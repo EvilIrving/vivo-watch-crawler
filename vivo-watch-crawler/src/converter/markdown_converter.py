@@ -185,19 +185,19 @@ class MarkdownConverter:
         from urllib.parse import urlparse
         parsed_url = urlparse(url)
         url_path = parsed_url.path.strip('/')
-        url_parts = url_path.split('/')
+        url_parts = [p for p in url_path.split('/') if p]  # 过滤空字符串
         
         # 创建分类目录
         category_dir = self.output_dir / category
         category_dir.mkdir(parents=True, exist_ok=True)
         
-        # 生成文件名
+        # 生成文件名和子目录
         filename = None
         sub_dir = None
         
-        # 尝试从Last部分提取文件名
+        # 从 URL 路径提取文件名和子目录
         if url_parts:
-            # 最后一个部分作为文件名
+            # 最后一个非空部分作为文件名
             filename = url_parts[-1] if url_parts[-1] else None
             
             # 倒数第2-3个部分作为子目录
@@ -210,9 +210,12 @@ class MarkdownConverter:
         if not filename or filename in ('doc', 'common'):
             filename = self._sanitize_filename(title)
         
-        # 确保文件名不为空
+        # 确保文件名不为空且符合命名规范
         if not filename:
             filename = 'untitled'
+        else:
+            # 转换为小写并用短横线连接（如果包含特殊字符）
+            filename = self._normalize_filename(filename)
         
         # 构建完整路径
         if sub_dir:
@@ -228,11 +231,30 @@ class MarkdownConverter:
         """清理文件名，移除非法字符"""
         # 移除或替换非法字符
         filename = re.sub(r'[<>:"/\\|?*]', '', filename)
-        # 替换空格为下划线
-        filename = filename.replace(' ', '_')
+        # 替换空格为短横线
+        filename = filename.replace(' ', '-')
         # 限制长度
         if len(filename) > 100:
             filename = filename[:100]
+        return filename or 'untitled'
+    
+    def _normalize_filename(self, filename: str) -> str:
+        """标准化文件名为小写短横线格式"""
+        # 先清理非法字符
+        filename = re.sub(r'[<>:"/\\|?*]', '', filename)
+        # 将驼峰命名转换为短横线（例如：localStorage -> local-storage）
+        filename = re.sub(r'([a-z])([A-Z])', r'\1-\2', filename)
+        # 替换空格、下划线为短横线
+        filename = re.sub(r'[\s_]+', '-', filename)
+        # 转换为小写
+        filename = filename.lower()
+        # 移除多余的短横线
+        filename = re.sub(r'-+', '-', filename)
+        # 移除首尾短横线
+        filename = filename.strip('-')
+        # 限制长度
+        if len(filename) > 100:
+            filename = filename[:100].rstrip('-')
         return filename or 'untitled'
         
     def save_markdown(self, filepath: Path, content: str):

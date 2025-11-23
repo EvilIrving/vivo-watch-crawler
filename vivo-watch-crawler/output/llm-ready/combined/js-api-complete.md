@@ -8,24 +8,21 @@
 - [概述](#概述)
 - [语音技术](#语音技术)
 - [视觉技术](#视觉技术)
-- [K-V 数据存储](#k-v-数据存储)
-- [存储空间统计](#存储空间统计)
-- [通用错误码](#通用错误码)
-- [概述](#概述)
-- [调用规则](#调用规则)
 - [说明](#说明)
 - [vivo 智能终端设备侧](#vivo-智能终端设备侧)
 - [概述](#概述)
 - [手机侧](#手机侧)
-- [vivo 智能终端设备 SDK 隐私政策](#vivo-智能终端设备-sdk-隐私政策)
-- [vivo 智能终端设备 SDK](#vivo-智能终端设备-sdk)
-- [穿戴业务 Kit](#穿戴业务-kit)
+- [通用错误码](#通用错误码)
 - [应用沙箱目录](#应用沙箱目录)
 - [生命周期](#生命周期)
 - [运动健康](#运动健康)
+- [概述](#概述)
+- [调用规则](#调用规则)
 - [数据共享](#数据共享)
 - [文件存储](#文件存储)
+- [K-V 数据存储](#k-v-数据存储)
 - [概述](#概述)
+- [存储空间统计](#存储空间统计)
 - [应用管理](#应用管理)
 - [概述](#概述)
 - [音频](#音频)
@@ -71,11 +68,14 @@
 - [websocket](#websocket)
 - [widgetManager](#widgetmanager)
 - [widgetProvider](#widgetprovider)
+- [vivo 智能终端设备 SDK 隐私政策](#vivo-智能终端设备-sdk-隐私政策)
+- [vivo 智能终端设备 SDK](#vivo-智能终端设备-sdk)
+- [穿戴业务 Kit](#穿戴业务-kit)
 
 ---
 
 
-<!-- 文档 1: js-api/ai/nlp/.md -->
+<!-- 文档 1: js-api/api/ai/nlp.md -->
 
 
 ## 自然语言处理
@@ -212,7 +212,7 @@ nlp.translateText({
 ---
 
 
-<!-- 文档 2: js-api/ai/overview/.md -->
+<!-- 文档 2: js-api/api/ai/overview.md -->
 
 
 ## 概述
@@ -238,7 +238,7 @@ nlp.translateText({
 ---
 
 
-<!-- 文档 3: js-api/ai/speech/.md -->
+<!-- 文档 3: js-api/api/ai/speech.md -->
 
 
 ## 语音技术
@@ -988,7 +988,7 @@ export default {
 ---
 
 
-<!-- 文档 4: js-api/ai/vision/.md -->
+<!-- 文档 4: js-api/api/ai/vision.md -->
 
 
 ## 视觉技术
@@ -1423,686 +1423,7 @@ const auth = {
 ---
 
 
-<!-- 文档 5: js-api/api/storage/localstorage.md -->
-
-
-## K-V 数据存储
-
-## K-V 数据存储
-
-更新时间：2025-10-09 11:25:10
-
-
-### 接口声明
-
-
-```
-
-{ "name": "blueos.storage.storage" }
-```
-
-复制代码
-### 导入模块
-
-
-```
-
-import storage from '@blueos.storage.storage' 或 const storage = require('@blueos.storage.storage')
-```
-
-复制代码
-### 接口定义
-
-
-#### storage.get(OBJECT)
-
-
-读取存储内容
-
-
-##### 参数：
-
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | String | 是 | 索引 |
-| default | String | 否 | 如果 key 不存在，返回 default。如果 default 未指定，返回长度为 0 的空字符串 |
-| success | Function | 否 | 成功回调 |
-| fail | Function | 否 | 失败回调 |
-| complete | Function | 否 | 执行结束后的回调 |
-
-
-##### success 返回值：
-
-
-key 对应的存储内容
-
-
-##### 示例：
-
-
-```
-
-storage.get({
-  key: 'A1',
-  success: function (data) {
-    console.log('handling success')
-  },
-  fail: function (data, code) {
-    console.log(`handling fail, code = ${code}`)
-  },
-})
-```
-
-复制代码
-#### storage.getSync(OBJECT)
-
-
-同步读取存储内容
-
-
-##### 参数：
-
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | String | 是 | 索引 |
-
-
-##### 返回值：
-
-
-| 参数名 | 类型 | 说明 |
-| --- | --- | --- |
-| value | String | Boolean | Number | Object | Array | key 对应的存储内容 |
-
-
-##### 示例：
-
-
-```
-
-const value = storage.getSync({ key: 'A1' })
-```
-
-复制代码
-#### storage.set(OBJECT)
-
-
-修改存储内容
-
-
-##### 参数：
-
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | String | 是 | 索引 |
-| value | String | Boolean | Number | Object | Array | 否 | 新值。如果新值是长度为 0 的空字符串，会删除以 key 为索引的数据项 |
-| success | Function | 否 | 成功回调 |
-| fail | Function | 否 | 失败回调 |
-| complete | Function | 否 | 执行结束后的回调 |
-
-
-##### 示例：
-
-
-```
-
-storage.set({
-  key: 'A1',
-  value: 'V1',
-  success: function (data) {
-    console.log('handling success')
-  },
-  fail: function (data, code) {
-    console.log(`handling fail, code = ${code}`)
-  },
-})
-```
-
-复制代码
-##### 示例：
-
-
-```
-
-storage.set({
-  key: 'A1',
-  value: true,
-  success: function (data) {
-    console.log('handling success')
-  },
-  fail: function (data, code) {
-    console.log(`handling fail, code = ${code}`)
-  },
-})
-```
-
-复制代码
-##### 示例：
-
-
-```
-
-storage.set({
-  key: 'A1',
-  value: 18,
-  success: function (data) {
-    console.log('handling success')
-  },
-  fail: function (data, code) {
-    console.log(`handling fail, code = ${code}`)
-  },
-})
-```
-
-复制代码
-##### 示例：
-
-
-```
-
-storage.set({
-  key: 'A1',
-  value: { name: '李四', age: 18 },
-  success: function (data) {
-    console.log('handling success')
-  },
-  fail: function (data, code) {
-    console.log(`handling fail, code = ${code}`)
-  },
-})
-```
-
-复制代码
-##### 示例：
-
-
-```
-
-storage.set({
-  key: 'A1',
-  value: [18, 20],
-  success: function (data) {
-    console.log('handling success')
-  },
-  fail: function (data, code) {
-    console.log(`handling fail, code = ${code}`)
-  },
-})
-```
-
-复制代码
-#### storage.clear(OBJECT)
-
-
-清空存储内容
-
-
-##### 参数：
-
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| success | Function | 否 | 成功回调 |
-| fail | Function | 否 | 失败回调 |
-| complete | Function | 否 | 执行结束后的回调 |
-
-
-##### 示例：
-
-
-```
-
-storage.clear({
-  success: function (data) {
-    console.log('handling success')
-  },
-  fail: function (data, code) {
-    console.log(`handling fail, code = ${code}`)
-  },
-})
-```
-
-复制代码
-#### storage.delete(OBJECT)
-
-
-删除存储内容
-
-
-##### 参数：
-
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| key | String | 是 | 索引 |
-| success | Function | 否 | 成功回调 |
-| fail | Function | 否 | 失败回调 |
-| complete | Function | 否 | 执行结束后的回调 |
-
-
-##### 示例：
-
-
-```
-
-storage.delete({
-  key: 'A1',
-  success: function (data) {
-    console.log('handling success')
-  },
-  fail: function (data, code) {
-    console.log(`handling fail, code = ${code}`)
-  },
-})
-```
-
-复制代码
-#### storage.key(OBJECT)
-
-
-返回存储中某个 index 的键名
-
-
-##### 参数：
-
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| index | Number | 是 | 要查询的键名对应的索引 |
-| success | Function | 否 | 成功回调 |
-| fail | Function | 否 | 失败回调 |
-| complete | Function | 否 | 执行结束后的回调 |
-
-
-##### success 返回值：
-
-
-index 对应的键名
-
-
-##### 示例：
-
-
-```
-
-storage.key({
-  index: 1,
-  success: function (data) {
-    console.log(`handling success, key = ${data}`)
-  },
-  fail: function (data, code) {
-    console.log(`handling fail, code = ${code}`)
-  },
-})
-```
-
-复制代码
-#### 属性
-
-
-| 名称 | 参数类型 | 是否可读 | 是否可写 | 描述 |
-| --- | --- | --- | --- | --- |
-| length 　 | Number | 是 | 否 | 存储里的数据项的数量 |
-
-
-##### 示例：
-
-
-```
-
-let length = storage.length
-```
-
-复制代码
-##### 通用 fail 回调参数定义
-
-
-| 属性 | 类型 | 说明 |
-| --- | --- | --- |
-| data | string | 接口失败信息描述 |
-| code | FailCodeEnum | 接口失败业务码 |
-
-
-##### FailCodeEnum
-
-
-| 属性 | 说明 |
-| --- | --- |
-| 302 | 存储空间不足 |
-
-
----
-
-
-<!-- 文档 6: js-api/api/storage/statvfs.md -->
-
-
-## 存储空间统计
-
-## 存储空间统计
-
-更新时间：2025-08-13 20:11:57
-
-
-statvfs 一个用来获取应用空间的模块，包含了获取可用空间与总空间接口，支持同步与异步。
-
-
-### 接口声明
-
-
-```
-
-{ "name": "blueos.storage.statvfs" }
-```
-
-复制代码
-### 导入模块
-
-
-```
-
-import statvfs from '@blueos.storage.statvfs'
-```
-
-复制代码
-### 接口定义
-
-
-#### statvfs.getFreeSize()
-
-
-查询指定文件系统可用空间大小，异步接口
-
-
-**参数：**
-
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 需要查询的文件系统的文件路径 URI |
-| success | (size:number)=>{} | 否 | 成功回调,返回 空闲的字节数，（单位为 Byte） |
-| fail | Function | 否 | 失败回调 |
-
-
-**使用示例：**
-
-
-```
-
-statvfs.getFreeSize({
-  path: 'internal://files',
-  success(size) {
-    console.info('getFreeSize successfully, Size: ' + size)
-  },
-})
-```
-
-复制代码
-#### statvfs.getFreeSizeSync()
-
-
-查询指定文件系统可用空间大小，同步接口
-
-
-**参数：**
-
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 需要查询的文件系统的文件路径 URI |
-
-
-**返回值：**
-
-
-空闲的字节数，（单位为 Byte）
-
-
-**使用示例：**
-
-
-```
-
-const freeSize = statvfs.getFreeSizeSync('internal://files')
-console.log(freeSize)
-```
-
-复制代码
-#### statvfs.getTotalSize()
-
-
-查询指定文件系统总空间大小，异步接口
-
-
-**参数：**
-
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 需要查询的文件系统的文件路径 URI |
-| success | (size:number)=>{} | 否 | 成功回调,返回总空间大小的字节数，（单位为 Byte） |
-| fail | Function | 否 | 失败回调 |
-
-
-**使用示例：**
-
-
-```
-
-statvfs.getTotalSize({
-  path: 'internal://files',
-  success(size) {
-    console.info('getTotalSize successfully, Size: ' + size)
-  },
-})
-```
-
-复制代码
-#### statvfs.getTotalSizeSync()
-
-
-查询指定文件系统总空间大小，同步接口
-
-
-**参数：**
-
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 需要查询的文件系统的文件路径 URI |
-
-
-**返回值：**
-
-
-总空间大小字节数，（单位为 Byte）
-
-
-**使用示例：**
-
-
-```
-
-const totalSize = statvfs.getTotalSizeSync('internal://files')
-console.log(totalSize)
-```
-
-复制代码
-
-
----
-
-
-<!-- 文档 7: js-api/common/error-code/.md -->
-
-
-## 通用错误码
-
-## 通用错误码
-
-更新时间：2024-01-10 16:04:30
-
-
-### 提供公共的错误码
-
-
-#### 其中，错误码 200 为系统通用错误码，所有系统未知异常发生时抛出。比如系统申请内存空间失败等。
-
-
-| code | 含义 |
-| --- | --- |
-| 200 | 通用错误。 |
-| 202 | 参数错误。 |
-| 300 | I/O 错误。 |
-
-
----
-
-
-<!-- 文档 8: js-api/common/overview/.md -->
-
-
-## 概述
-
-## 概述
-
-更新时间：2023-10-31 19:37:39
-
-
-在本章节中，我们将为您介绍蓝河系统 JS API 的调用规则和通用的错误码。通过阅读本章节，您将了解 JS API 的三种调用形式——同步、异步和订阅，并且掌握一些常见的错误码。
-
-
----
-
-
-<!-- 文档 9: js-api/common/rule/.md -->
-
-
-## 调用规则
-
-## 调用规则
-
-更新时间：2024-08-13 15:19:43
-
-
-### 同步
-
-
-同步方法调用后必须等到方法结果返回后才能继续后续的行为，返回值可以是任意类型。
-
-
-### 示例
-
-
-```
-
-import context from '@blueos.app.context'
-
-export default {
-  getInfo() {
-    const info = context.getInfo()
-    console.log(JSON.stringify(info))
-  },
-}
-```
-
-复制代码
-### 异步
-
-
-异步方法调用整个过程不会阻碍调用者的工作。业务执行完成后会调用开发者提供的回调函数。
-
-
-##### 异步接口支持的回调函数
-
-
-| 回调函数 | 参数名 | 类型 | 返回值 | 说明 |
-| --- | --- | --- | --- | --- |
-| success | data | any | 可选，返回值可以是任意类型，详见接口使用文档。 | 在执行成功时触发。 |
-| fail | data,code | any,number | 错误信息内容，一般是字符串，也可能是其他类型，详见接口使用文档。 | 在执行失败时触发。 [code 是错误码](/api/common/error-code/) |
-| complete | - | - | - | 在执行完成时触发。 |
-
-
-##### 说明
-
-
-```
-
-success、fail和complete四个回调函数是否支持参考具体接口描述。
-success、fail两个回调函数的触发是互斥的，即会且只会在一个回调函数中触发，触发任意一个都会再次调用complete回调。
-```
-
-复制代码
-### 示例
-
-
-```
-
-import deviceInfo from '@blueos.hardware.deviceInfo'
-
-export default {
-  getInfo() {
-    deviceInfo.getInfo({
-      success: function (data) {
-        console.log('Device information obtained successfully. Device brand:' + data.brand)
-      },
-      fail: function (data, code) {
-        console.log(
-          'Failed to obtain device information. Error code:' + code + '; Error information: ' + data
-        )
-      },
-    })
-  },
-}
-```
-
-复制代码
-### 订阅
-
-
-订阅接口不会立即返回结果，开发者要在参数中设置相应的回调函数；该回调函数会在完成时或者事件变化时进行回调；可以执行多次。
-
-
-##### 订阅接口支持以下回调函数
-
-
-| 回调函数 | 参数名 | 类型 | 返回值 | 说明 |
-| --- | --- | --- | --- | --- |
-| callback | data | any | 返回值可以是任意类型，详见接口使用文档。 | 接口调用成功或事件变更时触发，可能会触发多次。 |
-| fail | data,code | any,number | 错误信息内容，一般是字符串，也可能是其他类型，详见接口使用文档。 | 在执行失败时触发。一旦触发该回调函数，callback 不会再次被调用，接口调用结束。[code 是错误码](/api/common/error-code/) |
-
-
-##### 以监听罗盘数据为例
-
-
-```
-
-import sensor from '@blueos.hardware.sensor'
-
-export default {
-  subscribeCompass() {
-    sensor.subscribeCompass({
-      callback: function (ret) {
-        console.log(`handling callback, direction = ${ret.direction}`)
-      },
-      fail: function (data, code) {
-        console.log(`handling fail, code = ${code}`)
-      },
-    })
-  },
-}
-```
-
-复制代码
-
-
----
-
-
-<!-- 文档 10: js-api/connect/brief-introduction/.md -->
+<!-- 文档 5: js-api/api/connect/brief-introduction.md -->
 
 
 ## 说明
@@ -2131,7 +1452,7 @@ vivo智能终端设备SDK及穿戴业务Kit分别为手机及vivo智能终端设
 ---
 
 
-<!-- 文档 11: js-api/connect/interconnect/.md -->
+<!-- 文档 6: js-api/api/connect/interconnect.md -->
 
 
 ## vivo 智能终端设备侧
@@ -2550,7 +1871,7 @@ connect.onError = function (error) {
 ---
 
 
-<!-- 文档 12: js-api/connect/introduce/.md -->
+<!-- 文档 7: js-api/api/connect/introduce.md -->
 
 
 ## 概述
@@ -2639,7 +1960,7 @@ vivo 智能终端设备集成互联底座能力，我们针对 vivo 智能终端
 ---
 
 
-<!-- 文档 13: js-api/connect/mobile-side/.md -->
+<!-- 文档 8: js-api/api/connect/mobile-side.md -->
 
 
 ## 手机侧
@@ -2911,413 +2232,33 @@ DeviceRpcManager.getInstance().registerDataReceiver(new IDataReceiver() {
 ---
 
 
-<!-- 文档 14: js-api/development-guidance/privacy-policy/.md -->
+<!-- 文档 9: js-api/api/error-code.md -->
 
 
-## vivo 智能终端设备 SDK 隐私政策
+## 通用错误码
 
-## vivo 智能终端设备 SDK 隐私政策
+## 通用错误码
 
-更新时间：2024-10-11 12:02:48
+更新时间：2024-01-10 16:04:30
 
 
-#### 生效日期：2023 年 11 月 1 日
+### 提供公共的错误码
 
 
-### 引言
+#### 其中，错误码 200 为系统通用错误码，所有系统未知异常发生时抛出。比如系统申请内存空间失败等。
 
 
-本隐私政策适用于维沃移动通信有限公司及其关联方（以下简称“我们”或“vivo”，注册地址：广东省东莞市长安镇维沃路 1 号）提供的 vivo 智能终端设备 SDK 产品及服务（以下统称“SDK 产品”）。本文档要向开发者及其终端用户(“终端用户”)说明，为了实现产品的相关功能，本服务将如何处理终端用户的个人信息。
-
-
-请开发者及终端用户务必认真阅读本规则。如您是开发者，请您确认充分了解并同意本规则后再集成 SDK 产品，如果您不同意本规则的任何内容，应立即停止接入及使用 SDK 产品；同时，您应仅在获得终端用户的同意后集成 SDK 产品并处理终端用户的个人信息。为了保障您的 App 合法合规，请 App 开发者务必将 SDK 产品升级到最新版本。   
-
-
-#### 特别说明：
-
-
-如您是开发者，您应当：   
-
-
-1. 遵守法律、法规收集、使用和处理终端用户的个人信息，包括但不限于制定和公布有关个人信息保护的隐私政策等;
-2. 在集成 SDK 产品前，告知终端用户 SDK 产品处理终端用户个人信息的情况，并依法获得终端用户同意;
-3. 在获得终端用户的同意前，除非法律法规另有规定，不应收集终端用户的个人信息；
-4. 向终端用户提供易于操作且满足法律法规要求的用户权利实现机制，并告知终端用户如何查阅、复制、修改、删除个人信息，撤回同意，以及限制个人信息处理、转移个人信息、获取个人信息副本和注销账号；
-5. 遵守本规则的要求。   
- 如开发者和终端用户对本规则内容有任何疑问、意见或建议的，可随时通过本规则第六条提供的方式与我们联系。
-
-
-### 一、我们将如何收集和使用信息
-
-
-#### （一）为实现 SDK 产品功能所需收集的个人信息：
-
-
-开发者通过集成 vivo 智能终端设备 SDK，使用 vivo 智能终端设备 SDK 提供的能力，实现第三方 APP 同 vivo 运动健康之间进行数据通信和交互，也可实现 vivo 智能终端设备上的第三方 APP 同 vivo 智能终端设备的业务数据通信功能。为实现 SDK 产品的相应功能所必须，我们将向终端用户或开发者收集终端用户在使用与 SDK 产品相关的功能时产生的如下个人信息：
-
-
-基于不同的设备和系统及系统版本，以及开发者在集成、使用我们 SDK 产品时决定的权限，收集的设备信息会有所不同，因此开发者应对实际收集的个人信息向用户进行说明。
-
-
-vivo 智能终端设备 SDK 主要用于提供给第三方 APP 集成，他提供了一种简便的和运动健康之间建立数据连接通道的方式，用于三方 APP 和 vivo 运动健康之间进行数据通信和交互，间接实现了三方 APP 与 vivo 手表设备的业务数据通信功能。  
-
-
-| 个人信息类型 | 个人信息清单 | 使用目的 | 存留期 |
-| --- | --- | --- | --- |
-| 设备信息 | 设备名称、电量、连接状态、可用空间、mac地址、存储空间、充电状态 | 用于接入SDK的第三方app查询或订阅穿戴设备状态、提供开放能力。 | 不涉及，该数据不存储至本地，不上云 |
-
-
-如果您是开发者，在您接入、使用本服务前，我们要求您在隐私政策中向终端用户告知我们 SDK 的名称、SDK 提供方名称、收集个人信息类型、使用目的、隐私政策链接，并获取用户的同意或取得其他合法性基础。您可以参考如下方式提供条款内容：  
-
-
-##### 第三方 SDK 名称：vivo 智能终端设备 SDK
-
-
-##### 第三方名称：维沃移动通信有限公司
-
-
-##### 收集个人信息类型：设备信息（设备名称、电量、连接状态、可用空间、mac 地址、存储空间、充电状态）
-
-
-##### 使用目的：用于接入 SDK 的第三方 app 查询或订阅穿戴设备状态，提供开放能力。
-
-
-##### 隐私政策链接：[SDK 隐私政策](/api/connect/development-guidance/privacy-policy/)
-
-
-#### （二）根据法律法规的规定，以下是征得用户同意的例外情形：
-
-
-##### （1）与国家安全、国防安全有关的；
-
-
-##### （2）与公共安全、公共卫生、重大公共利益有关的；
-
-
-##### （3）与犯罪侦查、起诉、审判和判决执行等有关的；
-
-
-##### （4）出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人同意的；
-
-
-##### （5）所收集的个人信息是个人信息主体自行向社会公众公开的；
-
-
-##### （6）从合法公开披露的信息中收集的您的个人信息的，如合法的新闻报道、政府信息公开等渠道；
-
-
-##### （7）根据您的要求签订合同所必需的；
-
-
-##### （8）用于维护所提供的产品与/或服务的安全稳定运行所必需的，例如发现、处置产品与/或服务的故障；
-
-
-##### （9）为合法的新闻报道所必需的；
-
-
-##### （10）学术研究机构基于公共利益开展统计或学术研究所必要，且对外提供学术研究或描述的结果时，对结果中所包含的个人信息进行去标识化处理的。
-
-
-### 二、信息的存储
-
-
-#### （一）存放地域
-
-
-我们遵守法律法规的规定，将在中华人民共和国境内收集和产生的个人信息存储在境内。  
-
-
-#### （二）存储期限
-
-
-除非法律法规另有要求，我们仅在实现本声明所述目的所必需的时间内保留您的个人信息，超期会进行删除或进行匿名化处理。  
-
-
-### 三、数据安全保护
-
-
-为保护网络的完整性，vivo 采取了符合业界标准的安全防护措施以保护个人信息，防止数据遭到未经授权的访问、使用、修改、公开披露。我们将采取一切合理可行的措施保护个人信息，包括但不限于：  
-
-
-#### a) 进行安全检查、使用加密工具和软件、以及其他合理的安全措施和程序；
-
-
-#### b) 采取加密技术确保信息传输与存储过程的安全性和保密性，并建立安全事件响应团队，及时进行问题的定位、分析、处理；
-
-
-#### c) 限定授权访问人员，并采取分级权限管理措施，仅网络管理员和基于业务必要需了解资料的人员才能从内部访问用户的非公开个人信息。
-
-
-如果 vivo 知悉 vivo IT 数据网络安全受到危害或由于外部行为（包括但不限于外部安全攻击）使用户的非公开信息披露给不相关第三方，尽管本隐私政策中有其他规定，vivo 仍将采取其认为适当的合理措施，包括但不限于内部调查、上报并通知执法机构、以及配合执法机构工作等；如果 vivo 发现用户提供给 vivo IT 数据网络的个人信息以非本隐私声明允许的方式进行了非法披露，vivo 将尽快采取合法合理措施通知相关用户，告知被披露的信息以及 vivo IT 数据网络对该信息的知悉程度，最大程度采取补救措施。  
-
-
-### 四、未成年人保护
-
-
-本 SDK 产品主要面向成年人。  
- 若您是开发者，如果终端用户是未满 14 周岁的未成年人（“儿童”），您应当向儿童的父母或其他监护人告知本规则，并在征得儿童的父母或其他监护人同意的前提下处理儿童个人信息。如果我们发现开发者未征得儿童监护人同意向我们提供儿童个人信息的，我们将会采取措施尽快删除。  
- 若您是儿童监护人，当您对您所监护儿童个人信息保护有相关疑问或权利请求时，您可以联系开发者，或通过本规则第六条提供的方式与我们联系。  
-
-
-### 五、变更
-
-
-我们可能适时修订本规则内容。如果某一功能或服务未在前述说明中且需要收集终端用户的信息，我们将在变更生效前，通过网站公告等方式进行提示。如您是开发者，当更新后的本规则对处理终端用户的个人信息情况有重大变化的，您应当适时更新隐私政策，并以弹框形式通知终端用户并且获得其同意，如果终端用户不同意接受本规则，请停止集成 SDK 产品。  
-
-
-### 六、如何联系我们
-
-
-如果您有任何疑问、意见或建议，请拨打我们的客服电话 95033 或发送电子邮件至[iotpartners@vivo.com](mailto:iotpartners@vivo.com)的方式与我们联系。
+| code | 含义 |
+| --- | --- |
+| 200 | 通用错误。 |
+| 202 | 参数错误。 |
+| 300 | I/O 错误。 |
 
 
 ---
 
 
-<!-- 文档 15: js-api/development-guidance/rpc-sdk-guidance/.md -->
-
-
-## vivo 智能终端设备 SDK
-
-## vivo 智能终端设备 SDK
-
-更新时间：2025-07-23 09:40:34
-
-
-### 开发准备，申请 appid
-
-
-##### 1. 申请 app 开发者接入，接入地址：[vivo 开放平台](https://dev.vivo.com.cn/)，已有账号则无需申请，直接登录
-
-
-##### 2. 申请账号后，注册对应的 app，取到 appid
-
-
-### SDK 集成
-
-
-```
-
-implementation files('libs/device-rpc.aar')
-```
-
-复制代码
-### 初始化
-
-
-```
-
- // 在 app 恰当的时候初始化，如果需要拉起并发送到通知，建议放 application 里面。
- DeviceRpcManager.getInstance().init(getApplicationContext(), String encryStr,InitCallBack initCallBack);
-```
-
-复制代码
-##### encryStr:需联系 vivo 对接人员获取（[xiaoming.ling@vivo.com](mailto:xiaoming.ling@vivo.com)），请提供包名、appid
-
-
-##### InitCallBack:鉴权结果回调
-
-
-##### manifest 中添加 meta 数据，固定格式和名称，用于设备查询 app 功能信息
-
-
-```
-
-<meta-data android:name="health.device.manager.version" android:value="1" />
-<meta-data android:name="appid" android:value="开发平台申请的appid" />
-```
-
-复制代码
-### 三方 APP 协议参考设计
-
-
-三方 App 除了获取“运动健康功能版本号”，“读取设备对应功能版本号”外，通常需要使用接口<给设备发送 Request 数据>跟手机交换数据，为了区分不同 Request 数据类型，建议使用如下 Json 格式
-
-
-```
-
-{
-     "type":"type\_xxxx"
-     "data":{}
-}
-```
-
-复制代码
-##### 对应的 Response 数据类型，建议使用如下 Json 格式：
-
-
-```
-
-{
-     "code"：0
-     "result":{}
-}
-```
-
-复制代码
-##### 其中
-
-
-- type 指定数据类型，不同的业务对应不同的类型，用于对端区分数据，作相应处理
-- data 数据，不同业务有不同的数据
-- code 对端的业务执行结果
-- result 结果依赖不同的 type 而不同
-
-
-### SDK 下载
-
-
-[vivo 智能终端设备 SDK](https://h5.vivo.com.cn/health/rpcsdk/new/device-rpc.aar)
-
-
-### API 参考
-
-
-[手机侧](/api/connect/mobile-side/)
-
-
-### 隐私政策
-
-
-[隐私政策](/api/connect/development-guidance/privacy-policy/)
-
-
----
-
-
-<!-- 文档 16: js-api/development-guidance/watch-guidance/.md -->
-
-
-## 穿戴业务 Kit
-
-## 穿戴业务 Kit
-
-更新时间：2023-10-31 19:37:39
-
-
-### 代码示例
-
-
-##### 创建连接实例
-
-
-```
-
- create() {
-    console.log(`click here!`)
-    connect = interconnect.instance({ package: 'com.vivo.health.deviceRpcSdk.demo', fingerprint: '5de8782b74c1e2e064786428c229ab68884e7563704d0642466bf5f51dfa1330' })
-    this.create_text = "成功创建"
-    this.onopen()
-    this.onclose()
-    this.onerror()
-    this.onmessage()
-    timer = setTimeout(() => {
-      console.log(`等待 3s 执行send`)
-      this.send()
-    }, 3 \* 1000)
-
-  },
-```
-
-复制代码
-##### 数据发送
-
-
-```
-
-  send() {
-    console.log('send--------')
-    const self = this;
-    if (connect == null) {
-      console.log('interconnect feature not instanced!!')
-      return
-    }
-    connect.send({
-      data: {
-        type: 'getIsLogin'
-      },
-      success: function () {
-        self.send_status = '是'
-        console.log(`handling success`)
-      },
-      fail: function (data, code) {
-        self.send_status = '否'
-        console.log(`handling fail, code = ${code}`)
-      }
-    })
-  },
-```
-
-复制代码
-##### 数据接收
-
-
-```
-
-  onmessage() {
-    console.log('onmessage--------')
-    // 监听手机侧应用的数据
-    const self = this
-    if (connect == null) {
-      console.log('interconnect feature not instanced!!')
-      return
-    }
-    connect.onmessage = function (data) {
-      if (data && data.isFileType) {
-        console.log('filename is', data.fileName)
-      } else {
-        console.log('msg is', data)
-      }
-      self.onmessage_data = data
-    }
-
-  },
-```
-
-复制代码
-##### 断开及销毁
-
-
-```
-
-  close() {
-    const self = this
-    if (connect == null) {
-      console.log('interconnect feature not instanced!!')
-      return
-    }
-    connect.close({
-
-      success() {
-        console.log(`close success`)
-        self.close_data = 'success!'
-      },
-      fail(data, code) {
-        console.log(`handling fail, code = ${code}`)
-        self.close_data = 'fail!'
-      },
-    })
-  },
-
-  onDestroy() {
-    if(timer != null){
-      clearTimeout(timer) // 清除定时函数
-    }
-    this.close()
-  },
-```
-
-复制代码
-### API 参考
-
-
-[vivo 智能终端设备侧](/api/connect/interconnect/)
-
-
----
-
-
-<!-- 文档 17: js-api/extend/file-sandbox/.md -->
+<!-- 文档 10: js-api/api/extend/file-sandbox.md -->
 
 
 ## 应用沙箱目录
@@ -3408,7 +2349,7 @@ file.writeText({
 ---
 
 
-<!-- 文档 18: js-api/extend/lifecycle/.md -->
+<!-- 文档 11: js-api/api/extend/lifecycle.md -->
 
 
 ## 生命周期
@@ -3737,7 +2678,7 @@ onPalmOver(evt) {
 ---
 
 
-<!-- 文档 19: js-api/health/health/.md -->
+<!-- 文档 12: js-api/api/health/health.md -->
 
 
 ## 运动健康
@@ -4208,7 +3149,147 @@ const sum = health.STATISTIC\_TYPES.SUM
 ---
 
 
-<!-- 文档 20: js-api/storage/exchange/.md -->
+<!-- 文档 13: js-api/api/overview.md -->
+
+
+## 概述
+
+## 概述
+
+更新时间：2023-10-31 19:37:39
+
+
+在本章节中，我们将为您介绍蓝河系统 JS API 的调用规则和通用的错误码。通过阅读本章节，您将了解 JS API 的三种调用形式——同步、异步和订阅，并且掌握一些常见的错误码。
+
+
+---
+
+
+<!-- 文档 14: js-api/api/rule.md -->
+
+
+## 调用规则
+
+## 调用规则
+
+更新时间：2024-08-13 15:19:43
+
+
+### 同步
+
+
+同步方法调用后必须等到方法结果返回后才能继续后续的行为，返回值可以是任意类型。
+
+
+### 示例
+
+
+```
+
+import context from '@blueos.app.context'
+
+export default {
+  getInfo() {
+    const info = context.getInfo()
+    console.log(JSON.stringify(info))
+  },
+}
+```
+
+复制代码
+### 异步
+
+
+异步方法调用整个过程不会阻碍调用者的工作。业务执行完成后会调用开发者提供的回调函数。
+
+
+##### 异步接口支持的回调函数
+
+
+| 回调函数 | 参数名 | 类型 | 返回值 | 说明 |
+| --- | --- | --- | --- | --- |
+| success | data | any | 可选，返回值可以是任意类型，详见接口使用文档。 | 在执行成功时触发。 |
+| fail | data,code | any,number | 错误信息内容，一般是字符串，也可能是其他类型，详见接口使用文档。 | 在执行失败时触发。 [code 是错误码](/api/common/error-code/) |
+| complete | - | - | - | 在执行完成时触发。 |
+
+
+##### 说明
+
+
+```
+
+success、fail和complete四个回调函数是否支持参考具体接口描述。
+success、fail两个回调函数的触发是互斥的，即会且只会在一个回调函数中触发，触发任意一个都会再次调用complete回调。
+```
+
+复制代码
+### 示例
+
+
+```
+
+import deviceInfo from '@blueos.hardware.deviceInfo'
+
+export default {
+  getInfo() {
+    deviceInfo.getInfo({
+      success: function (data) {
+        console.log('Device information obtained successfully. Device brand:' + data.brand)
+      },
+      fail: function (data, code) {
+        console.log(
+          'Failed to obtain device information. Error code:' + code + '; Error information: ' + data
+        )
+      },
+    })
+  },
+}
+```
+
+复制代码
+### 订阅
+
+
+订阅接口不会立即返回结果，开发者要在参数中设置相应的回调函数；该回调函数会在完成时或者事件变化时进行回调；可以执行多次。
+
+
+##### 订阅接口支持以下回调函数
+
+
+| 回调函数 | 参数名 | 类型 | 返回值 | 说明 |
+| --- | --- | --- | --- | --- |
+| callback | data | any | 返回值可以是任意类型，详见接口使用文档。 | 接口调用成功或事件变更时触发，可能会触发多次。 |
+| fail | data,code | any,number | 错误信息内容，一般是字符串，也可能是其他类型，详见接口使用文档。 | 在执行失败时触发。一旦触发该回调函数，callback 不会再次被调用，接口调用结束。[code 是错误码](/api/common/error-code/) |
+
+
+##### 以监听罗盘数据为例
+
+
+```
+
+import sensor from '@blueos.hardware.sensor'
+
+export default {
+  subscribeCompass() {
+    sensor.subscribeCompass({
+      callback: function (ret) {
+        console.log(`handling callback, direction = ${ret.direction}`)
+      },
+      fail: function (data, code) {
+        console.log(`handling fail, code = ${code}`)
+      },
+    })
+  },
+}
+```
+
+复制代码
+
+
+---
+
+
+<!-- 文档 15: js-api/api/storage/exchange.md -->
 
 
 ## 数据共享
@@ -4478,7 +3559,7 @@ exchange.set({
 ---
 
 
-<!-- 文档 21: js-api/storage/file/.md -->
+<!-- 文档 16: js-api/api/storage/file.md -->
 
 
 ## 文件存储
@@ -5121,7 +4202,361 @@ file.rmdir({
 ---
 
 
-<!-- 文档 22: js-api/storage/overview/.md -->
+<!-- 文档 17: js-api/api/storage/localstorage.md -->
+
+
+## K-V 数据存储
+
+## K-V 数据存储
+
+更新时间：2025-10-09 11:25:10
+
+
+### 接口声明
+
+
+```
+
+{ "name": "blueos.storage.storage" }
+```
+
+复制代码
+### 导入模块
+
+
+```
+
+import storage from '@blueos.storage.storage' 或 const storage = require('@blueos.storage.storage')
+```
+
+复制代码
+### 接口定义
+
+
+#### storage.get(OBJECT)
+
+
+读取存储内容
+
+
+##### 参数：
+
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | String | 是 | 索引 |
+| default | String | 否 | 如果 key 不存在，返回 default。如果 default 未指定，返回长度为 0 的空字符串 |
+| success | Function | 否 | 成功回调 |
+| fail | Function | 否 | 失败回调 |
+| complete | Function | 否 | 执行结束后的回调 |
+
+
+##### success 返回值：
+
+
+key 对应的存储内容
+
+
+##### 示例：
+
+
+```
+
+storage.get({
+  key: 'A1',
+  success: function (data) {
+    console.log('handling success')
+  },
+  fail: function (data, code) {
+    console.log(`handling fail, code = ${code}`)
+  },
+})
+```
+
+复制代码
+#### storage.getSync(OBJECT)
+
+
+同步读取存储内容
+
+
+##### 参数：
+
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | String | 是 | 索引 |
+
+
+##### 返回值：
+
+
+| 参数名 | 类型 | 说明 |
+| --- | --- | --- |
+| value | String | Boolean | Number | Object | Array | key 对应的存储内容 |
+
+
+##### 示例：
+
+
+```
+
+const value = storage.getSync({ key: 'A1' })
+```
+
+复制代码
+#### storage.set(OBJECT)
+
+
+修改存储内容
+
+
+##### 参数：
+
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | String | 是 | 索引 |
+| value | String | Boolean | Number | Object | Array | 否 | 新值。如果新值是长度为 0 的空字符串，会删除以 key 为索引的数据项 |
+| success | Function | 否 | 成功回调 |
+| fail | Function | 否 | 失败回调 |
+| complete | Function | 否 | 执行结束后的回调 |
+
+
+##### 示例：
+
+
+```
+
+storage.set({
+  key: 'A1',
+  value: 'V1',
+  success: function (data) {
+    console.log('handling success')
+  },
+  fail: function (data, code) {
+    console.log(`handling fail, code = ${code}`)
+  },
+})
+```
+
+复制代码
+##### 示例：
+
+
+```
+
+storage.set({
+  key: 'A1',
+  value: true,
+  success: function (data) {
+    console.log('handling success')
+  },
+  fail: function (data, code) {
+    console.log(`handling fail, code = ${code}`)
+  },
+})
+```
+
+复制代码
+##### 示例：
+
+
+```
+
+storage.set({
+  key: 'A1',
+  value: 18,
+  success: function (data) {
+    console.log('handling success')
+  },
+  fail: function (data, code) {
+    console.log(`handling fail, code = ${code}`)
+  },
+})
+```
+
+复制代码
+##### 示例：
+
+
+```
+
+storage.set({
+  key: 'A1',
+  value: { name: '李四', age: 18 },
+  success: function (data) {
+    console.log('handling success')
+  },
+  fail: function (data, code) {
+    console.log(`handling fail, code = ${code}`)
+  },
+})
+```
+
+复制代码
+##### 示例：
+
+
+```
+
+storage.set({
+  key: 'A1',
+  value: [18, 20],
+  success: function (data) {
+    console.log('handling success')
+  },
+  fail: function (data, code) {
+    console.log(`handling fail, code = ${code}`)
+  },
+})
+```
+
+复制代码
+#### storage.clear(OBJECT)
+
+
+清空存储内容
+
+
+##### 参数：
+
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| success | Function | 否 | 成功回调 |
+| fail | Function | 否 | 失败回调 |
+| complete | Function | 否 | 执行结束后的回调 |
+
+
+##### 示例：
+
+
+```
+
+storage.clear({
+  success: function (data) {
+    console.log('handling success')
+  },
+  fail: function (data, code) {
+    console.log(`handling fail, code = ${code}`)
+  },
+})
+```
+
+复制代码
+#### storage.delete(OBJECT)
+
+
+删除存储内容
+
+
+##### 参数：
+
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| key | String | 是 | 索引 |
+| success | Function | 否 | 成功回调 |
+| fail | Function | 否 | 失败回调 |
+| complete | Function | 否 | 执行结束后的回调 |
+
+
+##### 示例：
+
+
+```
+
+storage.delete({
+  key: 'A1',
+  success: function (data) {
+    console.log('handling success')
+  },
+  fail: function (data, code) {
+    console.log(`handling fail, code = ${code}`)
+  },
+})
+```
+
+复制代码
+#### storage.key(OBJECT)
+
+
+返回存储中某个 index 的键名
+
+
+##### 参数：
+
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| index | Number | 是 | 要查询的键名对应的索引 |
+| success | Function | 否 | 成功回调 |
+| fail | Function | 否 | 失败回调 |
+| complete | Function | 否 | 执行结束后的回调 |
+
+
+##### success 返回值：
+
+
+index 对应的键名
+
+
+##### 示例：
+
+
+```
+
+storage.key({
+  index: 1,
+  success: function (data) {
+    console.log(`handling success, key = ${data}`)
+  },
+  fail: function (data, code) {
+    console.log(`handling fail, code = ${code}`)
+  },
+})
+```
+
+复制代码
+#### 属性
+
+
+| 名称 | 参数类型 | 是否可读 | 是否可写 | 描述 |
+| --- | --- | --- | --- | --- |
+| length 　 | Number | 是 | 否 | 存储里的数据项的数量 |
+
+
+##### 示例：
+
+
+```
+
+let length = storage.length
+```
+
+复制代码
+##### 通用 fail 回调参数定义
+
+
+| 属性 | 类型 | 说明 |
+| --- | --- | --- |
+| data | string | 接口失败信息描述 |
+| code | FailCodeEnum | 接口失败业务码 |
+
+
+##### FailCodeEnum
+
+
+| 属性 | 说明 |
+| --- | --- |
+| 302 | 存储空间不足 |
+
+
+---
+
+
+<!-- 文档 18: js-api/api/storage/overview.md -->
 
 
 ## 概述
@@ -5148,7 +4583,166 @@ file.rmdir({
 ---
 
 
-<!-- 文档 23: js-api/system/am/.md -->
+<!-- 文档 19: js-api/api/storage/statvfs.md -->
+
+
+## 存储空间统计
+
+## 存储空间统计
+
+更新时间：2025-08-13 20:11:57
+
+
+statvfs 一个用来获取应用空间的模块，包含了获取可用空间与总空间接口，支持同步与异步。
+
+
+### 接口声明
+
+
+```
+
+{ "name": "blueos.storage.statvfs" }
+```
+
+复制代码
+### 导入模块
+
+
+```
+
+import statvfs from '@blueos.storage.statvfs'
+```
+
+复制代码
+### 接口定义
+
+
+#### statvfs.getFreeSize()
+
+
+查询指定文件系统可用空间大小，异步接口
+
+
+**参数：**
+
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 需要查询的文件系统的文件路径 URI |
+| success | (size:number)=>{} | 否 | 成功回调,返回 空闲的字节数，（单位为 Byte） |
+| fail | Function | 否 | 失败回调 |
+
+
+**使用示例：**
+
+
+```
+
+statvfs.getFreeSize({
+  path: 'internal://files',
+  success(size) {
+    console.info('getFreeSize successfully, Size: ' + size)
+  },
+})
+```
+
+复制代码
+#### statvfs.getFreeSizeSync()
+
+
+查询指定文件系统可用空间大小，同步接口
+
+
+**参数：**
+
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 需要查询的文件系统的文件路径 URI |
+
+
+**返回值：**
+
+
+空闲的字节数，（单位为 Byte）
+
+
+**使用示例：**
+
+
+```
+
+const freeSize = statvfs.getFreeSizeSync('internal://files')
+console.log(freeSize)
+```
+
+复制代码
+#### statvfs.getTotalSize()
+
+
+查询指定文件系统总空间大小，异步接口
+
+
+**参数：**
+
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 需要查询的文件系统的文件路径 URI |
+| success | (size:number)=>{} | 否 | 成功回调,返回总空间大小的字节数，（单位为 Byte） |
+| fail | Function | 否 | 失败回调 |
+
+
+**使用示例：**
+
+
+```
+
+statvfs.getTotalSize({
+  path: 'internal://files',
+  success(size) {
+    console.info('getTotalSize successfully, Size: ' + size)
+  },
+})
+```
+
+复制代码
+#### statvfs.getTotalSizeSync()
+
+
+查询指定文件系统总空间大小，同步接口
+
+
+**参数：**
+
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 需要查询的文件系统的文件路径 URI |
+
+
+**返回值：**
+
+
+总空间大小字节数，（单位为 Byte）
+
+
+**使用示例：**
+
+
+```
+
+const totalSize = statvfs.getTotalSizeSync('internal://files')
+console.log(totalSize)
+```
+
+复制代码
+
+
+---
+
+
+<!-- 文档 20: js-api/api/system/am.md -->
 
 
 ## 应用管理
@@ -5241,7 +4835,7 @@ am.moveTaskToBack()
 ---
 
 
-<!-- 文档 24: js-api/system/app/.md -->
+<!-- 文档 21: js-api/api/system/app.md -->
 
 
 ## 概述
@@ -5273,7 +4867,7 @@ am.moveTaskToBack()
 ---
 
 
-<!-- 文档 25: js-api/system/audio/.md -->
+<!-- 文档 22: js-api/api/system/audio.md -->
 
 
 ## 音频
@@ -5473,7 +5067,7 @@ audio.onError = function (error) {
 ---
 
 
-<!-- 文档 26: js-api/system/audiomanager/.md -->
+<!-- 文档 23: js-api/api/system/audiomanager.md -->
 
 
 ## 音频管理
@@ -5902,7 +5496,7 @@ audioManager.isMicrophoneMute({
 ---
 
 
-<!-- 文档 27: js-api/system/battery/.md -->
+<!-- 文档 24: js-api/api/system/battery.md -->
 
 
 ## 电量信息
@@ -6017,7 +5611,7 @@ const batteryStatus = battery.getStatusSync()
 ---
 
 
-<!-- 文档 28: js-api/system/bluetooth/.md -->
+<!-- 文档 25: js-api/api/system/bluetooth.md -->
 
 
 ## 蓝牙
@@ -7179,7 +6773,7 @@ gattServer.unsubscribeConnectStateChange()
 ---
 
 
-<!-- 文档 29: js-api/system/brightness/.md -->
+<!-- 文档 26: js-api/api/system/brightness.md -->
 
 
 ## 屏幕亮度
@@ -7520,7 +7114,7 @@ brightness.unsubscribe()
 ---
 
 
-<!-- 文档 30: js-api/system/cipher/.md -->
+<!-- 文档 27: js-api/api/system/cipher.md -->
 
 
 ## 密码算法
@@ -7848,7 +7442,7 @@ console.log(res)
 ---
 
 
-<!-- 文档 31: js-api/system/communicationOverview/.md -->
+<!-- 文档 28: js-api/api/system/communication-overview.md -->
 
 
 ## 概述
@@ -7876,7 +7470,7 @@ console.log(res)
 ---
 
 
-<!-- 文档 32: js-api/system/console/.md -->
+<!-- 文档 29: js-api/api/system/console.md -->
 
 
 ## 日志打印
@@ -7942,7 +7536,7 @@ console.error('error:我是error')
 ---
 
 
-<!-- 文档 33: js-api/system/device/.md -->
+<!-- 文档 30: js-api/api/system/device.md -->
 
 
 ## 设备信息
@@ -8644,7 +8238,7 @@ device.getFeatureList({
 ---
 
 
-<!-- 文档 34: js-api/system/event/.md -->
+<!-- 文档 31: js-api/api/system/event.md -->
 
 
 ## 公共事件
@@ -8813,7 +8407,7 @@ event.unsubscribe({ id: 1 })
 ---
 
 
-<!-- 文档 35: js-api/system/fastlz/.md -->
+<!-- 文档 32: js-api/api/system/fastlz.md -->
 
 
 ## 解压缩
@@ -8894,7 +8488,7 @@ fastlz.decompress({
 ---
 
 
-<!-- 文档 36: js-api/system/fetch/.md -->
+<!-- 文档 33: js-api/api/system/fetch.md -->
 
 
 ## 数据请求
@@ -9009,7 +8603,7 @@ fetch.fetch({
 ---
 
 
-<!-- 文档 37: js-api/system/generatecertificatethumbprint/.md -->
+<!-- 文档 34: js-api/api/system/generatecertificatethumbprint.md -->
 
 
 ## 生成签名证书指纹
@@ -9076,7 +8670,7 @@ fetch.fetch({
 ---
 
 
-<!-- 文档 38: js-api/system/geolocation/.md -->
+<!-- 文档 35: js-api/api/system/geolocation.md -->
 
 
 ## 地理位置
@@ -9290,7 +8884,7 @@ const types = geolocation.getSupportedCoordTypes()
 ---
 
 
-<!-- 文档 39: js-api/system/hardware/.md -->
+<!-- 文档 36: js-api/api/system/hardware.md -->
 
 
 ## 概述
@@ -9320,7 +8914,7 @@ const types = geolocation.getSupportedCoordTypes()
 ---
 
 
-<!-- 文档 40: js-api/system/inputmethod/.md -->
+<!-- 文档 37: js-api/api/system/inputmethod.md -->
 
 
 ## 输入法
@@ -9472,7 +9066,7 @@ inputmethod.setInput({
 ---
 
 
-<!-- 文档 41: js-api/system/media/.md -->
+<!-- 文档 38: js-api/api/system/media.md -->
 
 
 ## 多媒体
@@ -10491,7 +10085,7 @@ audioRecorder.onStop = () => {
 ---
 
 
-<!-- 文档 42: js-api/system/multimediaOverview/.md -->
+<!-- 文档 39: js-api/api/system/multimedia-overview.md -->
 
 
 ## 概述
@@ -10518,7 +10112,7 @@ audioRecorder.onStop = () => {
 ---
 
 
-<!-- 文档 43: js-api/system/network/.md -->
+<!-- 文档 40: js-api/api/system/network.md -->
 
 
 ## 网络状态
@@ -10721,7 +10315,7 @@ network.getSimOperators({
 ---
 
 
-<!-- 文档 44: js-api/system/notification/.md -->
+<!-- 文档 41: js-api/api/system/notification.md -->
 
 
 ## 消息通知
@@ -10909,7 +10503,7 @@ notification.remove({
 ---
 
 
-<!-- 文档 45: js-api/system/package/.md -->
+<!-- 文档 42: js-api/api/system/package.md -->
 
 
 ## 包管理
@@ -11030,7 +10624,7 @@ packageManager.getCustomData({
 ---
 
 
-<!-- 文档 46: js-api/system/pagestack/.md -->
+<!-- 文档 43: js-api/api/system/pagestack.md -->
 
 
 ## 页面栈管理
@@ -11235,7 +10829,7 @@ pagestack.close({
 ---
 
 
-<!-- 文档 47: js-api/system/peaceOverview/.md -->
+<!-- 文档 44: js-api/api/system/peace-overview.md -->
 
 
 ## 概述
@@ -11260,7 +10854,7 @@ pagestack.close({
 ---
 
 
-<!-- 文档 48: js-api/system/permission/.md -->
+<!-- 文档 45: js-api/api/system/permission.md -->
 
 
 ## 权限管理
@@ -11469,7 +11063,7 @@ pagestack.close({
 ---
 
 
-<!-- 文档 49: js-api/system/phoneOverview/.md -->
+<!-- 文档 46: js-api/api/system/phone-overview.md -->
 
 
 ## 概述
@@ -11494,7 +11088,7 @@ pagestack.close({
 ---
 
 
-<!-- 文档 50: js-api/system/prompt/.md -->
+<!-- 文档 47: js-api/api/system/prompt.md -->
 
 
 ## 弹窗
@@ -11556,7 +11150,7 @@ prompt.showToast({
 ---
 
 
-<!-- 文档 51: js-api/system/record/.md -->
+<!-- 文档 48: js-api/api/system/record.md -->
 
 
 ## 录音
@@ -11723,7 +11317,7 @@ record.onError = function () {
 ---
 
 
-<!-- 文档 52: js-api/system/request/.md -->
+<!-- 文档 49: js-api/api/system/request.md -->
 
 
 ## 上传下载
@@ -11996,7 +11590,7 @@ request.onDownloadComplete({
 ---
 
 
-<!-- 文档 53: js-api/system/router/.md -->
+<!-- 文档 50: js-api/api/system/router.md -->
 
 
 ## 页面路由
@@ -12295,7 +11889,7 @@ router.setTransition({
 ---
 
 
-<!-- 文档 54: js-api/system/schedule/.md -->
+<!-- 文档 51: js-api/api/system/schedule.md -->
 
 
 ## 定时任务
@@ -12441,7 +12035,7 @@ schedule.cancel(1)
 ---
 
 
-<!-- 文档 55: js-api/system/screen/.md -->
+<!-- 文档 52: js-api/api/system/screen.md -->
 
 
 ## 屏幕管理
@@ -12542,7 +12136,7 @@ screen.getAodStatus()
 ---
 
 
-<!-- 文档 56: js-api/system/sensor/.md -->
+<!-- 文档 53: js-api/api/system/sensor.md -->
 
 
 ## 传感器
@@ -13194,7 +12788,7 @@ sensor.unsubscribeContinuousWristTurn()
 ---
 
 
-<!-- 文档 57: js-api/system/settings/.md -->
+<!-- 文档 54: js-api/api/system/settings.md -->
 
 
 ## 系统设置
@@ -13423,7 +13017,7 @@ const value = settings.getValueSync('brightness')
 ---
 
 
-<!-- 文档 58: js-api/system/short-message-service/.md -->
+<!-- 文档 55: js-api/api/system/short-message-service.md -->
 
 
 ## 短信
@@ -13471,7 +13065,7 @@ const value = settings.getValueSync('brightness')
 ---
 
 
-<!-- 文档 59: js-api/system/simManager/.md -->
+<!-- 文档 56: js-api/api/system/sim-manager.md -->
 
 
 ## sim 卡管理
@@ -13579,7 +13173,7 @@ simManager.getSimOperators({
 ---
 
 
-<!-- 文档 60: js-api/system/softwareOverview/.md -->
+<!-- 文档 57: js-api/api/system/software-overview.md -->
 
 
 ## 概述
@@ -13607,7 +13201,7 @@ simManager.getSimOperators({
 ---
 
 
-<!-- 文档 61: js-api/system/systemapp/.md -->
+<!-- 文档 58: js-api/api/system/systemapp.md -->
 
 
 ## 应用上下文
@@ -13754,7 +13348,7 @@ app.terminate()
 ---
 
 
-<!-- 文档 62: js-api/system/tar/.md -->
+<!-- 文档 59: js-api/api/system/tar.md -->
 
 
 ## 解包
@@ -13844,7 +13438,7 @@ tar.untar({
 ---
 
 
-<!-- 文档 63: js-api/system/telephony-service/.md -->
+<!-- 文档 60: js-api/api/system/telephony-service.md -->
 
 
 ## 电话
@@ -13892,7 +13486,7 @@ tar.untar({
 ---
 
 
-<!-- 文档 64: js-api/system/vibrator/.md -->
+<!-- 文档 61: js-api/api/system/vibrator.md -->
 
 
 ## 振动
@@ -14064,7 +13658,7 @@ vibrator.getSystemDefaultMode()
 ---
 
 
-<!-- 文档 65: js-api/system/websocket/.md -->
+<!-- 文档 62: js-api/api/system/websocket.md -->
 
 
 ## websocket
@@ -14355,7 +13949,7 @@ ws.onError = function (data) {
 ---
 
 
-<!-- 文档 66: js-api/system/widget-manager/.md -->
+<!-- 文档 63: js-api/api/system/widget-manager.md -->
 
 
 ## widgetManager
@@ -14422,7 +14016,7 @@ export default {
 ---
 
 
-<!-- 文档 67: js-api/system/widget-provider/.md -->
+<!-- 文档 64: js-api/api/system/widget-provider.md -->
 
 
 ## widgetProvider
@@ -14641,6 +14235,412 @@ widgetProvider 生命周期入参，描述卡片页面的 Action 事件信息。
 | --- | --- | --- | --- |
 | action | string | 是 | action 名，对应 data 中 actions 里的某个响应动作 |
 | params | Record<string, any> | 否 | 开发者在事件响应动作设置的参数 |
+
+
+---
+
+
+<!-- 文档 65: js-api/connect/development-guidance/privacy-policy.md -->
+
+
+## vivo 智能终端设备 SDK 隐私政策
+
+## vivo 智能终端设备 SDK 隐私政策
+
+更新时间：2024-10-11 12:02:48
+
+
+#### 生效日期：2023 年 11 月 1 日
+
+
+### 引言
+
+
+本隐私政策适用于维沃移动通信有限公司及其关联方（以下简称“我们”或“vivo”，注册地址：广东省东莞市长安镇维沃路 1 号）提供的 vivo 智能终端设备 SDK 产品及服务（以下统称“SDK 产品”）。本文档要向开发者及其终端用户(“终端用户”)说明，为了实现产品的相关功能，本服务将如何处理终端用户的个人信息。
+
+
+请开发者及终端用户务必认真阅读本规则。如您是开发者，请您确认充分了解并同意本规则后再集成 SDK 产品，如果您不同意本规则的任何内容，应立即停止接入及使用 SDK 产品；同时，您应仅在获得终端用户的同意后集成 SDK 产品并处理终端用户的个人信息。为了保障您的 App 合法合规，请 App 开发者务必将 SDK 产品升级到最新版本。   
+
+
+#### 特别说明：
+
+
+如您是开发者，您应当：   
+
+
+1. 遵守法律、法规收集、使用和处理终端用户的个人信息，包括但不限于制定和公布有关个人信息保护的隐私政策等;
+2. 在集成 SDK 产品前，告知终端用户 SDK 产品处理终端用户个人信息的情况，并依法获得终端用户同意;
+3. 在获得终端用户的同意前，除非法律法规另有规定，不应收集终端用户的个人信息；
+4. 向终端用户提供易于操作且满足法律法规要求的用户权利实现机制，并告知终端用户如何查阅、复制、修改、删除个人信息，撤回同意，以及限制个人信息处理、转移个人信息、获取个人信息副本和注销账号；
+5. 遵守本规则的要求。   
+ 如开发者和终端用户对本规则内容有任何疑问、意见或建议的，可随时通过本规则第六条提供的方式与我们联系。
+
+
+### 一、我们将如何收集和使用信息
+
+
+#### （一）为实现 SDK 产品功能所需收集的个人信息：
+
+
+开发者通过集成 vivo 智能终端设备 SDK，使用 vivo 智能终端设备 SDK 提供的能力，实现第三方 APP 同 vivo 运动健康之间进行数据通信和交互，也可实现 vivo 智能终端设备上的第三方 APP 同 vivo 智能终端设备的业务数据通信功能。为实现 SDK 产品的相应功能所必须，我们将向终端用户或开发者收集终端用户在使用与 SDK 产品相关的功能时产生的如下个人信息：
+
+
+基于不同的设备和系统及系统版本，以及开发者在集成、使用我们 SDK 产品时决定的权限，收集的设备信息会有所不同，因此开发者应对实际收集的个人信息向用户进行说明。
+
+
+vivo 智能终端设备 SDK 主要用于提供给第三方 APP 集成，他提供了一种简便的和运动健康之间建立数据连接通道的方式，用于三方 APP 和 vivo 运动健康之间进行数据通信和交互，间接实现了三方 APP 与 vivo 手表设备的业务数据通信功能。  
+
+
+| 个人信息类型 | 个人信息清单 | 使用目的 | 存留期 |
+| --- | --- | --- | --- |
+| 设备信息 | 设备名称、电量、连接状态、可用空间、mac地址、存储空间、充电状态 | 用于接入SDK的第三方app查询或订阅穿戴设备状态、提供开放能力。 | 不涉及，该数据不存储至本地，不上云 |
+
+
+如果您是开发者，在您接入、使用本服务前，我们要求您在隐私政策中向终端用户告知我们 SDK 的名称、SDK 提供方名称、收集个人信息类型、使用目的、隐私政策链接，并获取用户的同意或取得其他合法性基础。您可以参考如下方式提供条款内容：  
+
+
+##### 第三方 SDK 名称：vivo 智能终端设备 SDK
+
+
+##### 第三方名称：维沃移动通信有限公司
+
+
+##### 收集个人信息类型：设备信息（设备名称、电量、连接状态、可用空间、mac 地址、存储空间、充电状态）
+
+
+##### 使用目的：用于接入 SDK 的第三方 app 查询或订阅穿戴设备状态，提供开放能力。
+
+
+##### 隐私政策链接：[SDK 隐私政策](/api/connect/development-guidance/privacy-policy/)
+
+
+#### （二）根据法律法规的规定，以下是征得用户同意的例外情形：
+
+
+##### （1）与国家安全、国防安全有关的；
+
+
+##### （2）与公共安全、公共卫生、重大公共利益有关的；
+
+
+##### （3）与犯罪侦查、起诉、审判和判决执行等有关的；
+
+
+##### （4）出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人同意的；
+
+
+##### （5）所收集的个人信息是个人信息主体自行向社会公众公开的；
+
+
+##### （6）从合法公开披露的信息中收集的您的个人信息的，如合法的新闻报道、政府信息公开等渠道；
+
+
+##### （7）根据您的要求签订合同所必需的；
+
+
+##### （8）用于维护所提供的产品与/或服务的安全稳定运行所必需的，例如发现、处置产品与/或服务的故障；
+
+
+##### （9）为合法的新闻报道所必需的；
+
+
+##### （10）学术研究机构基于公共利益开展统计或学术研究所必要，且对外提供学术研究或描述的结果时，对结果中所包含的个人信息进行去标识化处理的。
+
+
+### 二、信息的存储
+
+
+#### （一）存放地域
+
+
+我们遵守法律法规的规定，将在中华人民共和国境内收集和产生的个人信息存储在境内。  
+
+
+#### （二）存储期限
+
+
+除非法律法规另有要求，我们仅在实现本声明所述目的所必需的时间内保留您的个人信息，超期会进行删除或进行匿名化处理。  
+
+
+### 三、数据安全保护
+
+
+为保护网络的完整性，vivo 采取了符合业界标准的安全防护措施以保护个人信息，防止数据遭到未经授权的访问、使用、修改、公开披露。我们将采取一切合理可行的措施保护个人信息，包括但不限于：  
+
+
+#### a) 进行安全检查、使用加密工具和软件、以及其他合理的安全措施和程序；
+
+
+#### b) 采取加密技术确保信息传输与存储过程的安全性和保密性，并建立安全事件响应团队，及时进行问题的定位、分析、处理；
+
+
+#### c) 限定授权访问人员，并采取分级权限管理措施，仅网络管理员和基于业务必要需了解资料的人员才能从内部访问用户的非公开个人信息。
+
+
+如果 vivo 知悉 vivo IT 数据网络安全受到危害或由于外部行为（包括但不限于外部安全攻击）使用户的非公开信息披露给不相关第三方，尽管本隐私政策中有其他规定，vivo 仍将采取其认为适当的合理措施，包括但不限于内部调查、上报并通知执法机构、以及配合执法机构工作等；如果 vivo 发现用户提供给 vivo IT 数据网络的个人信息以非本隐私声明允许的方式进行了非法披露，vivo 将尽快采取合法合理措施通知相关用户，告知被披露的信息以及 vivo IT 数据网络对该信息的知悉程度，最大程度采取补救措施。  
+
+
+### 四、未成年人保护
+
+
+本 SDK 产品主要面向成年人。  
+ 若您是开发者，如果终端用户是未满 14 周岁的未成年人（“儿童”），您应当向儿童的父母或其他监护人告知本规则，并在征得儿童的父母或其他监护人同意的前提下处理儿童个人信息。如果我们发现开发者未征得儿童监护人同意向我们提供儿童个人信息的，我们将会采取措施尽快删除。  
+ 若您是儿童监护人，当您对您所监护儿童个人信息保护有相关疑问或权利请求时，您可以联系开发者，或通过本规则第六条提供的方式与我们联系。  
+
+
+### 五、变更
+
+
+我们可能适时修订本规则内容。如果某一功能或服务未在前述说明中且需要收集终端用户的信息，我们将在变更生效前，通过网站公告等方式进行提示。如您是开发者，当更新后的本规则对处理终端用户的个人信息情况有重大变化的，您应当适时更新隐私政策，并以弹框形式通知终端用户并且获得其同意，如果终端用户不同意接受本规则，请停止集成 SDK 产品。  
+
+
+### 六、如何联系我们
+
+
+如果您有任何疑问、意见或建议，请拨打我们的客服电话 95033 或发送电子邮件至[iotpartners@vivo.com](mailto:iotpartners@vivo.com)的方式与我们联系。
+
+
+---
+
+
+<!-- 文档 66: js-api/connect/development-guidance/rpc-sdk-guidance.md -->
+
+
+## vivo 智能终端设备 SDK
+
+## vivo 智能终端设备 SDK
+
+更新时间：2025-07-23 09:40:34
+
+
+### 开发准备，申请 appid
+
+
+##### 1. 申请 app 开发者接入，接入地址：[vivo 开放平台](https://dev.vivo.com.cn/)，已有账号则无需申请，直接登录
+
+
+##### 2. 申请账号后，注册对应的 app，取到 appid
+
+
+### SDK 集成
+
+
+```
+
+implementation files('libs/device-rpc.aar')
+```
+
+复制代码
+### 初始化
+
+
+```
+
+ // 在 app 恰当的时候初始化，如果需要拉起并发送到通知，建议放 application 里面。
+ DeviceRpcManager.getInstance().init(getApplicationContext(), String encryStr,InitCallBack initCallBack);
+```
+
+复制代码
+##### encryStr:需联系 vivo 对接人员获取（[xiaoming.ling@vivo.com](mailto:xiaoming.ling@vivo.com)），请提供包名、appid
+
+
+##### InitCallBack:鉴权结果回调
+
+
+##### manifest 中添加 meta 数据，固定格式和名称，用于设备查询 app 功能信息
+
+
+```
+
+<meta-data android:name="health.device.manager.version" android:value="1" />
+<meta-data android:name="appid" android:value="开发平台申请的appid" />
+```
+
+复制代码
+### 三方 APP 协议参考设计
+
+
+三方 App 除了获取“运动健康功能版本号”，“读取设备对应功能版本号”外，通常需要使用接口<给设备发送 Request 数据>跟手机交换数据，为了区分不同 Request 数据类型，建议使用如下 Json 格式
+
+
+```
+
+{
+     "type":"type\_xxxx"
+     "data":{}
+}
+```
+
+复制代码
+##### 对应的 Response 数据类型，建议使用如下 Json 格式：
+
+
+```
+
+{
+     "code"：0
+     "result":{}
+}
+```
+
+复制代码
+##### 其中
+
+
+- type 指定数据类型，不同的业务对应不同的类型，用于对端区分数据，作相应处理
+- data 数据，不同业务有不同的数据
+- code 对端的业务执行结果
+- result 结果依赖不同的 type 而不同
+
+
+### SDK 下载
+
+
+[vivo 智能终端设备 SDK](https://h5.vivo.com.cn/health/rpcsdk/new/device-rpc.aar)
+
+
+### API 参考
+
+
+[手机侧](/api/connect/mobile-side/)
+
+
+### 隐私政策
+
+
+[隐私政策](/api/connect/development-guidance/privacy-policy/)
+
+
+---
+
+
+<!-- 文档 67: js-api/connect/development-guidance/watch-guidance.md -->
+
+
+## 穿戴业务 Kit
+
+## 穿戴业务 Kit
+
+更新时间：2023-10-31 19:37:39
+
+
+### 代码示例
+
+
+##### 创建连接实例
+
+
+```
+
+ create() {
+    console.log(`click here!`)
+    connect = interconnect.instance({ package: 'com.vivo.health.deviceRpcSdk.demo', fingerprint: '5de8782b74c1e2e064786428c229ab68884e7563704d0642466bf5f51dfa1330' })
+    this.create_text = "成功创建"
+    this.onopen()
+    this.onclose()
+    this.onerror()
+    this.onmessage()
+    timer = setTimeout(() => {
+      console.log(`等待 3s 执行send`)
+      this.send()
+    }, 3 \* 1000)
+
+  },
+```
+
+复制代码
+##### 数据发送
+
+
+```
+
+  send() {
+    console.log('send--------')
+    const self = this;
+    if (connect == null) {
+      console.log('interconnect feature not instanced!!')
+      return
+    }
+    connect.send({
+      data: {
+        type: 'getIsLogin'
+      },
+      success: function () {
+        self.send_status = '是'
+        console.log(`handling success`)
+      },
+      fail: function (data, code) {
+        self.send_status = '否'
+        console.log(`handling fail, code = ${code}`)
+      }
+    })
+  },
+```
+
+复制代码
+##### 数据接收
+
+
+```
+
+  onmessage() {
+    console.log('onmessage--------')
+    // 监听手机侧应用的数据
+    const self = this
+    if (connect == null) {
+      console.log('interconnect feature not instanced!!')
+      return
+    }
+    connect.onmessage = function (data) {
+      if (data && data.isFileType) {
+        console.log('filename is', data.fileName)
+      } else {
+        console.log('msg is', data)
+      }
+      self.onmessage_data = data
+    }
+
+  },
+```
+
+复制代码
+##### 断开及销毁
+
+
+```
+
+  close() {
+    const self = this
+    if (connect == null) {
+      console.log('interconnect feature not instanced!!')
+      return
+    }
+    connect.close({
+
+      success() {
+        console.log(`close success`)
+        self.close_data = 'success!'
+      },
+      fail(data, code) {
+        console.log(`handling fail, code = ${code}`)
+        self.close_data = 'fail!'
+      },
+    })
+  },
+
+  onDestroy() {
+    if(timer != null){
+      clearTimeout(timer) // 清除定时函数
+    }
+    this.close()
+  },
+```
+
+复制代码
+### API 参考
+
+
+[vivo 智能终端设备侧](/api/connect/interconnect/)
 
 
 ---

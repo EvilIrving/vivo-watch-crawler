@@ -239,11 +239,11 @@
       "breadcrumb": [],
       "summary": "image-animator\n更新时间：\n2023-12-21 13:49:50\n图片帧动画播放器。\n属性\n支持\n通用属性\n还支持如下属性：\n名称\n类型\n默认值\n必填\n描述\nimages\nArray<ImageFrame>\n-\n是\n设置图片帧信息集合。每一帧的帧信息包含图片路径、图片大小和图片位置信息。目前支持的图片格式为 png。\npredecode\nNumber\n0\n否\n是否启用预解码，默认值",
       "keywords": [
-        "String",
         "image-animator",
-        "ImageFrame",
+        "Number",
         "Array",
-        "Number"
+        "ImageFrame",
+        "String"
       ],
       "has_code": true
     },
@@ -255,8 +255,8 @@
       "breadcrumb": [],
       "summary": "image\n更新时间：\n2024-03-15 09:29:57\n渲染图片，不支持子组件、事件、方法\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\nsrc\n<uri>\n-\n否\n图片的 uri，支持本地图片和网络图片，支持的图片格式包括静态类型(png, svg, .9, gif)\nalt\n<uri>\n| 'blank'\n-\n否\n加载时显示的占位图；只支持本地图片资源(png)。\n注意：alt",
       "keywords": [
-        "Image",
-        "image"
+        "image",
+        "Image"
       ],
       "has_code": false
     },
@@ -280,8 +280,8 @@
       "breadcrumb": [],
       "summary": "概述\n更新时间：\n2023-10-31 19:37:39\n作为组成复杂组件和应用的基础模块，基本的 UI 展示功能通常包括文本框、链接和图片等元素。这些 UI 组件是构建用户界面的重要基础，通过这些基本元素的组合与拼接，可以实现丰富多彩、充满个性化的 UI 设计。蓝河系统提供了这些基本 UI 展示功能的实现和支持，以帮助您快速构建和部署丰富多样的用户界面和互动性应用。\n基础组件介绍\n更新时间：\n2",
       "keywords": [
-        "JavaScript",
-        "概述"
+        "概述",
+        "JavaScript"
       ],
       "has_code": false
     },
@@ -294,9 +294,9 @@
       "summary": "physics-engine\n更新时间：\n2025-10-10 09:34:52\n概述\n物理引擎是一种用于模拟现实世界物理规律的能力，包括重力、碰撞、摩擦、弹性、刚体运动等，使应用中的物体行为更加自然、真实。\n基本概念：\n空间 (Space)\n空间\n是物理引擎中用于模拟物理效果的容器。\n在一个空间中，可以添加多个刚体（Body）和形状（Shape）。\n每个\nphysics-engine\n组件对应一",
       "keywords": [
         "Shape",
-        "Body",
         "physics-engine",
-        "Space"
+        "Space",
+        "Body"
       ],
       "has_code": true
     },
@@ -308,9 +308,9 @@
       "breadcrumb": [],
       "summary": "progress\n更新时间：\n2025-07-08 14:41:29\n进度条，不支持子组件，支持\n通用事件\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\npercent\n<number>\n0\n否\n当前进度\ntype\nhorizontal | arc\nhorizontal\n否\n进度条类型，不支持动态修改\n样式\n支持\n通用样式\nhorizontal progress 底色为(136, 136,",
       "keywords": [
-        "Object",
         "String",
         "progress",
+        "Object",
         "Number"
       ],
       "has_code": false
@@ -372,10 +372,10 @@
       "breadcrumb": [],
       "summary": "动画样式\n更新时间：\n2025-04-15 11:26:34\n蓝河应用支持开发者制作动画，提供了\ntransform\n类、\nanimation\n类的动画样式属性，且参数格式与 CSS 对齐，更方便开发者上手适配动画\ntransform\n可参考此\n文档\n入门\nanimation\n可参考此\n文档\n入门\n动画样式列表\n名称\n类型\n默认值\n描述\ntransform-origin\n<position>\n0p",
       "keywords": [
-        "Color",
+        "Opacity",
         "Width",
-        "动画样式",
-        "Opacity"
+        "Color",
+        "动画样式"
       ],
       "has_code": true
     },
@@ -412,8 +412,8 @@
       "summary": "通用事件\n更新时间：\n2025-10-09 11:25:10\n通用事件指所有组件均支持的事件回调。\n开发者可以在组件标签上通过\non{eventName}\n（如\nonclick\n）或\n@{eventName}\n（如\n@click\n）的形式注册事件处理函数。 两种写法的效果一致，其中\n@event\n是语法糖，更适用于框架风格的开发方式。\n有关事件绑定的更多说明，请参考\n事件绑定\n文档。\n示例代码\n<",
       "keywords": [
         "MouseEvent",
-        "通用事件",
-        "TouchEvent"
+        "TouchEvent",
+        "通用事件"
       ],
       "has_code": true
     },
@@ -425,8 +425,8 @@
       "breadcrumb": [],
       "summary": "通用方法\n更新时间：\n2024-10-11 11:55:18\n通用方法，提供给所有组件调用的方法\n在组件使用\nid\n标记 id 属性后，开发者可通过\nthis.$element('idName')\n获取 dom 节点，再调用以下列举的\n通用方法\nid\n属性赋值可以查看此\n文档\n入门\nthis.$element\n可以查看此\n文档\n入门\ngetBoundingClientRect(Object obj",
       "keywords": [
-        "Object",
-        "通用方法"
+        "通用方法",
+        "Object"
       ],
       "has_code": true
     },
@@ -438,8 +438,8 @@
       "breadcrumb": [],
       "summary": "通用样式\n更新时间：\n2025-02-20 20:02:23\n通用样式，即所有组件都可以支持的样式\n它们均与 css 的属性样式用法保持一致，开发者可写在\n内联样式\n或\n<style>\n标签里，实现组件样式的定制化\n关于组件样式的设置，可以参考此\n文档\n入门\n类型说明\n长度类型\n名称\n类型定义\n描述\nlength\nString |Number\n用于描述尺寸单位，输入为 number 类型时，使用",
       "keywords": [
-        "通用样式",
         "String",
+        "通用样式",
         "Number"
       ],
       "has_code": true
@@ -452,10 +452,10 @@
       "breadcrumb": [],
       "summary": "组件动画\n更新时间：\n2025-10-09 11:25:10\n除了提供常规的 CSS 样式动画，蓝河应用还具备 JS 组件动画的方法。相比于 CSS 样式动画，这种动画方式拥有更为灵活、个性化的逻辑控制能力。\nElement.animate()\n创建一个\nAnimation\n对象实例；调用其\nplay\n方法，即可执行动画，表现为一系列变换 （位置、大小、旋转角度、背景颜色和不透明度）。\n语法\nco",
       "keywords": [
-        "Element",
+        "Animation",
         "组件动画",
-        "Demo",
-        "Animation"
+        "Element",
+        "Demo"
       ],
       "has_code": true
     },
@@ -467,8 +467,8 @@
       "breadcrumb": [],
       "summary": "自定义字体样式\n更新时间：\n2023-12-21 17:59:06\nfont-face 用于定义字体样式。当需要为文本组件设置自定义字体时，可以在 style 中定义 font-face 作为自定义字体，然后在 font-family 中可以引用该字体。\n自定义字体可以是从项目中的字体文件或网络字体文件中加载的字体。\n注： 只支持 ttf 和 otf 格式的字体。\n定义 font-face\n@fo",
       "keywords": [
-        "Common",
-        "自定义字体样式"
+        "自定义字体样式",
+        "Common"
       ],
       "has_code": true
     },
@@ -505,11 +505,11 @@
       "breadcrumb": [],
       "summary": "UI 组件支持的表冠旋转\n更新时间：\n2025-10-09 11:25:10\n作为手表上非常重要的交互按钮，表冠在蓝河系统中得到了充分的支持。我们严格遵守了只有在获得表冠焦点后才能响应表冠事件的规则，在此前提下，蓝河系统提供了丰富的表冠响应方式，并支持开发者进行自定义和个性化的表冠响应。这些支持和机制的存在，可以让开发人员更加便捷地使用 UI 组件和表冠交互控制，提高表冠的交互性和可用性。\nUI",
       "keywords": [
-        "Function",
         "UI 组件支持的表冠旋转",
-        "Object",
         "Boolean",
-        "Number"
+        "Number",
+        "Object",
+        "Function"
       ],
       "has_code": true
     },
@@ -533,8 +533,8 @@
       "breadcrumb": [],
       "summary": "list-item\n更新时间：\n2025-06-19 19:54:46\n<list>\n的子组件，用来展示列表具体 item，宽度默认充满 list 组件，支持子组件，支持\n通用属性\n，支持\n<div>样式\n，不支持 position 样式，支持\n通用样式\n，支持\n通用事件\n属性\n名称\n类型\n默认值\n必填\n描述\ntype\n<string>\n-\n是\nlist-item 类型，值为自定义的字符串，如'l",
       "keywords": [
-        "Slots",
-        "list-item"
+        "list-item",
+        "Slots"
       ],
       "has_code": false
     },
@@ -546,8 +546,8 @@
       "breadcrumb": [],
       "summary": "list\n更新时间：\n2025-06-19 19:54:46\n列表视图容器，仅支持\n<list-item>\n子组件，支持\n通用属性\n，支持\n通用样式\n属性\n名称\n类型\n默认值\n必填\n描述\ntype\nnormal|fisheye|grid\nnormal\n否\n设置列表的的布局方式，默认为普通的 list 布局；fisheye 是类似鱼眼镜头效果布局；grid 是网格布局。该属性不可动态变更\nscrol",
       "keywords": [
-        "Object",
-        "list"
+        "list",
+        "Object"
       ],
       "has_code": false
     },
@@ -572,9 +572,9 @@
       "summary": "scroll\n更新时间：\n2025-10-09 11:25:10\n滚动视图容器。竖向或水平方向滚动容器，竖向滚动需要设置定高，水平滚动需要设置定宽。\n子组件\n支持，也支持嵌套\nscroll\n。\n属性\n支持\n通用属性\n属性\n类型\n默认值\n必填\n说明\nscroll-x\nBoolean\nfalse\n否\n是否允许横向滚动\nscroll-y\nBoolean\nfalse\n否\n是否允许纵向滚动\nscroll-t",
       "keywords": [
         "String",
-        "Boolean",
         "scroll",
-        "Number"
+        "Number",
+        "Boolean"
       ],
       "has_code": true
     },
@@ -598,8 +598,8 @@
       "breadcrumb": [],
       "summary": "swiper\n更新时间：\n2025-04-09 17:46:39\n滑块视图容器，支持子组件\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\nindex\n<number>\n0\n否\n当前显示的子组件索引\nindicator\n<boolean>\ntrue\n否\n是否启用 indicator，默认 true\nscrollbar\n<boolean>\nfalse\n否\n是否启用滚动条，如果 indicato",
       "keywords": [
-        "Object",
-        "swiper"
+        "swiper",
+        "Object"
       ],
       "has_code": false
     },
@@ -611,8 +611,8 @@
       "breadcrumb": [],
       "summary": "cellular-list\n更新时间：\n2024-02-28 14:36:29\n蜂窝列表组件，将指定结构的数组渲染成蜂窝状列表。\n* 排列方式\n *     19___20\n *      |\n *      |  7___8___9\n *      |  |        \\\n *     18  | 1___2   10\n *    /    |  \\   \\   \\\n *   17    6",
       "keywords": [
-        "cellular-list",
         "String",
+        "cellular-list",
         "Integer"
       ],
       "has_code": true
@@ -674,8 +674,8 @@
       "breadcrumb": [],
       "summary": "vw-alert\n更新时间：\n2025-04-30 20:56:55\n控件定义：弹窗组件，此组件为应用内主动触发的信息、操作确认弹窗（注意：此组件不包含应用外的系统通知提醒弹窗）\n属性\n名称\n类型\n默认值\n必填\n描述\nicon\n<string>\n-\n否\n图标\ntitle\n<string>\n-\n否\n标题\ncontent\n<string>\n-\n是\n正文\ndes\n<string>\n-\n否\n副文本/辅助信",
       "keywords": [
-        "vw-alert",
-        "Array"
+        "Array",
+        "vw-alert"
       ],
       "has_code": false
     },
@@ -687,8 +687,8 @@
       "breadcrumb": [],
       "summary": "vw-button\n更新时间：\n2025-04-30 20:56:55\n一种基础的组件，点击后可执行对应（按钮表意）的操作。包含“文字按钮”“图标按钮”两类；\n属性\n名称\n类型\n默认值\n必填\n描述\ntype\n<string>\nplain\n否\n类型包括以下五种类型： plain,primary,success,warning,danger\nvalue\n<string>\n-\n是\n按钮文本\ndisabl",
       "keywords": [
-        "vw-button",
-        "MouseEvent"
+        "MouseEvent",
+        "vw-button"
       ],
       "has_code": false
     },
@@ -738,8 +738,8 @@
       "summary": "vw-list\n更新时间：\n2025-04-30 20:56:55\n列表包含一系列连续的列表项，可以呈现文本、图标等内容。 list 只提供每个选项相同的列表，如果每个选项不同可使用 list-item 类组件进行实现。\n参考当前需求，将列表分为以下几种：\n1.vw-list:最常用的列表，包含图标、标题、箭头（listArray 子项必填选项为 icon、title，list 属性可选 type",
       "keywords": [
         "vw-list",
-        "Array",
-        "Object"
+        "Object",
+        "Array"
       ],
       "has_code": true
     },
@@ -763,8 +763,8 @@
       "breadcrumb": [],
       "summary": "vw-slide\n更新时间：\n2025-04-30 20:56:55\n滑动条组件用来快速调节设置值，如音量、亮度、色彩饱和度等. 用户通过点击左侧/右侧按钮的方式增加/降低数值.\n属性\n名称\n类型\n默认值\n必填\n描述\ntype\n<string>\n'normal'\n是\n类型，普通(normal)和栅格(grid)\nvalue\n<number>\n-\n是\n当前进度数值\nmaxValue\n<number>",
       "keywords": [
-        "TouchEvent",
-        "vw-slide"
+        "vw-slide",
+        "TouchEvent"
       ],
       "has_code": true
     },
@@ -789,8 +789,8 @@
       "breadcrumb": [],
       "summary": "canvas\n更新时间：\n2024-10-11 11:55:18\n画布组件，通过使用 JavaScript 中的脚本，可以在 canvas 上绘制图形，文字等。\n子组件\n不支持\n属性\n支持\n通用属性\n样式\n支持\n通用样式\n方法\ncanvas.getContext()\n创建 canvas 绘图上下文\n参数\n参数\n类型\n描述\ncontextType\n<string>\n目前支持传入'2d'\n返回值\n参数",
       "keywords": [
-        "canvas",
         "CanvasGradient",
+        "canvas",
         "JavaScript"
       ],
       "has_code": true
@@ -815,8 +815,8 @@
       "breadcrumb": [],
       "summary": "input\n更新时间：\n2024-03-08 15:41:38\n提供可交互的界面，接收用户的输入，默认为单行\n子组件\n不支持\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\ntype\nbutton | checkbox | radio | text | date | speak\ntext\n否\n支持动态修改，\ntext\n为输入法录入，\nspeak\n为语音录入\nchecked\n<boolean>",
       "keywords": [
-        "String",
         "Object",
+        "String",
         "input",
         "Number"
       ],
@@ -890,11 +890,11 @@
       "breadcrumb": [],
       "summary": "自然语言处理\n更新时间：\n2025-04-30 20:56:55\n使用前提条件\n该接口底层依赖以下接口实现，开发者使用前需要在 manifest.json 中声明以下接口:\n{\n\"name\"\n:\n\"blueos.network.fetch\"\n}\n复制代码\n使用\nimport\nnlp\nfrom\n\"@blueos.ai.nlp\"\n复制代码\n接口总览\n接口名称\n接口说明明\ntranslateText\n翻",
       "keywords": [
-        "TranslateParams",
-        "自然语言处理",
-        "TranslateData",
+        "Promise",
         "Auth",
-        "Promise"
+        "自然语言处理",
+        "TranslateParams",
+        "TranslateData"
       ],
       "has_code": true
     },
@@ -918,11 +918,11 @@
       "breadcrumb": [],
       "summary": "语音技术\n更新时间：\n2025-04-30 20:56:55\n语音技术目前支持 ASR 与 TTS 两种技术。\nASR，自动语音识别技术（Automatic Speech Recognition）是一种将人的语音转换为文本的技术, 支持实时短语音识别与长语音听写。\nTTS，文字转语音技术（Text to Speech）是一种将文字转成语音的技术，可将上传的单句文本转成播报音频，包含了短音频生成和长",
       "keywords": [
-        "Automatic",
-        "Recognition",
         "语音技术",
-        "Speech",
-        "Text"
+        "Recognition",
+        "Text",
+        "Automatic",
+        "Speech"
       ],
       "has_code": true
     },
@@ -934,10 +934,10 @@
       "breadcrumb": [],
       "summary": "视觉技术\n更新时间：\n2025-04-30 20:56:55\n使用前提条件\n该接口底层依赖以下接口实现，开发者使用前需要在 manifest.json 中声明以下接口:\n{\n\"name\"\n:\n\"blueos.network.fetch\"\n}\n复制代码\n使用\nimport\nvision\nfrom\n\"@blueos.ai.vision\"\n复制代码\n接口总览\n接口名称\n接口说明\ncommonOcr\n识别",
       "keywords": [
-        "Auth",
         "Promise",
-        "OcrParams",
+        "Auth",
         "视觉技术",
+        "OcrParams",
         "OcrResult"
       ],
       "has_code": true
@@ -975,9 +975,9 @@
       "summary": "调用规则\n更新时间：\n2024-08-13 15:19:43\n同步\n同步方法调用后必须等到方法结果返回后才能继续后续的行为，返回值可以是任意类型。\n示例\nimport\ncontext\nfrom\n'@blueos.app.context'\nexport\ndefault\n{\ngetInfo\n(\n)\n{\nconst\ninfo\n=\ncontext\n.\ngetInfo\n(\n)\nconsole\n.\nlog\n(",
       "keywords": [
         "Error",
-        "调用规则",
         "Device",
-        "Failed"
+        "Failed",
+        "调用规则"
       ],
       "has_code": true
     },
@@ -989,9 +989,9 @@
       "breadcrumb": [],
       "summary": "说明\n更新时间：\n2025-04-29 11:37:34\n针对手机及vivo智能终端设备互联，向第三方应用开发者提供高层次的、简单易用的 API。\n第三方应用开发者无需关心手机及vivo智能终端设备的互联细节，通过 API 提供的能力可以简单地实现设备状态查询订阅、设备信息查询、数据传输等操作。\nvivo智能终端设备SDK及穿戴业务Kit分别为手机及vivo智能终端设备提供API。\n手机侧应用基于",
       "keywords": [
+        "Java",
         "说明",
-        "Native",
-        "Java"
+        "Native"
       ],
       "has_code": false
     },
@@ -1003,8 +1003,8 @@
       "breadcrumb": [],
       "summary": "vivo 智能终端设备 SDK 隐私政策\n更新时间：\n2024-10-11 12:02:48\n生效日期：2023 年 11 月 1 日\n引言\n本隐私政策适用于维沃移动通信有限公司及其关联方（以下简称“我们”或“vivo”，注册地址：广东省东莞市长安镇维沃路 1 号）提供的 vivo 智能终端设备 SDK 产品及服务（以下统称“SDK 产品”）。本文档要向开发者及其终端用户(“终端用户”)说明，为了",
       "keywords": [
-        "App",
-        "vivo 智能终端设备 SDK 隐私政策"
+        "vivo 智能终端设备 SDK 隐私政策",
+        "App"
       ],
       "has_code": false
     },
@@ -1016,11 +1016,11 @@
       "breadcrumb": [],
       "summary": "vivo 智能终端设备 SDK\n更新时间：\n2025-07-23 09:40:34\n开发准备，申请 appid\n1. 申请 app 开发者接入，接入地址：\nvivo 开放平台\n，已有账号则无需申请，直接登录\n2. 申请账号后，注册对应的 app，取到 appid\nSDK 集成\nimplementation\nfiles\n(\n'libs/device-rpc.aar'\n)\n复制代码\n初始化\n// 在",
       "keywords": [
-        "String",
-        "vivo 智能终端设备 SDK",
         "DeviceRpcManager",
-        "App",
-        "InitCallBack"
+        "InitCallBack",
+        "vivo 智能终端设备 SDK",
+        "String",
+        "App"
       ],
       "has_code": true
     },
@@ -1045,9 +1045,9 @@
       "breadcrumb": [],
       "summary": "vivo 智能终端设备侧\n更新时间：\n2025-01-17 11:58:56\n用于和搭配使用的手机 app 进行通信，收发手机 app 数据。\n接口声明\n{\n\"name\"\n:\n\"blueos.bluexlink.connectionManager\"\n}\n复制代码\n导入模块\nimport\ninterconnect\nfrom\n'@blueos.bluexlink.connectionManager'",
       "keywords": [
-        "Function",
         "Connect",
         "vivo 智能终端设备侧",
+        "Function",
         "App"
       ],
       "has_code": true
@@ -1073,11 +1073,11 @@
       "breadcrumb": [],
       "summary": "手机侧\n更新时间：\n2023-10-30 19:45:39\n接口使用\n同步发送数据\n命令发送 API\nRequest request\n=\nnew\nRequest\n.\nBuilder\n(\n)\n.\naction\n(\nConstant\n.\nAction\n.\nACTION_DEVICE_BUSINESS_DATA\n)\n.\npkgName\n(\n\"com.vivo.health\"\n)\n.\ndata\n(\ndat",
       "keywords": [
-        "Action",
         "Request",
         "Builder",
-        "Constant",
-        "手机侧"
+        "手机侧",
+        "Action",
+        "Constant"
       ],
       "has_code": true
     },
@@ -1102,8 +1102,8 @@
       "summary": "生命周期\n更新时间：\n2025-07-03 13:00:36\n了解应用/页面/自定义组件的生命周期与状态\n应用生命周期\nonCreate\n监听应用创建，应用创建时调用。\n参数\n无\nonDestroy\n监听应用销毁，应用销毁时调用。\n参数\n无\nonShow\n应用显示在前台时调用。\n参数\n无\nonHide\n应用退到后台时调用。\n参数\n无\n页面生命周期\nonInit\n监听页面初始化。当页面完成初始化时调",
       "keywords": [
         "生命周期",
-        "Number",
-        "Object"
+        "Object",
+        "Number"
       ],
       "has_code": true
     },
@@ -1115,10 +1115,10 @@
       "breadcrumb": [],
       "summary": "运动健康\n更新时间：\n2025-06-30 19:53:14\n概述\n蓝河应用等运动健康模块旨在支持用户的运动和健康数据管理。该模块提供了两个主要部分：采样数据和统计数据，为用户提供了全面的健康数据管理和实时监控功能，对于健康和运动类应用、健康监测工具和健康管理应用非常有用。\n接口声明\n{\n\"name\"\n:\n\"blueos.health.health\"\n}\n复制代码\n导入模块\nimport\nheal",
       "keywords": [
-        "RecentSample",
+        "运动健康",
         "Sample",
-        "DataType",
-        "运动健康"
+        "RecentSample",
+        "DataType"
       ],
       "has_code": true
     },
@@ -1144,9 +1144,9 @@
       "breadcrumb": [],
       "summary": "文件存储\n更新时间：\n2025-01-15 16:19:38\n接口声明\n{\n\"name\"\n:\n\"blueos.storage.file\"\n}\n复制代码\n导入模块\nimport\nfile\nfrom\n'@blueos.storage.file'\n复制代码\n注意：下面文件操作仅支持 URI 的写法，不支持文件绝对路径。\n接口定义\nfile.move(OBJECT)\n将源文件移动到指定位置\n参数：\n参数名",
       "keywords": [
-        "Function",
         "String",
-        "文件存储"
+        "文件存储",
+        "Function"
       ],
       "has_code": true
     },
@@ -1158,9 +1158,9 @@
       "breadcrumb": [],
       "summary": "K-V 数据存储\n更新时间：\n2025-10-09 11:25:10\n接口声明\n{\n\"name\"\n:\n\"blueos.storage.storage\"\n}\n复制代码\n导入模块\nimport\nstorage\nfrom\n'@blueos.storage.storage'\n或\nconst\nstorage\n=\nrequire\n(\n'@blueos.storage.storage'\n)\n复制代码\n接口定义",
       "keywords": [
-        "Function",
+        "String",
         "K-V 数据存储",
-        "String"
+        "Function"
       ],
       "has_code": true
     },
@@ -1184,10 +1184,10 @@
       "breadcrumb": [],
       "summary": "存储空间统计\n更新时间：\n2025-08-13 20:11:57\nstatvfs 一个用来获取应用空间的模块，包含了获取可用空间与总空间接口，支持同步与异步。\n接口声明\n{\n\"name\"\n:\n\"blueos.storage.statvfs\"\n}\n复制代码\n导入模块\nimport\nstatvfs\nfrom\n'@blueos.storage.statvfs'\n复制代码\n接口定义\nstatvfs.get",
       "keywords": [
-        "Function",
-        "Size",
+        "Byte",
         "存储空间统计",
-        "Byte"
+        "Function",
+        "Size"
       ],
       "has_code": true
     },
@@ -1223,8 +1223,8 @@
       "breadcrumb": [],
       "summary": "音频\n更新时间：\n2025-07-10 11:01:16\n接口声明\n{\n\"name\"\n:\n\"blueos.media.audio.audioPlayer\"\n}\n复制代码\n导入模块\nimport\naudio\nfrom\n'@blueos.media.audio.audioPlayer'\n或\nconst\naudio\n=\nrequire\n(\n'@blueos.media.audio.audioPlayer",
       "keywords": [
-        "音频",
         "String",
+        "音频",
         "Function"
       ],
       "has_code": true
@@ -1237,9 +1237,9 @@
       "breadcrumb": [],
       "summary": "音频管理\n更新时间：\n2025-07-10 11:01:16\n接口声明\n{\n\"name\"\n:\n\"blueos.media.audio.audioManager\"\n}\n复制代码\n导入模块\nimport\naudioManager\nfrom\n'@blueos.media.audio.audioManager'\n复制代码\n接口定义\nsetVolume(OBJECT)\n设置音量\n参数\n参数名\n类型\n必填\n说",
       "keywords": [
-        "Function",
+        "AudioVolumeType",
         "音频管理",
-        "AudioVolumeType"
+        "Function"
       ],
       "has_code": true
     },
@@ -1251,10 +1251,10 @@
       "breadcrumb": [],
       "summary": "电量信息\n更新时间：\n2024-08-13 15:19:43\n接口声明\n{\n\"name\"\n:\n\"blueos.hardware.battery\"\n}\n复制代码\n导入模块\nimport\nbattery\nfrom\n'@blueos.hardware.battery'\n或\nconst\nbattery\n=\nrequire\n(\n'@blueos.hardware.battery'\n)\n复制代码\n接口定义\nb",
       "keywords": [
-        "Function",
         "Boolean",
         "电量信息",
-        "Number"
+        "Number",
+        "Function"
       ],
       "has_code": true
     },
@@ -1266,12 +1266,12 @@
       "breadcrumb": [],
       "summary": "蓝牙\n更新时间：\n2025-10-09 11:25:10\n一、蓝牙整体介绍\n传统蓝牙\n传统蓝牙本机管理：打开和关闭蓝牙、设置和获取本机蓝牙名称、扫描和取消扫描周边蓝牙设备、获取本机蓝牙 profile 对其他设备的连接状态、获取本机蓝牙已配对的蓝牙设备列表。\n传统蓝牙远端设备操作：查询远端蓝牙设备名称和 MAC 地址、设备类型和配对状态，以及向远端蓝牙设备发起配对。\n低功率蓝牙 BLE\nBLE 设",
       "keywords": [
-        "蓝牙",
         "Profile",
-        "GattClientDevice",
-        "Attribute",
         "GattServer",
-        "Generic"
+        "Generic",
+        "Attribute",
+        "蓝牙",
+        "GattClientDevice"
       ],
       "has_code": true
     },
@@ -1283,10 +1283,10 @@
       "breadcrumb": [],
       "summary": "屏幕亮度\n更新时间：\n2023-11-08 11:11:17\n接口声明\n{\n\"name\"\n:\n\"blueos.hardware.display.brightness\"\n}\n复制代码\n导入模块\nimport\nbrightness\nfrom\n'@blueos.hardware.display.brightness'\n或\nconst\nbrightness\n=\nrequire\n(\n'@blueos.har",
       "keywords": [
-        "Function",
-        "屏幕亮度",
+        "Number",
         "Integer",
-        "Number"
+        "屏幕亮度",
+        "Function"
       ],
       "has_code": true
     },
@@ -1299,8 +1299,8 @@
       "summary": "密码算法\n更新时间：\n2025-04-27 20:44:09\n接口声明\n{\n\"name\"\n:\n\"blueos.security.cipher\"\n}\n复制代码\n导入模块\nimport\ncipher\nfrom\n'@blueos.security.cipher'\n或\nconst\ncipher\n=\nrequire\n(\n'@blueos.security.cipher'\n)\n复制代码\n接口定义\ncipher",
       "keywords": [
         "密码算法",
-        "None",
-        "String"
+        "String",
+        "None"
       ],
       "has_code": true
     },
@@ -1337,9 +1337,9 @@
       "breadcrumb": [],
       "summary": "设备信息\n更新时间：\n2025-03-31 14:41:09\n接口声明\n{\n\"name\"\n:\n\"blueos.hardware.deviceInfo\"\n}\n复制代码\n导入模块\nimport\ndevice\nfrom\n'@blueos.hardware.deviceInfo'\n或\nconst\ndevice\n=\nrequire\n(\n'@blueos.hardware.deviceInfo'\n)\n复制代码",
       "keywords": [
-        "Function",
         "设备信息",
-        "String"
+        "String",
+        "Function"
       ],
       "has_code": true
     },
@@ -1351,10 +1351,10 @@
       "breadcrumb": [],
       "summary": "公共事件\n更新时间：\n2023-12-21 13:49:50\n公共事件提供了多应用间数据传递和事件交互的能力。\n接口声明\n{\n\"name\"\n:\n\"blueos.app.event.eventManager\"\n}\n复制代码\n导入模块\nimport\nevent\nfrom\n'@blueos.app.event.eventManager'\n或\nconst\nevent\n=\nrequire\n(\n'@blueo",
       "keywords": [
-        "String",
         "公共事件",
-        "Array",
-        "Object"
+        "Object",
+        "String",
+        "Array"
       ],
       "has_code": true
     },
@@ -1366,9 +1366,9 @@
       "breadcrumb": [],
       "summary": "解压缩\n更新时间：\n2025-04-29 11:37:34\n接口声明\n{\n\"name\"\n:\n\"blueos.util.fastlz\"\n}\n复制代码\n导入模块\nimport\nfastlz\nfrom\n'@blueos.util.fastlz'\n或\nconst\nfastlz\n=\nrequire\n(\n'@blueos.util.fastlz'\n)\n复制代码\n接口定义\nfastlz.decompress(O",
       "keywords": [
-        "Function",
         "String",
-        "解压缩"
+        "解压缩",
+        "Function"
       ],
       "has_code": true
     },
@@ -1380,10 +1380,10 @@
       "breadcrumb": [],
       "summary": "数据请求\n更新时间：\n2024-10-11 11:55:18\n接口声明\n{\n\"name\"\n:\n\"blueos.network.fetch\"\n}\n复制代码\n导入模块\nimport\nfetch\nfrom\n'@blueos.network.fetch'\n或\nconst\nfetch\n=\nrequire\n(\n'@blueos.network.fetch'\n)\n复制代码\n接口定义\nfetch.fetch(OB",
       "keywords": [
-        "String",
         "ArrayBuffer",
-        "数据请求",
-        "Object"
+        "String",
+        "Object",
+        "数据请求"
       ],
       "has_code": true
     },
@@ -1395,10 +1395,10 @@
       "breadcrumb": [],
       "summary": "生成签名证书指纹\n更新时间：\n2024-01-10 16:04:30\n开发者通过\nJDK\n的\nKeytool\n工具以及签名文件，导出\nSHA256\n指纹。\nwindows\n执行 CMD 命令打开命令行工具，执行 cd 命令进入 keytool.exe 所在的目录（以下样例为 JDK 安装在 C 盘的 Program Files 目录）。\ncd\nC:\n\\\nProgram Files\n\\\nJava\n\\",
       "keywords": [
-        "Files",
-        "生成签名证书指纹",
         "Keytool",
-        "Program"
+        "Files",
+        "Program",
+        "生成签名证书指纹"
       ],
       "has_code": true
     },
@@ -1410,10 +1410,10 @@
       "breadcrumb": [],
       "summary": "地理位置\n更新时间：\n2024-08-13 15:19:43\n接口声明\n{\n\"name\"\n:\n\"blueos.hardware.location.location\"\n}\n复制代码\n导入模块\nimport\ngeolocation\nfrom\n'@blueos.hardware.location.location'\n或\nconst\ngeolocation\n=\nrequire\n(\n'@blueos.har",
       "keywords": [
-        "Function",
         "String",
         "地理位置",
-        "Number"
+        "Number",
+        "Function"
       ],
       "has_code": true
     },
@@ -1450,11 +1450,11 @@
       "breadcrumb": [],
       "summary": "多媒体\n更新时间：\n2025-08-13 20:11:57\n接口声明\n{\n\"name\"\n:\n\"blueos.media.audio.mediaManager\"\n}\n复制代码\n导入模块\nimport\nmedia\nfrom\n'@blueos.media.audio.mediaManager'\n或\nconst\nmedia\n=\nrequire\n(\n'@blueos.media.audio.mediaMan",
       "keywords": [
+        "多媒体",
         "ContentType",
-        "AudioPlayer",
-        "StreamType",
         "StreamUsage",
-        "多媒体"
+        "AudioPlayer",
+        "StreamType"
       ],
       "has_code": true
     },
@@ -1478,10 +1478,10 @@
       "breadcrumb": [],
       "summary": "网络状态\n更新时间：\n2024-10-11 11:55:18\n接口声明\n{\n\"name\"\n:\n\"blueos.network.networkManager\"\n}\n复制代码\n导入模块\nimport\nnetwork\nfrom\n'@blueos.network.networkManager'\n或\nconst\nnetwork\n=\nrequire\n(\n'@blueos.network.networkMana",
       "keywords": [
-        "Function",
-        "String",
         "Boolean",
-        "网络状态"
+        "String",
+        "网络状态",
+        "Function"
       ],
       "has_code": true
     },
@@ -1493,9 +1493,9 @@
       "breadcrumb": [],
       "summary": "消息通知\n更新时间：\n2024-09-02 20:54:40\n接口声明\n{\n\"name\"\n:\n\"blueos.app.notification.notificationManager\"\n}\n复制代码\n导入模块\nimport\nnotification\nfrom\n'@blueos.app.notification.notificationManager'\n或\nconst\nnotification\n=",
       "keywords": [
-        "Function",
+        "消息通知",
         "Notification",
-        "消息通知"
+        "Function"
       ],
       "has_code": true
     },
@@ -1507,8 +1507,8 @@
       "breadcrumb": [],
       "summary": "包管理\n更新时间：\n2025-10-09 11:25:10\n接口声明\n{\n\"name\"\n:\n\"blueos.package.packageManager\"\n}\n复制代码\n导入模块\nimport\npackageManager\nfrom\n'@blueos.package.packageManager'\n或\nconst\npackageManager\n=\nrequire\n(\n'@blueos.packag",
       "keywords": [
-        "Function",
         "String",
+        "Function",
         "包管理"
       ],
       "has_code": true
@@ -1521,10 +1521,10 @@
       "breadcrumb": [],
       "summary": "页面栈管理\n更新时间：\n2024-10-11 11:55:18\n接口声明\n{\n\"name\"\n:\n\"blueos.app.appmanager.pageStack\"\n}\n复制代码\n导入模块\nimport\npagestack\nfrom\n'@blueos.app.appmanager.pageStack'\n或\nconst\npagestack\n=\nrequire\n(\n'@blueos.app.appman",
       "keywords": [
-        "Function",
+        "页面栈管理",
         "String",
         "Array",
-        "页面栈管理"
+        "Function"
       ],
       "has_code": true
     },
@@ -1573,8 +1573,8 @@
       "breadcrumb": [],
       "summary": "弹窗\n更新时间：\n2023-10-30 10:12:45\n接口声明\n{\n\"name\"\n:\n\"blueos.window.prompt\"\n}\n复制代码\n导入模块\nimport\nprompt\nfrom\n'@blueos.window.prompt'\n或\nconst\nprompt\n=\nrequire\n(\n'@blueos.window.prompt'\n)\n复制代码\n接口定义\nprompt.showToa",
       "keywords": [
-        "String",
         "Toast",
+        "String",
         "弹窗",
         "Number"
       ],
@@ -1588,10 +1588,10 @@
       "breadcrumb": [],
       "summary": "录音\n更新时间：\n2024-09-02 14:53:40\n接口声明\n{\n\"name\"\n:\n\"blueos.media.audio.audioRecorder\"\n}\n复制代码\n导入模块\nimport\nrecord\nfrom\n'@blueos.media.audio.audioRecorder'\n或\nconst\nrecord\n=\nrequire\n(\n'@blueos.media.audio.audio",
       "keywords": [
-        "Function",
-        "String",
         "Error",
-        "录音"
+        "String",
+        "录音",
+        "Function"
       ],
       "has_code": true
     },
@@ -1603,10 +1603,10 @@
       "breadcrumb": [],
       "summary": "上传下载\n更新时间：\n2025-08-13 20:11:57\n接口声明\n{\n\"name\"\n:\n\"blueos.network.request\"\n}\n复制代码\n导入模块\nimport\nrequest\nfrom\n'@blueos.network.request'\n或\nconst\nrequest\n=\nrequire\n(\n'@blueos.network.request'\n)\n复制代码\n接口定义\nrequ",
       "keywords": [
-        "上传下载",
         "String",
-        "Array",
-        "Object"
+        "Object",
+        "上传下载",
+        "Array"
       ],
       "has_code": true
     },
@@ -1618,10 +1618,10 @@
       "breadcrumb": [],
       "summary": "页面路由\n更新时间：\n2024-01-10 16:04:30\n接口声明\n无需声明\n导入模块\nimport\nrouter\nfrom\n'@blueos.app.appmanager.router'\n或\nconst\nrouter\n=\nrequire\n(\n'@blueos.app.appmanager.router'\n)\n复制代码\n接口定义\nrouter.push(OBJECT)\n跳转到应用内的某个页面。",
       "keywords": [
-        "About",
+        "Object",
         "String",
         "页面路由",
-        "Object"
+        "About"
       ],
       "has_code": true
     },
@@ -1633,11 +1633,11 @@
       "breadcrumb": [],
       "summary": "定时任务\n更新时间：\n2024-09-14 16:42:27\n接口声明\n{\n\"name\"\n:\n\"blueos.app.appmanager.schedule\"\n}\n复制代码\n导入模块\nimport\nschedule\nfrom\n'@blueos.app.appmanager.schedule'\n或\nconst\nschedule\n=\nrequire\n(\n'@blueos.app.appmanager.",
       "keywords": [
+        "Number",
+        "Object",
         "Function",
         "String",
-        "定时任务",
-        "Object",
-        "Number"
+        "定时任务"
       ],
       "has_code": true
     },
@@ -1649,10 +1649,10 @@
       "breadcrumb": [],
       "summary": "屏幕管理\n更新时间：\n2023-12-25 11:01:05\n接口声明\n{\n\"name\"\n:\n\"blueos.hardware.display.screen\"\n}\n复制代码\n导入模块\nimport\nscreen\nfrom\n'@blueos.hardware.display.screen'\n或\nconst\nscreen\n=\nrequire\n(\n'@blueos.hardware.display.sc",
       "keywords": [
-        "屏幕管理",
-        "Display",
         "Always",
-        "Number"
+        "屏幕管理",
+        "Number",
+        "Display"
       ],
       "has_code": true
     },
@@ -1664,10 +1664,10 @@
       "breadcrumb": [],
       "summary": "传感器\n更新时间：\n2024-11-21 17:51:08\n接口声明\n{\n\"name\"\n:\n\"blueos.hardware.sensor.sensor\"\n}\n复制代码\n导入模块\nimport\nsensor\nfrom\n'@blueos.hardware.sensor.sensor'\n或\nconst\nsensor\n=\nrequire\n(\n'@blueos.hardware.sensor.sensor",
       "keywords": [
-        "Function",
         "String",
         "传感器",
-        "Number"
+        "Number",
+        "Function"
       ],
       "has_code": true
     },
@@ -1679,9 +1679,9 @@
       "breadcrumb": [],
       "summary": "系统设置\n更新时间：\n2024-09-02 14:53:40\n接口声明\n{\n\"name\"\n:\n\"blueos.service.settings\"\n}\n复制代码\n导入模块\nimport\nsettings\nfrom\n'@blueos.service.settings'\n复制代码\n在工程里面的 manifest 文件中配置如下内容\n申请权限\n{\n\"permissions\"\n:\n[\n{\n\"name\"\n:",
       "keywords": [
-        "Function",
+        "系统设置",
         "String",
-        "系统设置"
+        "Function"
       ],
       "has_code": true
     },
@@ -1693,9 +1693,9 @@
       "breadcrumb": [],
       "summary": "短信\n更新时间：\n2025-02-17 09:59:02\n在蓝河系统中，我们提供了 Deeplink 链接来使您可以快速打开短信服务所对应的页面。\n我们已经为短信服务功能提供了 Deeplink 链接，具体链接为\nhap://app/com.vivo.mms/pages/entry\n。\n该 Deeplink 链接的页面拉取是通过 Router 调用来实现的，您可以方便地打开短信服务页面并进行相关操",
       "keywords": [
-        "Deeplink",
+        "短信",
         "Router",
-        "短信"
+        "Deeplink"
       ],
       "has_code": true
     },
@@ -1708,9 +1708,9 @@
       "summary": "sim 卡管理\n更新时间：\n2024-10-11 11:55:18\n接口声明\n{\n\"name\"\n:\n\"blueos.telephony.simManager\"\n}\n复制代码\n导入模块\nimport\nsimManager\nfrom\n'@blueos.telephony.simManager'\n或\nconst\nsimManager\n=\nrequire\n(\n'@blueos.telephony.simM",
       "keywords": [
         "Sim",
-        "sim 卡管理",
         "Array",
-        "Function"
+        "Function",
+        "sim 卡管理"
       ],
       "has_code": true
     },
@@ -1734,8 +1734,8 @@
       "breadcrumb": [],
       "summary": "应用上下文\n更新时间：\n2025-10-09 11:25:10\n接口声明\n无需声明\n导入模块\nimport\napp\nfrom\n'@blueos.app.context'\n// 或 const app = require('@blueos.app.context')\n复制代码\n接口定义\napp.getInfo()\n获取当前应用信息\n参数：\n无\n返回值\n参数名\n类型\n说明\npackageName\nSt",
       "keywords": [
-        "应用上下文",
         "String",
+        "应用上下文",
         "Integer"
       ],
       "has_code": true
@@ -1748,9 +1748,9 @@
       "breadcrumb": [],
       "summary": "解包\n更新时间：\n2023-11-08 11:11:17\n接口声明\n{\n\"name\"\n:\n\"blueos.util.tar\"\n}\n复制代码\n导入模块\nimport\ntar\nfrom\n'@blueos.util.tar'\n或\nconst\nfastlz\n=\nrequire\n(\n'@blueos.util.tar'\n)\n复制代码\n接口定义\n注：“蓝河应用平台参数” 表示开发蓝河应用必填参数\ntar.un",
       "keywords": [
-        "Function",
+        "解包",
         "String",
-        "解包"
+        "Function"
       ],
       "has_code": true
     },
@@ -1763,8 +1763,8 @@
       "summary": "电话\n更新时间：\n2025-02-17 09:59:02\n在蓝河系统中，您可以通过 Deeplink 链接来打开电话服务相应页面。\n我们为电话服务提供了 Deeplink 链接，具体链接为\nhap://app/com.vivo.call/pages/callMenu\n。\n并且 Deeplink 的页面拉取是通过 Router 调用来实现的，方便您快速地进行操作。\n示例\n以下是一个示例，展示了如何使",
       "keywords": [
         "电话",
-        "Deeplink",
-        "Router"
+        "Router",
+        "Deeplink"
       ],
       "has_code": true
     },
@@ -1776,9 +1776,9 @@
       "breadcrumb": [],
       "summary": "振动\n更新时间：\n2024-08-13 15:19:43\n接口声明\n{\n\"name\"\n:\n\"blueos.hardware.vibrator.vibrator\"\n}\n复制代码\n导入模块\nimport\nvibrator\nfrom\n'@blueos.hardware.vibrator.vibrator'\n或\nconst\nvibrator\n=\nrequire\n(\n'@blueos.hardware.vi",
       "keywords": [
+        "振动",
         "String",
-        "Number",
-        "振动"
+        "Number"
       ],
       "has_code": true
     },
@@ -1790,12 +1790,12 @@
       "breadcrumb": [],
       "summary": "websocket\n更新时间：\n2023-12-25 11:01:05\n接口声明\n{\n\"name\"\n:\n\"blueos.network.webSocket\"\n}\n复制代码\n导入模块\nimport\nwebsocketfactory\nfrom\n'@blueos.network.webSocket'\n或\nconst\nwebsocketfactory\n=\nrequire\n(\n'@blueos.networ",
       "keywords": [
-        "String",
-        "Object",
+        "WebSocket",
+        "StringArray",
         "Referer",
         "websocket",
-        "StringArray",
-        "WebSocket"
+        "Object",
+        "String"
       ],
       "has_code": true
     },
@@ -1807,9 +1807,9 @@
       "breadcrumb": [],
       "summary": "widgetManager\n更新时间：\n2025-10-09 21:26:28\nwidgetProvider 通过 widgetManager 来刷新 卡片 UI 页面中的 uiData 数据，widgetManager 也可以用于主应用刷新 uidata 的数据。\n详细参考\nwidgetProvider 开发\n接口声明\n{\n\"name\"\n:\n\"blueos.app.widgetManager\"",
       "keywords": [
-        "Shenzhen",
+        "widgetManager",
         "Record",
-        "widgetManager"
+        "Shenzhen"
       ],
       "has_code": true
     },
@@ -1821,11 +1821,11 @@
       "breadcrumb": [],
       "summary": "widgetProvider\n更新时间：\n2025-10-09 21:26:28\nwidgetProvider 是轻卡的核心组成部分，它负责执行轻卡页面的逻辑，并与轻卡页面进行数据传递。\n详细参考\nwidgetProvider 开发\nonWidgetCreate\n当卡片在入口被创建时触发\n参数：\n参数名\n类型\n说明\nid\nstring\n卡片实例 id\nwidgetInfo\nWidgetInfo\n卡",
       "keywords": [
-        "Action",
-        "widgetProvider",
         "WidgetInfo",
         "WidgetEventInfo",
-        "Object"
+        "Object",
+        "Action",
+        "widgetProvider"
       ],
       "has_code": true
     },
@@ -1837,8 +1837,8 @@
       "breadcrumb": [],
       "summary": "数据绑定\n更新时间：\n2024-03-08 15:34:54\n蓝河应用提供了数据绑定 UI 组件的方式，当数据发生变化时，会自动触发 UI 组件的更新。\n绑定方法\n用法上，开发者可以在组件上使用\n\"{{varname}}\"\n，即双大括号内放置变量的形式，即可将变量绑定在 UI 组件上。\n示例如下\n<\ntemplate\n>\n<\ndiv\n>\n<\ntext\n>\n{{title}}\n</\ntext\n>\n<",
       "keywords": [
-        "Hello",
         "World",
+        "Hello",
         "数据绑定"
       ],
       "has_code": true
@@ -1851,8 +1851,8 @@
       "breadcrumb": [],
       "summary": "概述\n更新时间：\n2025-08-13 20:11:57\n通过在 UI 组件上绑定事件，开发者可以实现蓝河应用与用户之间的交互。\n绑定事件\n用法上，开发者可以使用 on (可以用@简写代替) 来绑定事件，如：onclick,onchange 可简写成 @click,@change，并在事件触发时执行对应的 JavaScript 业务代码。\n示例如下\n<\ntemplate\n>\n<\ndiv\nclass",
       "keywords": [
-        "JavaScript",
-        "概述"
+        "概述",
+        "JavaScript"
       ],
       "has_code": true
     },
@@ -1877,8 +1877,8 @@
       "breadcrumb": [],
       "summary": "条件渲染\n更新时间：\n2023-10-31 15:05:28\n条件渲染有 2 种：if/elif/else 和 show。它们的区别在于：if 为 false 时，组件会从 DOM 中移除，而 show 仅仅是渲染时不可见，组件依然存在于 DOM 中;\nif 指令\nif 条件渲染，是指 if/elif/else 这 3 个相关指令，用于控制是否增加或者删除组件；\nif/elif/else 节点必须",
       "keywords": [
-        "条件渲染",
-        "Hello"
+        "Hello",
+        "条件渲染"
       ],
       "has_code": true
     },
@@ -1891,9 +1891,9 @@
       "summary": "页面布局\n更新时间：\n2024-01-10 16:04:30\n蓝河应用使用的是 Flex 布局方式。\n盒模型\n蓝河应用布局框架使用 border-box 模型，具体表现与宽高边距计算可参考 MDN 文档\nbox-sizing\n， 暂不支持 content-box 模型与手动指定 box-sizing 属性。\n布局所占宽度 Width：\nWidth = width(包含padding-left +",
       "keywords": [
         "Flex",
-        "页面布局",
         "Height",
-        "Width"
+        "Width",
+        "页面布局"
       ],
       "has_code": true
     },
@@ -1905,9 +1905,9 @@
       "breadcrumb": [],
       "summary": "自定义组件\n更新时间：\n2025-06-23 10:14:39\n熟悉自定义组件的开发，了解父子组件之间的通信方式，如：props，data。\n组件自定义\n开发页面时开发者必须用到各种 UI 组件，如：\ntext\n、\ndiv\n，这些组件是由蓝河系统提供的；如果开发一个复杂的页面，开发者把所有的 UI 部分写在一个文件的\n<template>\n，那代码的可维护性将会很低，并且模块之间容易产生不必要的耦",
       "keywords": [
-        "Function",
+        "自定义组件",
         "Object",
-        "自定义组件"
+        "Function"
       ],
       "has_code": true
     },
@@ -1919,11 +1919,11 @@
       "breadcrumb": [],
       "summary": "props\n更新时间：\n2025-07-10 10:44:44\nProp 写法\nProp 属性名称使用 camelCase(驼峰命名法)命名法，在外部传递数据时请转化为以 kebab-case (短横线分隔命名) propObject 转换为 prop-object。\n<!-- 子组件 -->\n<\ntemplate\n>\n<\ndiv\nclass\n=\n\"\nchild-demo\n\"\n>\n<\ntext\n>",
       "keywords": [
-        "Hello",
         "props",
-        "Prop",
         "Array",
-        "Object"
+        "Prop",
+        "Object",
+        "Hello"
       ],
       "has_code": true
     },
@@ -1935,9 +1935,9 @@
       "breadcrumb": [],
       "summary": "页面路由\n更新时间：\n2025-10-09 11:25:10\n了解如何打开页面、回退，并传递参数\n组件 a 切换页面\n切换页面\n组件 a 可通过配置 href 属性跳转到应用内的页面\n示例如下：\n<\ntemplate\n>\n<\ndiv\nclass\n=\n\"\ntutorial-page\n\"\n>\n<!-- 以'/'开头的应用内页面的路径 -->\n<\na\nhref\n=\n\"\n/PageParams/recei",
       "keywords": [
+        "PageParams",
         "Hello",
-        "页面路由",
-        "PageParams"
+        "页面路由"
       ],
       "has_code": true
     },
@@ -1949,12 +1949,12 @@
       "breadcrumb": [],
       "summary": "文件组织\n更新时间：\n2024-01-10 16:04:30\n本文对项目的文件目录及相关内容进行了介绍，包括蓝河应用文件结构讲解，配置信息、新增页面等\n项目介绍\n通过 BlueOS Studio 新建一个项目，这个项目已经包含了\n项目配置\n与\n示例页面\n的初始代码，项目根目录主要结构如下：\n├── scripts                   工具脚本文件\n├── src\n│   ├── a",
       "keywords": [
-        "JavaScript",
-        "ProjectName",
-        "文件组织",
-        "DemoDetail",
         "Demo",
-        "Studio"
+        "ProjectName",
+        "Studio",
+        "JavaScript",
+        "文件组织",
+        "DemoDetail"
       ],
       "has_code": true
     },
@@ -1966,8 +1966,8 @@
       "breadcrumb": [],
       "summary": "框架简介\n更新时间：\n2025-07-09 21:34:57\n蓝河应用框架采用了类 web 开发范式，具有学习成本低，开发效率高的特点。框架提供了丰富的 UI 组件与样式，开发者可以因此高效搭建界面。同时框架提供了两套 API 接口，开发者可以按需选择。\n数据绑定\n数据绑定可以让数据与视图非常简单地保持同步。当做数据修改的时候，只需要在逻辑层修改数据，视图层就会做相应的更新。数据绑定的具体使用参看",
       "keywords": [
-        "框架简介",
-        "Native"
+        "Native",
+        "框架简介"
       ],
       "has_code": false
     },
@@ -1979,12 +1979,12 @@
       "breadcrumb": [],
       "summary": "manifest 文件\n更新时间：\n2025-10-09 11:25:10\nmanifest.json 文件中包含了应用描述、接口声明、页面路由信息\nmanifest\n属性\n类型\n默认值\n必填\n描述\npackage\nstring\n-\n是\n应用包名，\n确认与原生应用的包名不一致\n，推荐采用 com.company.module 的格式，如：com.example.demo\nname\nstring\n-",
       "keywords": [
-        "Config",
-        "Display",
         "FeatureInfo",
-        "Array",
         "manifest 文件",
-        "Router"
+        "Display",
+        "Config",
+        "Router",
+        "Array"
       ],
       "has_code": true
     },
@@ -1996,12 +1996,12 @@
       "breadcrumb": [],
       "summary": "javascript 代码\n更新时间：\n2025-05-20 14:21:12\n用来定义页面数据和实现生命周期接口\n语法\n支持 ES6 语法\n模块声明\n蓝河应用中支持\nES6\n的\nmodule\n标准，使用\nimport\n引入 js 依赖，同时支持 CommonJs 规范，使用\nrequire\n引入 js 依赖（具体参看功能接口部分文档说明）\n// 首先在 `manifest.json` 中配置 `",
       "keywords": [
-        "Function",
-        "Hello",
-        "Object",
-        "CommonJs",
         "javascript 代码",
-        "Common"
+        "CommonJs",
+        "Object",
+        "Common",
+        "Function",
+        "Hello"
       ],
       "has_code": true
     },
@@ -2013,12 +2013,12 @@
       "breadcrumb": [],
       "summary": "style 样式\n更新时间：\n2024-10-11 11:55:18\n用于描述 template 模板的组件样式，决定组件应该如何显示\n样式布局采用 CSS Flexbox（弹性盒）样式，针对部分原生组件，对 CSS 进行了少量的扩充以及修改\n为了解决屏幕适配问题，所有与大小相关的样式（例如 width、font-size）均以基准宽度（默认 750px）为基础，根据实际屏幕宽度进行缩放\n文件导入",
       "keywords": [
+        "Native",
         "Query",
-        "style 样式",
         "Code",
+        "style 样式",
         "Media",
-        "Flexbox",
-        "Native"
+        "Flexbox"
       ],
       "has_code": true
     },
@@ -2044,8 +2044,8 @@
       "breadcrumb": [],
       "summary": "页面启动模式\n更新时间：\n2023-10-21 10:15:58\n用于定义页面的启动行为\n静态声明\n在 manifest 文件中页面路由信息 router.page 可增加启动模式字段 launchMode，用于声明该页面的启动模式\n页面启动模式参数：\n属性\n类型\n默认值\n必填\n描述\nlaunchMode\nString\nstandard\n否\n声明页面的启动模式，支持\"singleTask\"，\"st",
       "keywords": [
-        "String",
-        "页面启动模式"
+        "页面启动模式",
+        "String"
       ],
       "has_code": true
     },
@@ -2083,10 +2083,10 @@
       "breadcrumb": [],
       "summary": "表盘\n更新时间：\n2025-10-09 11:25:10\n概述\n表盘指默认开机首屏的界面，可分为指针表盘和数字表盘，除了查看时间，表盘还可以给用户提供展示计步、心率、电量、天气等关键信息。\n系统会内置一些表盘，同时也支持第三方开发，用户可以根据喜好通过长按切换选择表盘。\n表盘项目结构\n一个表盘项目包含：描述项目配置信息的\nmanifest 文件\n，一个描述表盘界面的\nux 文件\n，以及引用的图片资",
       "keywords": [
-        "表盘",
-        "Integer",
         "String",
-        "Object"
+        "Object",
+        "Integer",
+        "表盘"
       ],
       "has_code": true
     },
@@ -2098,10 +2098,10 @@
       "breadcrumb": [],
       "summary": "快捷卡片\n更新时间：\n2025-10-09 11:25:10\n⚠ 快捷卡片已经弃用，请使用\n智慧服务卡片\n概述\n快捷卡片是应用的特殊页面，配置为快捷卡片的页面可以被其他宿主应用作为组件引入。此特性可以使得其能跟随主应用更新，而宿主应用无需更新。\n一个应用可以配置多个快捷卡片，一个快捷卡片也可以被多个宿主应用所引用。\nmanifest.json 文件\n快捷卡片在 manifest.json 中的 w",
       "keywords": [
-        "Music",
-        "快捷卡片",
         "Home",
-        "Integer"
+        "Music",
+        "Integer",
+        "快捷卡片"
       ],
       "has_code": true
     },
@@ -2113,8 +2113,8 @@
       "breadcrumb": [],
       "summary": "概述\n更新时间：\n2025-04-28 19:30:44\n1 前言\n本章节聚焦手表应用的性能优化，结合可穿戴设备资源受限、低功耗需求和小屏幕交互特点，提出切实可行的优化策略。我们将重点关注电池续航、显示功耗和交互流畅度，帮助开发者在蓝河应用框架下构建高效、稳定的智能穿戴产品。\n2 使用说明\n文中示例提供了「正例」和「反例」，便于读者直观对比两种方案的优劣，迅速掌握规范要点。示例仅供说明，不代表可直",
       "keywords": [
-        "Tree",
-        "概述"
+        "概述",
+        "Tree"
       ],
       "has_code": false
     },
@@ -2139,11 +2139,11 @@
       "breadcrumb": [],
       "summary": "响应式数据优化\n更新时间：\n2025-04-27 11:06:02\n蓝河框架基于 Proxy 实现响应式追踪机制，data 对象中的每个属性都会创建监听代理。优化数据层可显著降低内存消耗，提升渲染速度。\n消除冗余响应式数据\n推荐级别：强烈\n未使用的响应式数据仍会触发依赖收集，导致内存占用增加。\n优化方案\n采用普遍变量声明非响应式数据\n反例 1\n<\ntemplate\n>\n<\ntext\n>\n{{a}}",
       "keywords": [
-        "Sports",
-        "Team",
-        "响应式数据优化",
-        "Football",
         "Basketball",
+        "Football",
+        "响应式数据优化",
+        "Team",
+        "Sports",
         "Proxy"
       ],
       "has_code": true
@@ -2180,9 +2180,9 @@
       "breadcrumb": [],
       "summary": "长列表性能优化\n更新时间：\n2025-10-09 11:25:10\n本文阐述了长列表场景下的性能优化方案，在开发过程中遇到长列表性能问题时，可参考下面优化方案。\n分离固定标题与列表容器\n当\n<list>\n组件滚动时，内部元素复杂度直接影响滚动性能。建议将固定标题等静态元素移出列表容器，采用绝对定位等方式处理。\n推荐级别：强烈\n反例\n标题内嵌于列表容器，影响滚动性能：\n<\ntemplate\n>\n<",
       "keywords": [
-        "Non",
+        "长列表性能优化",
         "Vegetarian",
-        "长列表性能优化"
+        "Non"
       ],
       "has_code": true
     },
@@ -2195,9 +2195,9 @@
       "summary": "js 内存泄漏排查\n更新时间：\n2025-05-20 10:54:23\n在需要排查的场景先后进行两次 dump, 比如排查页面泄漏，在进入页面前 dump 一次，进入页面退出后再 dump 一次\n导出泄漏可以分为两种情况\n如果应用不需要底层能力支撑\n比如不需要\nblueos.multimedia.audio\n这些底层能力，可以直接在 BlueOS Studio 测试，在下图场景前后分别点击\n位置",
       "keywords": [
         "Devtool",
-        "js 内存泄漏排查",
+        "Studio",
         "Snapshot",
-        "Studio"
+        "js 内存泄漏排查"
       ],
       "has_code": true
     },
@@ -2209,9 +2209,9 @@
       "breadcrumb": [],
       "summary": "运行时性能优化\n更新时间：\n2025-04-27 11:06:02\n本节提供的关键优化手段可显著提升页面渲染与更新效率。\n避免在 CSS 中使用 ID 选择器\n推荐级别：强烈\n如果只需要在 css 中给组件添加样式，建议使用 class 选择器，只有需要使用 js 操作组件时，才会给组件注册 ID。\n反例 1\n<!-- 错误：在CSS中通过ID定义样式 -->\n<\ntemplate\n>\n<\ndiv",
       "keywords": [
+        "Tab",
         "运行时性能优化",
         "Diff",
-        "Tab",
         "JavaScript"
       ],
       "has_code": true
@@ -2248,8 +2248,8 @@
       "breadcrumb": [],
       "summary": "减少代码体积\n更新时间：\n2025-04-27 09:58:15\n本节非常重要，优劣不同的写法会有明显的代码体积差异，而代码体积越小，会获得更快的加载速度。\njs 封装要支持 Treeshaking\n推荐级别：强烈\n统一支持 Treeshaking 是非常重要的，因为它可以在打包编译时移除未使用的代码，减小输出的文件大小。\n在进行 JavaScript 封装时，请牢记以下两点：\n在能使用函数实现的",
       "keywords": [
-        "Treeshaking",
         "Object",
+        "Treeshaking",
         "减少代码体积",
         "JavaScript"
       ],
@@ -2276,10 +2276,10 @@
       "breadcrumb": [],
       "summary": "国际化\n更新时间：\n2025-10-09 11:25:10\n蓝河应用平台的能力会覆盖多个国家地区，平台支持国际化(i18n)的能力后，可以做到让一个蓝河应用产品（一个 RPK 文件）同时支持多个语言版本的切换，开发者无需开发多个不同语言的源码项目，避免给项目维护带来困难。\n使用系统默认的语言，开发者配置国际化的方式非常简单，只需要\n定义资源\n与\n引用资源\n两个步骤即可；如果允许用户在蓝河应用中修改",
       "keywords": [
-        "Function",
+        "String",
         "国际化",
         "ViewModel",
-        "String"
+        "Function"
       ],
       "has_code": true
     },
@@ -2291,12 +2291,12 @@
       "breadcrumb": [],
       "summary": "概述\n更新时间：\n2025-04-29 11:37:34\n蓝河应用开发采用类 web 开发范式，使用 UI 组件来搭建页面布局，使用样式来描述组件和页面的效果，使用 Javascript 来进行业务逻辑的开发。蓝河应用支持 MVVM（Model-View-ViewModel）的架构，通过数据绑定视图的方式，数据发生变化时，会自动触发 UI 的更新。\n如果开发者是首次接触蓝河应用，并希望立即开始编写",
       "keywords": [
-        "Javascript",
-        "Page",
+        "ViewModel",
         "概述",
-        "View",
         "Model",
-        "ViewModel"
+        "Page",
+        "Javascript",
+        "View"
       ],
       "has_code": false
     },
@@ -2308,9 +2308,9 @@
       "breadcrumb": [],
       "summary": "构建首个蓝河应用\n更新时间：\n2025-10-09 11:25:10\n本文将从开发工具、新建项目、安装依赖、调试项目、打包等方面入手，让您学习后，可以构建首个蓝河应用。\n开发\n开发者可以使用 BlueOS Studio 开发、调试和打包蓝河应用。以下所有的操作均在 BlueOS Studio 中完成，开发者可以\n点击链接进入工具下载页面\n，先安装 BlueOS Studio 。\n一、新建项目\n新建",
       "keywords": [
-        "构建首个蓝河应用",
         "Node",
-        "Studio"
+        "Studio",
+        "构建首个蓝河应用"
       ],
       "has_code": true
     },
@@ -2334,9 +2334,9 @@
       "breadcrumb": [],
       "summary": "轻卡开发\n更新时间：\n2025-10-09 11:25:10\n轻卡不运行 JavaScript，因此其开发范式与标准卡片存在差异，具体细节将在本节中进一步介绍。\n基本范式\n轻卡的开发 ux 文件开发分为\ndata\n、\ntemplate\n和\nstyle\n三个部分。\n例如：\n<\ndata\n>\n{\n   \"uiData\": {\n    \"content\": \"轻卡示例\"\n   }\n  }\n</\ndata",
       "keywords": [
-        "Hello",
-        "World",
         "轻卡开发",
+        "World",
+        "Hello",
         "JavaScript"
       ],
       "has_code": true
@@ -2350,8 +2350,8 @@
       "summary": "概述\n更新时间：\n2025-10-09 11:25:10\n本节介绍卡片的定义、分类、模块架构和运行原理。\n什么是卡片\n卡片是一种轻量的应用形态。它可以嵌入到各类场景应用的页面中（如负一屏，桌面，全搜，锁屏，浏览器，语音助手等），为用户提供快速、直观且高度关联的服务体验。通过精准和便捷地展示信息或功能，卡片不仅提高了用户获取服务的效率，也为应用带来了更多曝光机会和用户参与度。\n卡片分类\n蓝河系统卡片",
       "keywords": [
         "Action",
-        "Host",
-        "概述"
+        "概述",
+        "Host"
       ],
       "has_code": false
     },
@@ -2363,11 +2363,11 @@
       "breadcrumb": [],
       "summary": "卡片配置\n更新时间：\n2025-10-09 11:25:10\n本节介绍卡片配置及工程目录，通过示例展示了轻卡和标准卡的具体配置方法。\n工程目录\n在代码工程中支持两种卡片工程目录组织方式：\n一张卡片单独一个工程\n多张卡片和普通应用在同一个工程下，卡片和普通应用分属不同的文件目录。\n仅卡片\n注意：卡片工程中不存在 app.ux 文件。\n└── src\n│   ├── widgets\n# 统一存放项目快",
       "keywords": [
+        "Record",
         "Styles",
-        "Images",
-        "卡片配置",
         "Widget",
-        "Record"
+        "卡片配置",
+        "Images"
       ],
       "has_code": true
     },
@@ -2379,11 +2379,11 @@
       "breadcrumb": [],
       "summary": "widgetProvider 开发\n更新时间：\n2025-10-09 11:25:10\n本节将介绍 widgetProvider 的核心概念和三种实现方式。鉴于不同平台的开发方式各有差异，开发者可以做在具体文档中查阅。本节重点讲解 widgetProvider 的顶层概念，通过理解这些概念，您将更容易掌握不同实现方式之间的互通性。\n概述\nwidgetProvider 介绍\nwidgetProvid",
       "keywords": [
-        "Shenzhen",
+        "Promise",
         "Android",
-        "Action",
         "widgetProvider 开发",
-        "Promise"
+        "Shenzhen",
+        "Action"
       ],
       "has_code": true
     }

@@ -4,6 +4,7 @@
 
 ## 目录
 
+- [动画样式](#动画样式)
 - [a](#a)
 - [animated-vector](#animated-vector)
 - [概述](#概述)
@@ -19,17 +20,12 @@
 - [span](#span)
 - [svg-container](#svg-container)
 - [text](#text)
-- [动画样式](#动画样式)
 - [颜色样式](#颜色样式)
 - [通用属性](#通用属性)
 - [通用事件](#通用事件)
 - [通用方法](#通用方法)
 - [通用样式](#通用样式)
 - [组件动画](#组件动画)
-- [自定义字体样式](#自定义字体样式)
-- [渐变样式](#渐变样式)
-- [概述](#概述)
-- [UI 组件支持的表冠旋转](#ui-组件支持的表冠旋转)
 - [div](#div)
 - [list-item](#list-item)
 - [list](#list)
@@ -41,6 +37,7 @@
 - [drawer-navigation](#drawer-navigation)
 - [drawer](#drawer)
 - [概述](#概述)
+- [自定义字体样式](#自定义字体样式)
 - [概述](#概述)
 - [vw-alert](#vw-alert)
 - [vw-button](#vw-button)
@@ -51,7 +48,9 @@
 - [vw-loading](#vw-loading)
 - [vw-slide](#vw-slide)
 - [vw-title](#vw-title)
+- [渐变样式](#渐变样式)
 - [canvas](#canvas)
+- [概述](#概述)
 - [artboard](#artboard)
 - [input](#input)
 - [label](#label)
@@ -59,11 +58,144 @@
 - [picker](#picker)
 - [slider](#slider)
 - [switch](#switch)
+- [UI 组件支持的表冠旋转](#ui-组件支持的表冠旋转)
 
 ---
 
 
-<!-- 文档 1: ui-component/basic/a/.md -->
+<!-- 文档 1: ui-component/component/animation-styles.md -->
+
+
+## 动画样式
+
+## 动画样式
+
+更新时间：2025-04-15 11:26:34
+
+
+蓝河应用支持开发者制作动画，提供了`transform`类、`animation`类的动画样式属性，且参数格式与 CSS 对齐，更方便开发者上手适配动画
+
+
+`transform`可参考此 [文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform) 入门
+
+
+`animation`可参考此 [文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation) 入门
+
+
+**动画样式列表**
+
+
+| 名称 | 类型 | 默认值 | 描述 |
+| --- | --- | --- | --- |
+| transform-origin | `<position>` | 0px 0px | 变换原点位置，单位目前仅支持 px，格式为：50px 100px |
+| transform | `<string>` | - | 见下面 transform 操作 |
+| animation-name | `<string>` | - | 与@keyframes 的 name 相呼应，见下面@keyframes 属性 |
+| animation-delay | `<time>` | 0 | 目前支持的单位为[ s(秒) | ms(毫秒) ] |
+| animation-duration | `<time>` | 0 | 目前支持的单位为[ s(秒) | ms(毫秒) ] |
+| animation-iteration-count | `<integer>` | `infinite` | 1 | 定义动画播放的次数，可设置为`infinite`无限次播放 |
+| animation-timing-function | linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(`<number>`, `<number>`, `<number>`, `<number>`) | step-start | step-end | steps(number\_of\_steps[, step-direction]?) | ease | 规定动画的速度曲线 |
+| animation-fill-mode | none | forwards | none | 规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式 |
+| animation-direction | normal | reverse | alternate | alternate-reverse | normal | 定义动画播放的方向，详情请看[文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction) |
+
+
+**注**：
+
+
+- animation-timing-function 类型
+
+
+cubic-bezier(`<number>`, `<number>`, `<number>`, `<number>`) | step-start | step-end | steps(number\_of\_steps[, step-direction]?) 后支持 。其中：
+
+
+steps(number\_of\_steps，step-direction)
+
+
+| 名称 | 类型 | 默认值 | 必填 | 描述 |
+| --- | --- | --- | --- | --- |
+| number\_of\_steps | `<integer>` | - | 是 | 表示等间隔步数的正整数 |
+| step-direction | jump-start | jump-end | jump-none | jump-both | start | end | end | 否 | 指示函数左连续或右连续的关键字 |
+
+
+- cubic-bezier(x1, y1, x2, y2)
+
+
+参数 x1, y1, x2, y2 是 `<number>` 类型的值，代表当前定义的立方贝塞尔曲线中的 P1 和 P2 点的横坐标和纵坐标，x1 和 x2 必须在 [0，1] 范围内，否则当前值无效。
+
+
+### transform
+
+
+| 名称 | 类型 |
+| --- | --- |
+| translate | `<length>` | `<percent>` |
+| translateX | `<length>` | `<percent>` |
+| translateY | `<length>` | `<percent>` |
+| scale | `<number>` |
+| scaleX | `<number>` |
+| scaleY | `<number>` |
+| rotate | `<deg>` |
+
+
+### animation-fill-mode
+
+
+animation-fill-mode 属性规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式。
+
+
+默认情况下，CSS 动画在第一个关键帧播放完之前不会影响元素，在最后一个关键帧完成后停止影响元素。animation-fill-mode 属性可重写该行为。
+
+
+| 值 | 描述 |
+| --- | --- |
+| none | 默认值。动画在动画执行之前和之后不会应用任何样式到目标元素。 |
+| forwards | 在动画结束后（由 animation-iteration-count 决定），动画将应用该属性值。 |
+| backwards`暂不支持` | 动画将应用在 animation-delay 定义期间启动动画的第一次迭代的关键帧中定义的属性值。 |
+| both`暂不支持` | 动画遵循 forwards 和 backwards 的规则。 |
+
+
+### animation-name
+
+
+指定所采用的一系列动画，属性值的每个名称代表一个由 @keyframes 属性定义的关键帧序列。该属性支持在组件中应用单个动画或多个动画 ，应用多个动画时动画同时开始执行。
+
+
+示例代码：
+
+
+```
+
+/\* 单个动画 \*/
+animation-name: Color;
+animation-name: translate;
+animation-name: rotate;
+
+/\* 多个动画 \*/
+animation-name: Color, Opacity;
+animation-name: Width, translate, rotate;
+```
+
+复制代码
+### @keyframes
+
+
+| 名称 | 类型 | 默认值 | 描述 |
+| --- | --- | --- | --- |
+| background-color | `<color>` | - | - |
+| opacity | `<number>` | - | - |
+| width/height | `<length>` | - | 暂不支持百分比 |
+| transform | `<string>` | - | - |
+
+
+**注**：
+
+
+暂时不支持起始值(0%)或终止值(100%)缺省的情况，都需显式指定。
+
+
+---
+
+
+<!-- 文档 2: ui-component/component/basic/a.md -->
 
 
 ## a
@@ -119,7 +251,7 @@
 ---
 
 
-<!-- 文档 2: ui-component/basic/animated-vector/.md -->
+<!-- 文档 3: ui-component/component/basic/animated-vector.md -->
 
 
 ## animated-vector
@@ -228,7 +360,7 @@ animated-vector 组件提供配置 xml 动画，进行播放，暂停等操作�
 ---
 
 
-<!-- 文档 3: ui-component/basic/animation-overview/.md -->
+<!-- 文档 4: ui-component/component/basic/animation-overview.md -->
 
 
 ## 概述
@@ -254,7 +386,7 @@ animated-vector 组件提供配置 xml 动画，进行播放，暂停等操作�
 ---
 
 
-<!-- 文档 4: ui-component/basic/arc-text/.md -->
+<!-- 文档 5: ui-component/component/basic/arc-text.md -->
 
 
 ## arc-text
@@ -330,7 +462,7 @@ animated-vector 组件提供配置 xml 动画，进行播放，暂停等操作�
 ---
 
 
-<!-- 文档 5: ui-component/basic/barcode/.md -->
+<!-- 文档 6: ui-component/component/basic/barcode.md -->
 
 
 ## barcode
@@ -375,7 +507,7 @@ animated-vector 组件提供配置 xml 动画，进行播放，暂停等操作�
 ---
 
 
-<!-- 文档 6: ui-component/basic/image-animator/.md -->
+<!-- 文档 7: ui-component/component/basic/image-animator.md -->
 
 
 ## image-animator
@@ -532,7 +664,7 @@ ImageFrame 说明
 ---
 
 
-<!-- 文档 7: ui-component/basic/image/.md -->
+<!-- 文档 8: ui-component/component/basic/image.md -->
 
 
 ## image
@@ -663,7 +795,7 @@ object-fit ，参数列表如下：
 ---
 
 
-<!-- 文档 8: ui-component/basic/marquee/.md -->
+<!-- 文档 9: ui-component/component/basic/marquee.md -->
 
 
 ## marquee
@@ -811,7 +943,7 @@ object-fit ，参数列表如下：
 ---
 
 
-<!-- 文档 9: ui-component/basic/overview/.md -->
+<!-- 文档 10: ui-component/component/basic/overview.md -->
 
 
 ## 概述
@@ -846,7 +978,7 @@ object-fit ，参数列表如下：
 ---
 
 
-<!-- 文档 10: ui-component/basic/physics-space/.md -->
+<!-- 文档 11: ui-component/component/basic/physics-space.md -->
 
 
 ## physics-engine
@@ -1436,7 +1568,7 @@ this.$element('engine\_test').getBodyVelocity('bird', {
 ---
 
 
-<!-- 文档 11: ui-component/basic/progress/.md -->
+<!-- 文档 12: ui-component/component/basic/progress.md -->
 
 
 ## progress
@@ -1519,7 +1651,7 @@ arc progress 默认宽高为 32px，宽高设置不一致时，arc 图标为宽�
 ---
 
 
-<!-- 文档 12: ui-component/basic/qrcode/.md -->
+<!-- 文档 13: ui-component/component/basic/qrcode.md -->
 
 
 ## qrcode
@@ -1566,7 +1698,7 @@ arc progress 默认宽高为 32px，宽高设置不一致时，arc 图标为宽�
 ---
 
 
-<!-- 文档 13: ui-component/basic/span/.md -->
+<!-- 文档 14: ui-component/component/basic/span.md -->
 
 
 ## span
@@ -1598,7 +1730,7 @@ arc progress 默认宽高为 32px，宽高设置不一致时，arc 图标为宽�
 ---
 
 
-<!-- 文档 14: ui-component/basic/svg-container/.md -->
+<!-- 文档 15: ui-component/component/basic/svg-container.md -->
 
 
 ## svg-container
@@ -1748,7 +1880,7 @@ arc progress 默认宽高为 32px，宽高设置不一致时，arc 图标为宽�
 ---
 
 
-<!-- 文档 15: ui-component/basic/text/.md -->
+<!-- 文档 16: ui-component/component/basic/text.md -->
 
 
 ## text
@@ -1804,139 +1936,7 @@ arc progress 默认宽高为 32px，宽高设置不一致时，arc 图标为宽�
 ---
 
 
-<!-- 文档 16: ui-component/common/animation-styles/.md -->
-
-
-## 动画样式
-
-## 动画样式
-
-更新时间：2025-04-15 11:26:34
-
-
-蓝河应用支持开发者制作动画，提供了`transform`类、`animation`类的动画样式属性，且参数格式与 CSS 对齐，更方便开发者上手适配动画
-
-
-`transform`可参考此 [文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform) 入门
-
-
-`animation`可参考此 [文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation) 入门
-
-
-**动画样式列表**
-
-
-| 名称 | 类型 | 默认值 | 描述 |
-| --- | --- | --- | --- |
-| transform-origin | `<position>` | 0px 0px | 变换原点位置，单位目前仅支持 px，格式为：50px 100px |
-| transform | `<string>` | - | 见下面 transform 操作 |
-| animation-name | `<string>` | - | 与@keyframes 的 name 相呼应，见下面@keyframes 属性 |
-| animation-delay | `<time>` | 0 | 目前支持的单位为[ s(秒) | ms(毫秒) ] |
-| animation-duration | `<time>` | 0 | 目前支持的单位为[ s(秒) | ms(毫秒) ] |
-| animation-iteration-count | `<integer>` | `infinite` | 1 | 定义动画播放的次数，可设置为`infinite`无限次播放 |
-| animation-timing-function | linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(`<number>`, `<number>`, `<number>`, `<number>`) | step-start | step-end | steps(number\_of\_steps[, step-direction]?) | ease | 规定动画的速度曲线 |
-| animation-fill-mode | none | forwards | none | 规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式 |
-| animation-direction | normal | reverse | alternate | alternate-reverse | normal | 定义动画播放的方向，详情请看[文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction) |
-
-
-**注**：
-
-
-- animation-timing-function 类型
-
-
-cubic-bezier(`<number>`, `<number>`, `<number>`, `<number>`) | step-start | step-end | steps(number\_of\_steps[, step-direction]?) 后支持 。其中：
-
-
-steps(number\_of\_steps，step-direction)
-
-
-| 名称 | 类型 | 默认值 | 必填 | 描述 |
-| --- | --- | --- | --- | --- |
-| number\_of\_steps | `<integer>` | - | 是 | 表示等间隔步数的正整数 |
-| step-direction | jump-start | jump-end | jump-none | jump-both | start | end | end | 否 | 指示函数左连续或右连续的关键字 |
-
-
-- cubic-bezier(x1, y1, x2, y2)
-
-
-参数 x1, y1, x2, y2 是 `<number>` 类型的值，代表当前定义的立方贝塞尔曲线中的 P1 和 P2 点的横坐标和纵坐标，x1 和 x2 必须在 [0，1] 范围内，否则当前值无效。
-
-
-### transform
-
-
-| 名称 | 类型 |
-| --- | --- |
-| translate | `<length>` | `<percent>` |
-| translateX | `<length>` | `<percent>` |
-| translateY | `<length>` | `<percent>` |
-| scale | `<number>` |
-| scaleX | `<number>` |
-| scaleY | `<number>` |
-| rotate | `<deg>` |
-
-
-### animation-fill-mode
-
-
-animation-fill-mode 属性规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式。
-
-
-默认情况下，CSS 动画在第一个关键帧播放完之前不会影响元素，在最后一个关键帧完成后停止影响元素。animation-fill-mode 属性可重写该行为。
-
-
-| 值 | 描述 |
-| --- | --- |
-| none | 默认值。动画在动画执行之前和之后不会应用任何样式到目标元素。 |
-| forwards | 在动画结束后（由 animation-iteration-count 决定），动画将应用该属性值。 |
-| backwards`暂不支持` | 动画将应用在 animation-delay 定义期间启动动画的第一次迭代的关键帧中定义的属性值。 |
-| both`暂不支持` | 动画遵循 forwards 和 backwards 的规则。 |
-
-
-### animation-name
-
-
-指定所采用的一系列动画，属性值的每个名称代表一个由 @keyframes 属性定义的关键帧序列。该属性支持在组件中应用单个动画或多个动画 ，应用多个动画时动画同时开始执行。
-
-
-示例代码：
-
-
-```
-
-/\* 单个动画 \*/
-animation-name: Color;
-animation-name: translate;
-animation-name: rotate;
-
-/\* 多个动画 \*/
-animation-name: Color, Opacity;
-animation-name: Width, translate, rotate;
-```
-
-复制代码
-### @keyframes
-
-
-| 名称 | 类型 | 默认值 | 描述 |
-| --- | --- | --- | --- |
-| background-color | `<color>` | - | - |
-| opacity | `<number>` | - | - |
-| width/height | `<length>` | - | 暂不支持百分比 |
-| transform | `<string>` | - | - |
-
-
-**注**：
-
-
-暂时不支持起始值(0%)或终止值(100%)缺省的情况，都需显式指定。
-
-
----
-
-
-<!-- 文档 17: ui-component/common/color/.md -->
+<!-- 文档 17: ui-component/component/color.md -->
 
 
 ## 颜色样式
@@ -1966,7 +1966,7 @@ animation-name: Width, translate, rotate;
 ---
 
 
-<!-- 文档 18: ui-component/common/common-attributes/.md -->
+<!-- 文档 18: ui-component/component/common-attributes.md -->
 
 
 ## 通用属性
@@ -2026,7 +2026,7 @@ animation-name: Width, translate, rotate;
 ---
 
 
-<!-- 文档 19: ui-component/common/common-events/.md -->
+<!-- 文档 19: ui-component/component/common-events.md -->
 
 
 ## 通用事件
@@ -2187,7 +2187,7 @@ click event fired
 ---
 
 
-<!-- 文档 20: ui-component/common/common-methods/.md -->
+<!-- 文档 20: ui-component/component/common-methods.md -->
 
 
 ## 通用方法
@@ -2288,7 +2288,7 @@ Object rect
 ---
 
 
-<!-- 文档 21: ui-component/common/common-styles/.md -->
+<!-- 文档 21: ui-component/component/common-styles.md -->
 
 
 ## 通用样式
@@ -2553,7 +2553,7 @@ flex 布局仅支持上面列出的样式，w3c 中的其他标准切勿使，�
 ---
 
 
-<!-- 文档 22: ui-component/common/component-animation/.md -->
+<!-- 文档 22: ui-component/component/component-animation.md -->
 
 
 ## 组件动画
@@ -2807,399 +2807,7 @@ animation.play()
 ---
 
 
-<!-- 文档 23: ui-component/common/font-face-style/.md -->
-
-
-## 自定义字体样式
-
-## 自定义字体样式
-
-更新时间：2023-12-21 17:59:06
-
-
-font-face 用于定义字体样式。当需要为文本组件设置自定义字体时，可以在 style 中定义 font-face 作为自定义字体，然后在 font-family 中可以引用该字体。
-
-
-自定义字体可以是从项目中的字体文件或网络字体文件中加载的字体。
-
-
-注： 只支持 ttf 和 otf 格式的字体。
-
-
-### 定义 font-face
-
-
-```
-
-@font-face {
-  font-family: myfont;
-  src: url('http://www.example.com/myfont.ttf');
-}
-```
-
-复制代码
-#### font-family
-
-
-自定义字体的名称。
-
-
-#### src
-
-
-自定义字体的来源。
-
-
-目前支持的字体来源有 3 种：
-
-
-- 项目中的字体文件: 通过 url 指定项目中的字体文件路径(只支持绝对路径)
-- 网络字体文件：通过 url 指定网络字体的地址
-- 系统字体：通过 local 指定系统字体名称
-
-
-### 使用 font-face
-
-
-在 style 中定义了 font-face 后，我们可以在文本组件的 font-family 样式中指定 font-face 的名称，该组件即可应用 font-face 定义的字体。 font-face 中暂不支持设置多个 src 。
-
-
-##### 示例
-
-
-```
-
-<template>
-  <!-- template里只能有一个根节点 -->
-  <div class="demo-page">
-    <text class="font">测试自定义字体 test custom font</text>
-  </div>
-</template>
-
-<style>
- @font-face {
- font-family: myfont;
- src: url('http://www.example.com/myfont.ttf');
- }
- .demo-page {
- flex-direction: column;
- justify-content: center;
- align-items: center;
- }
- .font {
- font-family: myfont, serif;
- }
-</style>
-```
-
-复制代码
-### 图标字体 icon-font
-
-
-将图标制作成字体文件，保存到项目文件中（如:src/Common/iconfont.ttf），在 style 中定义一个 font-face ，然后在需要使用图标字体的地方使用该 font-face 作为组件的字体，组件的内容为字体文件中我们需要使用的图标的字符。
-
-
-```
-
-<template>
-  <!-- template里只能有一个根节点 -->
-  <div class="demo-page">
-    <text>测试text中嵌套iconfont<span class="icon-font-span">&#xe822;</span>test icon font</text>
-  </div>
-</template>
-
-<style>
- @font-face {
- font-family: iconfont;
- src: url('/Common/iconfont.ttf');
- }
- .demo-page {
- flex-direction: column;
- justify-content: center;
- align-items: center;
- }
- .icon-font-span {
- font-family: iconfont;
- font-size: 40px;
- color: #ff0000;
- }
-</style>
-```
-
-复制代码
-
-
----
-
-
-<!-- 文档 24: ui-component/common/gradient-styles/.md -->
-
-
-## 渐变样式
-
-## 渐变样式
-
-更新时间：2023-10-20 10:02:06
-
-
-渐变 (gradients) 可以在两个或多个指定的颜色之间显示平稳的过渡，用法与 CSS 渐变一致。
-
-
-当前框架支持以下渐变效果：
-
-
-- 线性渐变 (linear-gradient)
-- 重复线性渐变 (repeating-linear-gradient)
-
-
-### 线性渐变 / 重复线性渐变
-
-
-创建一个线性渐变，需要定义两类数据：1) 过渡方向；2) 过渡颜色，因此需要指定至少两种颜色。
-
-
-1. 过渡方向：通过`direction`或者`angle`两种形式指定
-2. 过渡颜色：支持方式：`#FF0000`、`#F00`
-
-
-- direction: 方向渐变
-
-
-```
-
-background: linear-gradient(direction, color-stop1, color-stop2, ...);
-background: repeating-linear-gradient(direction, color-stop1, color-stop2, ...);
-```
-
-复制代码
-#### 参数
-
-
-| 名称 | 类型 | 默认值 | 必填 | 描述 |
-| --- | --- | --- | --- | --- |
-| direction | `to` `<side-or-corner>`  `<side-or-corner>` = [`left` | `right`] || [`top` | `bottom`] | `to bottom` (从上到下渐变) | 否 | 例如：`to right` (从左向右渐变) |
-| |  | |  | |
-| color-stop | `<color>` [`<length>`|`<percentage>`] | | 是 | 从起点到`stop`的区域显示的背景色为`color` |
-
-
-#### 示例
-
-
-```
-
-#gradient {
-  height: 100px;
-  width: 200px;
-}
-```
-
-复制代码
-
-```
-
-/\* 从顶部开始渐变。起点是红色，慢慢过渡到蓝色 \*/
-background: linear-gradient(#f00, #00f);
-```
-
-复制代码
-![gradientTop](/7a6a6ec851205bddd62ad5ffc091a61b/gradientTop.png)
-
-
-```
-
-/\* 从左向右渐变，在距离左边90px和距离左边120px (200\*0.6) 之间30px宽度形成渐变\*/
-background: linear-gradient(to right, #f00 90px, #00f 60%);
-```
-
-复制代码
-![gradientTop](/c3840778f9e5ffc721b716b3cd892885/gradientThree.png)
-
-
----
-
-
-<!-- 文档 25: ui-component/common/rule/.md -->
-
-
-## 概述
-
-## 概述
-
-更新时间：2024-11-27 10:08:05
-
-
-UI 组件是编写整个界面的基础。蓝河系统的组件拥有多项核心能力，包括属性、样式、事件和方法，同时还支持表冠旋转相关的事件处理和复杂动画，让您的界面更加生动有趣。
-
-
-### 通用能力介绍
-
-
-| 能力 | 简述 |
-| --- | --- |
-| 通用事件 | 即所有组件都支持的事件回调 |
-| 通用属性 | 即所有组件都支持的属性。开发者可以在所有的组件标签上都使用通用属性 |
-| 通用样式 | 即所有组件都可以支持的样式，它们均与 css 的属性样式用法保持一致 |
-| 通用方法 | 提供给所有组件调用的方法 |
-| UI 组件支持的表冠旋转 | 提供支持表冠旋转的 UI 组件与对应属性 |
-| 颜色样式 | 支持颜色值类型 |
-| 动画样式 | 支持开发者制作动画，提供了 transform 类、animation 类的动画样式属性，且参数格式与 CSS 对齐 |
-| 渐变样式 | 渐变 (gradients) 可以在两个或多个指定的颜色之间显示平稳的过渡，用法与 CSS 渐变一致 |
-| 组件动画 | 提供一个新的执行动画的便捷方法，创建一个 Animation 对象实例 |
-
-
----
-
-
-<!-- 文档 26: ui-component/common/ui-rotation/.md -->
-
-
-## UI 组件支持的表冠旋转
-
-## UI 组件支持的表冠旋转
-
-更新时间：2025-10-09 11:25:10
-
-
-作为手表上非常重要的交互按钮，表冠在蓝河系统中得到了充分的支持。我们严格遵守了只有在获得表冠焦点后才能响应表冠事件的规则，在此前提下，蓝河系统提供了丰富的表冠响应方式，并支持开发者进行自定义和个性化的表冠响应。这些支持和机制的存在，可以让开发人员更加便捷地使用 UI 组件和表冠交互控制，提高表冠的交互性和可用性。
-
-
-### UI 组件表冠焦点
-
-
-为实现 UI 组件随表冠的旋转而滑动，务必确保 UI 组件处于获焦状态。同时，页面中只允许有一个组件获得焦点。
-
-
-默认焦点分配在最外层的最后一个可响应表冠的组件上。
-
-
-### 自定义 UI 组件对旋转表冠的响应
-
-
-开发者可以根据实际情况对组件响应旋转表冠事件进行自定义处理。
-
-
-### 默认支持的表冠组件如下：
-
-
-默认支持表冠的组件，其响应表冠选择和手指操作一致，组件上该触发的生命周期都会触发。
-
-
-| 组件名称 | 类型 |
-| --- | --- |
-| list | 用来呈现连续、多行数据的组件，包含一系列相同类型的列表项。 |
-| swiper | 一种带滚动功能的组件，它采用滑动的方式在有限的区域内显示更多的内容。 |
-| picker | 滚动选择器，允许用户从预定义范围中进行选择。当前支持时间选择器、日期选择器。 |
-| slider | 滑动型输入器。 |
-| scroll | 滚动视图容器。竖向或水平方向滚动容器，竖向滚动需要设置定高，水平滚动需要设置定宽。 |
-
-
-### 接口定义
-
-
-### 属性
-
-
-#### 以下属性都是组件的通用属性
-
-
-| 名称 | 类型 | 默认值 | 必填 | 描述 |
-| --- | --- | --- | --- | --- |
-| vibration-effectEnabled | Boolean | true | 否 | 表冠旋转的时候是否具有振动的效果，true 表示有振动效 果，false 表示没有振动效果 |
-| rotation-sensitivity | Number | 1 | 否 | 表冠灵敏度数值可设置为 高，正常，低以及默认的灵敏 度 1:低级，2:正常，3:高级 |
-| touch-focusable | Boolean | false | 否 | 设置组件在触摸模式下是否可以接收对焦 。 |
-
-
-### 事件
-
-
-| 事件名称 | 类型 | 默认值 | 必填 | 描述 |
-| --- | --- | --- | --- | --- |
-| rotation | Function | - | 否 | 组件监听表冠旋转的回调事件，组件的通用事件。 |
-
-
-#### 事件参数返回值 Object 对象的具体参数说明如下:
-
-
-| 接收参数 | 类型 | 说明 |
-| --- | --- | --- |
-| direction | Boolean | 旋转方向，表冠逆时针是正转返回 true，顺时针是反转返回 false。 |
-| delta | delta | 单次旋转变化量，重新旋转时会清零，正常低速情况下变化量的绝对值恒为 1，正 负代表旋转方向，正转为正，反转为负，单位为旋转事件的最小刻度。 |
-| velocity | Number | 旋转速度，方向之分与 delta 相同，单位为刻度/秒。 |
-| duration | Number | 事件时间间隔，本次和上一次事件触发时的时间间隔，首次触发事件时时间为 0， 单位为毫秒。 |
-| state | Number | 表冠旋转的状态，可取的值为 1:开始旋转，2:旋转中 ，3:旋转结束。 |
-
-
-### 方法
-
-
-| 方法名称 | 类型 | 说明 |
-| --- | --- | --- |
-| requestFocus | Boolean | 设置当前要获取焦点的组件，入参为 true 让当前组件抢占焦点，优先级最 高。此方法也是组件的通用方法。 |
-
-
-#### 示例
-
-
-##### 以 Picker 组件是默认支持表冠旋转的，旋转表冠组件聚焦设置示例代码如 下:
-
-
-```
-
-<script>
- export default {
- onReady() {
- const picker = this.$element('picker')
- picker.requestFocus(true)
- },
- }
-</script>
-
-<template>
-  <picker class="w-[750px] h-[750px] bg-black" id="picker" type="time"></picker>
-</template>
-
-<style>
-@tailwind utilities;
-</style>
-```
-
-复制代码
-##### 自定义 UI 组件支持表冠旋转
-
-
-```
-
-<script>
- export default {
- rotationHandler(ev){
- console.log('表冠事件输出'+ev )
- // 改变亮度
- },
- onReady () {
- const div = this.$element("div")
- div.requestFocus(true)
- }
- }
-</script>
-
-<template>
-  <div class="w-full h-full flex flex-col justify-center items-center">
-    <div class="w-60 h-60 bg-black" id="div" @rotation="rotationHandler">
-  </div>
-</template>
-
-<style>
-@tailwind utilities;
-</style>
-```
-
-复制代码
-
-
----
-
-
-<!-- 文档 27: ui-component/container/div/.md -->
+<!-- 文档 23: ui-component/component/container/div.md -->
 
 
 ## div
@@ -3227,7 +2835,7 @@ UI 组件是编写整个界面的基础。蓝河系统的组件拥有多项核�
 ---
 
 
-<!-- 文档 28: ui-component/container/list-item/.md -->
+<!-- 文档 24: ui-component/component/container/list-item.md -->
 
 
 ## list-item
@@ -3267,7 +2875,7 @@ UI 组件是编写整个界面的基础。蓝河系统的组件拥有多项核�
 ---
 
 
-<!-- 文档 29: ui-component/container/list/.md -->
+<!-- 文档 25: ui-component/component/container/list.md -->
 
 
 ## list
@@ -3332,7 +2940,7 @@ UI 组件是编写整个界面的基础。蓝河系统的组件拥有多项核�
 ---
 
 
-<!-- 文档 30: ui-component/container/overview/.md -->
+<!-- 文档 26: ui-component/component/container/overview.md -->
 
 
 ## 概述
@@ -3361,7 +2969,7 @@ UI 组件是编写整个界面的基础。蓝河系统的组件拥有多项核�
 ---
 
 
-<!-- 文档 31: ui-component/container/scroll/.md -->
+<!-- 文档 27: ui-component/component/container/scroll.md -->
 
 
 ## scroll
@@ -3507,7 +3115,7 @@ this.$element('scroll').revealScrollbar({
 ---
 
 
-<!-- 文档 32: ui-component/container/stack/.md -->
+<!-- 文档 28: ui-component/component/container/stack.md -->
 
 
 ## stack
@@ -3535,7 +3143,7 @@ this.$element('scroll').revealScrollbar({
 ---
 
 
-<!-- 文档 33: ui-component/container/swiper/.md -->
+<!-- 文档 29: ui-component/component/container/swiper.md -->
 
 
 ## swiper
@@ -3617,7 +3225,7 @@ this.$element('scroll').revealScrollbar({
 ---
 
 
-<!-- 文档 34: ui-component/extend/cellular-list/.md -->
+<!-- 文档 30: ui-component/component/extend/cellular-list.md -->
 
 
 ## cellular-list
@@ -3710,7 +3318,7 @@ content-item 数据结构
 ---
 
 
-<!-- 文档 35: ui-component/extend/drawer-navigation/.md -->
+<!-- 文档 31: ui-component/component/extend/drawer-navigation.md -->
 
 
 ## drawer-navigation
@@ -3750,7 +3358,7 @@ content-item 数据结构
 ---
 
 
-<!-- 文档 36: ui-component/extend/drawer/.md -->
+<!-- 文档 32: ui-component/component/extend/drawer.md -->
 
 
 ## drawer
@@ -3820,7 +3428,7 @@ closeDrawer 的参数说明:
 ---
 
 
-<!-- 文档 37: ui-component/extend/overview/.md -->
+<!-- 文档 33: ui-component/component/extend/overview.md -->
 
 
 ## 概述
@@ -3846,7 +3454,132 @@ closeDrawer 的参数说明:
 ---
 
 
-<!-- 文档 38: ui-component/global/overview/.md -->
+<!-- 文档 34: ui-component/component/font-face-style.md -->
+
+
+## 自定义字体样式
+
+## 自定义字体样式
+
+更新时间：2023-12-21 17:59:06
+
+
+font-face 用于定义字体样式。当需要为文本组件设置自定义字体时，可以在 style 中定义 font-face 作为自定义字体，然后在 font-family 中可以引用该字体。
+
+
+自定义字体可以是从项目中的字体文件或网络字体文件中加载的字体。
+
+
+注： 只支持 ttf 和 otf 格式的字体。
+
+
+### 定义 font-face
+
+
+```
+
+@font-face {
+  font-family: myfont;
+  src: url('http://www.example.com/myfont.ttf');
+}
+```
+
+复制代码
+#### font-family
+
+
+自定义字体的名称。
+
+
+#### src
+
+
+自定义字体的来源。
+
+
+目前支持的字体来源有 3 种：
+
+
+- 项目中的字体文件: 通过 url 指定项目中的字体文件路径(只支持绝对路径)
+- 网络字体文件：通过 url 指定网络字体的地址
+- 系统字体：通过 local 指定系统字体名称
+
+
+### 使用 font-face
+
+
+在 style 中定义了 font-face 后，我们可以在文本组件的 font-family 样式中指定 font-face 的名称，该组件即可应用 font-face 定义的字体。 font-face 中暂不支持设置多个 src 。
+
+
+##### 示例
+
+
+```
+
+<template>
+  <!-- template里只能有一个根节点 -->
+  <div class="demo-page">
+    <text class="font">测试自定义字体 test custom font</text>
+  </div>
+</template>
+
+<style>
+ @font-face {
+ font-family: myfont;
+ src: url('http://www.example.com/myfont.ttf');
+ }
+ .demo-page {
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ }
+ .font {
+ font-family: myfont, serif;
+ }
+</style>
+```
+
+复制代码
+### 图标字体 icon-font
+
+
+将图标制作成字体文件，保存到项目文件中（如:src/Common/iconfont.ttf），在 style 中定义一个 font-face ，然后在需要使用图标字体的地方使用该 font-face 作为组件的字体，组件的内容为字体文件中我们需要使用的图标的字符。
+
+
+```
+
+<template>
+  <!-- template里只能有一个根节点 -->
+  <div class="demo-page">
+    <text>测试text中嵌套iconfont<span class="icon-font-span">&#xe822;</span>test icon font</text>
+  </div>
+</template>
+
+<style>
+ @font-face {
+ font-family: iconfont;
+ src: url('/Common/iconfont.ttf');
+ }
+ .demo-page {
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ }
+ .icon-font-span {
+ font-family: iconfont;
+ font-size: 40px;
+ color: #ff0000;
+ }
+</style>
+```
+
+复制代码
+
+
+---
+
+
+<!-- 文档 35: ui-component/component/global/overview.md -->
 
 
 ## 概述
@@ -3878,7 +3611,7 @@ closeDrawer 的参数说明:
 ---
 
 
-<!-- 文档 39: ui-component/global/vw-alert/.md -->
+<!-- 文档 36: ui-component/component/global/vw-alert.md -->
 
 
 ## vw-alert
@@ -3919,7 +3652,7 @@ closeDrawer 的参数说明:
 ---
 
 
-<!-- 文档 40: ui-component/global/vw-button/.md -->
+<!-- 文档 37: ui-component/component/global/vw-button.md -->
 
 
 ## vw-button
@@ -3956,7 +3689,7 @@ closeDrawer 的参数说明:
 ---
 
 
-<!-- 文档 41: ui-component/global/vw-empty/.md -->
+<!-- 文档 38: ui-component/component/global/vw-empty.md -->
 
 
 ## vw-empty
@@ -4011,7 +3744,7 @@ closeDrawer 的参数说明:
 ---
 
 
-<!-- 文档 42: ui-component/global/vw-icon/.md -->
+<!-- 文档 39: ui-component/component/global/vw-icon.md -->
 
 
 ## vw-icon
@@ -4071,7 +3804,7 @@ closeDrawer 的参数说明:
 ---
 
 
-<!-- 文档 43: ui-component/global/vw-list-item/.md -->
+<!-- 文档 40: ui-component/component/global/vw-list-item.md -->
 
 
 ## vw-list-item
@@ -4251,7 +3984,7 @@ vw-li: 通用列表子项，（itemData 必填属性为 title ，可填属性 de
 ---
 
 
-<!-- 文档 44: ui-component/global/vw-list/.md -->
+<!-- 文档 41: ui-component/component/global/vw-list.md -->
 
 
 ## vw-list
@@ -4609,7 +4342,7 @@ vw-li: 通用列表子项，（itemData 必填属性为 title ，可填属性 de
 ---
 
 
-<!-- 文档 45: ui-component/global/vw-loading/.md -->
+<!-- 文档 42: ui-component/component/global/vw-loading.md -->
 
 
 ## vw-loading
@@ -4633,7 +4366,7 @@ vw-li: 通用列表子项，（itemData 必填属性为 title ，可填属性 de
 ---
 
 
-<!-- 文档 46: ui-component/global/vw-slide/.md -->
+<!-- 文档 43: ui-component/component/global/vw-slide.md -->
 
 
 ## vw-slide
@@ -4696,7 +4429,7 @@ vw-li: 通用列表子项，（itemData 必填属性为 title ，可填属性 de
 ---
 
 
-<!-- 文档 47: ui-component/global/vw-title/.md -->
+<!-- 文档 44: ui-component/component/global/vw-title.md -->
 
 
 ## vw-title
@@ -4760,7 +4493,93 @@ vw-li: 通用列表子项，（itemData 必填属性为 title ，可填属性 de
 ---
 
 
-<!-- 文档 48: ui-component/others/canvas/.md -->
+<!-- 文档 45: ui-component/component/gradient-styles.md -->
+
+
+## 渐变样式
+
+## 渐变样式
+
+更新时间：2023-10-20 10:02:06
+
+
+渐变 (gradients) 可以在两个或多个指定的颜色之间显示平稳的过渡，用法与 CSS 渐变一致。
+
+
+当前框架支持以下渐变效果：
+
+
+- 线性渐变 (linear-gradient)
+- 重复线性渐变 (repeating-linear-gradient)
+
+
+### 线性渐变 / 重复线性渐变
+
+
+创建一个线性渐变，需要定义两类数据：1) 过渡方向；2) 过渡颜色，因此需要指定至少两种颜色。
+
+
+1. 过渡方向：通过`direction`或者`angle`两种形式指定
+2. 过渡颜色：支持方式：`#FF0000`、`#F00`
+
+
+- direction: 方向渐变
+
+
+```
+
+background: linear-gradient(direction, color-stop1, color-stop2, ...);
+background: repeating-linear-gradient(direction, color-stop1, color-stop2, ...);
+```
+
+复制代码
+#### 参数
+
+
+| 名称 | 类型 | 默认值 | 必填 | 描述 |
+| --- | --- | --- | --- | --- |
+| direction | `to` `<side-or-corner>`  `<side-or-corner>` = [`left` | `right`] || [`top` | `bottom`] | `to bottom` (从上到下渐变) | 否 | 例如：`to right` (从左向右渐变) |
+| |  | |  | |
+| color-stop | `<color>` [`<length>`|`<percentage>`] | | 是 | 从起点到`stop`的区域显示的背景色为`color` |
+
+
+#### 示例
+
+
+```
+
+#gradient {
+  height: 100px;
+  width: 200px;
+}
+```
+
+复制代码
+
+```
+
+/\* 从顶部开始渐变。起点是红色，慢慢过渡到蓝色 \*/
+background: linear-gradient(#f00, #00f);
+```
+
+复制代码
+![gradientTop](/7a6a6ec851205bddd62ad5ffc091a61b/gradientTop.png)
+
+
+```
+
+/\* 从左向右渐变，在距离左边90px和距离左边120px (200\*0.6) 之间30px宽度形成渐变\*/
+background: linear-gradient(to right, #f00 90px, #00f 60%);
+```
+
+复制代码
+![gradientTop](/c3840778f9e5ffc721b716b3cd892885/gradientThree.png)
+
+
+---
+
+
+<!-- 文档 46: ui-component/component/others/canvas.md -->
 
 
 ## canvas
@@ -5587,7 +5406,39 @@ gradient.addColorStop(offset, color)
 ---
 
 
-<!-- 文档 49: ui-component/table/artboard/.md -->
+<!-- 文档 47: ui-component/component/rule.md -->
+
+
+## 概述
+
+## 概述
+
+更新时间：2024-11-27 10:08:05
+
+
+UI 组件是编写整个界面的基础。蓝河系统的组件拥有多项核心能力，包括属性、样式、事件和方法，同时还支持表冠旋转相关的事件处理和复杂动画，让您的界面更加生动有趣。
+
+
+### 通用能力介绍
+
+
+| 能力 | 简述 |
+| --- | --- |
+| 通用事件 | 即所有组件都支持的事件回调 |
+| 通用属性 | 即所有组件都支持的属性。开发者可以在所有的组件标签上都使用通用属性 |
+| 通用样式 | 即所有组件都可以支持的样式，它们均与 css 的属性样式用法保持一致 |
+| 通用方法 | 提供给所有组件调用的方法 |
+| UI 组件支持的表冠旋转 | 提供支持表冠旋转的 UI 组件与对应属性 |
+| 颜色样式 | 支持颜色值类型 |
+| 动画样式 | 支持开发者制作动画，提供了 transform 类、animation 类的动画样式属性，且参数格式与 CSS 对齐 |
+| 渐变样式 | 渐变 (gradients) 可以在两个或多个指定的颜色之间显示平稳的过渡，用法与 CSS 渐变一致 |
+| 组件动画 | 提供一个新的执行动画的便捷方法，创建一个 Animation 对象实例 |
+
+
+---
+
+
+<!-- 文档 48: ui-component/component/table/artboard.md -->
 
 
 ## artboard
@@ -5648,7 +5499,7 @@ gradient.addColorStop(offset, color)
 ---
 
 
-<!-- 文档 50: ui-component/table/input/.md -->
+<!-- 文档 49: ui-component/component/table/input.md -->
 
 
 ## input
@@ -5840,7 +5691,7 @@ setSpan 参数说明如下:
 ---
 
 
-<!-- 文档 51: ui-component/table/label/.md -->
+<!-- 文档 50: ui-component/component/table/label.md -->
 
 
 ## label
@@ -5888,7 +5739,7 @@ setSpan 参数说明如下:
 ---
 
 
-<!-- 文档 52: ui-component/table/overview/.md -->
+<!-- 文档 51: ui-component/component/table/overview.md -->
 
 
 ## 概述
@@ -5917,7 +5768,7 @@ setSpan 参数说明如下:
 ---
 
 
-<!-- 文档 53: ui-component/table/picker/.md -->
+<!-- 文档 52: ui-component/component/table/picker.md -->
 
 
 ## picker
@@ -6055,7 +5906,7 @@ setSpan 参数说明如下:
 ---
 
 
-<!-- 文档 54: ui-component/table/slider/.md -->
+<!-- 文档 53: ui-component/component/table/slider.md -->
 
 
 ## slider
@@ -6117,7 +5968,7 @@ setSpan 参数说明如下:
 ---
 
 
-<!-- 文档 55: ui-component/table/switch/.md -->
+<!-- 文档 54: ui-component/component/table/switch.md -->
 
 
 ## switch
@@ -6168,6 +6019,155 @@ setSpan 参数说明如下:
 | 名称 | 参数 | 描述 |
 | --- | --- | --- |
 | change | {checked:checkedValue} | checked 状态改变时触发 |
+
+
+---
+
+
+<!-- 文档 55: ui-component/component/ui-rotation.md -->
+
+
+## UI 组件支持的表冠旋转
+
+## UI 组件支持的表冠旋转
+
+更新时间：2025-10-09 11:25:10
+
+
+作为手表上非常重要的交互按钮，表冠在蓝河系统中得到了充分的支持。我们严格遵守了只有在获得表冠焦点后才能响应表冠事件的规则，在此前提下，蓝河系统提供了丰富的表冠响应方式，并支持开发者进行自定义和个性化的表冠响应。这些支持和机制的存在，可以让开发人员更加便捷地使用 UI 组件和表冠交互控制，提高表冠的交互性和可用性。
+
+
+### UI 组件表冠焦点
+
+
+为实现 UI 组件随表冠的旋转而滑动，务必确保 UI 组件处于获焦状态。同时，页面中只允许有一个组件获得焦点。
+
+
+默认焦点分配在最外层的最后一个可响应表冠的组件上。
+
+
+### 自定义 UI 组件对旋转表冠的响应
+
+
+开发者可以根据实际情况对组件响应旋转表冠事件进行自定义处理。
+
+
+### 默认支持的表冠组件如下：
+
+
+默认支持表冠的组件，其响应表冠选择和手指操作一致，组件上该触发的生命周期都会触发。
+
+
+| 组件名称 | 类型 |
+| --- | --- |
+| list | 用来呈现连续、多行数据的组件，包含一系列相同类型的列表项。 |
+| swiper | 一种带滚动功能的组件，它采用滑动的方式在有限的区域内显示更多的内容。 |
+| picker | 滚动选择器，允许用户从预定义范围中进行选择。当前支持时间选择器、日期选择器。 |
+| slider | 滑动型输入器。 |
+| scroll | 滚动视图容器。竖向或水平方向滚动容器，竖向滚动需要设置定高，水平滚动需要设置定宽。 |
+
+
+### 接口定义
+
+
+### 属性
+
+
+#### 以下属性都是组件的通用属性
+
+
+| 名称 | 类型 | 默认值 | 必填 | 描述 |
+| --- | --- | --- | --- | --- |
+| vibration-effectEnabled | Boolean | true | 否 | 表冠旋转的时候是否具有振动的效果，true 表示有振动效 果，false 表示没有振动效果 |
+| rotation-sensitivity | Number | 1 | 否 | 表冠灵敏度数值可设置为 高，正常，低以及默认的灵敏 度 1:低级，2:正常，3:高级 |
+| touch-focusable | Boolean | false | 否 | 设置组件在触摸模式下是否可以接收对焦 。 |
+
+
+### 事件
+
+
+| 事件名称 | 类型 | 默认值 | 必填 | 描述 |
+| --- | --- | --- | --- | --- |
+| rotation | Function | - | 否 | 组件监听表冠旋转的回调事件，组件的通用事件。 |
+
+
+#### 事件参数返回值 Object 对象的具体参数说明如下:
+
+
+| 接收参数 | 类型 | 说明 |
+| --- | --- | --- |
+| direction | Boolean | 旋转方向，表冠逆时针是正转返回 true，顺时针是反转返回 false。 |
+| delta | delta | 单次旋转变化量，重新旋转时会清零，正常低速情况下变化量的绝对值恒为 1，正 负代表旋转方向，正转为正，反转为负，单位为旋转事件的最小刻度。 |
+| velocity | Number | 旋转速度，方向之分与 delta 相同，单位为刻度/秒。 |
+| duration | Number | 事件时间间隔，本次和上一次事件触发时的时间间隔，首次触发事件时时间为 0， 单位为毫秒。 |
+| state | Number | 表冠旋转的状态，可取的值为 1:开始旋转，2:旋转中 ，3:旋转结束。 |
+
+
+### 方法
+
+
+| 方法名称 | 类型 | 说明 |
+| --- | --- | --- |
+| requestFocus | Boolean | 设置当前要获取焦点的组件，入参为 true 让当前组件抢占焦点，优先级最 高。此方法也是组件的通用方法。 |
+
+
+#### 示例
+
+
+##### 以 Picker 组件是默认支持表冠旋转的，旋转表冠组件聚焦设置示例代码如 下:
+
+
+```
+
+<script>
+ export default {
+ onReady() {
+ const picker = this.$element('picker')
+ picker.requestFocus(true)
+ },
+ }
+</script>
+
+<template>
+  <picker class="w-[750px] h-[750px] bg-black" id="picker" type="time"></picker>
+</template>
+
+<style>
+@tailwind utilities;
+</style>
+```
+
+复制代码
+##### 自定义 UI 组件支持表冠旋转
+
+
+```
+
+<script>
+ export default {
+ rotationHandler(ev){
+ console.log('表冠事件输出'+ev )
+ // 改变亮度
+ },
+ onReady () {
+ const div = this.$element("div")
+ div.requestFocus(true)
+ }
+ }
+</script>
+
+<template>
+  <div class="w-full h-full flex flex-col justify-center items-center">
+    <div class="w-60 h-60 bg-black" id="div" @rotation="rotationHandler">
+  </div>
+</template>
+
+<style>
+@tailwind utilities;
+</style>
+```
+
+复制代码
 
 
 ---

@@ -47,7 +47,7 @@
 ---
 
 
-<!-- 文档 1: tutorial/app-service/data-binding/.md -->
+<!-- 文档 1: tutorial/reference/app-service/data-binding.md -->
 
 
 ## 数据绑定
@@ -118,7 +118,7 @@
 ---
 
 
-<!-- 文档 2: tutorial/app-service/event-on/.md -->
+<!-- 文档 2: tutorial/reference/app-service/event-on.md -->
 
 
 ## 概述
@@ -224,7 +224,7 @@ UI 组件还支持许多其他的事件绑定，如果您想进一步了解，�
 ---
 
 
-<!-- 文档 3: tutorial/app-service/for/.md -->
+<!-- 文档 3: tutorial/reference/app-service/for.md -->
 
 
 ## 列表渲染
@@ -391,7 +391,7 @@ for="{{(index, value) in 5}}"
 ---
 
 
-<!-- 文档 4: tutorial/app-service/if-show/.md -->
+<!-- 文档 4: tutorial/reference/app-service/if-show.md -->
 
 
 ## 条件渲染
@@ -478,7 +478,7 @@ show 指令开始支持在自定义组件上进行声明，当这样使用时，
 ---
 
 
-<!-- 文档 5: tutorial/app-service/page-style-and-layout/.md -->
+<!-- 文档 5: tutorial/reference/app-service/page-style-and-layout.md -->
 
 
 ## 页面布局
@@ -712,7 +712,7 @@ div 组件为最常用的 Flex 容器组件，具有 Flex 布局的特性；text
 ---
 
 
-<!-- 文档 6: tutorial/app-service/parent-child-component-communication/.md -->
+<!-- 文档 6: tutorial/reference/app-service/parent-child-component-communication.md -->
 
 
 ## 自定义组件
@@ -997,7 +997,7 @@ div 组件为最常用的 Flex 容器组件，具有 Flex 布局的特性；text
 ---
 
 
-<!-- 文档 7: tutorial/app-service/props/.md -->
+<!-- 文档 7: tutorial/reference/app-service/props.md -->
 
 
 ## props
@@ -1169,7 +1169,7 @@ Prop 属性名称使用 camelCase(驼峰命名法)命名法，在外部传递数
 ---
 
 
-<!-- 文档 8: tutorial/app-service/switching-pages/.md -->
+<!-- 文档 8: tutorial/reference/app-service/switching-pages.md -->
 
 
 ## 页面路由
@@ -1414,7 +1414,7 @@ router 接口的参数 params 可配置页面跳转时需要传递的参数
 ---
 
 
-<!-- 文档 9: tutorial/configuration/file-organization/.md -->
+<!-- 文档 9: tutorial/reference/configuration/file-organization.md -->
 
 
 ## 文件组织
@@ -1658,7 +1658,7 @@ router 接口的参数 params 可配置页面跳转时需要传递的参数
 ---
 
 
-<!-- 文档 10: tutorial/configuration/intro/.md -->
+<!-- 文档 10: tutorial/reference/configuration/intro.md -->
 
 
 ## 框架简介
@@ -1709,7 +1709,7 @@ router 接口的参数 params 可配置页面跳转时需要传递的参数
 ---
 
 
-<!-- 文档 11: tutorial/configuration/manifest/.md -->
+<!-- 文档 11: tutorial/reference/configuration/manifest.md -->
 
 
 ## manifest 文件
@@ -1991,7 +1991,7 @@ widgetProvider 详细配置信息
 ---
 
 
-<!-- 文档 12: tutorial/configuration/script/.md -->
+<!-- 文档 12: tutorial/reference/configuration/script.md -->
 
 
 ## javascript 代码
@@ -2186,7 +2186,7 @@ export default {
 ---
 
 
-<!-- 文档 13: tutorial/configuration/style-sheet/.md -->
+<!-- 文档 13: tutorial/reference/configuration/style-sheet.md -->
 
 
 ## style 样式
@@ -2655,7 +2655,7 @@ npm i node-sass sass-loader
 ---
 
 
-<!-- 文档 14: tutorial/configuration/ux-file/.md -->
+<!-- 文档 14: tutorial/reference/configuration/ux-file.md -->
 
 
 ## UX 文件
@@ -2733,7 +2733,7 @@ APP、页面和自定义组件均通过 ux 后缀文件编写，ux 后缀文件�
 ---
 
 
-<!-- 文档 15: tutorial/extend/launch-mode/.md -->
+<!-- 文档 15: tutorial/reference/extend/launch-mode.md -->
 
 
 ## 页面启动模式
@@ -2804,7 +2804,7 @@ APP、页面和自定义组件均通过 ux 后缀文件编写，ux 后缀文件�
 ---
 
 
-<!-- 文档 16: tutorial/extend/mulit/.md -->
+<!-- 文档 16: tutorial/reference/extend/mulit.md -->
 
 
 ## 屏幕适配
@@ -3081,7 +3081,7 @@ res-defaults.json
 ---
 
 
-<!-- 文档 17: tutorial/extend/resident/.md -->
+<!-- 文档 17: tutorial/reference/extend/resident.md -->
 
 
 ## 后台运行
@@ -3161,7 +3161,7 @@ manifest.json 中声明所需的后台运行接口。后台运行接口及后台
 ---
 
 
-<!-- 文档 18: tutorial/extend/watchface/.md -->
+<!-- 文档 18: tutorial/reference/extend/watchface.md -->
 
 
 ## 表盘
@@ -3387,7 +3387,7 @@ index.ux 文件中包含了表盘界面描述、样式定义和业务逻辑代�
 ---
 
 
-<!-- 文档 19: tutorial/extend/widget/.md -->
+<!-- 文档 19: tutorial/reference/extend/widget.md -->
 
 
 ## 快捷卡片
@@ -3502,7 +3502,7 @@ index.ux 文件中包含了表盘界面描述、样式定义和业务逻辑代�
 ---
 
 
-<!-- 文档 20: tutorial/perf-guide/overview/.md -->
+<!-- 文档 20: tutorial/reference/perf-guide/overview.md -->
 
 
 ## 概述
@@ -3558,7 +3558,7 @@ index.ux 文件中包含了表盘界面描述、样式定义和业务逻辑代�
 ---
 
 
-<!-- 文档 21: tutorial/perf-guide/perf-dangerous/.md -->
+<!-- 文档 21: tutorial/reference/perf-guide/perf-dangerous.md -->
 
 
 ## 避免高耗性能操作
@@ -3702,7 +3702,7 @@ export default {
 ---
 
 
-<!-- 文档 22: tutorial/perf-guide/perf-data/.md -->
+<!-- 文档 22: tutorial/reference/perf-guide/perf-data.md -->
 
 
 ## 响应式数据优化
@@ -4011,7 +4011,7 @@ export default {
 ---
 
 
-<!-- 文档 23: tutorial/perf-guide/perf-frame-rate/.md -->
+<!-- 文档 23: tutorial/reference/perf-guide/perf-frame-rate.md -->
 
 
 ## 帧率优化指引
@@ -4048,7 +4048,7 @@ export default {
 ---
 
 
-<!-- 文档 24: tutorial/perf-guide/perf-init/.md -->
+<!-- 文档 24: tutorial/reference/perf-guide/perf-init.md -->
 
 
 ## 减少初始化开销
@@ -4203,7 +4203,7 @@ export default {
 ---
 
 
-<!-- 文档 25: tutorial/perf-guide/perf-longlist/.md -->
+<!-- 文档 25: tutorial/reference/perf-guide/perf-longlist.md -->
 
 
 ## 长列表性能优化
@@ -4387,7 +4387,7 @@ async loadMore() {
 ---
 
 
-<!-- 文档 26: tutorial/perf-guide/perf-memory-leak/.md -->
+<!-- 文档 26: tutorial/reference/perf-guide/perf-memory-leak.md -->
 
 
 ## js 内存泄漏排查
@@ -4468,7 +4468,7 @@ async loadMore() {
 ---
 
 
-<!-- 文档 27: tutorial/perf-guide/perf-runtime/.md -->
+<!-- 文档 27: tutorial/reference/perf-guide/perf-runtime.md -->
 
 
 ## 运行时性能优化
@@ -4896,7 +4896,7 @@ export default {
 ---
 
 
-<!-- 文档 28: tutorial/perf-guide/perf-src/.md -->
+<!-- 文档 28: tutorial/reference/perf-guide/perf-src.md -->
 
 
 ## 图片资源优化
@@ -4980,7 +4980,7 @@ svg 只在有动画或动态修改属性等特殊场景时使用，一般情况�
 ---
 
 
-<!-- 文档 29: tutorial/perf-guide/perf-subscription/.md -->
+<!-- 文档 29: tutorial/reference/perf-guide/perf-subscription.md -->
 
 
 ## 退出页面释放监听
@@ -5117,7 +5117,7 @@ export default {
 ---
 
 
-<!-- 文档 30: tutorial/perf-guide/perf-treeshaking/.md -->
+<!-- 文档 30: tutorial/reference/perf-guide/perf-treeshaking.md -->
 
 
 ## 减少代码体积
@@ -5662,7 +5662,7 @@ const user = {
 ---
 
 
-<!-- 文档 31: tutorial/question-answer/build-env/.md -->
+<!-- 文档 31: tutorial/reference/question-answer/build-env.md -->
 
 
 ## 编译环境变量
@@ -5712,7 +5712,7 @@ export default {
 ---
 
 
-<!-- 文档 32: tutorial/question-answer/i18n/.md -->
+<!-- 文档 32: tutorial/reference/question-answer/i18n.md -->
 
 
 ## 国际化
@@ -5965,7 +5965,7 @@ onConfigurationChanged(event) {
 ---
 
 
-<!-- 文档 33: tutorial/quickstart/introduction/.md -->
+<!-- 文档 33: tutorial/reference/quickstart/introduction.md -->
 
 
 ## 概述
@@ -6107,7 +6107,7 @@ BlueOS Studio 也提供了对应的分析面板，例如： [UI 调试](https://
 ---
 
 
-<!-- 文档 34: tutorial/quickstart/quick-start/.md -->
+<!-- 文档 34: tutorial/reference/quickstart/quick-start.md -->
 
 
 ## 构建首个蓝河应用
@@ -6282,7 +6282,7 @@ BlueOS Studio 也提供了对应的分析面板，例如： [UI 调试](https://
 ---
 
 
-<!-- 文档 35: tutorial/widget/js-widget/.md -->
+<!-- 文档 35: tutorial/reference/widget/js-widget.md -->
 
 
 ## 标准卡开发
@@ -6341,7 +6341,7 @@ export default {
 ---
 
 
-<!-- 文档 36: tutorial/widget/lite-widget/.md -->
+<!-- 文档 36: tutorial/reference/widget/lite-widget.md -->
 
 
 ## 轻卡开发
@@ -6792,7 +6792,7 @@ export default {
 ---
 
 
-<!-- 文档 37: tutorial/widget/overview/.md -->
+<!-- 文档 37: tutorial/reference/widget/overview.md -->
 
 
 ## 概述
@@ -6911,7 +6911,7 @@ export default {
 ---
 
 
-<!-- 文档 38: tutorial/widget/project-config/.md -->
+<!-- 文档 38: tutorial/reference/widget/project-config.md -->
 
 
 ## 卡片配置
@@ -7255,7 +7255,7 @@ export default {
 ---
 
 
-<!-- 文档 39: tutorial/widget/widget-provider/.md -->
+<!-- 文档 39: tutorial/reference/widget/widget-provider.md -->
 
 
 ## widgetProvider 开发
