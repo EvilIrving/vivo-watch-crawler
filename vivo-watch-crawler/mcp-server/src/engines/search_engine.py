@@ -93,10 +93,17 @@ class SearchEngine:
         results = []
         query_tokens = self._tokenize(query)
         
+        # 如果没有有效的查询关键词，返回空结果
+        if not query_tokens:
+            return results
+        
         # 如果指定了分类,先过滤
         candidate_doc_ids = None
         if category and category != 'all':
             candidate_doc_ids = set(self.category_index.get(category, []))
+            # 如果指定的分类不存在，返回空结果
+            if not candidate_doc_ids:
+                return results
         
         # 计算每个文档的相关度得分
         doc_scores = {}
@@ -111,6 +118,27 @@ class SearchEngine:
             score = self._calculate_relevance(doc, query_tokens)
             if score > 0:
                 doc_scores[doc_id] = score
+        
+        # 如果没有任何匹配，尝试降低门槛，返回部分匹配的结果
+        if not doc_scores:
+            for doc in self.documents:
+                doc_id = doc['id']
+                
+                # 分类过滤
+                if candidate_doc_ids is not None and doc_id not in candidate_doc_ids:
+                    continue
+                
+                # 使用更宽松的匹配：只要摘要中包含任一关键词
+                summary = doc.get('summary', '').lower()
+                title = doc.get('title', '').lower()
+                
+                partial_score = 0.0
+                for token in query_tokens:
+                    if len(token) > 2 and (token in summary or token in title):
+                        partial_score += 0.3
+                
+                if partial_score > 0:
+                    doc_scores[doc_id] = partial_score
         
         # 排序并限制结果数量
         sorted_doc_ids = sorted(
@@ -151,24 +179,41 @@ class SearchEngine:
         title = doc.get('title', '').lower()
         summary = doc.get('summary', '').lower()
         keywords = [k.lower() for k in doc.get('keywords', [])]
+        url = doc.get('url', '').lower()
         
+        # 遍历每个查询关键词
         for token in query_tokens:
-            # 精确匹配标题
-            if token in title:
-                score += 1.0
+            # 跳过过短的词（如 a, or, and 等）
+            if len(token) <= 1:
+                continue
             
-            # 精确匹配关键词
+            # 精确匹配标题 - 高权重
+            if token in title:
+                score += 2.0
+            
+            # 精确匹配关键词 - 高权重
             if token in keywords:
+                score += 1.5
+            # 部分匹配关键词
+            elif any(token in kw for kw in keywords):
                 score += 0.8
             
-            # 模糊匹配摘要
+            # 匹配 URL 路径
+            if token in url:
+                score += 1.0
+            
+            # 匹配摘要 - 基础权重
             if token in summary:
                 score += 0.5
         
         # 分类加权
         category = doc.get('category', '')
         if any(token in category for token in query_tokens):
-            score += 0.2
+            score += 0.3
+        
+        # 如果查询词数量较多，且部分匹配，给予额外加分
+        if len(query_tokens) >= 3 and score > 0:
+            score += 0.5
         
         return score
     
@@ -188,8 +233,10 @@ class SearchEngine:
             return f"@blueos-api/{title}.md"
         elif category == 'ui-component':
             return f"@blueos-component/{title}.md"
+        elif category == 'tutorial':
+            return f"@blueos-tutorial/{title}.md"
         else:
-            return ""
+            return f"@blueos-doc/{title}.md"
     
     def get_by_category(self, category: str) -> List[Dict[str, Any]]:
         """获取指定分类的所有文档"""
