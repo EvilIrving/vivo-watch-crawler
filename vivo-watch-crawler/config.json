@@ -1,0 +1,21 @@
+{
+  "entry_urls": [
+    "https://developers.vivo.com/product/blueos/doc/common/reference/quickstart/introduction",
+    "https://developers.vivo.com/product/blueos/doc/common/js/system/app",
+    "https://developers.vivo.com/product/blueos/doc/common/component/common/rule"
+  ],
+  "categories": {
+    "tutorial": "reference",
+    "js-api": "js",
+    "ui-component": "component"
+  },
+  "base_url": "https://developers.vivo.com/product/blueos/doc/",
+  "max_workers": 3,
+  "retry_times": 3,
+  "delay_range": [1, 3],
+  "timeout": 30,
+  "headless": true,
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+  "data_dir": "data",
+  "output_dir": "output"
+}
