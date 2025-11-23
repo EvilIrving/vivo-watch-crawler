@@ -1,0 +1,32 @@
+{
+  "server": {
+    "name": "blueos-docs-mcp",
+    "version": "1.0.0",
+    "transport": "stdio",
+    "log_level": "info",
+    "log_file": "logs/mcp-server.log"
+  },
+  "http": {
+    "host": "127.0.0.1",
+    "port": 8080,
+    "cors_enabled": true,
+    "cors_origins": ["*"]
+  },
+  "data": {
+    "base_path": "../../output",
+    "refs_path": "data/resource-refs.json",
+    "rules_path": "data/rules-knowledge-base.json",
+    "cache_dir": "data/cache",
+    "cache_ttl": 3600
+  },
+  "search": {
+    "default_limit": 5,
+    "max_limit": 20,
+    "enable_semantic": false,
+    "enable_cache": true
+  },
+  "validation": {
+    "max_code_length": 100000,
+    "timeout": 10
+  }
+}

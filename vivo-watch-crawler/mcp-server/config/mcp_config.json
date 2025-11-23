@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "blueos-docs": {
+      "command": "python3",
+      "args": [
+        "-m",
+        "src.server",
+        "--transport",
+        "stdio"
+      ],
+      "cwd": "/Users/actor/Documents/learn self/python/vivo-watch-crawler/mcp-server",
+      "env": {
+        "PYTHONPATH": "/Users/actor/Documents/learn self/python/vivo-watch-crawler/mcp-server"
+      }
+    }
+  },
+  "_comment": "SSE 模式配置示例 (如需使用SSE模式，请删除stdio配置，启用下面的配置)",
+  "_sse_example": {
+    "blueos-docs": {
+      "url": "http://127.0.0.1:8000/sse"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2025-11-24T03:01:33.834927",
+  "refs": {
+    "@blueos-doc.json": {
+      "path": "vivo-watch-crawler/output/index/doc-index.json",
+      "type": "application/json",
+      "description": "文档总索引",
+      "category": "index",
+      "size": 119975,
+      "checksum": "sha256:3e84748bc17f1906010b2f47fc19dcb664beb361591626403e9370b9c9d72ddf"
+    },
+    "@blueos-examples.json": {
+      "path": "vivo-watch-crawler/output/index/code-examples-index.json",
+      "type": "application/json",
+      "description": "代码示例索引",
+      "category": "index",
+      "size": 345249,
+      "checksum": "sha256:2a21e4454d23d8bb9d1b9e19045cc7b6fdad018b9c19755774afb600b1e76bb4"
+    },
+    "@blueos-component.json": {
+      "path": "vivo-watch-crawler/output/index/component-index.json",
+      "type": "application/json",
+      "description": "UI 组件索引",
+      "category": "index",
+      "size": 36,
+      "checksum": "sha256:9593c26e886647806eaa4ce98e7fb5b33b05b55ebd8e3b1eb2bc122f79484057"
+    },
+    "@blueos-api.json": {
+      "path": "vivo-watch-crawler/output/index/api-index.json",
+      "type": "application/json",
+      "description": "JavaScript API 索引",
+      "category": "index",
+      "size": 2194,
+      "checksum": "sha256:4af11e41729c9b155cbfe0474d6dbba8f8bfb0f646c5ba5ba1e7e061ca74ab12"
+    },
+    "@blueos-component-complete.md": {
+      "path": "vivo-watch-crawler/output/llm-ready/combined/ui-component-complete.md",
+      "type": "text/markdown",
+      "description": "UI 组件完整文档",
+      "category": "combined",
+      "size": 154117,
+      "checksum": "sha256:72b27919207e8703ea94537215a74dc6f3ab790aefbe5d6af7e09c9e0e71de3f"
+    },
+    "@blueos-api-complete.md": {
+      "path": "vivo-watch-crawler/output/llm-ready/combined/js-api-complete.md",
+      "type": "text/markdown",
+      "description": "JavaScript API 完整文档",
+      "category": "combined",
+      "size": 293832,
+      "checksum": "sha256:1403e79bf3bb29d5504708740b9e0dc67a00b3f4eccbe337f5bd398c6700cf92"
+    },
+    "@blueos-tutorial-complete.md": {
+      "path": "vivo-watch-crawler/output/llm-ready/combined/tutorial-complete.md",
+      "type": "text/markdown",
+      "description": "开发教程完整文档",
+      "category": "combined",
+      "size": 166144,
+      "checksum": "sha256:258eb775d81f9c62bbfae78487c850c6c161245bbd76028bca1143e1dfb9fad6"
+    },
+    "@blueos-api-rules.md": {
+      "path": "vivo-watch-crawler/output/markdown/js-api/api/rule.md",
+      "type": "text/markdown",
+      "description": "API 调用规范",
+      "category": "rules",
+      "size": 3074,
+      "checksum": "sha256:e7b565f53916a658d17a5d60775c611949d7fdc2e4bd33ed6eaf0e67306dc15a"
+    },
+    "@blueos-perf-guide.md": {
+      "path": "vivo-watch-crawler/output/markdown/tutorial/reference/perf-guide/overview.md",
+      "type": "text/markdown",
+      "description": "性能优化指南",
+      "category": "rules",
+      "size": 1815,
+      "checksum": "sha256:499f2c7a9c9b211cbd2ed6e91d486acbe09b5e2dee665489b32597709909b47f"
+    }
+  },
+  "patterns": [
+    {
+      "pattern": "@blueos-api/([a-z-]+)\\.md",
+      "template": "output/markdown/js-api/api/{0}.md",
+      "description": "API 命名空间文档"
+    },
+    {
+      "pattern": "@blueos-component/([a-z-]+)\\.md",
+      "template": "output/markdown/ui-component/component/**/{0}.md",
+      "description": "UI 组件文档"
+    }
+  ]
+}

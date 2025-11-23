@@ -1,0 +1,197 @@
+"""
+文档搜索引擎
+
+实现关键词搜索和语义匹配功能
+"""
+
+import json
+from pathlib import Path
+from typing import List, Dict, Any, Optional
+
+
+class SearchEngine:
+    def __init__(self, doc_index_file: str):
+        """
+        初始化搜索引擎
+        
+        Args:
+            doc_index_file: 文档索引文件路径
+        """
+        self.doc_index_file = Path(doc_index_file)
+        self.documents = []
+        self.keyword_index = {}  # 倒排索引: keyword -> [doc_ids]
+        self.category_index = {}  # 分类索引: category -> [doc_ids]
+        self.load_index()
+    
+    def load_index(self):
+        """加载文档索引"""
+        if not self.doc_index_file.exists():
+            raise FileNotFoundError(f"文档索引不存在: {self.doc_index_file}")
+        
+        with open(self.doc_index_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            self.documents = data.get('documents', [])
+        
+        # 构建倒排索引
+        self._build_keyword_index()
+        self._build_category_index()
+    
+    def _build_keyword_index(self):
+        """构建关键词倒排索引"""
+        for doc in self.documents:
+            doc_id = doc['id']
+            
+            # 索引标题
+            if 'title' in doc:
+                for word in self._tokenize(doc['title']):
+                    if word not in self.keyword_index:
+                        self.keyword_index[word] = []
+                    if doc_id not in self.keyword_index[word]:
+                        self.keyword_index[word].append(doc_id)
+            
+            # 索引关键词
+            if 'keywords' in doc:
+                for keyword in doc['keywords']:
+                    for word in self._tokenize(keyword):
+                        if word not in self.keyword_index:
+                            self.keyword_index[word] = []
+                        if doc_id not in self.keyword_index[word]:
+                            self.keyword_index[word].append(doc_id)
+    
+    def _build_category_index(self):
+        """构建分类索引"""
+        for doc in self.documents:
+            category = doc.get('category', 'unknown')
+            if category not in self.category_index:
+                self.category_index[category] = []
+            self.category_index[category].append(doc['id'])
+    
+    def _tokenize(self, text: str) -> List[str]:
+        """分词"""
+        # 简单分词: 转小写,按非字母数字字符分割
+        import re
+        tokens = re.findall(r'\w+', text.lower())
+        return tokens
+    
+    def search(
+        self,
+        query: str,
+        category: Optional[str] = None,
+        limit: int = 5
+    ) -> List[Dict[str, Any]]:
+        """
+        搜索文档
+        
+        Args:
+            query: 搜索查询
+            category: 可选的分类过滤
+            limit: 返回结果数量限制
+            
+        Returns:
+            匹配的文档列表,按相关度排序
+        """
+        results = []
+        query_tokens = self._tokenize(query)
+        
+        # 如果指定了分类,先过滤
+        candidate_doc_ids = None
+        if category and category != 'all':
+            candidate_doc_ids = set(self.category_index.get(category, []))
+        
+        # 计算每个文档的相关度得分
+        doc_scores = {}
+        
+        for doc in self.documents:
+            doc_id = doc['id']
+            
+            # 分类过滤
+            if candidate_doc_ids is not None and doc_id not in candidate_doc_ids:
+                continue
+            
+            score = self._calculate_relevance(doc, query_tokens)
+            if score > 0:
+                doc_scores[doc_id] = score
+        
+        # 排序并限制结果数量
+        sorted_doc_ids = sorted(
+            doc_scores.keys(),
+            key=lambda x: doc_scores[x],
+            reverse=True
+        )[:limit]
+        
+        # 构建结果
+        for doc_id in sorted_doc_ids:
+            doc = self._get_doc_by_id(doc_id)
+            if doc:
+                result = {
+                    'title': doc.get('title', ''),
+                    'category': doc.get('category', ''),
+                    'url': doc.get('url', ''),
+                    'ref': self._generate_ref(doc),
+                    'summary': doc.get('summary', '')[:200] + '...' if len(doc.get('summary', '')) > 200 else doc.get('summary', ''),
+                    'relevance': doc_scores[doc_id]
+                }
+                results.append(result)
+        
+        return results
+    
+    def _calculate_relevance(self, doc: Dict[str, Any], query_tokens: List[str]) -> float:
+        """
+        计算文档相关度得分
+        
+        Args:
+            doc: 文档
+            query_tokens: 查询关键词列表
+            
+        Returns:
+            相关度得分
+        """
+        score = 0.0
+        
+        title = doc.get('title', '').lower()
+        summary = doc.get('summary', '').lower()
+        keywords = [k.lower() for k in doc.get('keywords', [])]
+        
+        for token in query_tokens:
+            # 精确匹配标题
+            if token in title:
+                score += 1.0
+            
+            # 精确匹配关键词
+            if token in keywords:
+                score += 0.8
+            
+            # 模糊匹配摘要
+            if token in summary:
+                score += 0.5
+        
+        # 分类加权
+        category = doc.get('category', '')
+        if any(token in category for token in query_tokens):
+            score += 0.2
+        
+        return score
+    
+    def _get_doc_by_id(self, doc_id: str) -> Optional[Dict[str, Any]]:
+        """根据ID获取文档"""
+        for doc in self.documents:
+            if doc['id'] == doc_id:
+                return doc
+        return None
+    
+    def _generate_ref(self, doc: Dict[str, Any]) -> str:
+        """生成文档的快速引用标识符"""
+        category = doc.get('category', '')
+        title = doc.get('title', '').lower().replace(' ', '-')
+        
+        if category == 'js-api':
+            return f"@blueos-api/{title}.md"
+        elif category == 'ui-component':
+            return f"@blueos-component/{title}.md"
+        else:
+            return ""
+    
+    def get_by_category(self, category: str) -> List[Dict[str, Any]]:
+        """获取指定分类的所有文档"""
+        doc_ids = self.category_index.get(category, [])
+        return [self._get_doc_by_id(doc_id) for doc_id in doc_ids if self._get_doc_by_id(doc_id)]

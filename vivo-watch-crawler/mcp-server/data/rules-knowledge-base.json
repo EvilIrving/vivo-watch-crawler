@@ -1,0 +1,101 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2025-11-24T03:01:37.903839",
+  "total_rules": 7,
+  "rules": [
+    {
+      "rule_id": "api_001",
+      "category": "api",
+      "severity": "error",
+      "pattern": "require\\(['\\\"]@([^'\\\"]+)['\\\"]\\)",
+      "message": "API导入格式错误",
+      "recommendation": "使用正确的API导入格式: require('@system.xxx')",
+      "source_ref": "@blueos-api-rules.md",
+      "examples": [
+        {
+          "type": "correct",
+          "code": "const app = require('@system.app')"
+        },
+        {
+          "type": "wrong",
+          "code": "const app = require('system.app')"
+        }
+      ]
+    },
+    {
+      "rule_id": "api_002",
+      "category": "api",
+      "severity": "warning",
+      "pattern": "",
+      "message": "API参数类型不匹配",
+      "recommendation": "检查API文档,确保参数类型正确",
+      "source_ref": "@blueos-api-rules.md",
+      "examples": []
+    },
+    {
+      "rule_id": "perf_001",
+      "category": "performance",
+      "severity": "warning",
+      "pattern": "for=\\\"\\{\\{.+\\}\\}\\\"",
+      "message": "长列表未启用优化",
+      "recommendation": "对于超过100项的列表,建议使用scrollpage=\"true\"启用虚拟滚动",
+      "source_ref": "@blueos-perf-guide.md",
+      "examples": [
+        {
+          "type": "correct",
+          "code": "<list scrollpage=\"true\">\n  <list-item for=\"{{items}}\"></list-item>\n</list>"
+        }
+      ]
+    },
+    {
+      "rule_id": "perf_002",
+      "category": "performance",
+      "severity": "major",
+      "pattern": "(setInterval|setTimeout)",
+      "message": "可能存在内存泄漏风险",
+      "recommendation": "确保在页面销毁时清除定时器",
+      "source_ref": "@blueos-perf-guide.md",
+      "examples": [
+        {
+          "type": "correct",
+          "code": "onDestroy() {\n  clearInterval(this.timer);\n}"
+        }
+      ]
+    },
+    {
+      "rule_id": "perf_003",
+      "category": "performance",
+      "severity": "major",
+      "pattern": "subscribe\\(",
+      "message": "订阅未取消可能导致内存泄漏",
+      "recommendation": "在onDestroy中取消所有订阅",
+      "source_ref": "@blueos-perf-guide.md",
+      "examples": [
+        {
+          "type": "correct",
+          "code": "onDestroy() {\n  this.subscription.unsubscribe();\n}"
+        }
+      ]
+    },
+    {
+      "rule_id": "perf_004",
+      "category": "performance",
+      "severity": "info",
+      "pattern": "",
+      "message": "避免在模板中使用复杂表达式",
+      "recommendation": "将复杂计算移到computed属性或方法中",
+      "source_ref": "@blueos-perf-guide.md",
+      "examples": []
+    },
+    {
+      "rule_id": "style_001",
+      "category": "style",
+      "severity": "warning",
+      "pattern": "style=\\\"[^\\\"]*position:\\s*absolute",
+      "message": "list-item不支持position样式",
+      "recommendation": "list-item组件不支持position属性,请移除",
+      "source_ref": "@blueos-component-rules.md",
+      "examples": []
+    }
+  ]
+}
