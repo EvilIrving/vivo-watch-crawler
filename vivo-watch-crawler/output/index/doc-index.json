@@ -1,0 +1,2391 @@
+{
+  "total": 161,
+  "categories": {
+    "ui-component": [
+      "doc_0000",
+      "doc_0001",
+      "doc_0002",
+      "doc_0003",
+      "doc_0004",
+      "doc_0005",
+      "doc_0006",
+      "doc_0007",
+      "doc_0008",
+      "doc_0009",
+      "doc_0010",
+      "doc_0011",
+      "doc_0012",
+      "doc_0013",
+      "doc_0014",
+      "doc_0015",
+      "doc_0016",
+      "doc_0017",
+      "doc_0018",
+      "doc_0019",
+      "doc_0020",
+      "doc_0021",
+      "doc_0022",
+      "doc_0023",
+      "doc_0024",
+      "doc_0025",
+      "doc_0026",
+      "doc_0027",
+      "doc_0028",
+      "doc_0029",
+      "doc_0030",
+      "doc_0031",
+      "doc_0032",
+      "doc_0033",
+      "doc_0034",
+      "doc_0035",
+      "doc_0036",
+      "doc_0037",
+      "doc_0038",
+      "doc_0039",
+      "doc_0040",
+      "doc_0041",
+      "doc_0042",
+      "doc_0043",
+      "doc_0044",
+      "doc_0045",
+      "doc_0046",
+      "doc_0047",
+      "doc_0048",
+      "doc_0049",
+      "doc_0050",
+      "doc_0051",
+      "doc_0052",
+      "doc_0053",
+      "doc_0054"
+    ],
+    "js-api": [
+      "doc_0055",
+      "doc_0056",
+      "doc_0057",
+      "doc_0058",
+      "doc_0059",
+      "doc_0060",
+      "doc_0061",
+      "doc_0062",
+      "doc_0063",
+      "doc_0064",
+      "doc_0065",
+      "doc_0066",
+      "doc_0067",
+      "doc_0068",
+      "doc_0069",
+      "doc_0070",
+      "doc_0071",
+      "doc_0072",
+      "doc_0073",
+      "doc_0074",
+      "doc_0075",
+      "doc_0076",
+      "doc_0077",
+      "doc_0078",
+      "doc_0079",
+      "doc_0080",
+      "doc_0081",
+      "doc_0082",
+      "doc_0083",
+      "doc_0084",
+      "doc_0085",
+      "doc_0086",
+      "doc_0087",
+      "doc_0088",
+      "doc_0089",
+      "doc_0090",
+      "doc_0091",
+      "doc_0092",
+      "doc_0093",
+      "doc_0094",
+      "doc_0095",
+      "doc_0096",
+      "doc_0097",
+      "doc_0098",
+      "doc_0099",
+      "doc_0100",
+      "doc_0101",
+      "doc_0102",
+      "doc_0103",
+      "doc_0104",
+      "doc_0105",
+      "doc_0106",
+      "doc_0107",
+      "doc_0108",
+      "doc_0109",
+      "doc_0110",
+      "doc_0111",
+      "doc_0112",
+      "doc_0113",
+      "doc_0114",
+      "doc_0115",
+      "doc_0116",
+      "doc_0117",
+      "doc_0118",
+      "doc_0119",
+      "doc_0120",
+      "doc_0121"
+    ],
+    "tutorial": [
+      "doc_0122",
+      "doc_0123",
+      "doc_0124",
+      "doc_0125",
+      "doc_0126",
+      "doc_0127",
+      "doc_0128",
+      "doc_0129",
+      "doc_0130",
+      "doc_0131",
+      "doc_0132",
+      "doc_0133",
+      "doc_0134",
+      "doc_0135",
+      "doc_0136",
+      "doc_0137",
+      "doc_0138",
+      "doc_0139",
+      "doc_0140",
+      "doc_0141",
+      "doc_0142",
+      "doc_0143",
+      "doc_0144",
+      "doc_0145",
+      "doc_0146",
+      "doc_0147",
+      "doc_0148",
+      "doc_0149",
+      "doc_0150",
+      "doc_0151",
+      "doc_0152",
+      "doc_0153",
+      "doc_0154",
+      "doc_0155",
+      "doc_0156",
+      "doc_0157",
+      "doc_0158",
+      "doc_0159",
+      "doc_0160"
+    ]
+  },
+  "documents": [
+    {
+      "id": "doc_0000",
+      "title": "a",
+      "url": "https://developers-watch.vivo.com.cn/component/basic/a/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "a\n更新时间：\n2025-07-10 10:44:44\n超链接（默认不带下划线）。文本内容写在标签内容区，支持转义字符\n\"\\\"\n子组件\n支持\n<span>\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\nhref\n<string>\n-\n否\n支持的格式参见\n页面路由\n中的 uri 参数。\n额外的:\nhref 还可以通过“?param1=value1”的方式添加参数，参数可以在页面中通过\nthi",
+      "keywords": [
+        "About",
+        "a"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0001",
+      "title": "animated-vector",
+      "url": "https://developers-watch.vivo.com.cn/component/basic/animated-vector/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "animated-vector\n更新时间：\n2023-10-31 20:58:14\n概述\nanimated-vector 组件，用于解析渲染安卓 xml 动画资源。\nxml 动画通过将矢量可绘制对象资源与属性动画资源通过 AAPT 内嵌资源格式在 xml 文件中定义来实现，可在\n安卓开发者文档\n中了解更多。\nanimated-vector 组件提供配置 xml 动画，进行播放，暂停等操作的能力，只",
+      "keywords": [
+        "animated-vector"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0002",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/component/basic/animation-overview/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2023-10-30 17:10:04\n提供用于实现页面元素动画效果的 UI 组件，通常用于增强用户交互体验，吸引用户的注意力，提高页面的美观度和可视化效果。\n动画组件介绍\n组件\n简述\nsvg-container\n渲染 svg 图片，可以动态修改 svg 属性\nimage-animator\n图片帧动画播放器\nanimated-vector\nanimated-vector 组件，用",
+      "keywords": [
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0003",
+      "title": "arc-text",
+      "url": "https://developers-watch.vivo.com.cn/component/basic/arc-text/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "arc-text\n更新时间：\n2023-10-20 10:02:06\n弧形文本，文本内容展示在 arc-text 组件盒模型内最大且居中的圆周上，超出的内容将会被截断。\n如下图示例\n弧\n形\n文\n本\n子组件\n不支持\n属性\n支持\n通用属性\n样式\n支持\n通用样式\n名称\n类型\n默认值\n必填\n描述\ncolor\n<color>\n#000000\n否\n文本颜色\nfont-size\n<length>\n30px\n否",
+      "keywords": [
+        "arc-text"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0004",
+      "title": "barcode",
+      "url": "https://developers-watch.vivo.com.cn/component/basic/barcode/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "barcode\n更新时间：\n2023-10-20 10:02:06\n条形码，将文本内容转换为条形码展示。\n子组件\n不支持\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\nvalue\n<string>\n-\n是\n条形码内容，码制为 Code128 码，长度小于等于 20 字节\n样式\n支持\n通用样式\n事件\n支持\n通用事件",
+      "keywords": [
+        "barcode"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0005",
+      "title": "image-animator",
+      "url": "https://developers-watch.vivo.com.cn/component/basic/image-animator/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "image-animator\n更新时间：\n2023-12-21 13:49:50\n图片帧动画播放器。\n属性\n支持\n通用属性\n还支持如下属性：\n名称\n类型\n默认值\n必填\n描述\nimages\nArray<ImageFrame>\n-\n是\n设置图片帧信息集合。每一帧的帧信息包含图片路径、图片大小和图片位置信息。目前支持的图片格式为 png。\npredecode\nNumber\n0\n否\n是否启用预解码，默认值",
+      "keywords": [
+        "String",
+        "image-animator",
+        "ImageFrame",
+        "Array",
+        "Number"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0006",
+      "title": "image",
+      "url": "https://developers-watch.vivo.com.cn/component/basic/image/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "image\n更新时间：\n2024-03-15 09:29:57\n渲染图片，不支持子组件、事件、方法\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\nsrc\n<uri>\n-\n否\n图片的 uri，支持本地图片和网络图片，支持的图片格式包括静态类型(png, svg, .9, gif)\nalt\n<uri>\n| 'blank'\n-\n否\n加载时显示的占位图；只支持本地图片资源(png)。\n注意：alt",
+      "keywords": [
+        "Image",
+        "image"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0007",
+      "title": "marquee",
+      "url": "https://developers-watch.vivo.com.cn/component/basic/marquee/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "marquee\n更新时间：\n2025-08-13 20:11:57\n跑马灯组件，用于展示一段滚动文字，默认为单行显示。\n子组件\n不支持子组件。\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\nscrollamount\n<number>\n1\n否\n每秒滚动的距离，单位：px。\nloop\n<number>\n3\n否\n滚动的次数，默认值为 3。\ndirection\n<string>\nleft\n否\n滚动",
+      "keywords": [
+        "marquee"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0008",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/component/basic/overview/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2023-10-31 19:37:39\n作为组成复杂组件和应用的基础模块，基本的 UI 展示功能通常包括文本框、链接和图片等元素。这些 UI 组件是构建用户界面的重要基础，通过这些基本元素的组合与拼接，可以实现丰富多彩、充满个性化的 UI 设计。蓝河系统提供了这些基本 UI 展示功能的实现和支持，以帮助您快速构建和部署丰富多样的用户界面和互动性应用。\n基础组件介绍\n更新时间：\n2",
+      "keywords": [
+        "JavaScript",
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0009",
+      "title": "physics-engine",
+      "url": "https://developers-watch.vivo.com.cn/component/basic/physics-space/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "physics-engine\n更新时间：\n2025-10-10 09:34:52\n概述\n物理引擎是一种用于模拟现实世界物理规律的能力，包括重力、碰撞、摩擦、弹性、刚体运动等，使应用中的物体行为更加自然、真实。\n基本概念：\n空间 (Space)\n空间\n是物理引擎中用于模拟物理效果的容器。\n在一个空间中，可以添加多个刚体（Body）和形状（Shape）。\n每个\nphysics-engine\n组件对应一",
+      "keywords": [
+        "Shape",
+        "Body",
+        "physics-engine",
+        "Space"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0010",
+      "title": "progress",
+      "url": "https://developers-watch.vivo.com.cn/component/basic/progress/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "progress\n更新时间：\n2025-07-08 14:41:29\n进度条，不支持子组件，支持\n通用事件\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\npercent\n<number>\n0\n否\n当前进度\ntype\nhorizontal | arc\nhorizontal\n否\n进度条类型，不支持动态修改\n样式\n支持\n通用样式\nhorizontal progress 底色为(136, 136,",
+      "keywords": [
+        "Object",
+        "String",
+        "progress",
+        "Number"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0011",
+      "title": "qrcode",
+      "url": "https://developers-watch.vivo.com.cn/component/basic/qrcode/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "qrcode\n更新时间：\n2023-12-21 13:49:50\n二维码，将文本内容转换为二维码展示。\n子组件\n不支持\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\nvalue\n<string>\n-\n是\n二维码内容，长度小于等于 400 字节\neclevel\n<number>\n1\n否\n二维码纠错等级 取值范围为 0 到 3\ntype\nnormal | circle\nnormal\n否\n二维码",
+      "keywords": [
+        "qrcode"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0012",
+      "title": "span",
+      "url": "https://developers-watch.vivo.com.cn/component/basic/span/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "span\n更新时间：\n2023-10-20 10:02:06\n格式化的文本，只能作为\n<text>\n子组件，不支持事件，目前不支持换行。\n属性\n支持\n通用属性\n样式\n名称\n类型\n默认值\n必填\n描述\ncolor\n<color>\n#000000\n否\n文本颜色\nfont-size\n<length>\n30px\n否\n文本尺寸\nfont-weight\nnormal | bold | lighter | bor",
+      "keywords": [
+        "span"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0013",
+      "title": "svg-container",
+      "url": "https://developers-watch.vivo.com.cn/component/basic/svg-container/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "svg-container\n更新时间：\n2024-10-11 11:55:18\n渲染 svg 图片，可以动态修改 svg 属性\n子组件\n无\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\nsrc\n<uri>\n-\n是\n只支持本地 uri\n支持动态修改的属性说明：\n基本图形属性\n标签\n属性\n描述\n备注\nrect\nx\n横坐标\ny\n纵坐标\nrx\n水平角半径\nry\n垂直角半径\nwidth\n宽度\nhei",
+      "keywords": [
+        "Object",
+        "svg-container"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0014",
+      "title": "text",
+      "url": "https://developers-watch.vivo.com.cn/component/basic/text/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "text\n更新时间：\n2023-10-20 10:02:06\n文本，文本内容写在标签内容区\n子组件\n支持\n<span>\n属性\n支持\n通用属性\n样式\n支持\n通用样式\n名称\n类型\n默认值\n必填\n描述\nmin-width\n<length>\n|\n<percentage>\n-\n否\n指定元素的最小宽度\nmin-height\n<length>\n|\n<percentage>\n-\n否\n指定元素的最小高度\nmax-w",
+      "keywords": [
+        "text"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0015",
+      "title": "动画样式",
+      "url": "https://developers-watch.vivo.com.cn/component/common/animation-styles/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "动画样式\n更新时间：\n2025-04-15 11:26:34\n蓝河应用支持开发者制作动画，提供了\ntransform\n类、\nanimation\n类的动画样式属性，且参数格式与 CSS 对齐，更方便开发者上手适配动画\ntransform\n可参考此\n文档\n入门\nanimation\n可参考此\n文档\n入门\n动画样式列表\n名称\n类型\n默认值\n描述\ntransform-origin\n<position>\n0p",
+      "keywords": [
+        "Color",
+        "Width",
+        "动画样式",
+        "Opacity"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0016",
+      "title": "颜色样式",
+      "url": "https://developers-watch.vivo.com.cn/component/common/color/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "颜色样式\n更新时间：\n2023-10-30 22:39:21\n蓝河应用支持\n颜色值类型\n开发者可参考\nMDN 文档\n了解更多颜色值的入门知识\n颜色值格式示例\n'#f0f'\n(#rgb)\n'#ff00ff'\n(#rrggbb)\n'#ff00ff13'\n(#rrggbbaa)\nrgb(255, 0, 255)\nrgba(255, 255, 255, 1.0)\nblack,white",
+      "keywords": [
+        "颜色样式"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0017",
+      "title": "通用属性",
+      "url": "https://developers-watch.vivo.com.cn/component/common/common-attributes/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "通用属性\n更新时间：\n2023-10-31 17:06:23\n通用属性，即所有组件都支持的属性。\n开发者可以在所有的组件标签上都使用\n通用属性\n示例代码\n<\ntemplate\n>\n<\ndiv\n>\n<\ntext\nid\n=\n\"\ntext1\n\"\nclass\n=\n\"\ntext-normal\n\"\n>\nline 1\n</\ntext\n>\n<\ntext\nid\n=\n\"\ntext2\n\"\nclass\n=\n\"\ntext-",
+      "keywords": [
+        "通用属性"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0018",
+      "title": "通用事件",
+      "url": "https://developers-watch.vivo.com.cn/component/common/common-events/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "通用事件\n更新时间：\n2025-10-09 11:25:10\n通用事件指所有组件均支持的事件回调。\n开发者可以在组件标签上通过\non{eventName}\n（如\nonclick\n）或\n@{eventName}\n（如\n@click\n）的形式注册事件处理函数。 两种写法的效果一致，其中\n@event\n是语法糖，更适用于框架风格的开发方式。\n有关事件绑定的更多说明，请参考\n事件绑定\n文档。\n示例代码\n<",
+      "keywords": [
+        "MouseEvent",
+        "通用事件",
+        "TouchEvent"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0019",
+      "title": "通用方法",
+      "url": "https://developers-watch.vivo.com.cn/component/common/common-methods/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "通用方法\n更新时间：\n2024-10-11 11:55:18\n通用方法，提供给所有组件调用的方法\n在组件使用\nid\n标记 id 属性后，开发者可通过\nthis.$element('idName')\n获取 dom 节点，再调用以下列举的\n通用方法\nid\n属性赋值可以查看此\n文档\n入门\nthis.$element\n可以查看此\n文档\n入门\ngetBoundingClientRect(Object obj",
+      "keywords": [
+        "Object",
+        "通用方法"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0020",
+      "title": "通用样式",
+      "url": "https://developers-watch.vivo.com.cn/component/common/common-styles/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "通用样式\n更新时间：\n2025-02-20 20:02:23\n通用样式，即所有组件都可以支持的样式\n它们均与 css 的属性样式用法保持一致，开发者可写在\n内联样式\n或\n<style>\n标签里，实现组件样式的定制化\n关于组件样式的设置，可以参考此\n文档\n入门\n类型说明\n长度类型\n名称\n类型定义\n描述\nlength\nString |Number\n用于描述尺寸单位，输入为 number 类型时，使用",
+      "keywords": [
+        "通用样式",
+        "String",
+        "Number"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0021",
+      "title": "组件动画",
+      "url": "https://developers-watch.vivo.com.cn/component/common/component-animation/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "组件动画\n更新时间：\n2025-10-09 11:25:10\n除了提供常规的 CSS 样式动画，蓝河应用还具备 JS 组件动画的方法。相比于 CSS 样式动画，这种动画方式拥有更为灵活、个性化的逻辑控制能力。\nElement.animate()\n创建一个\nAnimation\n对象实例；调用其\nplay\n方法，即可执行动画，表现为一系列变换 （位置、大小、旋转角度、背景颜色和不透明度）。\n语法\nco",
+      "keywords": [
+        "Element",
+        "组件动画",
+        "Demo",
+        "Animation"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0022",
+      "title": "自定义字体样式",
+      "url": "https://developers-watch.vivo.com.cn/component/common/font-face-style/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "自定义字体样式\n更新时间：\n2023-12-21 17:59:06\nfont-face 用于定义字体样式。当需要为文本组件设置自定义字体时，可以在 style 中定义 font-face 作为自定义字体，然后在 font-family 中可以引用该字体。\n自定义字体可以是从项目中的字体文件或网络字体文件中加载的字体。\n注： 只支持 ttf 和 otf 格式的字体。\n定义 font-face\n@fo",
+      "keywords": [
+        "Common",
+        "自定义字体样式"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0023",
+      "title": "渐变样式",
+      "url": "https://developers-watch.vivo.com.cn/component/common/gradient-styles/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "渐变样式\n更新时间：\n2023-10-20 10:02:06\n渐变 (gradients) 可以在两个或多个指定的颜色之间显示平稳的过渡，用法与 CSS 渐变一致。\n当前框架支持以下渐变效果：\n线性渐变 (linear-gradient)\n重复线性渐变 (repeating-linear-gradient)\n线性渐变 / 重复线性渐变\n创建一个线性渐变，需要定义两类数据：1) 过渡方向；2) 过渡",
+      "keywords": [
+        "渐变样式"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0024",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/component/common/rule/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2024-11-27 10:08:05\nUI 组件是编写整个界面的基础。蓝河系统的组件拥有多项核心能力，包括属性、样式、事件和方法，同时还支持表冠旋转相关的事件处理和复杂动画，让您的界面更加生动有趣。\n通用能力介绍\n能力\n简述\n通用事件\n即所有组件都支持的事件回调\n通用属性\n即所有组件都支持的属性。开发者可以在所有的组件标签上都使用通用属性\n通用样式\n即所有组件都可以支持的样式，",
+      "keywords": [
+        "Animation",
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0025",
+      "title": "UI 组件支持的表冠旋转",
+      "url": "https://developers-watch.vivo.com.cn/component/common/ui-rotation/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "UI 组件支持的表冠旋转\n更新时间：\n2025-10-09 11:25:10\n作为手表上非常重要的交互按钮，表冠在蓝河系统中得到了充分的支持。我们严格遵守了只有在获得表冠焦点后才能响应表冠事件的规则，在此前提下，蓝河系统提供了丰富的表冠响应方式，并支持开发者进行自定义和个性化的表冠响应。这些支持和机制的存在，可以让开发人员更加便捷地使用 UI 组件和表冠交互控制，提高表冠的交互性和可用性。\nUI",
+      "keywords": [
+        "Function",
+        "UI 组件支持的表冠旋转",
+        "Object",
+        "Boolean",
+        "Number"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0026",
+      "title": "div",
+      "url": "https://developers-watch.vivo.com.cn/component/container/div/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "div\n更新时间：\n2023-11-06 14:52:55\n基本容器，支持子组件，支持\n通用属性\n，支持\n通用样式\n，支持\n通用事件\n样式\n名称\n类型\n默认值\n必填\n描述\nflex-direction\ncolumn | row | column-reverse | row-reverse\nrow\n否\n默认为横向\nrow\n，父容器为\n<div>、<list-item>\n时生效\nflex-wrap\nn",
+      "keywords": [
+        "div"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0027",
+      "title": "list-item",
+      "url": "https://developers-watch.vivo.com.cn/component/container/list-item/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "list-item\n更新时间：\n2025-06-19 19:54:46\n<list>\n的子组件，用来展示列表具体 item，宽度默认充满 list 组件，支持子组件，支持\n通用属性\n，支持\n<div>样式\n，不支持 position 样式，支持\n通用样式\n，支持\n通用事件\n属性\n名称\n类型\n默认值\n必填\n描述\ntype\n<string>\n-\n是\nlist-item 类型，值为自定义的字符串，如'l",
+      "keywords": [
+        "Slots",
+        "list-item"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0028",
+      "title": "list",
+      "url": "https://developers-watch.vivo.com.cn/component/container/list/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "list\n更新时间：\n2025-06-19 19:54:46\n列表视图容器，仅支持\n<list-item>\n子组件，支持\n通用属性\n，支持\n通用样式\n属性\n名称\n类型\n默认值\n必填\n描述\ntype\nnormal|fisheye|grid\nnormal\n否\n设置列表的的布局方式，默认为普通的 list 布局；fisheye 是类似鱼眼镜头效果布局；grid 是网格布局。该属性不可动态变更\nscrol",
+      "keywords": [
+        "Object",
+        "list"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0029",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/component/container/overview/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2023-10-31 20:58:14\n布局/容器组件是实现 UI 布局的核心模块之一，不仅可以提供独立的布局功能，还可以多个容器组合，实现更为复杂的布局模式和视觉效果。布局容器还能够为其它 UI 组件提供适当的间距及排列方式，使得整个页面更加美观，构建更丰富的 UI 界面。\n布局/容器组件介绍\n组件\n简述\ndiv\n基本容器\nlist\n列表视图容器，仅支持\n<list-item>",
+      "keywords": [
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0030",
+      "title": "scroll",
+      "url": "https://developers-watch.vivo.com.cn/component/container/scroll/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "scroll\n更新时间：\n2025-10-09 11:25:10\n滚动视图容器。竖向或水平方向滚动容器，竖向滚动需要设置定高，水平滚动需要设置定宽。\n子组件\n支持，也支持嵌套\nscroll\n。\n属性\n支持\n通用属性\n属性\n类型\n默认值\n必填\n说明\nscroll-x\nBoolean\nfalse\n否\n是否允许横向滚动\nscroll-y\nBoolean\nfalse\n否\n是否允许纵向滚动\nscroll-t",
+      "keywords": [
+        "String",
+        "Boolean",
+        "scroll",
+        "Number"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0031",
+      "title": "stack",
+      "url": "https://developers-watch.vivo.com.cn/component/container/stack/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "stack\n更新时间：\n2023-12-21 13:49:50\n基本容器，子组件排列方式为层叠排列，每个直接子组件按照先后顺序依次堆叠，覆盖前一个子组件，支持子组件，支持\n通用属性\n样式\n支持\n<div> 样式\n，支持\n通用样式\n事件\n支持\n通用事件",
+      "keywords": [
+        "stack"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0032",
+      "title": "swiper",
+      "url": "https://developers-watch.vivo.com.cn/component/container/swiper/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "swiper\n更新时间：\n2025-04-09 17:46:39\n滑块视图容器，支持子组件\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\nindex\n<number>\n0\n否\n当前显示的子组件索引\nindicator\n<boolean>\ntrue\n否\n是否启用 indicator，默认 true\nscrollbar\n<boolean>\nfalse\n否\n是否启用滚动条，如果 indicato",
+      "keywords": [
+        "Object",
+        "swiper"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0033",
+      "title": "cellular-list",
+      "url": "https://developers-watch.vivo.com.cn/component/extend/cellular-list/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "cellular-list\n更新时间：\n2024-02-28 14:36:29\n蜂窝列表组件，将指定结构的数组渲染成蜂窝状列表。\n* 排列方式\n *     19___20\n *      |\n *      |  7___8___9\n *      |  |        \\\n *     18  | 1___2   10\n *    /    |  \\   \\   \\\n *   17    6",
+      "keywords": [
+        "cellular-list",
+        "String",
+        "Integer"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0034",
+      "title": "drawer-navigation",
+      "url": "https://developers-watch.vivo.com.cn/component/extend/drawer-navigation/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "drawer-navigation\n更新时间：\n2025-10-09 11:25:10\n<drawer>\n的子组件，用来展示具体的抽屉内容\n子组件\n支持\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\ndirection\nstart | end | up | down\nstart\n否\ndrawer-navigation 的滑出方向，支持 start/end/up/down。如果多个 draw",
+      "keywords": [
+        "drawer-navigation"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0035",
+      "title": "drawer",
+      "url": "https://developers-watch.vivo.com.cn/component/extend/drawer/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "drawer\n更新时间：\n2023-10-20 10:02:06\n抽屉容器，抽屉默认隐藏。可通过边缘滑动，支持 flex 布局。\n子组件\n支持,包括\n<drawer-navigation>\n子组件\n属性\n支持\n通用属性\n样式\n支持\n通用样式\n事件\n支持\n通用事件\n名称\n参数\n描述\nchange\n{direction:directionValue, state: stateValue}\n抽屉打开关闭",
+      "keywords": [
+        "Object",
+        "drawer"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0036",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/component/extend/overview/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2024-10-11 11:55:18\n用于简化页面导航的 UI 组件，通过提供直观的导航形式、清晰的页面路径和视觉创意等，提供了便捷的导航体验\n导航组件介绍\n组件\n简述\ndrawer\n抽屉容器，抽屉默认隐藏。可通过边缘滑动，支持 flex 布局\ndrawer-navigation\n<drawer>的子组件，用来展示具体的抽屉内容\ncellular-list\n蜂窝列表组件，将指定",
+      "keywords": [
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0037",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/component/global/overview/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2023-10-30 19:29:42\n提供基于蓝河应用的特定的设计规范和标准所设计的 UI 组件，这些组件具有统一的设计风格、布局、图标元素和字体字号等，旨在为用户提供全面的业务场景下的界面设计需求。\n系统风格组件介绍\n组件\n简述\nvw-alert\n弹窗组件，此组件为应用内主动触发的信息、操作确认弹窗\nvw-button\n一种基础的组件，点击后可执行对应（按钮表意）的操作。包含",
+      "keywords": [
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0038",
+      "title": "vw-alert",
+      "url": "https://developers-watch.vivo.com.cn/component/global/vw-alert/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "vw-alert\n更新时间：\n2025-04-30 20:56:55\n控件定义：弹窗组件，此组件为应用内主动触发的信息、操作确认弹窗（注意：此组件不包含应用外的系统通知提醒弹窗）\n属性\n名称\n类型\n默认值\n必填\n描述\nicon\n<string>\n-\n否\n图标\ntitle\n<string>\n-\n否\n标题\ncontent\n<string>\n-\n是\n正文\ndes\n<string>\n-\n否\n副文本/辅助信",
+      "keywords": [
+        "vw-alert",
+        "Array"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0039",
+      "title": "vw-button",
+      "url": "https://developers-watch.vivo.com.cn/component/global/vw-button/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "vw-button\n更新时间：\n2025-04-30 20:56:55\n一种基础的组件，点击后可执行对应（按钮表意）的操作。包含“文字按钮”“图标按钮”两类；\n属性\n名称\n类型\n默认值\n必填\n描述\ntype\n<string>\nplain\n否\n类型包括以下五种类型： plain,primary,success,warning,danger\nvalue\n<string>\n-\n是\n按钮文本\ndisabl",
+      "keywords": [
+        "vw-button",
+        "MouseEvent"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0040",
+      "title": "vw-empty",
+      "url": "https://developers-watch.vivo.com.cn/component/global/vw-empty/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "vw-empty\n更新时间：\n2025-04-30 20:56:55\n控件定义：页面无用户生成的内容时，显示空白页控件元素：\n（1） 图标\n（2） 正文\n（3） 辅助信息\n属性\n名称\n类型\n默认值\n必填\n描述\nicon\n<string>\n-\n否\nicon 名称/自定义路径定义\ncontent\n<string>\n-\n是\n正文描述\ndes\n<string>\n-\n否\n辅助信息描述\ncontent-col",
+      "keywords": [
+        "vw-empty"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0041",
+      "title": "vw-icon",
+      "url": "https://developers-watch.vivo.com.cn/component/global/vw-icon/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "vw-icon\n更新时间：\n2025-04-30 20:56:55\n控件定义：提供一套常用图标\n常用 icon 列表\nicon\n描述\ndelete\n删除\narrow-left\n左箭头\narrow-right\n右箭头\nplus\n加号\nminus\n减号\nwarn\n警告\nfinish\n完成\narrow-right-black\n指向右边的黑色箭头\ninfo-light\n浅色信息图标\ninfo-dark\n深",
+      "keywords": [
+        "vw-icon"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0042",
+      "title": "vw-list-item",
+      "url": "https://developers-watch.vivo.com.cn/component/global/vw-list-item/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "vw-list-item\n更新时间：\n2025-04-30 20:56:55\n列表选项可以作为列表的子项，当列表的每一项不同时可以用列表选项拼接实现。 list-item 代表一类组件，命名上我们用 li 缩写代替 list-item\n参考当前需求，将列表选项分为以下几种：\nvw-li: 通用列表子项，（itemData 必填属性为 title ，可填属性 des ，icon ，inputType",
+      "keywords": [
+        "vw-list-item",
+        "Object"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0043",
+      "title": "vw-list",
+      "url": "https://developers-watch.vivo.com.cn/component/global/vw-list/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "vw-list\n更新时间：\n2025-04-30 20:56:55\n列表包含一系列连续的列表项，可以呈现文本、图标等内容。 list 只提供每个选项相同的列表，如果每个选项不同可使用 list-item 类组件进行实现。\n参考当前需求，将列表分为以下几种：\n1.vw-list:最常用的列表，包含图标、标题、箭头（listArray 子项必填选项为 icon、title，list 属性可选 type",
+      "keywords": [
+        "vw-list",
+        "Array",
+        "Object"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0044",
+      "title": "vw-loading",
+      "url": "https://developers-watch.vivo.com.cn/component/global/vw-loading/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "vw-loading\n更新时间：\n2025-04-30 20:56:55\n用于定性地指示一种过程状态，多用于数据加载过程，如加载应用列表，或从网络端获取内容的过程\n属性\n名称\n类型\n默认值\n必填\n描述\nsize\n<number>\n-\n是\nloading 控件的大小",
+      "keywords": [
+        "vw-loading"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0045",
+      "title": "vw-slide",
+      "url": "https://developers-watch.vivo.com.cn/component/global/vw-slide/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "vw-slide\n更新时间：\n2025-04-30 20:56:55\n滑动条组件用来快速调节设置值，如音量、亮度、色彩饱和度等. 用户通过点击左侧/右侧按钮的方式增加/降低数值.\n属性\n名称\n类型\n默认值\n必填\n描述\ntype\n<string>\n'normal'\n是\n类型，普通(normal)和栅格(grid)\nvalue\n<number>\n-\n是\n当前进度数值\nmaxValue\n<number>",
+      "keywords": [
+        "TouchEvent",
+        "vw-slide"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0046",
+      "title": "vw-title",
+      "url": "https://developers-watch.vivo.com.cn/component/global/vw-title/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "vw-title\n更新时间：\n2025-04-30 20:56:55\n标题显示在页面顶部，作为关键导航信息，用来告知用户当前在哪里。\n属性\n名称\n类型\n默认值\n必填\n描述\nvalue\n<string>\n-\n是\n标题文本内容\nis-fixed\n<boolean>\ntrue\n否\n标题是否固定顶部\nicon-left\n<string>\n-\n否\n标题左侧图标（仅方表生效）\nicon-right\n<stri",
+      "keywords": [
+        "vw-title",
+        "Number"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0047",
+      "title": "canvas",
+      "url": "https://developers-watch.vivo.com.cn/component/others/canvas/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "canvas\n更新时间：\n2024-10-11 11:55:18\n画布组件，通过使用 JavaScript 中的脚本，可以在 canvas 上绘制图形，文字等。\n子组件\n不支持\n属性\n支持\n通用属性\n样式\n支持\n通用样式\n方法\ncanvas.getContext()\n创建 canvas 绘图上下文\n参数\n参数\n类型\n描述\ncontextType\n<string>\n目前支持传入'2d'\n返回值\n参数",
+      "keywords": [
+        "canvas",
+        "CanvasGradient",
+        "JavaScript"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0048",
+      "title": "artboard",
+      "url": "https://developers-watch.vivo.com.cn/component/table/artboard/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "artboard\n更新时间：\n2025-02-24 15:08:18\n提供可交互的界面，接收用户的笔画输入\n子组件\n不支持\n属性\n支持\n通用属性\n样式\n支持\n通用样式\n名称\n类型\n默认值\n必填\n描述\ndefault-pen-color\n<color>\n#000\n否\n画笔颜色\ndefault-pen-size\n<length>\n24px\n否\n画笔尺寸\nwidth\n<length>\n|\n<percen",
+      "keywords": [
+        "artboard"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0049",
+      "title": "input",
+      "url": "https://developers-watch.vivo.com.cn/component/table/input/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "input\n更新时间：\n2024-03-08 15:41:38\n提供可交互的界面，接收用户的输入，默认为单行\n子组件\n不支持\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\ntype\nbutton | checkbox | radio | text | date | speak\ntext\n否\n支持动态修改，\ntext\n为输入法录入，\nspeak\n为语音录入\nchecked\n<boolean>",
+      "keywords": [
+        "String",
+        "Object",
+        "input",
+        "Number"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0050",
+      "title": "label",
+      "url": "https://developers-watch.vivo.com.cn/component/table/label/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "label\n更新时间：\n2023-10-20 10:02:06\n为\ninput\n组件定义标注\n子组件\n不支持\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\ntarget\n<string>\n-\n否\n目标 input 组件 id\n样式\n支持\n通用样式\n支持\ntext 样式\n事件\n点击 label 组件，触发 target 绑定 id 的 checkbox 或者 radio 组件点击事件，扩大点",
+      "keywords": [
+        "label"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0051",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/component/table/overview/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2024-10-11 11:55:18\n用于收集和展示用户的信息，以便后续的处理。可通过搭配使用不同的表单组件，实现不同的业务需求，比如登录、注册和信息填写等\n表单组件介绍\n组件\n简述\ninput\n提供可交互的界面，接收用户的输入，默认为单行\nlabel\n为\ninput\n组件定义标注\npicker\n滚动选择器，支持四种选择器，普通选择器，日期选择器，时间选择器，弧形选择器\nsli",
+      "keywords": [
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0052",
+      "title": "picker",
+      "url": "https://developers-watch.vivo.com.cn/component/table/picker/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "picker\n更新时间：\n2025-03-31 12:03:25\n滚动选择器，支持四种选择器，普通选择器，日期选择器，时间选择器，索引栏选择器。\n子组件\n不支持\n属性\n支持\n通用属性\n普通选择器\n名称\n类型\n默认值\n必填\n描述\ntype\ntext\n-\n是\n不支持动态修改\nrange\n<array>\n-\n否\n选择器的取值范围\nselected\n<string>\n0\n否\n选择器的默认取值，取值为 ra",
+      "keywords": [
+        "picker"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0053",
+      "title": "slider",
+      "url": "https://developers-watch.vivo.com.cn/component/table/slider/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "slider\n更新时间：\n2024-02-28 14:20:00\n滑动型输入器\n子组件\n不支持\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\nmin\n<number>\n0\n否\n-\nmax\n<number>\n100\n否\n-\nvalue\n<number>\n0\n否\n-\ntype\n<string>\n无\n否\ntype =\nvertical\n为垂直方向，不设置为水平\nshow-block\n<boole",
+      "keywords": [
+        "slider"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0054",
+      "title": "switch",
+      "url": "https://developers-watch.vivo.com.cn/component/table/switch/",
+      "category": "ui-component",
+      "breadcrumb": [],
+      "summary": "switch\n更新时间：\n2023-10-20 10:02:06\n开关选择\n子组件\n不支持\n属性\n支持\n通用属性\n名称\n类型\n默认值\n必填\n描述\nchecked\n<boolean>\nfalse\n否\n可触发 checked 伪类\n样式\n支持\n通用样式\n名称\n类型\n默认值\n必填\n描述\nthumb-color\n<color>\n#009385\n否\n滑块颜色\ntrack-color\n<color>\n#009",
+      "keywords": [
+        "switch"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0055",
+      "title": "自然语言处理",
+      "url": "https://developers-watch.vivo.com.cn/api/ai/nlp/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "自然语言处理\n更新时间：\n2025-04-30 20:56:55\n使用前提条件\n该接口底层依赖以下接口实现，开发者使用前需要在 manifest.json 中声明以下接口:\n{\n\"name\"\n:\n\"blueos.network.fetch\"\n}\n复制代码\n使用\nimport\nnlp\nfrom\n\"@blueos.ai.nlp\"\n复制代码\n接口总览\n接口名称\n接口说明明\ntranslateText\n翻",
+      "keywords": [
+        "TranslateParams",
+        "自然语言处理",
+        "TranslateData",
+        "Auth",
+        "Promise"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0056",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/api/ai/overview/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2024-11-13 15:38:47\n基于\nvivo 算法平台\n，蓝河 AI 服务为开发者提供了图像、语音、自然语言处理等优质能力。通过这些能力，开发者可以为用户提供更智能的服务及体验。\n子模块介绍\n模块\n简述\n视觉技术\n通过计算机视觉技术来处理和分析图像和视频数据，对其进行识别、分类、分割等操作\n自然语言处理\n通过计算机算法和人工智能技术来分析、理解、生成和处理人类语言\n语音",
+      "keywords": [
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0057",
+      "title": "语音技术",
+      "url": "https://developers-watch.vivo.com.cn/api/ai/speech/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "语音技术\n更新时间：\n2025-04-30 20:56:55\n语音技术目前支持 ASR 与 TTS 两种技术。\nASR，自动语音识别技术（Automatic Speech Recognition）是一种将人的语音转换为文本的技术, 支持实时短语音识别与长语音听写。\nTTS，文字转语音技术（Text to Speech）是一种将文字转成语音的技术，可将上传的单句文本转成播报音频，包含了短音频生成和长",
+      "keywords": [
+        "Automatic",
+        "Recognition",
+        "语音技术",
+        "Speech",
+        "Text"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0058",
+      "title": "视觉技术",
+      "url": "https://developers-watch.vivo.com.cn/api/ai/vision/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "视觉技术\n更新时间：\n2025-04-30 20:56:55\n使用前提条件\n该接口底层依赖以下接口实现，开发者使用前需要在 manifest.json 中声明以下接口:\n{\n\"name\"\n:\n\"blueos.network.fetch\"\n}\n复制代码\n使用\nimport\nvision\nfrom\n\"@blueos.ai.vision\"\n复制代码\n接口总览\n接口名称\n接口说明\ncommonOcr\n识别",
+      "keywords": [
+        "Auth",
+        "Promise",
+        "OcrParams",
+        "视觉技术",
+        "OcrResult"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0059",
+      "title": "通用错误码",
+      "url": "https://developers-watch.vivo.com.cn/api/common/error-code/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "通用错误码\n更新时间：\n2024-01-10 16:04:30\n提供公共的错误码\n其中，错误码 200 为系统通用错误码，所有系统未知异常发生时抛出。比如系统申请内存空间失败等。\ncode\n含义\n200\n通用错误。\n202\n参数错误。\n300\nI/O 错误。",
+      "keywords": [
+        "通用错误码"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0060",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/api/common/overview/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2023-10-31 19:37:39\n在本章节中，我们将为您介绍蓝河系统 JS API 的调用规则和通用的错误码。通过阅读本章节，您将了解 JS API 的三种调用形式——同步、异步和订阅，并且掌握一些常见的错误码。",
+      "keywords": [
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0061",
+      "title": "调用规则",
+      "url": "https://developers-watch.vivo.com.cn/api/common/rule/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "调用规则\n更新时间：\n2024-08-13 15:19:43\n同步\n同步方法调用后必须等到方法结果返回后才能继续后续的行为，返回值可以是任意类型。\n示例\nimport\ncontext\nfrom\n'@blueos.app.context'\nexport\ndefault\n{\ngetInfo\n(\n)\n{\nconst\ninfo\n=\ncontext\n.\ngetInfo\n(\n)\nconsole\n.\nlog\n(",
+      "keywords": [
+        "Error",
+        "调用规则",
+        "Device",
+        "Failed"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0062",
+      "title": "说明",
+      "url": "https://developers-watch.vivo.com.cn/api/connect/brief-introduction/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "说明\n更新时间：\n2025-04-29 11:37:34\n针对手机及vivo智能终端设备互联，向第三方应用开发者提供高层次的、简单易用的 API。\n第三方应用开发者无需关心手机及vivo智能终端设备的互联细节，通过 API 提供的能力可以简单地实现设备状态查询订阅、设备信息查询、数据传输等操作。\nvivo智能终端设备SDK及穿戴业务Kit分别为手机及vivo智能终端设备提供API。\n手机侧应用基于",
+      "keywords": [
+        "说明",
+        "Native",
+        "Java"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0063",
+      "title": "vivo 智能终端设备 SDK 隐私政策",
+      "url": "https://developers-watch.vivo.com.cn/api/connect/development-guidance/privacy-policy/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "vivo 智能终端设备 SDK 隐私政策\n更新时间：\n2024-10-11 12:02:48\n生效日期：2023 年 11 月 1 日\n引言\n本隐私政策适用于维沃移动通信有限公司及其关联方（以下简称“我们”或“vivo”，注册地址：广东省东莞市长安镇维沃路 1 号）提供的 vivo 智能终端设备 SDK 产品及服务（以下统称“SDK 产品”）。本文档要向开发者及其终端用户(“终端用户”)说明，为了",
+      "keywords": [
+        "App",
+        "vivo 智能终端设备 SDK 隐私政策"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0064",
+      "title": "vivo 智能终端设备 SDK",
+      "url": "https://developers-watch.vivo.com.cn/api/connect/development-guidance/rpc-sdk-guidance/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "vivo 智能终端设备 SDK\n更新时间：\n2025-07-23 09:40:34\n开发准备，申请 appid\n1. 申请 app 开发者接入，接入地址：\nvivo 开放平台\n，已有账号则无需申请，直接登录\n2. 申请账号后，注册对应的 app，取到 appid\nSDK 集成\nimplementation\nfiles\n(\n'libs/device-rpc.aar'\n)\n复制代码\n初始化\n// 在",
+      "keywords": [
+        "String",
+        "vivo 智能终端设备 SDK",
+        "DeviceRpcManager",
+        "App",
+        "InitCallBack"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0065",
+      "title": "穿戴业务 Kit",
+      "url": "https://developers-watch.vivo.com.cn/api/connect/development-guidance/watch-guidance/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "穿戴业务 Kit\n更新时间：\n2023-10-31 19:37:39\n代码示例\n创建连接实例\ncreate\n(\n)\n{\nconsole\n.\nlog\n(\n`\nclick here!\n`\n)\nconnect\n=\ninterconnect\n.\ninstance\n(\n{\npackage\n:\n'com.vivo.health.deviceRpcSdk.demo'\n,\nfingerprint\n:\n'5de87",
+      "keywords": [
+        "穿戴业务 Kit",
+        "Kit"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0066",
+      "title": "vivo 智能终端设备侧",
+      "url": "https://developers-watch.vivo.com.cn/api/connect/interconnect/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "vivo 智能终端设备侧\n更新时间：\n2025-01-17 11:58:56\n用于和搭配使用的手机 app 进行通信，收发手机 app 数据。\n接口声明\n{\n\"name\"\n:\n\"blueos.bluexlink.connectionManager\"\n}\n复制代码\n导入模块\nimport\ninterconnect\nfrom\n'@blueos.bluexlink.connectionManager'",
+      "keywords": [
+        "Function",
+        "Connect",
+        "vivo 智能终端设备侧",
+        "App"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0067",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/api/connect/introduce/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2023-11-02 15:33:26\n基于开放兼容的 BlueXlink 互联底座，可以实现不同设备间的能力互补，为用户提供一致的交互体验。\nBlueXlink 互联底座实现了设备发现，连接，组网，安全认证，协议兼容等复杂工作，开发者只需要调用简单的 API，就可实现设备互联功能的开发。\n另外，我们提供了支持多种开发语言的，多套 SDK 支持不同设备间的互联。当前向手机及 vi",
+      "keywords": [
+        "BlueXlink",
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0068",
+      "title": "手机侧",
+      "url": "https://developers-watch.vivo.com.cn/api/connect/mobile-side/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "手机侧\n更新时间：\n2023-10-30 19:45:39\n接口使用\n同步发送数据\n命令发送 API\nRequest request\n=\nnew\nRequest\n.\nBuilder\n(\n)\n.\naction\n(\nConstant\n.\nAction\n.\nACTION_DEVICE_BUSINESS_DATA\n)\n.\npkgName\n(\n\"com.vivo.health\"\n)\n.\ndata\n(\ndat",
+      "keywords": [
+        "Action",
+        "Request",
+        "Builder",
+        "Constant",
+        "手机侧"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0069",
+      "title": "应用沙箱目录",
+      "url": "https://developers-watch.vivo.com.cn/api/extend/file-sandbox/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "应用沙箱目录\n更新时间：\n2025-10-09 11:25:10\n蓝河应用框架给每个应用分配了一个专属的应用目录，蓝河应用的数据访问和操作都被限制在该目录内，此目录下存放的数据可以保护数据的安全性，这个目录称为 “应用的沙箱目录”。\n应用沙箱目录定义\n应用沙箱目录定义详细说明\n沙箱目录名\n定义说明\nfiles\n应用在本设备上用于存放小而重要的数据目录（如用户登录数据），安全且持久有效，随应用卸载而",
+      "keywords": [
+        "应用沙箱目录"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0070",
+      "title": "生命周期",
+      "url": "https://developers-watch.vivo.com.cn/api/extend/lifecycle/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "生命周期\n更新时间：\n2025-07-03 13:00:36\n了解应用/页面/自定义组件的生命周期与状态\n应用生命周期\nonCreate\n监听应用创建，应用创建时调用。\n参数\n无\nonDestroy\n监听应用销毁，应用销毁时调用。\n参数\n无\nonShow\n应用显示在前台时调用。\n参数\n无\nonHide\n应用退到后台时调用。\n参数\n无\n页面生命周期\nonInit\n监听页面初始化。当页面完成初始化时调",
+      "keywords": [
+        "生命周期",
+        "Number",
+        "Object"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0071",
+      "title": "运动健康",
+      "url": "https://developers-watch.vivo.com.cn/api/health/health/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "运动健康\n更新时间：\n2025-06-30 19:53:14\n概述\n蓝河应用等运动健康模块旨在支持用户的运动和健康数据管理。该模块提供了两个主要部分：采样数据和统计数据，为用户提供了全面的健康数据管理和实时监控功能，对于健康和运动类应用、健康监测工具和健康管理应用非常有用。\n接口声明\n{\n\"name\"\n:\n\"blueos.health.health\"\n}\n复制代码\n导入模块\nimport\nheal",
+      "keywords": [
+        "RecentSample",
+        "Sample",
+        "DataType",
+        "运动健康"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0072",
+      "title": "数据共享",
+      "url": "https://developers-watch.vivo.com.cn/api/storage/exchange/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "数据共享\n更新时间：\n2024-10-11 11:55:18\n提供了一个不同蓝河应用间数据交互的方式。蓝河应用可以利用它发布数据，或从其他蓝河应用获取数据\n数据交互有三个数据空间，分别是应用空间（application）、应用开发商空间（vendor）和全局空间（global）\napplication：数据发布在应用空间，读取、修改、删除 时需同时指定发布方的包名和签名，并且需要发布方授权\nven",
+      "keywords": [
+        "数据共享",
+        "String",
+        "Function"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0073",
+      "title": "文件存储",
+      "url": "https://developers-watch.vivo.com.cn/api/storage/file/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "文件存储\n更新时间：\n2025-01-15 16:19:38\n接口声明\n{\n\"name\"\n:\n\"blueos.storage.file\"\n}\n复制代码\n导入模块\nimport\nfile\nfrom\n'@blueos.storage.file'\n复制代码\n注意：下面文件操作仅支持 URI 的写法，不支持文件绝对路径。\n接口定义\nfile.move(OBJECT)\n将源文件移动到指定位置\n参数：\n参数名",
+      "keywords": [
+        "Function",
+        "String",
+        "文件存储"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0074",
+      "title": "K-V 数据存储",
+      "url": "https://developers-watch.vivo.com.cn/api/storage/localstorage",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "K-V 数据存储\n更新时间：\n2025-10-09 11:25:10\n接口声明\n{\n\"name\"\n:\n\"blueos.storage.storage\"\n}\n复制代码\n导入模块\nimport\nstorage\nfrom\n'@blueos.storage.storage'\n或\nconst\nstorage\n=\nrequire\n(\n'@blueos.storage.storage'\n)\n复制代码\n接口定义",
+      "keywords": [
+        "Function",
+        "K-V 数据存储",
+        "String"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0075",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/api/storage/overview/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2025-08-13 20:11:57\n蓝河应用的数据存储能力模块使应用能够更好地管理和存储数据，提供了广泛的工具和功能，从简单的键值存储到文件操作，以及跨应用数据共享，提供了多样化数据管理和共享能力。\n子模块介绍\n模块\n简述\n存储空间统计\n提供获取可用空间与总空间的能力，支持同步与异步。\nK-V 数据存储\n提供读取、修改、设置、删除、清空存储内容等数据存储能力\n文件存储\n提供对",
+      "keywords": [
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0076",
+      "title": "存储空间统计",
+      "url": "https://developers-watch.vivo.com.cn/api/storage/statvfs",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "存储空间统计\n更新时间：\n2025-08-13 20:11:57\nstatvfs 一个用来获取应用空间的模块，包含了获取可用空间与总空间接口，支持同步与异步。\n接口声明\n{\n\"name\"\n:\n\"blueos.storage.statvfs\"\n}\n复制代码\n导入模块\nimport\nstatvfs\nfrom\n'@blueos.storage.statvfs'\n复制代码\n接口定义\nstatvfs.get",
+      "keywords": [
+        "Function",
+        "Size",
+        "存储空间统计",
+        "Byte"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0077",
+      "title": "应用管理",
+      "url": "https://developers-watch.vivo.com.cn/api/system/am/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "应用管理\n更新时间：\n2024-03-14 09:45:42\n接口声明\nJS 接口声明\n{\n\"name\"\n:\n\"blueos.app.appmanager.appState\"\n}\n复制代码\n导入模块\nimport\nam\nfrom\n'@blueos.app.appmanager.appState'\n复制代码\n在工程里面的 manifest 文件中配置如下内容\n申请权限\n{\n\"permissions\"",
+      "keywords": [
+        "应用管理"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0078",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/api/system/app/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2023-10-31 18:07:58\n蓝河应用的应用框架为开发者提供了广泛的能力，以构建、管理蓝河应用的各个方面。通过这些能力，开发者可以更好地控制和定制蓝河应用的行为、用户体验以及数据操作。\n子模块介绍\n模块\n简介\n应用上下文\n提供了管理和控制应用的重要功能，可帮助开发者获得更多应用信息、整合外部资源，以及有效退出应用\n页面路由\n提供应用能够有效管理和导航不同页面的能力，以确",
+      "keywords": [
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0079",
+      "title": "音频",
+      "url": "https://developers-watch.vivo.com.cn/api/system/audio/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "音频\n更新时间：\n2025-07-10 11:01:16\n接口声明\n{\n\"name\"\n:\n\"blueos.media.audio.audioPlayer\"\n}\n复制代码\n导入模块\nimport\naudio\nfrom\n'@blueos.media.audio.audioPlayer'\n或\nconst\naudio\n=\nrequire\n(\n'@blueos.media.audio.audioPlayer",
+      "keywords": [
+        "音频",
+        "String",
+        "Function"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0080",
+      "title": "音频管理",
+      "url": "https://developers-watch.vivo.com.cn/api/system/audiomanager/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "音频管理\n更新时间：\n2025-07-10 11:01:16\n接口声明\n{\n\"name\"\n:\n\"blueos.media.audio.audioManager\"\n}\n复制代码\n导入模块\nimport\naudioManager\nfrom\n'@blueos.media.audio.audioManager'\n复制代码\n接口定义\nsetVolume(OBJECT)\n设置音量\n参数\n参数名\n类型\n必填\n说",
+      "keywords": [
+        "Function",
+        "音频管理",
+        "AudioVolumeType"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0081",
+      "title": "电量信息",
+      "url": "https://developers-watch.vivo.com.cn/api/system/battery/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "电量信息\n更新时间：\n2024-08-13 15:19:43\n接口声明\n{\n\"name\"\n:\n\"blueos.hardware.battery\"\n}\n复制代码\n导入模块\nimport\nbattery\nfrom\n'@blueos.hardware.battery'\n或\nconst\nbattery\n=\nrequire\n(\n'@blueos.hardware.battery'\n)\n复制代码\n接口定义\nb",
+      "keywords": [
+        "Function",
+        "Boolean",
+        "电量信息",
+        "Number"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0082",
+      "title": "蓝牙",
+      "url": "https://developers-watch.vivo.com.cn/api/system/bluetooth/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "蓝牙\n更新时间：\n2025-10-09 11:25:10\n一、蓝牙整体介绍\n传统蓝牙\n传统蓝牙本机管理：打开和关闭蓝牙、设置和获取本机蓝牙名称、扫描和取消扫描周边蓝牙设备、获取本机蓝牙 profile 对其他设备的连接状态、获取本机蓝牙已配对的蓝牙设备列表。\n传统蓝牙远端设备操作：查询远端蓝牙设备名称和 MAC 地址、设备类型和配对状态，以及向远端蓝牙设备发起配对。\n低功率蓝牙 BLE\nBLE 设",
+      "keywords": [
+        "蓝牙",
+        "Profile",
+        "GattClientDevice",
+        "Attribute",
+        "GattServer",
+        "Generic"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0083",
+      "title": "屏幕亮度",
+      "url": "https://developers-watch.vivo.com.cn/api/system/brightness/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "屏幕亮度\n更新时间：\n2023-11-08 11:11:17\n接口声明\n{\n\"name\"\n:\n\"blueos.hardware.display.brightness\"\n}\n复制代码\n导入模块\nimport\nbrightness\nfrom\n'@blueos.hardware.display.brightness'\n或\nconst\nbrightness\n=\nrequire\n(\n'@blueos.har",
+      "keywords": [
+        "Function",
+        "屏幕亮度",
+        "Integer",
+        "Number"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0084",
+      "title": "密码算法",
+      "url": "https://developers-watch.vivo.com.cn/api/system/cipher/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "密码算法\n更新时间：\n2025-04-27 20:44:09\n接口声明\n{\n\"name\"\n:\n\"blueos.security.cipher\"\n}\n复制代码\n导入模块\nimport\ncipher\nfrom\n'@blueos.security.cipher'\n或\nconst\ncipher\n=\nrequire\n(\n'@blueos.security.cipher'\n)\n复制代码\n接口定义\ncipher",
+      "keywords": [
+        "密码算法",
+        "None",
+        "String"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0085",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/api/system/communicationOverview/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2023-10-29 18:27:39\n蓝河应用通信能力为应用提供了丰富的通信工具，从本地设备到远程服务器，从文件传输到实时通信，从蓝牙到网络状态监测，为应用提供了多样化的数据传输和通信渠道。这使开发者能够构建更多样化的应用，实现应用内外的数据传输和通信。\n子模块介绍\n模块\n简述\n蓝牙\n该模块允许应用与附件的蓝牙设备进行通信，实现设备间的数据传输和互动\n上传下载\n该模块支持应用上",
+      "keywords": [
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0086",
+      "title": "日志打印",
+      "url": "https://developers-watch.vivo.com.cn/api/system/console/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "日志打印\n更新时间：\n2024-06-28 10:21:20\n概述\n日志打印模块用于帮助开发者在应用开发和调试过程中记录和分析信息，有利于错误排查和性能优化。\n接口声明\n无需声明\n导入模块\n无需导入\n接口定义\nconsole.debug/log/info/warn/error(message)\n打印一段文本。\n参数：\n参数\n类型\n必填\n说明\nmessage\nString\n是\n要打印的文本，也可以是",
+      "keywords": [
+        "String",
+        "日志打印"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0087",
+      "title": "设备信息",
+      "url": "https://developers-watch.vivo.com.cn/api/system/device/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "设备信息\n更新时间：\n2025-03-31 14:41:09\n接口声明\n{\n\"name\"\n:\n\"blueos.hardware.deviceInfo\"\n}\n复制代码\n导入模块\nimport\ndevice\nfrom\n'@blueos.hardware.deviceInfo'\n或\nconst\ndevice\n=\nrequire\n(\n'@blueos.hardware.deviceInfo'\n)\n复制代码",
+      "keywords": [
+        "Function",
+        "设备信息",
+        "String"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0088",
+      "title": "公共事件",
+      "url": "https://developers-watch.vivo.com.cn/api/system/event/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "公共事件\n更新时间：\n2023-12-21 13:49:50\n公共事件提供了多应用间数据传递和事件交互的能力。\n接口声明\n{\n\"name\"\n:\n\"blueos.app.event.eventManager\"\n}\n复制代码\n导入模块\nimport\nevent\nfrom\n'@blueos.app.event.eventManager'\n或\nconst\nevent\n=\nrequire\n(\n'@blueo",
+      "keywords": [
+        "String",
+        "公共事件",
+        "Array",
+        "Object"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0089",
+      "title": "解压缩",
+      "url": "https://developers-watch.vivo.com.cn/api/system/fastlz/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "解压缩\n更新时间：\n2025-04-29 11:37:34\n接口声明\n{\n\"name\"\n:\n\"blueos.util.fastlz\"\n}\n复制代码\n导入模块\nimport\nfastlz\nfrom\n'@blueos.util.fastlz'\n或\nconst\nfastlz\n=\nrequire\n(\n'@blueos.util.fastlz'\n)\n复制代码\n接口定义\nfastlz.decompress(O",
+      "keywords": [
+        "Function",
+        "String",
+        "解压缩"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0090",
+      "title": "数据请求",
+      "url": "https://developers-watch.vivo.com.cn/api/system/fetch/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "数据请求\n更新时间：\n2024-10-11 11:55:18\n接口声明\n{\n\"name\"\n:\n\"blueos.network.fetch\"\n}\n复制代码\n导入模块\nimport\nfetch\nfrom\n'@blueos.network.fetch'\n或\nconst\nfetch\n=\nrequire\n(\n'@blueos.network.fetch'\n)\n复制代码\n接口定义\nfetch.fetch(OB",
+      "keywords": [
+        "String",
+        "ArrayBuffer",
+        "数据请求",
+        "Object"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0091",
+      "title": "生成签名证书指纹",
+      "url": "https://developers-watch.vivo.com.cn/api/system/generatecertificatethumbprint/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "生成签名证书指纹\n更新时间：\n2024-01-10 16:04:30\n开发者通过\nJDK\n的\nKeytool\n工具以及签名文件，导出\nSHA256\n指纹。\nwindows\n执行 CMD 命令打开命令行工具，执行 cd 命令进入 keytool.exe 所在的目录（以下样例为 JDK 安装在 C 盘的 Program Files 目录）。\ncd\nC:\n\\\nProgram Files\n\\\nJava\n\\",
+      "keywords": [
+        "Files",
+        "生成签名证书指纹",
+        "Keytool",
+        "Program"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0092",
+      "title": "地理位置",
+      "url": "https://developers-watch.vivo.com.cn/api/system/geolocation/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "地理位置\n更新时间：\n2024-08-13 15:19:43\n接口声明\n{\n\"name\"\n:\n\"blueos.hardware.location.location\"\n}\n复制代码\n导入模块\nimport\ngeolocation\nfrom\n'@blueos.hardware.location.location'\n或\nconst\ngeolocation\n=\nrequire\n(\n'@blueos.har",
+      "keywords": [
+        "Function",
+        "String",
+        "地理位置",
+        "Number"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0093",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/api/system/hardware/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2024-01-26 10:30:32\n蓝河应用的基础硬件能力模块旨在为应用提供访问和控制设备的基础硬件功能。该模块使应用能够与设备硬件进行互动，为开发者提供了强大的工具，以满足应用特定功能要求。\n子模块介绍\n模块\n简述\n地理位置\n该模块允许应用获取设备的地理位置信息，包括经度、纬度和定位精度，以支持位置相关的应用功能\n振动\n该模块提供了控制设备振动的功能，使应用能够在需要时触发",
+      "keywords": [
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0094",
+      "title": "输入法",
+      "url": "https://developers-watch.vivo.com.cn/api/system/inputmethod/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "输入法\n更新时间：\n2024-07-05 18:02:47\n接口声明\n{\n\"name\"\n:\n\"blueos.service.inputMethod\"\n}\n复制代码\n导入模块\nimport\ninputmethod\nfrom\n'@blueos.service.inputMethod'\n或\nconst\ninputmethod\n=\nrequire\n(\n'@blueos.service.inputMetho",
+      "keywords": [
+        "String",
+        "输入法"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0095",
+      "title": "多媒体",
+      "url": "https://developers-watch.vivo.com.cn/api/system/media/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "多媒体\n更新时间：\n2025-08-13 20:11:57\n接口声明\n{\n\"name\"\n:\n\"blueos.media.audio.mediaManager\"\n}\n复制代码\n导入模块\nimport\nmedia\nfrom\n'@blueos.media.audio.mediaManager'\n或\nconst\nmedia\n=\nrequire\n(\n'@blueos.media.audio.mediaMan",
+      "keywords": [
+        "ContentType",
+        "AudioPlayer",
+        "StreamType",
+        "StreamUsage",
+        "多媒体"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0096",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/api/system/multimediaOverview/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2023-10-29 18:27:39\n蓝河应用多媒体能力支持音频业务的开发，提供音频相关的功能，主要包括音频播放、音频流式播放、录音、音量管理等。\n子模块介绍\n模块\n简述\n音频\n提供音频播放能力\n多媒体\n提供音频播放、音频流式播放、录音能力\n音频管理\n提供音量设置，音量获取、监听等音频管理能力\n录音\n提供录音能力",
+      "keywords": [
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0097",
+      "title": "网络状态",
+      "url": "https://developers-watch.vivo.com.cn/api/system/network/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "网络状态\n更新时间：\n2024-10-11 11:55:18\n接口声明\n{\n\"name\"\n:\n\"blueos.network.networkManager\"\n}\n复制代码\n导入模块\nimport\nnetwork\nfrom\n'@blueos.network.networkManager'\n或\nconst\nnetwork\n=\nrequire\n(\n'@blueos.network.networkMana",
+      "keywords": [
+        "Function",
+        "String",
+        "Boolean",
+        "网络状态"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0098",
+      "title": "消息通知",
+      "url": "https://developers-watch.vivo.com.cn/api/system/notification/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "消息通知\n更新时间：\n2024-09-02 20:54:40\n接口声明\n{\n\"name\"\n:\n\"blueos.app.notification.notificationManager\"\n}\n复制代码\n导入模块\nimport\nnotification\nfrom\n'@blueos.app.notification.notificationManager'\n或\nconst\nnotification\n=",
+      "keywords": [
+        "Function",
+        "Notification",
+        "消息通知"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0099",
+      "title": "包管理",
+      "url": "https://developers-watch.vivo.com.cn/api/system/package/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "包管理\n更新时间：\n2025-10-09 11:25:10\n接口声明\n{\n\"name\"\n:\n\"blueos.package.packageManager\"\n}\n复制代码\n导入模块\nimport\npackageManager\nfrom\n'@blueos.package.packageManager'\n或\nconst\npackageManager\n=\nrequire\n(\n'@blueos.packag",
+      "keywords": [
+        "Function",
+        "String",
+        "包管理"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0100",
+      "title": "页面栈管理",
+      "url": "https://developers-watch.vivo.com.cn/api/system/pagestack/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "页面栈管理\n更新时间：\n2024-10-11 11:55:18\n接口声明\n{\n\"name\"\n:\n\"blueos.app.appmanager.pageStack\"\n}\n复制代码\n导入模块\nimport\npagestack\nfrom\n'@blueos.app.appmanager.pageStack'\n或\nconst\npagestack\n=\nrequire\n(\n'@blueos.app.appman",
+      "keywords": [
+        "Function",
+        "String",
+        "Array",
+        "页面栈管理"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0101",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/api/system/peaceOverview/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2023-10-29 18:27:39\n蓝河应用安全模块旨在确保应用程序的数据和用户信息得到有效的保护，以防止未经授权的访问和数据泄漏。\n子模块介绍\n模块\n简述\n权限管理\n提供全面的权限控制和管理功能，以确保应用的安全性和隐私保护\n密码算法\n为应用提供了安全数据加密和解密的功能，以确保用户的敏感信息得到保护",
+      "keywords": [
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0102",
+      "title": "权限管理",
+      "url": "https://developers-watch.vivo.com.cn/api/system/permission/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "权限管理\n更新时间：\n2024-10-11 11:55:18\n权限列表\nwatch.permission.LOCATION\n说明：\n位置信息\n模块：\n@blueos.hardware.geolocation\ngeolocation.getLocation(OBJECT)\ngeolocation.subscribe(OBJECT)\ngeolocation.unsubscribe()\n错误码：\n400",
+      "keywords": [
+        "权限管理",
+        "Object"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0103",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/api/system/phoneOverview/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2023-10-31 16:42:47\n蓝河应用的电话能力模块的多功能性使其成为实现通信和互动的强大工具。它为应用提供了多种通信方式，可以通过短信进行信息传递以及通过电话进行语音通话，满足不同用户需求。这对于社交应用、通讯工具、客户服务和多种应用场景都具有广泛的适用性。\n子模块介绍\n模块\n简述\n短信\n提供了短信服务集成和短信功能实现支持\n打电话\n提供了电话通信支持，以满足用户的通",
+      "keywords": [
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0104",
+      "title": "弹窗",
+      "url": "https://developers-watch.vivo.com.cn/api/system/prompt/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "弹窗\n更新时间：\n2023-10-30 10:12:45\n接口声明\n{\n\"name\"\n:\n\"blueos.window.prompt\"\n}\n复制代码\n导入模块\nimport\nprompt\nfrom\n'@blueos.window.prompt'\n或\nconst\nprompt\n=\nrequire\n(\n'@blueos.window.prompt'\n)\n复制代码\n接口定义\nprompt.showToa",
+      "keywords": [
+        "String",
+        "Toast",
+        "弹窗",
+        "Number"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0105",
+      "title": "录音",
+      "url": "https://developers-watch.vivo.com.cn/api/system/record/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "录音\n更新时间：\n2024-09-02 14:53:40\n接口声明\n{\n\"name\"\n:\n\"blueos.media.audio.audioRecorder\"\n}\n复制代码\n导入模块\nimport\nrecord\nfrom\n'@blueos.media.audio.audioRecorder'\n或\nconst\nrecord\n=\nrequire\n(\n'@blueos.media.audio.audio",
+      "keywords": [
+        "Function",
+        "String",
+        "Error",
+        "录音"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0106",
+      "title": "上传下载",
+      "url": "https://developers-watch.vivo.com.cn/api/system/request/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "上传下载\n更新时间：\n2025-08-13 20:11:57\n接口声明\n{\n\"name\"\n:\n\"blueos.network.request\"\n}\n复制代码\n导入模块\nimport\nrequest\nfrom\n'@blueos.network.request'\n或\nconst\nrequest\n=\nrequire\n(\n'@blueos.network.request'\n)\n复制代码\n接口定义\nrequ",
+      "keywords": [
+        "上传下载",
+        "String",
+        "Array",
+        "Object"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0107",
+      "title": "页面路由",
+      "url": "https://developers-watch.vivo.com.cn/api/system/router/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "页面路由\n更新时间：\n2024-01-10 16:04:30\n接口声明\n无需声明\n导入模块\nimport\nrouter\nfrom\n'@blueos.app.appmanager.router'\n或\nconst\nrouter\n=\nrequire\n(\n'@blueos.app.appmanager.router'\n)\n复制代码\n接口定义\nrouter.push(OBJECT)\n跳转到应用内的某个页面。",
+      "keywords": [
+        "About",
+        "String",
+        "页面路由",
+        "Object"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0108",
+      "title": "定时任务",
+      "url": "https://developers-watch.vivo.com.cn/api/system/schedule/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "定时任务\n更新时间：\n2024-09-14 16:42:27\n接口声明\n{\n\"name\"\n:\n\"blueos.app.appmanager.schedule\"\n}\n复制代码\n导入模块\nimport\nschedule\nfrom\n'@blueos.app.appmanager.schedule'\n或\nconst\nschedule\n=\nrequire\n(\n'@blueos.app.appmanager.",
+      "keywords": [
+        "Function",
+        "String",
+        "定时任务",
+        "Object",
+        "Number"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0109",
+      "title": "屏幕管理",
+      "url": "https://developers-watch.vivo.com.cn/api/system/screen/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "屏幕管理\n更新时间：\n2023-12-25 11:01:05\n接口声明\n{\n\"name\"\n:\n\"blueos.hardware.display.screen\"\n}\n复制代码\n导入模块\nimport\nscreen\nfrom\n'@blueos.hardware.display.screen'\n或\nconst\nscreen\n=\nrequire\n(\n'@blueos.hardware.display.sc",
+      "keywords": [
+        "屏幕管理",
+        "Display",
+        "Always",
+        "Number"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0110",
+      "title": "传感器",
+      "url": "https://developers-watch.vivo.com.cn/api/system/sensor/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "传感器\n更新时间：\n2024-11-21 17:51:08\n接口声明\n{\n\"name\"\n:\n\"blueos.hardware.sensor.sensor\"\n}\n复制代码\n导入模块\nimport\nsensor\nfrom\n'@blueos.hardware.sensor.sensor'\n或\nconst\nsensor\n=\nrequire\n(\n'@blueos.hardware.sensor.sensor",
+      "keywords": [
+        "Function",
+        "String",
+        "传感器",
+        "Number"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0111",
+      "title": "系统设置",
+      "url": "https://developers-watch.vivo.com.cn/api/system/settings/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "系统设置\n更新时间：\n2024-09-02 14:53:40\n接口声明\n{\n\"name\"\n:\n\"blueos.service.settings\"\n}\n复制代码\n导入模块\nimport\nsettings\nfrom\n'@blueos.service.settings'\n复制代码\n在工程里面的 manifest 文件中配置如下内容\n申请权限\n{\n\"permissions\"\n:\n[\n{\n\"name\"\n:",
+      "keywords": [
+        "Function",
+        "String",
+        "系统设置"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0112",
+      "title": "短信",
+      "url": "https://developers-watch.vivo.com.cn/api/system/short-message-service/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "短信\n更新时间：\n2025-02-17 09:59:02\n在蓝河系统中，我们提供了 Deeplink 链接来使您可以快速打开短信服务所对应的页面。\n我们已经为短信服务功能提供了 Deeplink 链接，具体链接为\nhap://app/com.vivo.mms/pages/entry\n。\n该 Deeplink 链接的页面拉取是通过 Router 调用来实现的，您可以方便地打开短信服务页面并进行相关操",
+      "keywords": [
+        "Deeplink",
+        "Router",
+        "短信"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0113",
+      "title": "sim 卡管理",
+      "url": "https://developers-watch.vivo.com.cn/api/system/simManager/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "sim 卡管理\n更新时间：\n2024-10-11 11:55:18\n接口声明\n{\n\"name\"\n:\n\"blueos.telephony.simManager\"\n}\n复制代码\n导入模块\nimport\nsimManager\nfrom\n'@blueos.telephony.simManager'\n或\nconst\nsimManager\n=\nrequire\n(\n'@blueos.telephony.simM",
+      "keywords": [
+        "Sim",
+        "sim 卡管理",
+        "Array",
+        "Function"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0114",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/api/system/softwareOverview/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2023-10-31 19:37:39\n蓝河应用的基础软件能力为应用提供了基础的软件功能支持，包括系统设置、输入法、解压缩、解包和序列化等，可以帮助开发者更加高效、快速地进行软件开发和计算机操作\n子模块介绍\n模块\n简述\n系统设置\n提供获取系统设置能力\n输入法\n为输入法应用提供向 input 组件写入数据能力\n解压缩\n提供解压本地文件能力\n解包\n提供解包能力\n序列化\n提供序列化数据",
+      "keywords": [
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0115",
+      "title": "应用上下文",
+      "url": "https://developers-watch.vivo.com.cn/api/system/systemapp/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "应用上下文\n更新时间：\n2025-10-09 11:25:10\n接口声明\n无需声明\n导入模块\nimport\napp\nfrom\n'@blueos.app.context'\n// 或 const app = require('@blueos.app.context')\n复制代码\n接口定义\napp.getInfo()\n获取当前应用信息\n参数：\n无\n返回值\n参数名\n类型\n说明\npackageName\nSt",
+      "keywords": [
+        "应用上下文",
+        "String",
+        "Integer"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0116",
+      "title": "解包",
+      "url": "https://developers-watch.vivo.com.cn/api/system/tar/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "解包\n更新时间：\n2023-11-08 11:11:17\n接口声明\n{\n\"name\"\n:\n\"blueos.util.tar\"\n}\n复制代码\n导入模块\nimport\ntar\nfrom\n'@blueos.util.tar'\n或\nconst\nfastlz\n=\nrequire\n(\n'@blueos.util.tar'\n)\n复制代码\n接口定义\n注：“蓝河应用平台参数” 表示开发蓝河应用必填参数\ntar.un",
+      "keywords": [
+        "Function",
+        "String",
+        "解包"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0117",
+      "title": "电话",
+      "url": "https://developers-watch.vivo.com.cn/api/system/telephony-service/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "电话\n更新时间：\n2025-02-17 09:59:02\n在蓝河系统中，您可以通过 Deeplink 链接来打开电话服务相应页面。\n我们为电话服务提供了 Deeplink 链接，具体链接为\nhap://app/com.vivo.call/pages/callMenu\n。\n并且 Deeplink 的页面拉取是通过 Router 调用来实现的，方便您快速地进行操作。\n示例\n以下是一个示例，展示了如何使",
+      "keywords": [
+        "电话",
+        "Deeplink",
+        "Router"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0118",
+      "title": "振动",
+      "url": "https://developers-watch.vivo.com.cn/api/system/vibrator/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "振动\n更新时间：\n2024-08-13 15:19:43\n接口声明\n{\n\"name\"\n:\n\"blueos.hardware.vibrator.vibrator\"\n}\n复制代码\n导入模块\nimport\nvibrator\nfrom\n'@blueos.hardware.vibrator.vibrator'\n或\nconst\nvibrator\n=\nrequire\n(\n'@blueos.hardware.vi",
+      "keywords": [
+        "String",
+        "Number",
+        "振动"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0119",
+      "title": "websocket",
+      "url": "https://developers-watch.vivo.com.cn/api/system/websocket/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "websocket\n更新时间：\n2023-12-25 11:01:05\n接口声明\n{\n\"name\"\n:\n\"blueos.network.webSocket\"\n}\n复制代码\n导入模块\nimport\nwebsocketfactory\nfrom\n'@blueos.network.webSocket'\n或\nconst\nwebsocketfactory\n=\nrequire\n(\n'@blueos.networ",
+      "keywords": [
+        "String",
+        "Object",
+        "Referer",
+        "websocket",
+        "StringArray",
+        "WebSocket"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0120",
+      "title": "widgetManager",
+      "url": "https://developers-watch.vivo.com.cn/api/system/widget-manager/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "widgetManager\n更新时间：\n2025-10-09 21:26:28\nwidgetProvider 通过 widgetManager 来刷新 卡片 UI 页面中的 uiData 数据，widgetManager 也可以用于主应用刷新 uidata 的数据。\n详细参考\nwidgetProvider 开发\n接口声明\n{\n\"name\"\n:\n\"blueos.app.widgetManager\"",
+      "keywords": [
+        "Shenzhen",
+        "Record",
+        "widgetManager"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0121",
+      "title": "widgetProvider",
+      "url": "https://developers-watch.vivo.com.cn/api/system/widget-provider/",
+      "category": "js-api",
+      "breadcrumb": [],
+      "summary": "widgetProvider\n更新时间：\n2025-10-09 21:26:28\nwidgetProvider 是轻卡的核心组成部分，它负责执行轻卡页面的逻辑，并与轻卡页面进行数据传递。\n详细参考\nwidgetProvider 开发\nonWidgetCreate\n当卡片在入口被创建时触发\n参数：\n参数名\n类型\n说明\nid\nstring\n卡片实例 id\nwidgetInfo\nWidgetInfo\n卡",
+      "keywords": [
+        "Action",
+        "widgetProvider",
+        "WidgetInfo",
+        "WidgetEventInfo",
+        "Object"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0122",
+      "title": "数据绑定",
+      "url": "https://developers-watch.vivo.com.cn/reference/app-service/data-binding/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "数据绑定\n更新时间：\n2024-03-08 15:34:54\n蓝河应用提供了数据绑定 UI 组件的方式，当数据发生变化时，会自动触发 UI 组件的更新。\n绑定方法\n用法上，开发者可以在组件上使用\n\"{{varname}}\"\n，即双大括号内放置变量的形式，即可将变量绑定在 UI 组件上。\n示例如下\n<\ntemplate\n>\n<\ndiv\n>\n<\ntext\n>\n{{title}}\n</\ntext\n>\n<",
+      "keywords": [
+        "Hello",
+        "World",
+        "数据绑定"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0123",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/reference/app-service/event-on/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2025-08-13 20:11:57\n通过在 UI 组件上绑定事件，开发者可以实现蓝河应用与用户之间的交互。\n绑定事件\n用法上，开发者可以使用 on (可以用@简写代替) 来绑定事件，如：onclick,onchange 可简写成 @click,@change，并在事件触发时执行对应的 JavaScript 业务代码。\n示例如下\n<\ntemplate\n>\n<\ndiv\nclass",
+      "keywords": [
+        "JavaScript",
+        "概述"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0124",
+      "title": "列表渲染",
+      "url": "https://developers-watch.vivo.com.cn/reference/app-service/for/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "列表渲染\n更新时间：\n2025-06-17 15:55:14\n使用\nfor\n指令可循环渲染数组数据。其语法支持多种形式（\n{{}}\n可省略）：\n基础写法\nfor\n=\n\"{{list}}\"\n复制代码\nlist\n是数组类型数据。\n默认数组元素变量为\n$item\n，索引为\n$idx\n。\n自定义变量名\nfor\n=\n\"{{value in list}}\"\n复制代码\nvalue\n是自定义的数组元素变量名。\n索",
+      "keywords": [
+        "列表渲染",
+        "React"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0125",
+      "title": "条件渲染",
+      "url": "https://developers-watch.vivo.com.cn/reference/app-service/if-show/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "条件渲染\n更新时间：\n2023-10-31 15:05:28\n条件渲染有 2 种：if/elif/else 和 show。它们的区别在于：if 为 false 时，组件会从 DOM 中移除，而 show 仅仅是渲染时不可见，组件依然存在于 DOM 中;\nif 指令\nif 条件渲染，是指 if/elif/else 这 3 个相关指令，用于控制是否增加或者删除组件；\nif/elif/else 节点必须",
+      "keywords": [
+        "条件渲染",
+        "Hello"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0126",
+      "title": "页面布局",
+      "url": "https://developers-watch.vivo.com.cn/reference/app-service/page-style-and-layout/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "页面布局\n更新时间：\n2024-01-10 16:04:30\n蓝河应用使用的是 Flex 布局方式。\n盒模型\n蓝河应用布局框架使用 border-box 模型，具体表现与宽高边距计算可参考 MDN 文档\nbox-sizing\n， 暂不支持 content-box 模型与手动指定 box-sizing 属性。\n布局所占宽度 Width：\nWidth = width(包含padding-left +",
+      "keywords": [
+        "Flex",
+        "页面布局",
+        "Height",
+        "Width"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0127",
+      "title": "自定义组件",
+      "url": "https://developers-watch.vivo.com.cn/reference/app-service/parent-child-component-communication/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "自定义组件\n更新时间：\n2025-06-23 10:14:39\n熟悉自定义组件的开发，了解父子组件之间的通信方式，如：props，data。\n组件自定义\n开发页面时开发者必须用到各种 UI 组件，如：\ntext\n、\ndiv\n，这些组件是由蓝河系统提供的；如果开发一个复杂的页面，开发者把所有的 UI 部分写在一个文件的\n<template>\n，那代码的可维护性将会很低，并且模块之间容易产生不必要的耦",
+      "keywords": [
+        "Function",
+        "Object",
+        "自定义组件"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0128",
+      "title": "props",
+      "url": "https://developers-watch.vivo.com.cn/reference/app-service/props/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "props\n更新时间：\n2025-07-10 10:44:44\nProp 写法\nProp 属性名称使用 camelCase(驼峰命名法)命名法，在外部传递数据时请转化为以 kebab-case (短横线分隔命名) propObject 转换为 prop-object。\n<!-- 子组件 -->\n<\ntemplate\n>\n<\ndiv\nclass\n=\n\"\nchild-demo\n\"\n>\n<\ntext\n>",
+      "keywords": [
+        "Hello",
+        "props",
+        "Prop",
+        "Array",
+        "Object"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0129",
+      "title": "页面路由",
+      "url": "https://developers-watch.vivo.com.cn/reference/app-service/switching-pages/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "页面路由\n更新时间：\n2025-10-09 11:25:10\n了解如何打开页面、回退，并传递参数\n组件 a 切换页面\n切换页面\n组件 a 可通过配置 href 属性跳转到应用内的页面\n示例如下：\n<\ntemplate\n>\n<\ndiv\nclass\n=\n\"\ntutorial-page\n\"\n>\n<!-- 以'/'开头的应用内页面的路径 -->\n<\na\nhref\n=\n\"\n/PageParams/recei",
+      "keywords": [
+        "Hello",
+        "页面路由",
+        "PageParams"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0130",
+      "title": "文件组织",
+      "url": "https://developers-watch.vivo.com.cn/reference/configuration/file-organization/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "文件组织\n更新时间：\n2024-01-10 16:04:30\n本文对项目的文件目录及相关内容进行了介绍，包括蓝河应用文件结构讲解，配置信息、新增页面等\n项目介绍\n通过 BlueOS Studio 新建一个项目，这个项目已经包含了\n项目配置\n与\n示例页面\n的初始代码，项目根目录主要结构如下：\n├── scripts                   工具脚本文件\n├── src\n│   ├── a",
+      "keywords": [
+        "JavaScript",
+        "ProjectName",
+        "文件组织",
+        "DemoDetail",
+        "Demo",
+        "Studio"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0131",
+      "title": "框架简介",
+      "url": "https://developers-watch.vivo.com.cn/reference/configuration/intro/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "框架简介\n更新时间：\n2025-07-09 21:34:57\n蓝河应用框架采用了类 web 开发范式，具有学习成本低，开发效率高的特点。框架提供了丰富的 UI 组件与样式，开发者可以因此高效搭建界面。同时框架提供了两套 API 接口，开发者可以按需选择。\n数据绑定\n数据绑定可以让数据与视图非常简单地保持同步。当做数据修改的时候，只需要在逻辑层修改数据，视图层就会做相应的更新。数据绑定的具体使用参看",
+      "keywords": [
+        "框架简介",
+        "Native"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0132",
+      "title": "manifest 文件",
+      "url": "https://developers-watch.vivo.com.cn/reference/configuration/manifest/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "manifest 文件\n更新时间：\n2025-10-09 11:25:10\nmanifest.json 文件中包含了应用描述、接口声明、页面路由信息\nmanifest\n属性\n类型\n默认值\n必填\n描述\npackage\nstring\n-\n是\n应用包名，\n确认与原生应用的包名不一致\n，推荐采用 com.company.module 的格式，如：com.example.demo\nname\nstring\n-",
+      "keywords": [
+        "Config",
+        "Display",
+        "FeatureInfo",
+        "Array",
+        "manifest 文件",
+        "Router"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0133",
+      "title": "javascript 代码",
+      "url": "https://developers-watch.vivo.com.cn/reference/configuration/script/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "javascript 代码\n更新时间：\n2025-05-20 14:21:12\n用来定义页面数据和实现生命周期接口\n语法\n支持 ES6 语法\n模块声明\n蓝河应用中支持\nES6\n的\nmodule\n标准，使用\nimport\n引入 js 依赖，同时支持 CommonJs 规范，使用\nrequire\n引入 js 依赖（具体参看功能接口部分文档说明）\n// 首先在 `manifest.json` 中配置 `",
+      "keywords": [
+        "Function",
+        "Hello",
+        "Object",
+        "CommonJs",
+        "javascript 代码",
+        "Common"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0134",
+      "title": "style 样式",
+      "url": "https://developers-watch.vivo.com.cn/reference/configuration/style-sheet/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "style 样式\n更新时间：\n2024-10-11 11:55:18\n用于描述 template 模板的组件样式，决定组件应该如何显示\n样式布局采用 CSS Flexbox（弹性盒）样式，针对部分原生组件，对 CSS 进行了少量的扩充以及修改\n为了解决屏幕适配问题，所有与大小相关的样式（例如 width、font-size）均以基准宽度（默认 750px）为基础，根据实际屏幕宽度进行缩放\n文件导入",
+      "keywords": [
+        "Query",
+        "style 样式",
+        "Code",
+        "Media",
+        "Flexbox",
+        "Native"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0135",
+      "title": "UX 文件",
+      "url": "https://developers-watch.vivo.com.cn/reference/configuration/ux-file/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "UX 文件\n更新时间：\n2025-10-09 11:25:10\nAPP、页面和自定义组件均通过 ux 后缀文件编写，ux 后缀文件由\njavascript 代码\n、template 模板和\nstyle 样式\n3 个部分组成，一个典型的页面 ux 后缀文件示例如下：\n<\nscript\n>\nimport\nrouter\nfrom\n'@blueos.app.router'\nexport\ndefault\n{",
+      "keywords": [
+        "UX 文件",
+        "ViewModel",
+        "DemoDetail"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0136",
+      "title": "页面启动模式",
+      "url": "https://developers-watch.vivo.com.cn/reference/extend/launch-mode/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "页面启动模式\n更新时间：\n2023-10-21 10:15:58\n用于定义页面的启动行为\n静态声明\n在 manifest 文件中页面路由信息 router.page 可增加启动模式字段 launchMode，用于声明该页面的启动模式\n页面启动模式参数：\n属性\n类型\n默认值\n必填\n描述\nlaunchMode\nString\nstandard\n否\n声明页面的启动模式，支持\"singleTask\"，\"st",
+      "keywords": [
+        "String",
+        "页面启动模式"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0137",
+      "title": "屏幕适配",
+      "url": "https://developers-watch.vivo.com.cn/reference/extend/mulit/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "屏幕适配\n更新时间：\n2024-10-11 11:55:18\n蓝河操作系统支持对不同尺寸和不同形状的屏幕的适配能力。\n1.等比放缩\n在 manifest 文件中配置\ndesignWidth\n字段的设计基准宽度，蓝河应用便可以自动完成等比缩放。\n// manifest.json\n{\n\"config\"\n:\n{\n\"designWidth\"\n:\n466\n}\n}\n复制代码\n如上示例中\ndesignWidth",
+      "keywords": [
+        "屏幕适配",
+        "String",
+        "Function"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0138",
+      "title": "后台运行",
+      "url": "https://developers-watch.vivo.com.cn/reference/extend/resident/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "后台运行\n更新时间：\n2025-05-16 10:47:50\n概述\n为了节省系统资源，通常情况下，应用切换到后台后将会暂停运行，等到再次切换回前台时继续运行。但音乐/运动等类型的应用， 退到后台后可能仍然需要继续运行，为满足此类需求，加入了对后台运行的支持。\n后台运行模式的工作原理如下:\n在应用切换到后台时，系统将会检查是否满足后台运行的条件，如果满足，应用将继续运行，否则将被暂停。此条件包括：",
+      "keywords": [
+        "后台运行"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0139",
+      "title": "表盘",
+      "url": "https://developers-watch.vivo.com.cn/reference/extend/watchface/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "表盘\n更新时间：\n2025-10-09 11:25:10\n概述\n表盘指默认开机首屏的界面，可分为指针表盘和数字表盘，除了查看时间，表盘还可以给用户提供展示计步、心率、电量、天气等关键信息。\n系统会内置一些表盘，同时也支持第三方开发，用户可以根据喜好通过长按切换选择表盘。\n表盘项目结构\n一个表盘项目包含：描述项目配置信息的\nmanifest 文件\n，一个描述表盘界面的\nux 文件\n，以及引用的图片资",
+      "keywords": [
+        "表盘",
+        "Integer",
+        "String",
+        "Object"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0140",
+      "title": "快捷卡片",
+      "url": "https://developers-watch.vivo.com.cn/reference/extend/widget/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "快捷卡片\n更新时间：\n2025-10-09 11:25:10\n⚠ 快捷卡片已经弃用，请使用\n智慧服务卡片\n概述\n快捷卡片是应用的特殊页面，配置为快捷卡片的页面可以被其他宿主应用作为组件引入。此特性可以使得其能跟随主应用更新，而宿主应用无需更新。\n一个应用可以配置多个快捷卡片，一个快捷卡片也可以被多个宿主应用所引用。\nmanifest.json 文件\n快捷卡片在 manifest.json 中的 w",
+      "keywords": [
+        "Music",
+        "快捷卡片",
+        "Home",
+        "Integer"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0141",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/reference/perf-guide/overview/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2025-04-28 19:30:44\n1 前言\n本章节聚焦手表应用的性能优化，结合可穿戴设备资源受限、低功耗需求和小屏幕交互特点，提出切实可行的优化策略。我们将重点关注电池续航、显示功耗和交互流畅度，帮助开发者在蓝河应用框架下构建高效、稳定的智能穿戴产品。\n2 使用说明\n文中示例提供了「正例」和「反例」，便于读者直观对比两种方案的优劣，迅速掌握规范要点。示例仅供说明，不代表可直",
+      "keywords": [
+        "Tree",
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0142",
+      "title": "避免高耗性能操作",
+      "url": "https://developers-watch.vivo.com.cn/reference/perf-guide/perf-dangerous/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "避免高耗性能操作\n更新时间：\n2025-04-27 09:58:15\n在蓝河应用开发中，需特别注意以下高消耗性能操作，合理规避可显著提升渲染效率与运行时性能。\n避免使用后代选择器\n推荐级别：强烈\n后代选择器在传统 Web 开发中能有效规避样式污染，但蓝河应用的页面与组件采用\n天然样式隔离机制\n，嵌套选择器会触发冗余的样式计算，导致渲染性能下降。\n直接使用类名选择器，避免多级嵌套结构。\n反例\n.li",
+      "keywords": [
+        "避免高耗性能操作",
+        "Web"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0143",
+      "title": "响应式数据优化",
+      "url": "https://developers-watch.vivo.com.cn/reference/perf-guide/perf-data/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "响应式数据优化\n更新时间：\n2025-04-27 11:06:02\n蓝河框架基于 Proxy 实现响应式追踪机制，data 对象中的每个属性都会创建监听代理。优化数据层可显著降低内存消耗，提升渲染速度。\n消除冗余响应式数据\n推荐级别：强烈\n未使用的响应式数据仍会触发依赖收集，导致内存占用增加。\n优化方案\n采用普遍变量声明非响应式数据\n反例 1\n<\ntemplate\n>\n<\ntext\n>\n{{a}}",
+      "keywords": [
+        "Sports",
+        "Team",
+        "响应式数据优化",
+        "Football",
+        "Basketball",
+        "Proxy"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0144",
+      "title": "帧率优化指引",
+      "url": "https://developers-watch.vivo.com.cn/reference/perf-guide/perf-frame-rate/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "帧率优化指引\n更新时间：\n2025-04-25 20:12:10\n本节介绍提升帧率的有效方法。\n避免冗余背景声明\n如背景色为黑色，则不需要另外设置黑色（默认背景色为黑色）\n如父容器已经有背景颜色，则不需要单独给页面的容器设置一样的背景色\n给 div 组件设置宽高\n横向布局至少设置高度\n纵向布局至少设置宽度\n使用图片的原始尺寸\nimage 组件上的宽高使用图片的原始尺寸\nbackground-ima",
+      "keywords": [
+        "帧率优化指引"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0145",
+      "title": "减少初始化开销",
+      "url": "https://developers-watch.vivo.com.cn/reference/perf-guide/perf-init/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "减少初始化开销\n更新时间：\n2025-04-28 19:30:44\n应用初始化阶段的代码复杂度直接影响应用/页面实例的创建耗时，优化该阶段的执行效率能显著改善首屏渲染性能。\n避免引入耗时自执行模块\n推荐级别：强烈\n模块中的自执行逻辑会在导入时立即执行，导致页面加载阻塞。应将初始化逻辑移至生命周期钩子中按需执行。\n反例\n// init.js 中的自执行逻辑会立即执行，延长加载时间\nimport\n'.",
+      "keywords": [
+        "减少初始化开销"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0146",
+      "title": "长列表性能优化",
+      "url": "https://developers-watch.vivo.com.cn/reference/perf-guide/perf-longlist/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "长列表性能优化\n更新时间：\n2025-10-09 11:25:10\n本文阐述了长列表场景下的性能优化方案，在开发过程中遇到长列表性能问题时，可参考下面优化方案。\n分离固定标题与列表容器\n当\n<list>\n组件滚动时，内部元素复杂度直接影响滚动性能。建议将固定标题等静态元素移出列表容器，采用绝对定位等方式处理。\n推荐级别：强烈\n反例\n标题内嵌于列表容器，影响滚动性能：\n<\ntemplate\n>\n<",
+      "keywords": [
+        "Non",
+        "Vegetarian",
+        "长列表性能优化"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0147",
+      "title": "js 内存泄漏排查",
+      "url": "https://developers-watch.vivo.com.cn/reference/perf-guide/perf-memory-leak/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "js 内存泄漏排查\n更新时间：\n2025-05-20 10:54:23\n在需要排查的场景先后进行两次 dump, 比如排查页面泄漏，在进入页面前 dump 一次，进入页面退出后再 dump 一次\n导出泄漏可以分为两种情况\n如果应用不需要底层能力支撑\n比如不需要\nblueos.multimedia.audio\n这些底层能力，可以直接在 BlueOS Studio 测试，在下图场景前后分别点击\n位置",
+      "keywords": [
+        "Devtool",
+        "js 内存泄漏排查",
+        "Snapshot",
+        "Studio"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0148",
+      "title": "运行时性能优化",
+      "url": "https://developers-watch.vivo.com.cn/reference/perf-guide/perf-runtime/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "运行时性能优化\n更新时间：\n2025-04-27 11:06:02\n本节提供的关键优化手段可显著提升页面渲染与更新效率。\n避免在 CSS 中使用 ID 选择器\n推荐级别：强烈\n如果只需要在 css 中给组件添加样式，建议使用 class 选择器，只有需要使用 js 操作组件时，才会给组件注册 ID。\n反例 1\n<!-- 错误：在CSS中通过ID定义样式 -->\n<\ntemplate\n>\n<\ndiv",
+      "keywords": [
+        "运行时性能优化",
+        "Diff",
+        "Tab",
+        "JavaScript"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0149",
+      "title": "图片资源优化",
+      "url": "https://developers-watch.vivo.com.cn/reference/perf-guide/perf-src/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "图片资源优化\n更新时间：\n2025-04-27 11:06:02\n本章为 UI 设计师提供界面资源设计规范，通过科学管理图片资源降低内存占用、提升渲染性能、优化安装包体积，适用于设计阶段至开发交付全流程。\n图片尺寸适配原则\n推荐级别：强烈\n图片物理尺寸必须与目标显示区域像素尺寸严格匹配，禁止使用超分辨率图片。大尺寸图片会导致内存占用激增，同时增加 GPU 渲染管线压力。\n8 位色深资源优先\n推荐级",
+      "keywords": [
+        "图片资源优化"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0150",
+      "title": "退出页面释放监听",
+      "url": "https://developers-watch.vivo.com.cn/reference/perf-guide/perf-subscription/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "退出页面释放监听\n更新时间：\n2025-04-27 09:58:15\n在蓝河应用开发中，正确处理页面生命周期末端的资源释放是保障应用性能的关键。以下规范针对页面销毁阶段（onDestroy）必须执行的三类资源清理操作。\n定时器资源释放\n推荐级别：强烈\n所有通过\nsetTimeout\n/\nsetInterval\n创建的计时器，必须在页面销毁时通过\nclearTimeout\n/\nclearInterv",
+      "keywords": [
+        "退出页面释放监听"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0151",
+      "title": "减少代码体积",
+      "url": "https://developers-watch.vivo.com.cn/reference/perf-guide/perf-treeshaking/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "减少代码体积\n更新时间：\n2025-04-27 09:58:15\n本节非常重要，优劣不同的写法会有明显的代码体积差异，而代码体积越小，会获得更快的加载速度。\njs 封装要支持 Treeshaking\n推荐级别：强烈\n统一支持 Treeshaking 是非常重要的，因为它可以在打包编译时移除未使用的代码，减小输出的文件大小。\n在进行 JavaScript 封装时，请牢记以下两点：\n在能使用函数实现的",
+      "keywords": [
+        "Treeshaking",
+        "Object",
+        "减少代码体积",
+        "JavaScript"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0152",
+      "title": "编译环境变量",
+      "url": "https://developers-watch.vivo.com.cn/reference/question-answer/build-env/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "编译环境变量\n更新时间：\n2024-03-13 09:57:59\n编译环境变量\nprocess.env.NODE_ENV\n用于在构建时判断生产环境或开发环境。它可以帮助在编译时去掉不必要构建的代码块。环境变量的一种使用场景是用于模拟器无法覆盖的能力，可以使用 JavaScript 来模拟这些情况。\n编译环境变量取值\n环境\n取值\n开发环境\ndevelopment\n正式环境\nproduction\n使用",
+      "keywords": [
+        "编译环境变量",
+        "JavaScript"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0153",
+      "title": "国际化",
+      "url": "https://developers-watch.vivo.com.cn/reference/question-answer/i18n/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "国际化\n更新时间：\n2025-10-09 11:25:10\n蓝河应用平台的能力会覆盖多个国家地区，平台支持国际化(i18n)的能力后，可以做到让一个蓝河应用产品（一个 RPK 文件）同时支持多个语言版本的切换，开发者无需开发多个不同语言的源码项目，避免给项目维护带来困难。\n使用系统默认的语言，开发者配置国际化的方式非常简单，只需要\n定义资源\n与\n引用资源\n两个步骤即可；如果允许用户在蓝河应用中修改",
+      "keywords": [
+        "Function",
+        "国际化",
+        "ViewModel",
+        "String"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0154",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/reference/quickstart/introduction/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2025-04-29 11:37:34\n蓝河应用开发采用类 web 开发范式，使用 UI 组件来搭建页面布局，使用样式来描述组件和页面的效果，使用 Javascript 来进行业务逻辑的开发。蓝河应用支持 MVVM（Model-View-ViewModel）的架构，通过数据绑定视图的方式，数据发生变化时，会自动触发 UI 的更新。\n如果开发者是首次接触蓝河应用，并希望立即开始编写",
+      "keywords": [
+        "Javascript",
+        "Page",
+        "概述",
+        "View",
+        "Model",
+        "ViewModel"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0155",
+      "title": "构建首个蓝河应用",
+      "url": "https://developers-watch.vivo.com.cn/reference/quickstart/quick-start/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "构建首个蓝河应用\n更新时间：\n2025-10-09 11:25:10\n本文将从开发工具、新建项目、安装依赖、调试项目、打包等方面入手，让您学习后，可以构建首个蓝河应用。\n开发\n开发者可以使用 BlueOS Studio 开发、调试和打包蓝河应用。以下所有的操作均在 BlueOS Studio 中完成，开发者可以\n点击链接进入工具下载页面\n，先安装 BlueOS Studio 。\n一、新建项目\n新建",
+      "keywords": [
+        "构建首个蓝河应用",
+        "Node",
+        "Studio"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0156",
+      "title": "标准卡开发",
+      "url": "https://developers-watch.vivo.com.cn/reference/widget/js-widget/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "标准卡开发\n更新时间：\n2025-10-09 11:25:10\n标准卡和普通蓝河页面开发范式相同，包含下列常见能力：\n生命周期\n页面样式与布局\n列表渲染\n条件指令\n应用跳转及参数传递\n事件绑定\n自定义组件\n国际化多语言\n示例：\n<\nscript\n>\nexport\ndefault\n{\ndata\n:\n{\nshowSunny\n:\nfalse\n,\n}\n,\nonInit\n(\n)\n{\n// 这里可以添加初始化",
+      "keywords": [
+        "标准卡开发"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0157",
+      "title": "轻卡开发",
+      "url": "https://developers-watch.vivo.com.cn/reference/widget/lite-widget/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "轻卡开发\n更新时间：\n2025-10-09 11:25:10\n轻卡不运行 JavaScript，因此其开发范式与标准卡片存在差异，具体细节将在本节中进一步介绍。\n基本范式\n轻卡的开发 ux 文件开发分为\ndata\n、\ntemplate\n和\nstyle\n三个部分。\n例如：\n<\ndata\n>\n{\n   \"uiData\": {\n    \"content\": \"轻卡示例\"\n   }\n  }\n</\ndata",
+      "keywords": [
+        "Hello",
+        "World",
+        "轻卡开发",
+        "JavaScript"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0158",
+      "title": "概述",
+      "url": "https://developers-watch.vivo.com.cn/reference/widget/overview/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "概述\n更新时间：\n2025-10-09 11:25:10\n本节介绍卡片的定义、分类、模块架构和运行原理。\n什么是卡片\n卡片是一种轻量的应用形态。它可以嵌入到各类场景应用的页面中（如负一屏，桌面，全搜，锁屏，浏览器，语音助手等），为用户提供快速、直观且高度关联的服务体验。通过精准和便捷地展示信息或功能，卡片不仅提高了用户获取服务的效率，也为应用带来了更多曝光机会和用户参与度。\n卡片分类\n蓝河系统卡片",
+      "keywords": [
+        "Action",
+        "Host",
+        "概述"
+      ],
+      "has_code": false
+    },
+    {
+      "id": "doc_0159",
+      "title": "卡片配置",
+      "url": "https://developers-watch.vivo.com.cn/reference/widget/project-config/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "卡片配置\n更新时间：\n2025-10-09 11:25:10\n本节介绍卡片配置及工程目录，通过示例展示了轻卡和标准卡的具体配置方法。\n工程目录\n在代码工程中支持两种卡片工程目录组织方式：\n一张卡片单独一个工程\n多张卡片和普通应用在同一个工程下，卡片和普通应用分属不同的文件目录。\n仅卡片\n注意：卡片工程中不存在 app.ux 文件。\n└── src\n│   ├── widgets\n# 统一存放项目快",
+      "keywords": [
+        "Styles",
+        "Images",
+        "卡片配置",
+        "Widget",
+        "Record"
+      ],
+      "has_code": true
+    },
+    {
+      "id": "doc_0160",
+      "title": "widgetProvider 开发",
+      "url": "https://developers-watch.vivo.com.cn/reference/widget/widget-provider/",
+      "category": "tutorial",
+      "breadcrumb": [],
+      "summary": "widgetProvider 开发\n更新时间：\n2025-10-09 11:25:10\n本节将介绍 widgetProvider 的核心概念和三种实现方式。鉴于不同平台的开发方式各有差异，开发者可以做在具体文档中查阅。本节重点讲解 widgetProvider 的顶层概念，通过理解这些概念，您将更容易掌握不同实现方式之间的互通性。\n概述\nwidgetProvider 介绍\nwidgetProvid",
+      "keywords": [
+        "Shenzhen",
+        "Android",
+        "Action",
+        "widgetProvider 开发",
+        "Promise"
+      ],
+      "has_code": true
+    }
+  ]
+}

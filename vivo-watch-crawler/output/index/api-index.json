@@ -1,0 +1,57 @@
+{
+  "total": 2,
+  "apis": [
+    {
+      "name": "localstorage",
+      "title": "K-V 数据存储",
+      "url": "https://developers-watch.vivo.com.cn/api/storage/localstorage",
+      "namespace": "",
+      "parameters": [
+        {
+          "name": "参数名"
+        },
+        {
+          "name": "参数名"
+        },
+        {
+          "name": "参数名"
+        },
+        {
+          "name": "参数名"
+        },
+        {
+          "name": "参数名"
+        },
+        {
+          "name": "参数名"
+        }
+      ],
+      "returns": "key 对应的存储内容",
+      "examples_count": 13,
+      "description": "K-V 数据存储\n更新时间：\n2025-10-09 11:25:10\n接口声明\n{\n\"name\"\n:\n\"blueos.storage.storage\"\n}\n复制代码\n导入模块\nimport\nstorage\nfrom\n'@blueos.storage.storage'\n或\nconst\nstorage\n=\nrequire\n(\n'@blueos.storage.storage'\n)\n复制代码\n接口定义\nstorage.get(OBJECT)\n读取存储内容\n参数：\n参数名\n类型\n必填\n说明\nkey\nString\n是\n索引\ndefault\nString\n否\n如果 key 不存在，返回 default。如"
+    },
+    {
+      "name": "statvfs",
+      "title": "存储空间统计",
+      "url": "https://developers-watch.vivo.com.cn/api/storage/statvfs",
+      "namespace": "",
+      "parameters": [
+        {
+          "name": "参数名"
+        },
+        {
+          "name": "参数名"
+        },
+        {
+          "name": "参数名"
+        },
+        {
+          "name": "参数名"
+        }
+      ],
+      "returns": "空闲的字节数，（单位为 Byte）",
+      "examples_count": 6,
+      "description": "存储空间统计\n更新时间：\n2025-08-13 20:11:57\nstatvfs 一个用来获取应用空间的模块，包含了获取可用空间与总空间接口，支持同步与异步。\n接口声明\n{\n\"name\"\n:\n\"blueos.storage.statvfs\"\n}\n复制代码\n导入模块\nimport\nstatvfs\nfrom\n'@blueos.storage.statvfs'\n复制代码\n接口定义\nstatvfs.getFreeSize()\n查询指定文件系统可用空间大小，异步接口\n参数：\n参数名\n类型\n必填\n说明\npath\nstring\n是\n需要查询的文件系统的文件路径 URI\nsuccess\n(size:numbe"
+    }
+  ]
+}

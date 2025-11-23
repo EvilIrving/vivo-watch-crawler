@@ -865,3 +865,574 @@ playwright._impl._errors.TargetClosedError: BrowserContext.close: Target page, c
 2025-11-24 02:19:28,474 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/api/system/sensor?hastopwindow=1
 2025-11-24 02:19:28,859 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/api/system/sensor/ -> js-api.jsonl
 2025-11-24 02:19:28,860 - src.crawler.scheduler_api - INFO -   ✓ 成功: 传感器
+2025-11-24 02:19:31,587 - src.crawler.scheduler_api - INFO - 
+[57/161] 处理: /api/system/settings/
+2025-11-24 02:19:31,587 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/api/system/settings?hastopwindow=1
+2025-11-24 02:19:31,853 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/api/system/settings/ -> js-api.jsonl
+2025-11-24 02:19:31,853 - src.crawler.scheduler_api - INFO -   ✓ 成功: 系统设置
+2025-11-24 02:19:34,744 - src.crawler.scheduler_api - INFO - 
+[58/161] 处理: /api/system/short-message-service/
+2025-11-24 02:19:34,745 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/api/system/short-message-service?hastopwindow=1
+2025-11-24 02:19:34,993 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/api/system/short-message-service/ -> js-api.jsonl
+2025-11-24 02:19:34,993 - src.crawler.scheduler_api - INFO -   ✓ 成功: 短信
+2025-11-24 02:19:37,570 - src.crawler.scheduler_api - INFO - 
+[59/161] 处理: /api/system/simManager/
+2025-11-24 02:19:37,571 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/api/system/simManager?hastopwindow=1
+2025-11-24 02:19:37,881 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/api/system/simManager/ -> js-api.jsonl
+2025-11-24 02:19:37,881 - src.crawler.scheduler_api - INFO -   ✓ 成功: sim 卡管理
+2025-11-24 02:19:40,161 - src.crawler.scheduler_api - INFO - 
+[60/161] 处理: /api/system/softwareOverview/
+2025-11-24 02:19:40,162 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/api/system/softwareOverview?hastopwindow=1
+2025-11-24 02:19:40,430 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/api/system/softwareOverview/ -> js-api.jsonl
+2025-11-24 02:19:40,430 - src.crawler.scheduler_api - INFO -   ✓ 成功: 概述
+2025-11-24 02:19:43,174 - src.crawler.scheduler_api - INFO - 
+进度: 60/161 (37.3%) | 成功: 60 | 失败: 0 | 跳过: 0
+
+2025-11-24 02:19:43,174 - src.crawler.scheduler_api - INFO - 
+[61/161] 处理: /api/system/systemapp/
+2025-11-24 02:19:43,174 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/api/system/systemapp?hastopwindow=1
+2025-11-24 02:19:43,440 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/api/system/systemapp/ -> js-api.jsonl
+2025-11-24 02:19:43,440 - src.crawler.scheduler_api - INFO -   ✓ 成功: 应用上下文
+2025-11-24 02:19:45,437 - src.crawler.scheduler_api - INFO - 
+[62/161] 处理: /api/system/tar/
+2025-11-24 02:19:45,437 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/api/system/tar?hastopwindow=1
+2025-11-24 02:19:45,812 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/api/system/tar/ -> js-api.jsonl
+2025-11-24 02:19:45,812 - src.crawler.scheduler_api - INFO -   ✓ 成功: 解包
+2025-11-24 02:19:47,799 - src.crawler.scheduler_api - INFO - 
+[63/161] 处理: /api/system/telephony-service/
+2025-11-24 02:19:47,799 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/api/system/telephony-service?hastopwindow=1
+2025-11-24 02:19:48,021 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/api/system/telephony-service/ -> js-api.jsonl
+2025-11-24 02:19:48,021 - src.crawler.scheduler_api - INFO -   ✓ 成功: 电话
+2025-11-24 02:19:50,932 - src.crawler.scheduler_api - INFO - 
+[64/161] 处理: /api/system/vibrator/
+2025-11-24 02:19:50,932 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/api/system/vibrator?hastopwindow=1
+2025-11-24 02:19:51,359 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/api/system/vibrator/ -> js-api.jsonl
+2025-11-24 02:19:51,359 - src.crawler.scheduler_api - INFO -   ✓ 成功: 振动
+2025-11-24 02:19:53,861 - src.crawler.scheduler_api - INFO - 
+[65/161] 处理: /api/system/websocket/
+2025-11-24 02:19:53,862 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/api/system/websocket?hastopwindow=1
+2025-11-24 02:19:54,156 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/api/system/websocket/ -> js-api.jsonl
+2025-11-24 02:19:54,156 - src.crawler.scheduler_api - INFO -   ✓ 成功: websocket
+2025-11-24 02:19:55,646 - src.crawler.scheduler_api - INFO - 
+[66/161] 处理: /api/system/widget-manager/
+2025-11-24 02:19:55,646 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/api/system/widget-manager?hastopwindow=1
+2025-11-24 02:19:55,885 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/api/system/widget-manager/ -> js-api.jsonl
+2025-11-24 02:19:55,885 - src.crawler.scheduler_api - INFO -   ✓ 成功: widgetManager
+2025-11-24 02:19:58,658 - src.crawler.scheduler_api - INFO - 
+[67/161] 处理: /api/system/widget-provider/
+2025-11-24 02:19:58,658 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/api/system/widget-provider?hastopwindow=1
+2025-11-24 02:19:58,958 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/api/system/widget-provider/ -> js-api.jsonl
+2025-11-24 02:19:58,959 - src.crawler.scheduler_api - INFO -   ✓ 成功: widgetProvider
+2025-11-24 02:20:01,513 - src.crawler.scheduler_api - INFO - 
+[68/161] 处理: /component/basic/a/
+2025-11-24 02:20:01,515 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/basic/a?hastopwindow=1
+2025-11-24 02:20:01,841 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/basic/a/ -> ui-component.jsonl
+2025-11-24 02:20:01,841 - src.crawler.scheduler_api - INFO -   ✓ 成功: a
+2025-11-24 02:20:03,596 - src.crawler.scheduler_api - INFO - 
+[69/161] 处理: /component/basic/animated-vector/
+2025-11-24 02:20:03,596 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/basic/animated-vector?hastopwindow=1
+2025-11-24 02:20:03,871 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/basic/animated-vector/ -> ui-component.jsonl
+2025-11-24 02:20:03,871 - src.crawler.scheduler_api - INFO -   ✓ 成功: animated-vector
+2025-11-24 02:20:06,130 - src.crawler.scheduler_api - INFO - 
+[70/161] 处理: /component/basic/animation-overview/
+2025-11-24 02:20:06,130 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/basic/animation-overview?hastopwindow=1
+2025-11-24 02:20:06,375 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/basic/animation-overview/ -> ui-component.jsonl
+2025-11-24 02:20:06,375 - src.crawler.scheduler_api - INFO -   ✓ 成功: 概述
+2025-11-24 02:20:07,916 - src.crawler.scheduler_api - INFO - 
+进度: 70/161 (43.5%) | 成功: 70 | 失败: 0 | 跳过: 0
+
+2025-11-24 02:20:07,916 - src.crawler.scheduler_api - INFO - 
+[71/161] 处理: /component/basic/arc-text/
+2025-11-24 02:20:07,916 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/basic/arc-text?hastopwindow=1
+2025-11-24 02:20:08,160 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/basic/arc-text/ -> ui-component.jsonl
+2025-11-24 02:20:08,161 - src.crawler.scheduler_api - INFO -   ✓ 成功: arc-text
+2025-11-24 02:20:10,920 - src.crawler.scheduler_api - INFO - 
+[72/161] 处理: /component/basic/barcode/
+2025-11-24 02:20:10,921 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/basic/barcode?hastopwindow=1
+2025-11-24 02:20:11,190 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/basic/barcode/ -> ui-component.jsonl
+2025-11-24 02:20:11,191 - src.crawler.scheduler_api - INFO -   ✓ 成功: barcode
+2025-11-24 02:20:14,163 - src.crawler.scheduler_api - INFO - 
+[73/161] 处理: /component/basic/image-animator/
+2025-11-24 02:20:14,163 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/basic/image-animator?hastopwindow=1
+2025-11-24 02:20:14,471 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/basic/image-animator/ -> ui-component.jsonl
+2025-11-24 02:20:14,471 - src.crawler.scheduler_api - INFO -   ✓ 成功: image-animator
+2025-11-24 02:20:15,940 - src.crawler.scheduler_api - INFO - 
+[74/161] 处理: /component/basic/image/
+2025-11-24 02:20:15,941 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/basic/image?hastopwindow=1
+2025-11-24 02:20:16,264 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/basic/image/ -> ui-component.jsonl
+2025-11-24 02:20:16,264 - src.crawler.scheduler_api - INFO -   ✓ 成功: image
+2025-11-24 02:20:17,615 - src.crawler.scheduler_api - INFO - 
+[75/161] 处理: /component/basic/marquee/
+2025-11-24 02:20:17,615 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/basic/marquee?hastopwindow=1
+2025-11-24 02:20:17,889 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/basic/marquee/ -> ui-component.jsonl
+2025-11-24 02:20:17,890 - src.crawler.scheduler_api - INFO -   ✓ 成功: marquee
+2025-11-24 02:20:20,008 - src.crawler.scheduler_api - INFO - 
+[76/161] 处理: /component/basic/overview/
+2025-11-24 02:20:20,008 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/basic/overview?hastopwindow=1
+2025-11-24 02:20:20,296 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/basic/overview/ -> ui-component.jsonl
+2025-11-24 02:20:20,296 - src.crawler.scheduler_api - INFO -   ✓ 成功: 概述
+2025-11-24 02:20:22,568 - src.crawler.scheduler_api - INFO - 
+[77/161] 处理: /component/basic/physics-space/
+2025-11-24 02:20:22,568 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/basic/physics-space?hastopwindow=1
+2025-11-24 02:20:23,070 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/basic/physics-space/ -> ui-component.jsonl
+2025-11-24 02:20:23,070 - src.crawler.scheduler_api - INFO -   ✓ 成功: physics-engine
+2025-11-24 02:20:25,613 - src.crawler.scheduler_api - INFO - 
+[78/161] 处理: /component/basic/progress/
+2025-11-24 02:20:25,614 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/basic/progress?hastopwindow=1
+2025-11-24 02:20:25,887 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/basic/progress/ -> ui-component.jsonl
+2025-11-24 02:20:25,887 - src.crawler.scheduler_api - INFO -   ✓ 成功: progress
+2025-11-24 02:20:28,603 - src.crawler.scheduler_api - INFO - 
+[79/161] 处理: /component/basic/qrcode/
+2025-11-24 02:20:28,603 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/basic/qrcode?hastopwindow=1
+2025-11-24 02:20:28,867 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/basic/qrcode/ -> ui-component.jsonl
+2025-11-24 02:20:28,867 - src.crawler.scheduler_api - INFO -   ✓ 成功: qrcode
+2025-11-24 02:20:30,111 - src.crawler.scheduler_api - INFO - 
+[80/161] 处理: /component/basic/span/
+2025-11-24 02:20:30,112 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/basic/span?hastopwindow=1
+2025-11-24 02:20:30,451 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/basic/span/ -> ui-component.jsonl
+2025-11-24 02:20:30,451 - src.crawler.scheduler_api - INFO -   ✓ 成功: span
+2025-11-24 02:20:31,549 - src.crawler.scheduler_api - INFO - 
+进度: 80/161 (49.7%) | 成功: 80 | 失败: 0 | 跳过: 0
+
+2025-11-24 02:20:31,550 - src.crawler.scheduler_api - INFO - 
+[81/161] 处理: /component/basic/svg-container/
+2025-11-24 02:20:31,550 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/basic/svg-container?hastopwindow=1
+2025-11-24 02:20:31,845 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/basic/svg-container/ -> ui-component.jsonl
+2025-11-24 02:20:31,845 - src.crawler.scheduler_api - INFO -   ✓ 成功: svg-container
+2025-11-24 02:20:33,536 - src.crawler.scheduler_api - INFO - 
+[82/161] 处理: /component/basic/text/
+2025-11-24 02:20:33,537 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/basic/text?hastopwindow=1
+2025-11-24 02:20:33,784 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/basic/text/ -> ui-component.jsonl
+2025-11-24 02:20:33,784 - src.crawler.scheduler_api - INFO -   ✓ 成功: text
+2025-11-24 02:20:35,720 - src.crawler.scheduler_api - INFO - 
+[83/161] 处理: /component/common/animation-styles/
+2025-11-24 02:20:35,721 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/common/animation-styles?hastopwindow=1
+2025-11-24 02:20:36,115 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/common/animation-styles/ -> ui-component.jsonl
+2025-11-24 02:20:36,115 - src.crawler.scheduler_api - INFO -   ✓ 成功: 动画样式
+2025-11-24 02:20:38,590 - src.crawler.scheduler_api - INFO - 
+[84/161] 处理: /component/common/color/
+2025-11-24 02:20:38,590 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/common/color?hastopwindow=1
+2025-11-24 02:20:38,819 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/common/color/ -> ui-component.jsonl
+2025-11-24 02:20:38,819 - src.crawler.scheduler_api - INFO -   ✓ 成功: 颜色样式
+2025-11-24 02:20:40,980 - src.crawler.scheduler_api - INFO - 
+[85/161] 处理: /component/common/common-attributes/
+2025-11-24 02:20:40,980 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/common/common-attributes?hastopwindow=1
+2025-11-24 02:20:41,201 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/common/common-attributes/ -> ui-component.jsonl
+2025-11-24 02:20:41,201 - src.crawler.scheduler_api - INFO -   ✓ 成功: 通用属性
+2025-11-24 02:20:42,331 - src.crawler.scheduler_api - INFO - 
+[86/161] 处理: /component/common/common-events/
+2025-11-24 02:20:42,332 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/common/common-events?hastopwindow=1
+2025-11-24 02:20:42,610 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/common/common-events/ -> ui-component.jsonl
+2025-11-24 02:20:42,610 - src.crawler.scheduler_api - INFO -   ✓ 成功: 通用事件
+2025-11-24 02:20:45,346 - src.crawler.scheduler_api - INFO - 
+[87/161] 处理: /component/common/common-methods/
+2025-11-24 02:20:45,347 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/common/common-methods?hastopwindow=1
+2025-11-24 02:20:45,650 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/common/common-methods/ -> ui-component.jsonl
+2025-11-24 02:20:45,651 - src.crawler.scheduler_api - INFO -   ✓ 成功: 通用方法
+2025-11-24 02:20:46,732 - src.crawler.scheduler_api - INFO - 
+[88/161] 处理: /component/common/common-styles/
+2025-11-24 02:20:46,733 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/common/common-styles?hastopwindow=1
+2025-11-24 02:20:47,088 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/common/common-styles/ -> ui-component.jsonl
+2025-11-24 02:20:47,088 - src.crawler.scheduler_api - INFO -   ✓ 成功: 通用样式
+2025-11-24 02:20:49,453 - src.crawler.scheduler_api - INFO - 
+[89/161] 处理: /component/common/component-animation/
+2025-11-24 02:20:49,454 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/common/component-animation?hastopwindow=1
+2025-11-24 02:20:49,716 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/common/component-animation/ -> ui-component.jsonl
+2025-11-24 02:20:49,716 - src.crawler.scheduler_api - INFO -   ✓ 成功: 组件动画
+2025-11-24 02:20:51,204 - src.crawler.scheduler_api - INFO - 
+[90/161] 处理: /component/common/font-face-style/
+2025-11-24 02:20:51,204 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/common/font-face-style?hastopwindow=1
+2025-11-24 02:20:51,617 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/common/font-face-style/ -> ui-component.jsonl
+2025-11-24 02:20:51,617 - src.crawler.scheduler_api - INFO -   ✓ 成功: 自定义字体样式
+2025-11-24 02:20:53,936 - src.crawler.scheduler_api - INFO - 
+进度: 90/161 (55.9%) | 成功: 90 | 失败: 0 | 跳过: 0
+
+2025-11-24 02:20:53,936 - src.crawler.scheduler_api - INFO - 
+[91/161] 处理: /component/common/gradient-styles/
+2025-11-24 02:20:53,936 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/common/gradient-styles?hastopwindow=1
+2025-11-24 02:20:54,173 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/common/gradient-styles/ -> ui-component.jsonl
+2025-11-24 02:20:54,173 - src.crawler.scheduler_api - INFO -   ✓ 成功: 渐变样式
+2025-11-24 02:20:55,691 - src.crawler.scheduler_api - INFO - 
+[92/161] 处理: /component/common/rule/
+2025-11-24 02:20:55,691 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/common/rule?hastopwindow=1
+2025-11-24 02:20:55,923 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/common/rule/ -> ui-component.jsonl
+2025-11-24 02:20:55,923 - src.crawler.scheduler_api - INFO -   ✓ 成功: 概述
+2025-11-24 02:20:58,275 - src.crawler.scheduler_api - INFO - 
+[93/161] 处理: /component/common/ui-rotation/
+2025-11-24 02:20:58,276 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/common/ui-rotation?hastopwindow=1
+2025-11-24 02:20:58,541 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/common/ui-rotation/ -> ui-component.jsonl
+2025-11-24 02:20:58,541 - src.crawler.scheduler_api - INFO -   ✓ 成功: UI 组件支持的表冠旋转
+2025-11-24 02:21:00,905 - src.crawler.scheduler_api - INFO - 
+[94/161] 处理: /component/container/div/
+2025-11-24 02:21:00,905 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/container/div?hastopwindow=1
+2025-11-24 02:21:01,182 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/container/div/ -> ui-component.jsonl
+2025-11-24 02:21:01,182 - src.crawler.scheduler_api - INFO -   ✓ 成功: div
+2025-11-24 02:21:02,455 - src.crawler.scheduler_api - INFO - 
+[95/161] 处理: /component/container/list-item/
+2025-11-24 02:21:02,455 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/container/list-item?hastopwindow=1
+2025-11-24 02:21:02,766 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/container/list-item/ -> ui-component.jsonl
+2025-11-24 02:21:02,766 - src.crawler.scheduler_api - INFO -   ✓ 成功: list-item
+2025-11-24 02:21:03,788 - src.crawler.scheduler_api - INFO - 
+[96/161] 处理: /component/container/list/
+2025-11-24 02:21:03,788 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/container/list?hastopwindow=1
+2025-11-24 02:21:04,033 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/container/list/ -> ui-component.jsonl
+2025-11-24 02:21:04,033 - src.crawler.scheduler_api - INFO -   ✓ 成功: list
+2025-11-24 02:21:05,936 - src.crawler.scheduler_api - INFO - 
+[97/161] 处理: /component/container/overview/
+2025-11-24 02:21:05,937 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/container/overview?hastopwindow=1
+2025-11-24 02:21:06,256 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/container/overview/ -> ui-component.jsonl
+2025-11-24 02:21:06,256 - src.crawler.scheduler_api - INFO -   ✓ 成功: 概述
+2025-11-24 02:21:09,123 - src.crawler.scheduler_api - INFO - 
+[98/161] 处理: /component/container/scroll/
+2025-11-24 02:21:09,124 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/container/scroll?hastopwindow=1
+2025-11-24 02:21:09,507 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/container/scroll/ -> ui-component.jsonl
+2025-11-24 02:21:09,507 - src.crawler.scheduler_api - INFO -   ✓ 成功: scroll
+2025-11-24 02:21:11,941 - src.crawler.scheduler_api - INFO - 
+[99/161] 处理: /component/container/stack/
+2025-11-24 02:21:11,941 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/container/stack?hastopwindow=1
+2025-11-24 02:21:12,232 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/container/stack/ -> ui-component.jsonl
+2025-11-24 02:21:12,232 - src.crawler.scheduler_api - INFO -   ✓ 成功: stack
+2025-11-24 02:21:14,686 - src.crawler.scheduler_api - INFO - 
+[100/161] 处理: /component/container/swiper/
+2025-11-24 02:21:14,687 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/container/swiper?hastopwindow=1
+2025-11-24 02:21:14,984 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/container/swiper/ -> ui-component.jsonl
+2025-11-24 02:21:14,984 - src.crawler.scheduler_api - INFO -   ✓ 成功: swiper
+2025-11-24 02:21:16,135 - src.crawler.scheduler_api - INFO - 
+进度: 100/161 (62.1%) | 成功: 100 | 失败: 0 | 跳过: 0
+
+2025-11-24 02:21:16,135 - src.crawler.scheduler_api - INFO - 
+[101/161] 处理: /component/extend/cellular-list/
+2025-11-24 02:21:16,135 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/extend/cellular-list?hastopwindow=1
+2025-11-24 02:21:16,336 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/extend/cellular-list/ -> ui-component.jsonl
+2025-11-24 02:21:16,336 - src.crawler.scheduler_api - INFO -   ✓ 成功: cellular-list
+2025-11-24 02:21:18,526 - src.crawler.scheduler_api - INFO - 
+[102/161] 处理: /component/extend/drawer-navigation/
+2025-11-24 02:21:18,526 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/extend/drawer-navigation?hastopwindow=1
+2025-11-24 02:21:18,783 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/extend/drawer-navigation/ -> ui-component.jsonl
+2025-11-24 02:21:18,783 - src.crawler.scheduler_api - INFO -   ✓ 成功: drawer-navigation
+2025-11-24 02:21:21,563 - src.crawler.scheduler_api - INFO - 
+[103/161] 处理: /component/extend/drawer/
+2025-11-24 02:21:21,563 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/extend/drawer?hastopwindow=1
+2025-11-24 02:21:21,804 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/extend/drawer/ -> ui-component.jsonl
+2025-11-24 02:21:21,804 - src.crawler.scheduler_api - INFO -   ✓ 成功: drawer
+2025-11-24 02:21:24,153 - src.crawler.scheduler_api - INFO - 
+[104/161] 处理: /component/extend/overview/
+2025-11-24 02:21:24,153 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/extend/overview?hastopwindow=1
+2025-11-24 02:21:24,398 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/extend/overview/ -> ui-component.jsonl
+2025-11-24 02:21:24,398 - src.crawler.scheduler_api - INFO -   ✓ 成功: 概述
+2025-11-24 02:21:26,223 - src.crawler.scheduler_api - INFO - 
+[105/161] 处理: /component/global/overview/
+2025-11-24 02:21:26,224 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/global/overview?hastopwindow=1
+2025-11-24 02:21:26,594 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/global/overview/ -> ui-component.jsonl
+2025-11-24 02:21:26,594 - src.crawler.scheduler_api - INFO -   ✓ 成功: 概述
+2025-11-24 02:21:29,218 - src.crawler.scheduler_api - INFO - 
+[106/161] 处理: /component/global/vw-alert/
+2025-11-24 02:21:29,218 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/global/vw-alert?hastopwindow=1
+2025-11-24 02:21:29,477 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/global/vw-alert/ -> ui-component.jsonl
+2025-11-24 02:21:29,478 - src.crawler.scheduler_api - INFO -   ✓ 成功: vw-alert
+2025-11-24 02:21:31,797 - src.crawler.scheduler_api - INFO - 
+[107/161] 处理: /component/global/vw-button/
+2025-11-24 02:21:31,797 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/global/vw-button?hastopwindow=1
+2025-11-24 02:21:32,141 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/global/vw-button/ -> ui-component.jsonl
+2025-11-24 02:21:32,141 - src.crawler.scheduler_api - INFO -   ✓ 成功: vw-button
+2025-11-24 02:21:34,379 - src.crawler.scheduler_api - INFO - 
+[108/161] 处理: /component/global/vw-empty/
+2025-11-24 02:21:34,379 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/global/vw-empty?hastopwindow=1
+2025-11-24 02:21:34,655 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/global/vw-empty/ -> ui-component.jsonl
+2025-11-24 02:21:34,655 - src.crawler.scheduler_api - INFO -   ✓ 成功: vw-empty
+2025-11-24 02:21:37,596 - src.crawler.scheduler_api - INFO - 
+[109/161] 处理: /component/global/vw-icon/
+2025-11-24 02:21:37,596 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/global/vw-icon?hastopwindow=1
+2025-11-24 02:21:37,875 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/global/vw-icon/ -> ui-component.jsonl
+2025-11-24 02:21:37,875 - src.crawler.scheduler_api - INFO -   ✓ 成功: vw-icon
+2025-11-24 02:21:39,576 - src.crawler.scheduler_api - INFO - 
+[110/161] 处理: /component/global/vw-list-item/
+2025-11-24 02:21:39,576 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/global/vw-list-item?hastopwindow=1
+2025-11-24 02:21:39,833 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/global/vw-list-item/ -> ui-component.jsonl
+2025-11-24 02:21:39,833 - src.crawler.scheduler_api - INFO -   ✓ 成功: vw-list-item
+2025-11-24 02:21:41,596 - src.crawler.scheduler_api - INFO - 
+进度: 110/161 (68.3%) | 成功: 110 | 失败: 0 | 跳过: 0
+
+2025-11-24 02:21:41,596 - src.crawler.scheduler_api - INFO - 
+[111/161] 处理: /component/global/vw-list/
+2025-11-24 02:21:41,597 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/global/vw-list?hastopwindow=1
+2025-11-24 02:21:41,973 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/global/vw-list/ -> ui-component.jsonl
+2025-11-24 02:21:41,973 - src.crawler.scheduler_api - INFO -   ✓ 成功: vw-list
+2025-11-24 02:21:43,917 - src.crawler.scheduler_api - INFO - 
+[112/161] 处理: /component/global/vw-loading/
+2025-11-24 02:21:43,918 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/global/vw-loading?hastopwindow=1
+2025-11-24 02:21:44,279 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/global/vw-loading/ -> ui-component.jsonl
+2025-11-24 02:21:44,279 - src.crawler.scheduler_api - INFO -   ✓ 成功: vw-loading
+2025-11-24 02:21:46,637 - src.crawler.scheduler_api - INFO - 
+[113/161] 处理: /component/global/vw-slide/
+2025-11-24 02:21:46,637 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/global/vw-slide?hastopwindow=1
+2025-11-24 02:21:46,897 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/global/vw-slide/ -> ui-component.jsonl
+2025-11-24 02:21:46,897 - src.crawler.scheduler_api - INFO -   ✓ 成功: vw-slide
+2025-11-24 02:21:48,637 - src.crawler.scheduler_api - INFO - 
+[114/161] 处理: /component/global/vw-title/
+2025-11-24 02:21:48,638 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/global/vw-title?hastopwindow=1
+2025-11-24 02:21:48,913 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/global/vw-title/ -> ui-component.jsonl
+2025-11-24 02:21:48,913 - src.crawler.scheduler_api - INFO -   ✓ 成功: vw-title
+2025-11-24 02:21:50,851 - src.crawler.scheduler_api - INFO - 
+[115/161] 处理: /component/others/canvas/
+2025-11-24 02:21:50,852 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/others/canvas?hastopwindow=1
+2025-11-24 02:21:51,341 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/others/canvas/ -> ui-component.jsonl
+2025-11-24 02:21:51,341 - src.crawler.scheduler_api - INFO -   ✓ 成功: canvas
+2025-11-24 02:21:53,696 - src.crawler.scheduler_api - INFO - 
+[116/161] 处理: /component/table/artboard/
+2025-11-24 02:21:53,697 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/table/artboard?hastopwindow=1
+2025-11-24 02:21:53,972 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/table/artboard/ -> ui-component.jsonl
+2025-11-24 02:21:53,972 - src.crawler.scheduler_api - INFO -   ✓ 成功: artboard
+2025-11-24 02:21:56,452 - src.crawler.scheduler_api - INFO - 
+[117/161] 处理: /component/table/input/
+2025-11-24 02:21:56,452 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/table/input?hastopwindow=1
+2025-11-24 02:21:56,771 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/table/input/ -> ui-component.jsonl
+2025-11-24 02:21:56,771 - src.crawler.scheduler_api - INFO -   ✓ 成功: input
+2025-11-24 02:21:59,772 - src.crawler.scheduler_api - INFO - 
+[118/161] 处理: /component/table/label/
+2025-11-24 02:21:59,772 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/table/label?hastopwindow=1
+2025-11-24 02:22:00,073 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/table/label/ -> ui-component.jsonl
+2025-11-24 02:22:00,073 - src.crawler.scheduler_api - INFO -   ✓ 成功: label
+2025-11-24 02:22:02,062 - src.crawler.scheduler_api - INFO - 
+[119/161] 处理: /component/table/overview/
+2025-11-24 02:22:02,062 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/table/overview?hastopwindow=1
+2025-11-24 02:22:02,315 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/table/overview/ -> ui-component.jsonl
+2025-11-24 02:22:02,315 - src.crawler.scheduler_api - INFO -   ✓ 成功: 概述
+2025-11-24 02:22:03,567 - src.crawler.scheduler_api - INFO - 
+[120/161] 处理: /component/table/picker/
+2025-11-24 02:22:03,568 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/table/picker?hastopwindow=1
+2025-11-24 02:22:03,826 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/table/picker/ -> ui-component.jsonl
+2025-11-24 02:22:03,826 - src.crawler.scheduler_api - INFO -   ✓ 成功: picker
+2025-11-24 02:22:06,329 - src.crawler.scheduler_api - INFO - 
+进度: 120/161 (74.5%) | 成功: 120 | 失败: 0 | 跳过: 0
+
+2025-11-24 02:22:06,329 - src.crawler.scheduler_api - INFO - 
+[121/161] 处理: /component/table/slider/
+2025-11-24 02:22:06,330 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/table/slider?hastopwindow=1
+2025-11-24 02:22:06,622 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/table/slider/ -> ui-component.jsonl
+2025-11-24 02:22:06,622 - src.crawler.scheduler_api - INFO -   ✓ 成功: slider
+2025-11-24 02:22:08,205 - src.crawler.scheduler_api - INFO - 
+[122/161] 处理: /component/table/switch/
+2025-11-24 02:22:08,205 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/component/table/switch?hastopwindow=1
+2025-11-24 02:22:08,435 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/component/table/switch/ -> ui-component.jsonl
+2025-11-24 02:22:08,435 - src.crawler.scheduler_api - INFO -   ✓ 成功: switch
+2025-11-24 02:22:09,751 - src.crawler.scheduler_api - INFO - 
+[123/161] 处理: /reference/app-service/data-binding/
+2025-11-24 02:22:09,751 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/app-service/data-binding?hastopwindow=1
+2025-11-24 02:22:10,122 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/app-service/data-binding/ -> tutorial.jsonl
+2025-11-24 02:22:10,122 - src.crawler.scheduler_api - INFO -   ✓ 成功: 数据绑定
+2025-11-24 02:22:12,323 - src.crawler.scheduler_api - INFO - 
+[124/161] 处理: /reference/app-service/event-on/
+2025-11-24 02:22:12,323 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/app-service/event-on?hastopwindow=1
+2025-11-24 02:22:12,578 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/app-service/event-on/ -> tutorial.jsonl
+2025-11-24 02:22:12,579 - src.crawler.scheduler_api - INFO -   ✓ 成功: 概述
+2025-11-24 02:22:14,489 - src.crawler.scheduler_api - INFO - 
+[125/161] 处理: /reference/app-service/for/
+2025-11-24 02:22:14,489 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/app-service/for?hastopwindow=1
+2025-11-24 02:22:14,741 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/app-service/for/ -> tutorial.jsonl
+2025-11-24 02:22:14,741 - src.crawler.scheduler_api - INFO -   ✓ 成功: 列表渲染
+2025-11-24 02:22:17,492 - src.crawler.scheduler_api - INFO - 
+[126/161] 处理: /reference/app-service/if-show/
+2025-11-24 02:22:17,493 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/app-service/if-show?hastopwindow=1
+2025-11-24 02:22:17,736 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/app-service/if-show/ -> tutorial.jsonl
+2025-11-24 02:22:17,736 - src.crawler.scheduler_api - INFO -   ✓ 成功: 条件渲染
+2025-11-24 02:22:19,279 - src.crawler.scheduler_api - INFO - 
+[127/161] 处理: /reference/app-service/page-style-and-layout/
+2025-11-24 02:22:19,279 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/app-service/page-style-and-layout?hastopwindow=1
+2025-11-24 02:22:19,557 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/app-service/page-style-and-layout/ -> tutorial.jsonl
+2025-11-24 02:22:19,557 - src.crawler.scheduler_api - INFO -   ✓ 成功: 页面布局
+2025-11-24 02:22:21,287 - src.crawler.scheduler_api - INFO - 
+[128/161] 处理: /reference/app-service/parent-child-component-communication/
+2025-11-24 02:22:21,287 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/app-service/parent-child-component-communication?hastopwindow=1
+2025-11-24 02:22:21,585 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/app-service/parent-child-component-communication/ -> tutorial.jsonl
+2025-11-24 02:22:21,585 - src.crawler.scheduler_api - INFO -   ✓ 成功: 自定义组件
+2025-11-24 02:22:22,598 - src.crawler.scheduler_api - INFO - 
+[129/161] 处理: /reference/app-service/props/
+2025-11-24 02:22:22,599 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/app-service/props?hastopwindow=1
+2025-11-24 02:22:22,857 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/app-service/props/ -> tutorial.jsonl
+2025-11-24 02:22:22,857 - src.crawler.scheduler_api - INFO -   ✓ 成功: props
+2025-11-24 02:22:25,305 - src.crawler.scheduler_api - INFO - 
+[130/161] 处理: /reference/app-service/switching-pages/
+2025-11-24 02:22:25,305 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/app-service/switching-pages?hastopwindow=1
+2025-11-24 02:22:25,606 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/app-service/switching-pages/ -> tutorial.jsonl
+2025-11-24 02:22:25,606 - src.crawler.scheduler_api - INFO -   ✓ 成功: 页面路由
+2025-11-24 02:22:27,143 - src.crawler.scheduler_api - INFO - 
+进度: 130/161 (80.7%) | 成功: 130 | 失败: 0 | 跳过: 0
+
+2025-11-24 02:22:27,144 - src.crawler.scheduler_api - INFO - 
+[131/161] 处理: /reference/configuration/file-organization/
+2025-11-24 02:22:27,144 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/configuration/file-organization?hastopwindow=1
+2025-11-24 02:22:27,445 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/configuration/file-organization/ -> tutorial.jsonl
+2025-11-24 02:22:27,445 - src.crawler.scheduler_api - INFO -   ✓ 成功: 文件组织
+2025-11-24 02:22:29,373 - src.crawler.scheduler_api - INFO - 
+[132/161] 处理: /reference/configuration/intro/
+2025-11-24 02:22:29,374 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/configuration/intro?hastopwindow=1
+2025-11-24 02:22:29,666 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/configuration/intro/ -> tutorial.jsonl
+2025-11-24 02:22:29,667 - src.crawler.scheduler_api - INFO -   ✓ 成功: 框架简介
+2025-11-24 02:22:32,195 - src.crawler.scheduler_api - INFO - 
+[133/161] 处理: /reference/configuration/manifest/
+2025-11-24 02:22:32,196 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/configuration/manifest?hastopwindow=1
+2025-11-24 02:22:32,492 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/configuration/manifest/ -> tutorial.jsonl
+2025-11-24 02:22:32,492 - src.crawler.scheduler_api - INFO -   ✓ 成功: manifest 文件
+2025-11-24 02:22:34,370 - src.crawler.scheduler_api - INFO - 
+[134/161] 处理: /reference/configuration/script/
+2025-11-24 02:22:34,371 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/configuration/script?hastopwindow=1
+2025-11-24 02:22:34,739 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/configuration/script/ -> tutorial.jsonl
+2025-11-24 02:22:34,740 - src.crawler.scheduler_api - INFO -   ✓ 成功: javascript 代码
+2025-11-24 02:22:36,941 - src.crawler.scheduler_api - INFO - 
+[135/161] 处理: /reference/configuration/style-sheet/
+2025-11-24 02:22:36,941 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/configuration/style-sheet?hastopwindow=1
+2025-11-24 02:22:37,714 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/configuration/style-sheet/ -> tutorial.jsonl
+2025-11-24 02:22:37,714 - src.crawler.scheduler_api - INFO -   ✓ 成功: style 样式
+2025-11-24 02:22:39,708 - src.crawler.scheduler_api - INFO - 
+[136/161] 处理: /reference/configuration/ux-file/
+2025-11-24 02:22:39,708 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/configuration/ux-file?hastopwindow=1
+2025-11-24 02:22:40,105 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/configuration/ux-file/ -> tutorial.jsonl
+2025-11-24 02:22:40,105 - src.crawler.scheduler_api - INFO -   ✓ 成功: UX 文件
+2025-11-24 02:22:42,195 - src.crawler.scheduler_api - INFO - 
+[137/161] 处理: /reference/extend/launch-mode/
+2025-11-24 02:22:42,195 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/extend/launch-mode?hastopwindow=1
+2025-11-24 02:22:42,446 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/extend/launch-mode/ -> tutorial.jsonl
+2025-11-24 02:22:42,446 - src.crawler.scheduler_api - INFO -   ✓ 成功: 页面启动模式
+2025-11-24 02:22:44,445 - src.crawler.scheduler_api - INFO - 
+[138/161] 处理: /reference/extend/mulit/
+2025-11-24 02:22:44,446 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/extend/mulit?hastopwindow=1
+2025-11-24 02:22:44,712 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/extend/mulit/ -> tutorial.jsonl
+2025-11-24 02:22:44,713 - src.crawler.scheduler_api - INFO -   ✓ 成功: 屏幕适配
+2025-11-24 02:22:47,274 - src.crawler.scheduler_api - INFO - 
+[139/161] 处理: /reference/extend/resident/
+2025-11-24 02:22:47,274 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/extend/resident?hastopwindow=1
+2025-11-24 02:22:47,559 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/extend/resident/ -> tutorial.jsonl
+2025-11-24 02:22:47,559 - src.crawler.scheduler_api - INFO -   ✓ 成功: 后台运行
+2025-11-24 02:22:49,404 - src.crawler.scheduler_api - INFO - 
+[140/161] 处理: /reference/extend/watchface/
+2025-11-24 02:22:49,404 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/extend/watchface?hastopwindow=1
+2025-11-24 02:22:49,732 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/extend/watchface/ -> tutorial.jsonl
+2025-11-24 02:22:49,732 - src.crawler.scheduler_api - INFO -   ✓ 成功: 表盘
+2025-11-24 02:22:51,565 - src.crawler.scheduler_api - INFO - 
+进度: 140/161 (87.0%) | 成功: 140 | 失败: 0 | 跳过: 0
+
+2025-11-24 02:22:51,566 - src.crawler.scheduler_api - INFO - 
+[141/161] 处理: /reference/extend/widget/
+2025-11-24 02:22:51,566 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/extend/widget?hastopwindow=1
+2025-11-24 02:22:51,833 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/extend/widget/ -> tutorial.jsonl
+2025-11-24 02:22:51,833 - src.crawler.scheduler_api - INFO -   ✓ 成功: 快捷卡片
+2025-11-24 02:22:52,979 - src.crawler.scheduler_api - INFO - 
+[142/161] 处理: /reference/perf-guide/overview/
+2025-11-24 02:22:52,979 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/perf-guide/overview?hastopwindow=1
+2025-11-24 02:22:53,179 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/perf-guide/overview/ -> tutorial.jsonl
+2025-11-24 02:22:53,179 - src.crawler.scheduler_api - INFO -   ✓ 成功: 概述
+2025-11-24 02:22:55,206 - src.crawler.scheduler_api - INFO - 
+[143/161] 处理: /reference/perf-guide/perf-dangerous/
+2025-11-24 02:22:55,206 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-dangerous?hastopwindow=1
+2025-11-24 02:22:55,431 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-dangerous/ -> tutorial.jsonl
+2025-11-24 02:22:55,431 - src.crawler.scheduler_api - INFO -   ✓ 成功: 避免高耗性能操作
+2025-11-24 02:22:58,249 - src.crawler.scheduler_api - INFO - 
+[144/161] 处理: /reference/perf-guide/perf-data/
+2025-11-24 02:22:58,249 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-data?hastopwindow=1
+2025-11-24 02:22:58,739 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-data/ -> tutorial.jsonl
+2025-11-24 02:22:58,739 - src.crawler.scheduler_api - INFO -   ✓ 成功: 响应式数据优化
+2025-11-24 02:23:01,726 - src.crawler.scheduler_api - INFO - 
+[145/161] 处理: /reference/perf-guide/perf-frame-rate/
+2025-11-24 02:23:01,726 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-frame-rate?hastopwindow=1
+2025-11-24 02:23:01,985 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-frame-rate/ -> tutorial.jsonl
+2025-11-24 02:23:01,985 - src.crawler.scheduler_api - INFO -   ✓ 成功: 帧率优化指引
+2025-11-24 02:23:03,372 - src.crawler.scheduler_api - INFO - 
+[146/161] 处理: /reference/perf-guide/perf-init/
+2025-11-24 02:23:03,372 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-init?hastopwindow=1
+2025-11-24 02:23:03,648 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-init/ -> tutorial.jsonl
+2025-11-24 02:23:03,648 - src.crawler.scheduler_api - INFO -   ✓ 成功: 减少初始化开销
+2025-11-24 02:23:05,419 - src.crawler.scheduler_api - INFO - 
+[147/161] 处理: /reference/perf-guide/perf-longlist/
+2025-11-24 02:23:05,419 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-longlist?hastopwindow=1
+2025-11-24 02:23:05,690 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-longlist/ -> tutorial.jsonl
+2025-11-24 02:23:05,690 - src.crawler.scheduler_api - INFO -   ✓ 成功: 长列表性能优化
+2025-11-24 02:23:07,624 - src.crawler.scheduler_api - INFO - 
+[148/161] 处理: /reference/perf-guide/perf-memory-leak/
+2025-11-24 02:23:07,625 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-memory-leak?hastopwindow=1
+2025-11-24 02:23:07,850 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-memory-leak/ -> tutorial.jsonl
+2025-11-24 02:23:07,850 - src.crawler.scheduler_api - INFO -   ✓ 成功: js 内存泄漏排查
+2025-11-24 02:23:09,771 - src.crawler.scheduler_api - INFO - 
+[149/161] 处理: /reference/perf-guide/perf-runtime/
+2025-11-24 02:23:09,771 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-runtime?hastopwindow=1
+2025-11-24 02:23:10,130 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-runtime/ -> tutorial.jsonl
+2025-11-24 02:23:10,130 - src.crawler.scheduler_api - INFO -   ✓ 成功: 运行时性能优化
+2025-11-24 02:23:12,829 - src.crawler.scheduler_api - INFO - 
+[150/161] 处理: /reference/perf-guide/perf-src/
+2025-11-24 02:23:12,829 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-src?hastopwindow=1
+2025-11-24 02:23:13,151 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-src/ -> tutorial.jsonl
+2025-11-24 02:23:13,151 - src.crawler.scheduler_api - INFO -   ✓ 成功: 图片资源优化
+2025-11-24 02:23:14,594 - src.crawler.scheduler_api - INFO - 
+进度: 150/161 (93.2%) | 成功: 150 | 失败: 0 | 跳过: 0
+
+2025-11-24 02:23:14,594 - src.crawler.scheduler_api - INFO - 
+[151/161] 处理: /reference/perf-guide/perf-subscription/
+2025-11-24 02:23:14,594 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-subscription?hastopwindow=1
+2025-11-24 02:23:14,858 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-subscription/ -> tutorial.jsonl
+2025-11-24 02:23:14,858 - src.crawler.scheduler_api - INFO -   ✓ 成功: 退出页面释放监听
+2025-11-24 02:23:17,382 - src.crawler.scheduler_api - INFO - 
+[152/161] 处理: /reference/perf-guide/perf-treeshaking/
+2025-11-24 02:23:17,382 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-treeshaking?hastopwindow=1
+2025-11-24 02:23:17,675 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/perf-guide/perf-treeshaking/ -> tutorial.jsonl
+2025-11-24 02:23:17,675 - src.crawler.scheduler_api - INFO -   ✓ 成功: 减少代码体积
+2025-11-24 02:23:20,141 - src.crawler.scheduler_api - INFO - 
+[153/161] 处理: /reference/question-answer/build-env/
+2025-11-24 02:23:20,142 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/question-answer/build-env?hastopwindow=1
+2025-11-24 02:23:20,395 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/question-answer/build-env/ -> tutorial.jsonl
+2025-11-24 02:23:20,395 - src.crawler.scheduler_api - INFO -   ✓ 成功: 编译环境变量
+2025-11-24 02:23:21,408 - src.crawler.scheduler_api - INFO - 
+[154/161] 处理: /reference/question-answer/i18n/
+2025-11-24 02:23:21,408 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/question-answer/i18n?hastopwindow=1
+2025-11-24 02:23:21,762 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/question-answer/i18n/ -> tutorial.jsonl
+2025-11-24 02:23:21,763 - src.crawler.scheduler_api - INFO -   ✓ 成功: 国际化
+2025-11-24 02:23:24,212 - src.crawler.scheduler_api - INFO - 
+[155/161] 处理: /reference/quickstart/introduction/
+2025-11-24 02:23:24,212 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/quickstart/introduction?hastopwindow=1
+2025-11-24 02:23:24,517 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/quickstart/introduction/ -> tutorial.jsonl
+2025-11-24 02:23:24,518 - src.crawler.scheduler_api - INFO -   ✓ 成功: 概述
+2025-11-24 02:23:26,031 - src.crawler.scheduler_api - INFO - 
+[156/161] 处理: /reference/quickstart/quick-start/
+2025-11-24 02:23:26,031 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/quickstart/quick-start?hastopwindow=1
+2025-11-24 02:23:26,329 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/quickstart/quick-start/ -> tutorial.jsonl
+2025-11-24 02:23:26,329 - src.crawler.scheduler_api - INFO -   ✓ 成功: 构建首个蓝河应用
+2025-11-24 02:23:28,859 - src.crawler.scheduler_api - INFO - 
+[157/161] 处理: /reference/widget/js-widget/
+2025-11-24 02:23:28,859 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/widget/js-widget?hastopwindow=1
+2025-11-24 02:23:29,079 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/widget/js-widget/ -> tutorial.jsonl
+2025-11-24 02:23:29,079 - src.crawler.scheduler_api - INFO -   ✓ 成功: 标准卡开发
+2025-11-24 02:23:31,476 - src.crawler.scheduler_api - INFO - 
+[158/161] 处理: /reference/widget/lite-widget/
+2025-11-24 02:23:31,477 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/widget/lite-widget?hastopwindow=1
+2025-11-24 02:23:31,758 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/widget/lite-widget/ -> tutorial.jsonl
+2025-11-24 02:23:31,758 - src.crawler.scheduler_api - INFO -   ✓ 成功: 轻卡开发
+2025-11-24 02:23:34,614 - src.crawler.scheduler_api - INFO - 
+[159/161] 处理: /reference/widget/overview/
+2025-11-24 02:23:34,615 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/widget/overview?hastopwindow=1
+2025-11-24 02:23:34,930 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/widget/overview/ -> tutorial.jsonl
+2025-11-24 02:23:34,931 - src.crawler.scheduler_api - INFO -   ✓ 成功: 概述
+2025-11-24 02:23:37,721 - src.crawler.scheduler_api - INFO - 
+[160/161] 处理: /reference/widget/project-config/
+2025-11-24 02:23:37,721 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/widget/project-config?hastopwindow=1
+2025-11-24 02:23:37,979 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/widget/project-config/ -> tutorial.jsonl
+2025-11-24 02:23:37,979 - src.crawler.scheduler_api - INFO -   ✓ 成功: 卡片配置
+2025-11-24 02:23:40,789 - src.crawler.scheduler_api - INFO - 
+进度: 160/161 (99.4%) | 成功: 160 | 失败: 0 | 跳过: 0
+
+2025-11-24 02:23:40,789 - src.crawler.scheduler_api - INFO - 
+[161/161] 处理: /reference/widget/widget-provider/
+2025-11-24 02:23:40,789 - src.crawler.api_crawler - INFO - 请求 HTML: https://developers-watch.vivo.com.cn/reference/widget/widget-provider?hastopwindow=1
+2025-11-24 02:23:41,107 - src.crawler.storage - INFO - 保存页面数据: https://developers-watch.vivo.com.cn/reference/widget/widget-provider/ -> tutorial.jsonl
+2025-11-24 02:23:41,107 - src.crawler.scheduler_api - INFO -   ✓ 成功: widgetProvider 开发
+2025-11-24 02:23:41,107 - src.crawler.storage - INFO - 保存统计信息
+2025-11-24 02:23:41,108 - src.crawler.scheduler_api - INFO - 
+============================================================
+2025-11-24 02:23:41,108 - src.crawler.scheduler_api - INFO - 爬取完成
+2025-11-24 02:23:41,108 - src.crawler.scheduler_api - INFO - ============================================================
+2025-11-24 02:23:41,108 - src.crawler.scheduler_api - INFO - 总页面数: 161
+2025-11-24 02:23:41,108 - src.crawler.scheduler_api - INFO - 成功: 161
+2025-11-24 02:23:41,108 - src.crawler.scheduler_api - INFO - 失败: 0
+2025-11-24 02:23:41,108 - src.crawler.scheduler_api - INFO - 跳过: 0
+2025-11-24 02:23:41,108 - src.crawler.scheduler_api - INFO - 成功率: 100.0%
+2025-11-24 02:23:41,108 - src.crawler.scheduler_api - INFO - ============================================================
+2025-11-24 02:23:41,109 - __main__ - INFO - 
+所有任务完成!

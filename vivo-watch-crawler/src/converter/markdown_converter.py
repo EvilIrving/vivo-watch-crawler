@@ -182,30 +182,46 @@ class MarkdownConverter:
             文件路径
         """
         # 从 URL 提取路径信息
-        url_parts = url.split('/')
+        from urllib.parse import urlparse
+        parsed_url = urlparse(url)
+        url_path = parsed_url.path.strip('/')
+        url_parts = url_path.split('/')
         
-        # 查找关键路径部分
+        # 创建分类目录
         category_dir = self.output_dir / category
         category_dir.mkdir(parents=True, exist_ok=True)
         
-        # 生成文件名（使用 URL 最后几部分）
-        if len(url_parts) >= 2:
-            # 提取子目录和文件名
-            sub_parts = [p for p in url_parts[-3:-1] if p and p != 'doc']
-            filename = url_parts[-1]
+        # 生成文件名
+        filename = None
+        sub_dir = None
+        
+        # 尝试从Last部分提取文件名
+        if url_parts:
+            # 最后一个部分作为文件名
+            filename = url_parts[-1] if url_parts[-1] else None
             
-            # 创建子目录
-            if sub_parts:
-                sub_dir = category_dir / '/'.join(sub_parts)
-                sub_dir.mkdir(parents=True, exist_ok=True)
-                filepath = sub_dir / f"{filename}.md"
-            else:
-                filepath = category_dir / f"{filename}.md"
+            # 倒数第2-3个部分作为子目录
+            if len(url_parts) >= 2:
+                sub_parts = [p for p in url_parts[-3:-1] if p and p not in ('doc', 'common')]
+                if sub_parts:
+                    sub_dir = '/'.join(sub_parts)
+        
+        # 如果没有有效文件名，使用标题
+        if not filename or filename in ('doc', 'common'):
+            filename = self._sanitize_filename(title)
+        
+        # 确保文件名不为空
+        if not filename:
+            filename = 'untitled'
+        
+        # 构建完整路径
+        if sub_dir:
+            full_sub_dir = category_dir / sub_dir
+            full_sub_dir.mkdir(parents=True, exist_ok=True)
+            filepath = full_sub_dir / f"{filename}.md"
         else:
-            # 使用标题生成文件名
-            safe_title = self._sanitize_filename(title)
-            filepath = category_dir / f"{safe_title}.md"
-            
+            filepath = category_dir / f"{filename}.md"
+        
         return filepath
         
     def _sanitize_filename(self, filename: str) -> str:

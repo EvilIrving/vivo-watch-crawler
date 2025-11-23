@@ -2,11 +2,12 @@
 
 ## 项目概述
 
-本项目用于自动爬取 vivo BlueOS 手表开发文档，并转换为适合大语言模型（LLM）使用的 Markdown 格式文档。采用高效的 API 爬取策略，直接从 Gatsby 页面数据接口获取内容，无需浏览器自动化工具。
+本项目用于自动爬取 vivo BlueOS 手表开发文档，并转换为适合大语言模型（LLM）使用的 Markdown 格式文档。采用高效的 HTML API 爬取策略，直接获取页面内容，无需浏览器自动化工具。
 
 ### 核心功能
 
-- 🚀 **API 爬取模式**：直接调用 Gatsby page-data API，速度快、稳定性高
+- 🚀 **HTML API 爬取**：直接访问 HTML 页面（`?hastopwindow=1`），速度快、稳定性高
+- 🔍 **自动发现**：从导航页面自动提取所有文档链接（161 个页面）
 - 📑 **智能分类**：自动识别教程(tutorial)、JS API、UI 组件三大类别
 - 🔍 **内容提取**：精准提取标题、正文、代码示例及元数据
 - 📝 **格式转换**：HTML 转 Markdown，保持代码示例格式
@@ -15,16 +16,72 @@
 
 ## 快速开始
 
-### 1. 安装依赖
+### 0. 环境要求
 
+- **Python 版本**: 3.8 或更高
+- **操作系统**: macOS / Linux / Windows
+- **网络**: 需要能访问 `developers-watch.vivo.com.cn`
+- **存储空间**: 至少 100MB （存储文档和索引）
+
+### 1. 创建虚拟环境（强烈推荐）
+
+虚拟环境可以隔离项目依赖，避免与系统 Python 包冲突。
+
+**macOS / Linux:**
 ```bash
 cd vivo-watch-crawler
+
+# 创建虚拟环境
+python3 -m venv venv
+
+# 激活虚拟环境
+source venv/bin/activate
+
+# 验证激活成功（命令行前缀显示 (venv)）
+which python
+# 输出应为: /path/to/vivo-watch-crawler/venv/bin/python
+```
+
+**Windows:**
+```bash
+cd vivo-watch-crawler
+
+# 创建虚拟环境
+python -m venv venv
+
+# 激活虚拟环境
+venv\Scripts\activate
+
+# 验证激活成功（命令行前缀显示 (venv)）
+where python
+# 输出应为: C:\path\to\vivo-watch-crawler\venv\Scripts\python.exe
+```
+
+> **提示**: 激活虚拟环境后，命令行前缀会显示 `(venv)`，表示当前在虚拟环境中。
+
+### 2. 安装依赖
+
+在激活虚拟环境后，安装项目所需的 Python 包：
+
+```bash
+# 升级 pip（可选）
+pip install --upgrade pip
+
+# 安装依赖
 pip install -r requirements.txt
 ```
 
-> **注意**：本项目使用 API 爬取模式，不需要安装 Playwright 或浏览器驱动。
+**依赖包说明:**
+- `requests` - HTTP 请求库
+- `beautifulsoup4` - HTML 解析
+- `lxml` - XML/HTML 解析器
+- `markdownify` - HTML 转 Markdown
+
+> **重要**: 本项目使用 **HTML API 爬取模式**，**不需要** 安装 Playwright 或浏览器驱动！
 
 ### 2. 一键运行（推荐）
+
+确保已激活虚拟环境（命令行前缀有 `(venv)`），然后运行：
 
 ```bash
 chmod +x run.sh
@@ -33,13 +90,31 @@ chmod +x run.sh
 
 **执行流程：**
 1. 自动检查 Python 环境和依赖
-2. 从 sitemap 发现所有页面
-3. 通过 API 批量爬取页面数据
+2. 从导航页面自动发现所有文档链接（161 个）
+3. 通过 HTML API 批量爬取页面数据
 4. 转换 HTML 为 Markdown 格式
 5. 生成 LLM 就绪的合并文档
 6. 构建多维度索引文件
 
-**预计用时：** 约 2-5 分钟（取决于网络速度和页面数量）
+**预计用时：** 约 3-8 分钟（取决于网络速度）
+
+**输出示例：**
+```
+============================================================
+开始爬取 vivo 手表文档 (API 模式)
+============================================================
+
+阶段一: 发现所有页面
+============================================================
+从导航页面自动发现所有文档链接...
+从导航发现 161 个页面
+
+阶段二: 爬取所有页面
+============================================================
+[1/161] 处理: /api/ai/nlp/
+  ✓ 成功: 自然语言处理
+...
+```
 
 ### 3. 分步运行
 
@@ -63,6 +138,80 @@ python -m src.converter.main
 - `output/llm-ready/` - LLM 优化文档
 - `output/index/` - 索引文件
 - `converter.log` - 转换日志
+
+## 虚拟环境管理
+
+### 退出虚拟环境
+
+当你完成工作后，可以退出虚拟环境：
+
+```bash
+deactivate
+```
+
+退出后，命令行前缀的 `(venv)` 会消失。
+
+### 重新激活虚拟环境
+
+下次使用时，只需重新激活：
+
+**macOS / Linux:**
+```bash
+cd vivo-watch-crawler
+source venv/bin/activate
+```
+
+**Windows:**
+```bash
+cd vivo-watch-crawler
+venv\Scripts\activate
+```
+
+### 删除虚拟环境
+
+如果需要完全删除虚拟环境（例如重新安装依赖）：
+
+**macOS / Linux:**
+```bash
+# 退出虚拟环境（如果已激活）
+deactivate
+
+# 删除虚拟环境目录
+rm -rf venv/
+
+# 重新创建（如需）
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+**Windows:**
+```bash
+# 退出虚拟环境（如果已激活）
+deactivate
+
+# 删除虚拟环境目录
+rmdir /s venv
+
+# 重新创建（如需）
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### 清理项目数据
+
+**清理爬取数据（重新爬取）:**
+```bash
+rm -rf data/ output/
+```
+
+**完全清理（包括虚拟环境、数据和日志）:**
+```bash
+rm -rf venv/ data/ output/ *.log
+```
+
+> **注意**: 删除 `data/` 后，下次运行会重新爬取所有页面。
 
 ## 配置说明
 
@@ -235,17 +384,53 @@ for api in api_index['apis']:
 
 ## 常见问题
 
+### Q: 为什么推荐使用虚拟环境？
+
+**A:** 虚拟环境有以下优点：
+
+1. **隔离依赖** - 避免与系统 Python 包冲突
+2. **版本管理** - 不同项目可使用不同版本的包
+3. **易于清理** - 删除 `venv/` 目录即可完全清除
+4. **部署一致** - 确保开发和生产环境一致
+
+### Q: 如何检查是否在虚拟环境中？
+
+**A:** 查看命令行前缀是否有 `(venv)`，或运行：
+
+```bash
+# macOS / Linux
+which python
+# 应该显示: /path/to/vivo-watch-crawler/venv/bin/python
+
+# Windows
+where python
+# 应该显示: C:\path\to\vivo-watch-crawler\venv\Scripts\python.exe
+```
+
+### Q: 忘记激活虚拟环境会怎样？
+
+**A:** 如果忘记激活虚拟环境，`pip install` 会安装到系统 Python 环境，可能引起依赖冲突。建议：
+
+1. 确认命令行前缀有 `(venv)`
+2. 如果没有，运行 `source venv/bin/activate` （macOS/Linux）或 `venv\Scripts\activate` （Windows）
+
 ### Q: 爬虫采用什么技术？
 
-**A:** 本项目使用 **API 爬取模式**，直接调用 vivo 开发者网站的 Gatsby page-data API：
+**A:** 本项目使用 **HTML API 爬取模式**，直接访问 vivo 开发者网站的 HTML 页面：
 
 ```
-https://developers-watch.vivo.com.cn/page-data{path}/page-data.json
+https://developers-watch.vivo.com.cn{path}?hastopwindow=1
 ```
 
-这种方式相比浏览器自动化具有以下优势：
+**工作原理：**
+1. 从 3 个导航页面（API、Reference、Component）提取侧边栏链接
+2. 自动发现所有 161 个文档页面
+3. 使用 `?hastopwindow=1` 参数获取完整 HTML 内容
+4. 提取 `.html-content` 区域的文档内容
+
+**相比浏览器自动化的优势：**
 - ⚡ 速度更快（无需加载浏览器）
-- 🎯 数据更准确（直接获取结构化数据）
+- 🎯 数据更准确（直接获取 HTML 内容）
 - 💪 稳定性更高（不受页面渲染影响）
 - 📦 依赖更少（无需 Playwright）
 

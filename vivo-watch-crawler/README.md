@@ -33,23 +33,80 @@ vivo-watch-crawler/
 
 ## 快速开始
 
-### 1. 安装依赖
+### 0. 环境要求
+
+- Python 3.8+
+- pip
+- 网络连接（需访问 developers-watch.vivo.com.cn）
+
+### 1. 创建虚拟环境（推荐）
+
+**macOS/Linux:**
+```bash
+# 创建虚拟环境
+python3 -m venv venv
+
+# 激活虚拟环境
+source venv/bin/activate
+```
+
+**Windows:**
+```bash
+# 创建虚拟环境
+python -m venv venv
+
+# 激活虚拟环境
+venv\Scripts\activate
+```
+
+### 2. 安装依赖
 
 ```bash
 pip install -r requirements.txt
-playwright install chromium
 ```
 
-### 2. 运行爬虫
+> **注意**：本项目使用 HTML API 爬取模式，**无需安装** Playwright 或浏览器驱动。
 
+### 3. 运行爬虫
+
+**一键运行（推荐）:**
 ```bash
-python src/crawler/main.py
+chmod +x run.sh
+./run.sh
 ```
 
-### 3. 生成 LLM 文档
-
+**或分步运行:**
 ```bash
-python src/converter/main.py
+# 爬取文档
+python -m src.crawler.main
+
+# 转换为 Markdown
+python -m src.converter.main
+```
+
+### 4. 生成 LLM 文档
+
+运行 `./run.sh` 会自动完成以下步骤：
+1. 爬取所有文档（161 个页面）
+2. 转换为 Markdown 格式
+3. 生成 LLM 就绪文档
+4. 构建文档索引
+
+### 5. 清理环境
+
+**退出虚拟环境:**
+```bash
+deactivate
+```
+
+**删除虚拟环境:**
+```bash
+rm -rf venv/
+```
+
+**清理数据（重新爬取）:**
+```bash
+rm -rf data/ output/
 ```
 
 ## 配置说明
