@@ -51,7 +51,7 @@ async def search_documentation(
         匹配的文档列表(JSON格式)
     """
     try:
-        from engines.search_engine import SearchEngine
+        from src.engines.search_engine import SearchEngine
         
         doc_index = OUTPUT_DIR / "index" / "doc-index.json"
         engine = SearchEngine(str(doc_index))
@@ -86,7 +86,7 @@ async def get_resource(
         资源内容和元数据
     """
     try:
-        from engines.ref_resolver import RefResolver
+        from src.engines.ref_resolver import RefResolver
         
         refs_file = DATA_DIR / "resource-refs.json"
         resolver = RefResolver(str(refs_file), str(OUTPUT_DIR.parent))
