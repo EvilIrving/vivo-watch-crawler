@@ -119,10 +119,16 @@ class RefResolver:
     def _get_mime_type(self, file_path: Path) -> str:
         """获取MIME类型"""
         ext = file_path.suffix.lower()
+        # 处理 .d.ts 的双扩展名
+        if file_path.name.endswith('.d.ts'):
+            return 'application/typescript'
+        
         mime_types = {
             '.json': 'application/json',
             '.md': 'text/markdown',
-            '.txt': 'text/plain'
+            '.txt': 'text/plain',
+            '.ts': 'application/typescript',
+            '.js': 'application/javascript'
         }
         return mime_types.get(ext, 'application/octet-stream')
     

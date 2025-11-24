@@ -1,14 +1,14 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-11-24T03:01:33.834927",
+  "generated_at": "2025-11-24T11:16:38.265209",
   "refs": {
     "@blueos-doc.json": {
       "path": "vivo-watch-crawler/output/index/doc-index.json",
       "type": "application/json",
       "description": "文档总索引",
       "category": "index",
-      "size": 119975,
-      "checksum": "sha256:3e84748bc17f1906010b2f47fc19dcb664beb361591626403e9370b9c9d72ddf"
+      "size": 140299,
+      "checksum": "sha256:8d02f42ad61f83610fca32563a7d1d73726cb8b4000dda69f4b0e30f5f2f88a7"
     },
     "@blueos-examples.json": {
       "path": "vivo-watch-crawler/output/index/code-examples-index.json",
@@ -73,6 +73,342 @@
       "category": "rules",
       "size": 1815,
       "checksum": "sha256:499f2c7a9c9b211cbd2ed6e91d486acbe09b5e2dee665489b32597709909b47f"
+    },
+    "@blueos-api/hardware/deviceInfo.d.ts": {
+      "path": "vivo-watch-crawler/data/api/hardware/deviceInfo.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: deviceInfo.d",
+      "category": "typescript-definitions",
+      "size": 13440,
+      "checksum": "sha256:0d89b85564f1f8d10c83a794ecf6149dfd270f705442bfcc4c790ea7ec367ac7"
+    },
+    "@blueos-api/app/configuration.d.ts": {
+      "path": "vivo-watch-crawler/data/api/app/configuration.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: configuration.d",
+      "category": "typescript-definitions",
+      "size": 1142,
+      "checksum": "sha256:f34a4777ddcdd021f06691f61a33314ac804d3c7789809a3c869fd15ae72c767"
+    },
+    "@blueos-api/app/context.d.ts": {
+      "path": "vivo-watch-crawler/data/api/app/context.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: context.d",
+      "category": "typescript-definitions",
+      "size": 1128,
+      "checksum": "sha256:61ca24cee2d7073321f70642720254a0619727c66717634df9d9918e1dccabe9"
+    },
+    "@blueos-api/util/tar.d.ts": {
+      "path": "vivo-watch-crawler/data/api/util/tar.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: tar.d",
+      "category": "typescript-definitions",
+      "size": 837,
+      "checksum": "sha256:156f2f47eec020cb7fc1f7c26a2e33c8cd95ea58624edec0f09df8f6ec26ae5e"
+    },
+    "@blueos-api/util/fastlz.d.ts": {
+      "path": "vivo-watch-crawler/data/api/util/fastlz.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: fastlz.d",
+      "category": "typescript-definitions",
+      "size": 843,
+      "checksum": "sha256:c589896909427247c9714bffa7d145d23e608e6845c99322ce02aa2aa1f59db7"
+    },
+    "@blueos-api/security/cipher.d.ts": {
+      "path": "vivo-watch-crawler/data/api/security/cipher.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: cipher.d",
+      "category": "typescript-definitions",
+      "size": 4773,
+      "checksum": "sha256:b34c2c394116e217124149bda4b7608147c2a783aeb41a38a286696fe1520485"
+    },
+    "@blueos-api/security/permissionType.d.ts": {
+      "path": "vivo-watch-crawler/data/api/security/permissionType.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: permissionType.d",
+      "category": "typescript-definitions",
+      "size": 554,
+      "checksum": "sha256:f58d3cb2268a6388e02070e54d1c63d768a2e126f85d0e448049b9c1d667738e"
+    },
+    "@blueos-api/health/health.d.ts": {
+      "path": "vivo-watch-crawler/data/api/health/health.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: health.d",
+      "category": "typescript-definitions",
+      "size": 6741,
+      "checksum": "sha256:0f83618d68a66e6d2d95c2c4a7c33dd7ffba13529e7e8a6673fbbb1aeeef7cdd"
+    },
+    "@blueos-api/network/request.d.ts": {
+      "path": "vivo-watch-crawler/data/api/network/request.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: request.d",
+      "category": "typescript-definitions",
+      "size": 5085,
+      "checksum": "sha256:e8d11a8e518b5852b1fd3ecbce22616125fe46852034341e2bb7c4d605df3bc7"
+    },
+    "@blueos-api/network/webSocket.d.ts": {
+      "path": "vivo-watch-crawler/data/api/network/webSocket.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: webSocket.d",
+      "category": "typescript-definitions",
+      "size": 3019,
+      "checksum": "sha256:cd4ecc0f6dcef8fba3edcac8343183a1336426c63dd63cbed43da5b3e8cd5094"
+    },
+    "@blueos-api/network/networkManager.d.ts": {
+      "path": "vivo-watch-crawler/data/api/network/networkManager.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: networkManager.d",
+      "category": "typescript-definitions",
+      "size": 3287,
+      "checksum": "sha256:c3c327a551474de559cb37b6e4bc7d181baa9209d5d62b7344bcc52019dc604f"
+    },
+    "@blueos-api/network/fetch.d.ts": {
+      "path": "vivo-watch-crawler/data/api/network/fetch.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: fetch.d",
+      "category": "typescript-definitions",
+      "size": 2013,
+      "checksum": "sha256:0649b2ba63ab7c2250d100ab38866d851867b7c2c8d24d538724b21f5d56e02a"
+    },
+    "@blueos-api/bluexlink/connectionManager.d.ts": {
+      "path": "vivo-watch-crawler/data/api/bluexlink/connectionManager.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: connectionManager.d",
+      "category": "typescript-definitions",
+      "size": 5207,
+      "checksum": "sha256:5cd41eb5494e62692d0772bd6e72e051833cbbe04f6af44d886e9985f32d8e70"
+    },
+    "@blueos-api/storage/exchange.d.ts": {
+      "path": "vivo-watch-crawler/data/api/storage/exchange.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: exchange.d",
+      "category": "typescript-definitions",
+      "size": 3442,
+      "checksum": "sha256:55575de00c01b8f82f72f9ef144274ba609ad2f1e885df690db4b80f49c0863b"
+    },
+    "@blueos-api/storage/file.d.ts": {
+      "path": "vivo-watch-crawler/data/api/storage/file.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: file.d",
+      "category": "typescript-definitions",
+      "size": 11303,
+      "checksum": "sha256:f80c1a1dfb346e83f86d72a2ececc3877b9678677ce89c76d62c2d485c36cf81"
+    },
+    "@blueos-api/storage/sandboxUri.d.ts": {
+      "path": "vivo-watch-crawler/data/api/storage/sandboxUri.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: sandboxUri.d",
+      "category": "typescript-definitions",
+      "size": 620,
+      "checksum": "sha256:e5b096d2c6b9bae8ec401817824666397cb988e5e7c0d57ddc4ac33808853606"
+    },
+    "@blueos-api/storage/storage.d.ts": {
+      "path": "vivo-watch-crawler/data/api/storage/storage.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: storage.d",
+      "category": "typescript-definitions",
+      "size": 4018,
+      "checksum": "sha256:97f189737762abf20475642fa576b26ee2c8d533affe5d32e64b061e2279959d"
+    },
+    "@blueos-api/telephony/simManager.d.ts": {
+      "path": "vivo-watch-crawler/data/api/telephony/simManager.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: simManager.d",
+      "category": "typescript-definitions",
+      "size": 1379,
+      "checksum": "sha256:9be2fd6802c0980d8bb62509487bbff2d9e248b07798a8973f43c868ebcc997b"
+    },
+    "@blueos-api/window/prompt.d.ts": {
+      "path": "vivo-watch-crawler/data/api/window/prompt.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: prompt.d",
+      "category": "typescript-definitions",
+      "size": 432,
+      "checksum": "sha256:a2953b06a6ddab1a7af3051b94b181037fc7ecce4cbf1ea4ab38afc28e0a9d22"
+    },
+    "@blueos-api/bluetooth/bluetoothManager.d.ts": {
+      "path": "vivo-watch-crawler/data/api/bluetooth/bluetoothManager.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: bluetoothManager.d",
+      "category": "typescript-definitions",
+      "size": 3306,
+      "checksum": "sha256:7fa28bc247c64f49a325fed92d59df5df3508986ec65c750bc005edc70578077"
+    },
+    "@blueos-api/service/inputMethod.d.ts": {
+      "path": "vivo-watch-crawler/data/api/service/inputMethod.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: inputMethod.d",
+      "category": "typescript-definitions",
+      "size": 389,
+      "checksum": "sha256:37a350dc01c3b9788662a839168a21b4b823d065ca25d4a6b97195a67273d002"
+    },
+    "@blueos-api/service/settings.d.ts": {
+      "path": "vivo-watch-crawler/data/api/service/settings.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: settings.d",
+      "category": "typescript-definitions",
+      "size": 1225,
+      "checksum": "sha256:4fb1adb964dd9111b21f146b6671d0f75f900e7e8ee824536e9f05967c68a6a6"
+    },
+    "@blueos-api/service/systemConfiguration.d.ts": {
+      "path": "vivo-watch-crawler/data/api/service/systemConfiguration.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: systemConfiguration.d",
+      "category": "typescript-definitions",
+      "size": 530,
+      "checksum": "sha256:3b131d863a8abc88b0100bc847cacabde4c2309a23ff8504310e313b8ab8e36e"
+    },
+    "@blueos-api/package/packageManager.d.ts": {
+      "path": "vivo-watch-crawler/data/api/package/packageManager.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: packageManager.d",
+      "category": "typescript-definitions",
+      "size": 2709,
+      "checksum": "sha256:439cbc753207454308239f62f8bba14e8d440db4203de987e19a485005190e3f"
+    },
+    "@blueos-api/media/audio/audioManager.d.ts": {
+      "path": "vivo-watch-crawler/data/api/media/audio/audioManager.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: audioManager.d",
+      "category": "typescript-definitions",
+      "size": 6773,
+      "checksum": "sha256:f788d7c7f843093634328c2b6e39205bd5051046fa43bddaf35b65920ea4fc9b"
+    },
+    "@blueos-api/media/audio/audioRecorder.d.ts": {
+      "path": "vivo-watch-crawler/data/api/media/audio/audioRecorder.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: audioRecorder.d",
+      "category": "typescript-definitions",
+      "size": 1500,
+      "checksum": "sha256:ddf8ce4dfdb8dadc92b43399edae6d0def64880b85d1b7535d14988c4eea3d3f"
+    },
+    "@blueos-api/media/audio/audioPlayer.d.ts": {
+      "path": "vivo-watch-crawler/data/api/media/audio/audioPlayer.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: audioPlayer.d",
+      "category": "typescript-definitions",
+      "size": 2955,
+      "checksum": "sha256:3a1efe82e60711df3881e0b0af5a57f0827405aa4a333093e147e7cf8172cd01"
+    },
+    "@blueos-api/media/audio/mediaManager.d.ts": {
+      "path": "vivo-watch-crawler/data/api/media/audio/mediaManager.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: mediaManager.d",
+      "category": "typescript-definitions",
+      "size": 8827,
+      "checksum": "sha256:dba41a6b070ba96dfea5c1aa6fe475fa0f018881a29f8d35ac64323735853fcd"
+    },
+    "@blueos-api/app/appmanager/appState.d.ts": {
+      "path": "vivo-watch-crawler/data/api/app/appmanager/appState.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: appState.d",
+      "category": "typescript-definitions",
+      "size": 302,
+      "checksum": "sha256:8abf09e659e1813ad71a80f4f5fd9b579a2c42d2db37181cbbbbf664a59cb131"
+    },
+    "@blueos-api/app/appmanager/transitionAnimation.d.ts": {
+      "path": "vivo-watch-crawler/data/api/app/appmanager/transitionAnimation.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: transitionAnimation.d",
+      "category": "typescript-definitions",
+      "size": 591,
+      "checksum": "sha256:923562659a73a60d73716e67aa768c79695e6cfcdf38b5f396739d06ff585da1"
+    },
+    "@blueos-api/app/appmanager/schedule.d.ts": {
+      "path": "vivo-watch-crawler/data/api/app/appmanager/schedule.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: schedule.d",
+      "category": "typescript-definitions",
+      "size": 1821,
+      "checksum": "sha256:cf33aded3777d0d806b671699b16958d51f27a62619435c55917473150789455"
+    },
+    "@blueos-api/app/appmanager/router.d.ts": {
+      "path": "vivo-watch-crawler/data/api/app/appmanager/router.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: router.d",
+      "category": "typescript-definitions",
+      "size": 4041,
+      "checksum": "sha256:6b9ebd1d3de9da5be97243d088e698b5618fa7a8e9faf9d69ec6a218ddd2ea8e"
+    },
+    "@blueos-api/app/appmanager/pageStack.d.ts": {
+      "path": "vivo-watch-crawler/data/api/app/appmanager/pageStack.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: pageStack.d",
+      "category": "typescript-definitions",
+      "size": 2465,
+      "checksum": "sha256:17545a7b40ace997f2e39d0a4d7b17f301b6b7fc804e50ee8e2910fd835788a5"
+    },
+    "@blueos-api/app/notification/notificationManager.d.ts": {
+      "path": "vivo-watch-crawler/data/api/app/notification/notificationManager.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: notificationManager.d",
+      "category": "typescript-definitions",
+      "size": 3974,
+      "checksum": "sha256:72352a7e5f498c44b7b2a73917c99cd2042c697520cab84a1bf902466583fda2"
+    },
+    "@blueos-api/app/event/systemEvent.d.ts": {
+      "path": "vivo-watch-crawler/data/api/app/event/systemEvent.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: systemEvent.d",
+      "category": "typescript-definitions",
+      "size": 1314,
+      "checksum": "sha256:a6ed2f94d554f1c0c7d4b09f29fd978be67018783fda9ffc477c5759237f6998"
+    },
+    "@blueos-api/app/event/eventManager.d.ts": {
+      "path": "vivo-watch-crawler/data/api/app/event/eventManager.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: eventManager.d",
+      "category": "typescript-definitions",
+      "size": 1615,
+      "checksum": "sha256:e2e575dbaebd224bfb9970b09fc617a0f7d3b9aab1456bf711250234289aa7c8"
+    },
+    "@blueos-api/hardware/vibrator/vibrator.d.ts": {
+      "path": "vivo-watch-crawler/data/api/hardware/vibrator/vibrator.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: vibrator.d",
+      "category": "typescript-definitions",
+      "size": 1815,
+      "checksum": "sha256:70ffc05700bafaaa8b5ea7abbb1201a79a00b1c79435c17473e1320f24c50648"
+    },
+    "@blueos-api/hardware/location/location.d.ts": {
+      "path": "vivo-watch-crawler/data/api/hardware/location/location.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: location.d",
+      "category": "typescript-definitions",
+      "size": 2887,
+      "checksum": "sha256:ae8abc3dd827ab55c2f3cac6895804a9ee794090262ea52f13aa39ab222c65ca"
+    },
+    "@blueos-api/hardware/sensor/sensor.d.ts": {
+      "path": "vivo-watch-crawler/data/api/hardware/sensor/sensor.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: sensor.d",
+      "category": "typescript-definitions",
+      "size": 7620,
+      "checksum": "sha256:9a626f0a37b19f7d8034ec6ed707fa4af2b8dc011b77b438879cfd11256a7b78"
+    },
+    "@blueos-api/hardware/display/screen.d.ts": {
+      "path": "vivo-watch-crawler/data/api/hardware/display/screen.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: screen.d",
+      "category": "typescript-definitions",
+      "size": 648,
+      "checksum": "sha256:55d38095733dfd0fe3960d8d5e6204e21883a3277ed624e6c8156066d048a64a"
+    },
+    "@blueos-api/hardware/display/brightness.d.ts": {
+      "path": "vivo-watch-crawler/data/api/hardware/display/brightness.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: brightness.d",
+      "category": "typescript-definitions",
+      "size": 4935,
+      "checksum": "sha256:53ce6d86faf1e23559e7c58a87defaa50d5b71f595bda96cee2ff127c04eae5a"
+    },
+    "@blueos-api/hardware/battery/battery.d.ts": {
+      "path": "vivo-watch-crawler/data/api/hardware/battery/battery.d.ts",
+      "type": "application/typescript",
+      "description": "TypeScript 类型定义: battery.d",
+      "category": "typescript-definitions",
+      "size": 1286,
+      "checksum": "sha256:9bf77e48a8d564407d1bd3a3f515e51101c8c1eb11e8b99862866f1472db5c29"
     }
   },
   "patterns": [
@@ -85,6 +421,11 @@
       "pattern": "@blueos-component/([a-z-]+)\\.md",
       "template": "output/markdown/ui-component/component/**/{0}.md",
       "description": "UI 组件文档"
+    },
+    {
+      "pattern": "@blueos-api/(.+)\\.d\\.ts",
+      "template": "data/api/{0}.d.ts",
+      "description": "TypeScript 类型定义"
     }
   ]
 }

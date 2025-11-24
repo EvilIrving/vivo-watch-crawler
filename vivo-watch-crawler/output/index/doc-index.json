@@ -1,5 +1,5 @@
 {
-  "total": 161,
+  "total": 203,
   "categories": {
     "ui-component": [
       "doc_0000",
@@ -167,6 +167,50 @@
       "doc_0158",
       "doc_0159",
       "doc_0160"
+    ],
+    "typescript-definitions": [
+      "dts_0161",
+      "dts_0162",
+      "dts_0163",
+      "dts_0164",
+      "dts_0165",
+      "dts_0166",
+      "dts_0167",
+      "dts_0168",
+      "dts_0169",
+      "dts_0170",
+      "dts_0171",
+      "dts_0172",
+      "dts_0173",
+      "dts_0174",
+      "dts_0175",
+      "dts_0176",
+      "dts_0177",
+      "dts_0178",
+      "dts_0179",
+      "dts_0180",
+      "dts_0181",
+      "dts_0182",
+      "dts_0183",
+      "dts_0184",
+      "dts_0185",
+      "dts_0186",
+      "dts_0187",
+      "dts_0188",
+      "dts_0189",
+      "dts_0190",
+      "dts_0191",
+      "dts_0192",
+      "dts_0193",
+      "dts_0194",
+      "dts_0195",
+      "dts_0196",
+      "dts_0197",
+      "dts_0198",
+      "dts_0199",
+      "dts_0200",
+      "dts_0201",
+      "dts_0202"
     ]
   },
   "documents": [
@@ -2386,6 +2430,762 @@
         "Action"
       ],
       "has_code": true
+    },
+    {
+      "id": "dts_0161",
+      "title": "appState.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/app/appmanager/appState.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "appState.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 241
+    },
+    {
+      "id": "dts_0162",
+      "title": "pageStack.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/app/appmanager/pageStack.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "pageStack.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 1969
+    },
+    {
+      "id": "dts_0163",
+      "title": "router.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/app/appmanager/router.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "router.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 2821
+    },
+    {
+      "id": "dts_0164",
+      "title": "schedule.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/app/appmanager/schedule.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "schedule.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 1279
+    },
+    {
+      "id": "dts_0165",
+      "title": "transitionAnimation.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/app/appmanager/transitionAnimation.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "transitionAnimation.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 482
+    },
+    {
+      "id": "dts_0166",
+      "title": "configuration.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/app/configuration.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "configuration.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 782
+    },
+    {
+      "id": "dts_0167",
+      "title": "context.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/app/context.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "context.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 883
+    },
+    {
+      "id": "dts_0168",
+      "title": "eventManager.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/app/event/eventManager.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "eventManager.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 1264
+    },
+    {
+      "id": "dts_0169",
+      "title": "systemEvent.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/app/event/systemEvent.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "systemEvent.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 1109
+    },
+    {
+      "id": "dts_0170",
+      "title": "notificationManager.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/app/notification/notificationManager.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "notificationManager.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 3070
+    },
+    {
+      "id": "dts_0171",
+      "title": "bluetoothManager.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/bluetooth/bluetoothManager.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "bluetoothManager.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 2235
+    },
+    {
+      "id": "dts_0172",
+      "title": "connectionManager.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/bluexlink/connectionManager.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "connectionManager.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 4043
+    },
+    {
+      "id": "dts_0173",
+      "title": "battery.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/hardware/battery/battery.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "battery.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 978
+    },
+    {
+      "id": "dts_0174",
+      "title": "deviceInfo.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/hardware/deviceInfo.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "deviceInfo.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 10120
+    },
+    {
+      "id": "dts_0175",
+      "title": "brightness.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/hardware/display/brightness.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "brightness.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 3687
+    },
+    {
+      "id": "dts_0176",
+      "title": "screen.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/hardware/display/screen.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "screen.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 467
+    },
+    {
+      "id": "dts_0177",
+      "title": "location.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/hardware/location/location.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "location.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 2102
+    },
+    {
+      "id": "dts_0178",
+      "title": "sensor.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/hardware/sensor/sensor.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "sensor.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 5502
+    },
+    {
+      "id": "dts_0179",
+      "title": "vibrator.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/hardware/vibrator/vibrator.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "vibrator.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 1379
+    },
+    {
+      "id": "dts_0180",
+      "title": "health.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/health/health.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "health.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 5186
+    },
+    {
+      "id": "dts_0181",
+      "title": "audioManager.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/media/audio/audioManager.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "audioManager.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 5328
+    },
+    {
+      "id": "dts_0182",
+      "title": "audioPlayer.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/media/audio/audioPlayer.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "audioPlayer.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 2118
+    },
+    {
+      "id": "dts_0183",
+      "title": "audioRecorder.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/media/audio/audioRecorder.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "audioRecorder.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 1107
+    },
+    {
+      "id": "dts_0184",
+      "title": "mediaManager.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/media/audio/mediaManager.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "mediaManager.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 6006
+    },
+    {
+      "id": "dts_0185",
+      "title": "fetch.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/network/fetch.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "fetch.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 1518
+    },
+    {
+      "id": "dts_0186",
+      "title": "networkManager.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/network/networkManager.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "networkManager.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 2382
+    },
+    {
+      "id": "dts_0187",
+      "title": "request.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/network/request.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "request.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 3741
+    },
+    {
+      "id": "dts_0188",
+      "title": "webSocket.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/network/webSocket.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "webSocket.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 2243
+    },
+    {
+      "id": "dts_0189",
+      "title": "packageManager.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/package/packageManager.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "packageManager.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 2094
+    },
+    {
+      "id": "dts_0190",
+      "title": "cipher.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/security/cipher.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "cipher.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 3233
+    },
+    {
+      "id": "dts_0191",
+      "title": "permissionType.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/security/permissionType.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "permissionType.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 460
+    },
+    {
+      "id": "dts_0192",
+      "title": "inputMethod.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/service/inputMethod.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "inputMethod.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 304
+    },
+    {
+      "id": "dts_0193",
+      "title": "settings.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/service/settings.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "settings.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 953
+    },
+    {
+      "id": "dts_0194",
+      "title": "systemConfiguration.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/service/systemConfiguration.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "systemConfiguration.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 431
+    },
+    {
+      "id": "dts_0195",
+      "title": "exchange.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/storage/exchange.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "exchange.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 2506
+    },
+    {
+      "id": "dts_0196",
+      "title": "file.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/storage/file.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "file.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 8346
+    },
+    {
+      "id": "dts_0197",
+      "title": "sandboxUri.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/storage/sandboxUri.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "sandboxUri.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 381
+    },
+    {
+      "id": "dts_0198",
+      "title": "storage.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/storage/storage.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "storage.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 3064
+    },
+    {
+      "id": "dts_0199",
+      "title": "simManager.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/telephony/simManager.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "simManager.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 1014
+    },
+    {
+      "id": "dts_0200",
+      "title": "fastlz.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/util/fastlz.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "fastlz.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 647
+    },
+    {
+      "id": "dts_0201",
+      "title": "tar.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/util/tar.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "tar.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 643
+    },
+    {
+      "id": "dts_0202",
+      "title": "prompt.d (TypeScript)",
+      "category": "typescript-definitions",
+      "path": "api/window/prompt.d.ts",
+      "summary": "TypeScript 类型定义。包含: 导出成员",
+      "keywords": [
+        "prompt.d"
+      ],
+      "type_info": {
+        "interfaces": [],
+        "classes": [],
+        "enums": [],
+        "types": [],
+        "functions": []
+      },
+      "content_length": 353
     }
   ]
 }

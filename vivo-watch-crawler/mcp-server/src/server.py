@@ -173,6 +173,33 @@ async def find_code_examples(
                     "category": example.get('category')
                 })
         
+        # 处理 .d.ts 类型定义文件作为代码示例
+        if not matched:
+            from src.engines.ref_resolver import RefResolver
+            
+            refs_file = DATA_DIR / "resource-refs.json"
+            resolver = RefResolver(str(refs_file), str(OUTPUT_DIR.parent))
+            
+            # 输记参数，查找匹配的 .d.ts 文件
+            dts_pattern = f"@blueos-api/**/{feature_lower}"
+            
+            data_dir = OUTPUT_DIR.parent / "data" / "api"
+            if data_dir.exists():
+                for ts_file in data_dir.rglob(f"*{feature_lower}*.d.ts"):
+                    try:
+                        content = ts_file.read_text(encoding='utf-8')
+                        matched.append({
+                            "id": f"dts_{ts_file.stem}",
+                            "code": content,
+                            "language": "typescript",
+                            "description": f"TypeScript 类型定义: {ts_file.stem}",
+                            "source_title": f"{ts_file.parent.name}/{ts_file.stem}",
+                            "source_url": f"@blueos-api/{'/'.join(ts_file.relative_to(data_dir).parts)}",
+                            "category": "typescript-definitions"
+                        })
+                    except Exception:
+                        pass
+        
         return json.dumps({
             "success": True,
             "examples": matched[:10],  # 限制返回数量

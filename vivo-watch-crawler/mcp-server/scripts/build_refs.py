@@ -38,7 +38,9 @@ class RefBuilder:
         mime_types = {
             '.json': 'application/json',
             '.md': 'text/markdown',
-            '.txt': 'text/plain'
+            '.txt': 'text/plain',
+            '.d.ts': 'application/typescript',
+            '.ts': 'application/typescript'
         }
         return mime_types.get(ext, 'application/octet-stream')
     
@@ -62,6 +64,14 @@ class RefBuilder:
             "template": template,
             "description": description
         })
+    
+    def _generate_dts_ref(self, ts_file: Path, base_dir: Path) -> str:
+        """为 .d.ts 文件生成引用标识符"""
+        relative = ts_file.relative_to(base_dir)
+        # 将路径转换为引用: app/appmanager/router.d.ts -> @blueos-api/app/appmanager/router.d.ts
+        parts = relative.parts
+        ref_path = '/'.join(parts)
+        return f"@blueos-api/{ref_path}"
     
     def build(self):
         """构建引用映射表"""
@@ -159,6 +169,22 @@ class RefBuilder:
                 "rules"
             )
         
+        # 索引 .d.ts 类型定义文件
+        data_dir = self.output_dir.parent / "data" / "api"
+        if data_dir.exists():
+            for ts_file in data_dir.rglob("*.d.ts"):
+                # 生成引用标识符: @blueos-api/{category}/{name}.d.ts
+                relative_path = ts_file.relative_to(data_dir.parent)
+                ref_name = self._generate_dts_ref(ts_file, data_dir)
+                
+                if ref_name:
+                    self.add_static_ref(
+                        ref_name,
+                        ts_file,
+                        f"TypeScript 类型定义: {ts_file.stem}",
+                        "typescript-definitions"
+                    )
+        
         # 添加模式匹配规则
         # API 命名空间文档
         self.add_pattern(
@@ -172,6 +198,13 @@ class RefBuilder:
             r"@blueos-component/([a-z-]+)\.md",
             "output/markdown/ui-component/component/**/{0}.md",
             "UI 组件文档"
+        )
+        
+        # TypeScript 类型定义文件模式
+        self.add_pattern(
+            r"@blueos-api/(.+)\.d\.ts",
+            "data/api/{0}.d.ts",
+            "TypeScript 类型定义"
         )
         
         print(f"已生成 {len(self.refs)} 个静态引用")

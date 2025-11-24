@@ -229,6 +229,14 @@ class SearchEngine:
         category = doc.get('category', '')
         title = doc.get('title', '').lower().replace(' ', '-')
         
+        # 处理 TypeScript 类型定义
+        if category == 'typescript-definitions':
+            # 对于 .d.ts 文件，使用完整路径
+            path_info = doc.get('path', '')
+            if path_info:
+                return f"@blueos-api/{path_info.replace('data/api/', '').replace('.d.ts', '')}.d.ts"
+            return f"@blueos-api/{title}.d.ts"
+        
         if category == 'js-api':
             return f"@blueos-api/{title}.md"
         elif category == 'ui-component':
