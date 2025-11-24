@@ -1,5 +1,11 @@
 # vivo 手表文档爬虫与 LLM 文档生成系统
 
+⚠️ **重要说明**
+
+本项目已归档。**vivo 不支持个人开发者发布应用**。本项目仅供学习参考，不可用于商业用途。
+
+---
+
 ## 项目简介
 
 本项目用于爬取 vivo BlueOS 手表开发文档，并转换为适合大模型（LLM）训练和使用的 Markdown 格式文档。
@@ -128,6 +134,12 @@ rm -rf data/ output/
 - `output/llm-ready/combined/`: 合并的大文档
 - `output/llm-ready/qa-pairs/`: 问答对数据集
 - `output/index/`: 索引文件（为 MCP 准备）
+
+## MCP 服务
+
+本项目包含 MCP（Model Context Protocol）服务器实现，用于为 LLM 提供文档检索和索引功能。
+
+详见：[mcp-server/README.md](mcp-server/README.md)
 
 ## 许可证
 
