@@ -37,7 +37,7 @@ vivo-watch-crawler/
 
 - Python 3.8+
 - pip
-- 网络连接（需访问 developers-watch.vivo.com.cn）
+- 网络连接（需访问 developers-watch.vivo.com.cn 和 studio.blueos.com.cn）
 
 ### 1. 创建虚拟环境（推荐）
 
@@ -77,8 +77,11 @@ chmod +x run.sh
 
 **或分步运行:**
 ```bash
-# 爬取文档
+# 爬取vivo手表文档
 python -m src.crawler.main
+
+# 爬取BlueOS Studio文档
+python -m src.crawler.blueos_main
 
 # 转换为 Markdown
 python -m src.converter.main
@@ -87,7 +90,7 @@ python -m src.converter.main
 ### 4. 生成 LLM 文档
 
 运行 `./run.sh` 会自动完成以下步骤：
-1. 爬取所有文档（161 个页面）
+1. 爬取所有文档（包括vivo手表文档和BlueOS Studio文档）
 2. 转换为 Markdown 格式
 3. 生成 LLM 就绪文档
 4. 构建文档索引

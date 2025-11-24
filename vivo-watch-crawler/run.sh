@@ -26,12 +26,17 @@ if ! python3 -c "import requests" 2>/dev/null; then
 fi
 
 echo ""
-echo "步骤 1/2: 运行爬虫"
+echo "步骤 1/3: 运行vivo手表文档爬虫"
 echo "----------------------------------"
 python3 -m src.crawler.main
 
 echo ""
-echo "步骤 2/2: 转换和生成文档"
+echo "步骤 2/3: 运行BlueOS Studio文档爬虫"
+echo "----------------------------------"
+python3 -m src.crawler.blueos_main
+
+echo ""
+echo "步骤 3/3: 转换和生成文档"
 echo "----------------------------------"
 python3 -m src.converter.main
 
