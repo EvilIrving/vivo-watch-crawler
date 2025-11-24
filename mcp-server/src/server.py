@@ -40,15 +40,20 @@ async def search_documentation(
     category: str = "all",
     limit: int = 5
 ) -> str:
-    """搜索 BlueOS 开发文档
+    """搜索 BlueOS 开发文档与 API 类型定义
+    
+    支持搜索 JavaScript API 文档、UI 组件、开发教程以及 TypeScript 类型定义文件。
     
     Args:
-        query: 搜索关键词或问题描述
-        category: 文档分类 (js-api/ui-component/tutorial/all)
+        query: 搜索关键词或问题描述。支持以下查询方式:
+            - API 查询: "database", "network", "bluetooth" 等
+            - 类型查询: "interface", "接口", "function", "函数" 等
+            - 特定元素: "EventManager", "BatteryManager" 等
+        category: 文档分类 (js-api/ui-component/tutorial/typescript-definitions/all)
         limit: 返回结果数量限制
     
     Returns:
-        匹配的文档列表(JSON格式)
+        匹配的文档列表(JSON格式)。对于 TypeScript 查询会优先返回 .d.ts 类型定义文件
     """
     try:
         from src.engines.search_engine import SearchEngine

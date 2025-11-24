@@ -10,6 +10,18 @@ from typing import List, Dict, Any, Optional
 
 
 class SearchEngine:
+    # TypeScript 特定的查询关键词映射
+    TS_QUERY_PATTERNS = {
+        'interface': ['interface', '接口'],
+        'type': ['type', '类型', 'typedef'],
+        'class': ['class', '类'],
+        'function': ['function', '函数'],
+        'method': ['method', '方法'],
+        'enum': ['enum', '枚举'],
+        'property': ['property', '属性', 'prop'],
+        'api': ['api', 'interface', 'method', 'function']
+    }
+    
     def __init__(self, doc_index_file: str):
         """
         初始化搜索引擎
@@ -21,6 +33,7 @@ class SearchEngine:
         self.documents = []
         self.keyword_index = {}  # 倒排索引: keyword -> [doc_ids]
         self.category_index = {}  # 分类索引: category -> [doc_ids]
+        self.type_info_index = {}  # 类型信息索引: type_element -> [doc_ids]
         self.load_index()
     
     def load_index(self):
@@ -35,6 +48,7 @@ class SearchEngine:
         # 构建倒排索引
         self._build_keyword_index()
         self._build_category_index()
+        self._build_type_info_index()
     
     def _build_keyword_index(self):
         """构建关键词倒排索引"""
@@ -66,12 +80,69 @@ class SearchEngine:
                 self.category_index[category] = []
             self.category_index[category].append(doc['id'])
     
+    def _build_type_info_index(self):
+        """构建 TypeScript 类型信息索引（用于 .d.ts 文件）"""
+        for doc in self.documents:
+            # 只索引 TypeScript 定义文件
+            if doc.get('category') != 'typescript-definitions':
+                continue
+            
+            doc_id = doc['id']
+            type_info = doc.get('type_info', {})
+            
+            # 索引接口、类、函数、枚举、类型等
+            for type_element in type_info.get('interfaces', []):
+                if 'interface' not in self.type_info_index:
+                    self.type_info_index['interface'] = []
+                if doc_id not in self.type_info_index['interface']:
+                    self.type_info_index['interface'].append(doc_id)
+                # 也索引具体的接口名称
+                key = f"interface:{type_element.lower()}"
+                if key not in self.type_info_index:
+                    self.type_info_index[key] = []
+                if doc_id not in self.type_info_index[key]:
+                    self.type_info_index[key].append(doc_id)
+            
+            for type_element in type_info.get('classes', []):
+                if 'class' not in self.type_info_index:
+                    self.type_info_index['class'] = []
+                if doc_id not in self.type_info_index['class']:
+                    self.type_info_index['class'].append(doc_id)
+            
+            for type_element in type_info.get('functions', []):
+                if 'function' not in self.type_info_index:
+                    self.type_info_index['function'] = []
+                if doc_id not in self.type_info_index['function']:
+                    self.type_info_index['function'].append(doc_id)
+            
+            for type_element in type_info.get('types', []):
+                if 'type' not in self.type_info_index:
+                    self.type_info_index['type'] = []
+                if doc_id not in self.type_info_index['type']:
+                    self.type_info_index['type'].append(doc_id)
+            
+            for type_element in type_info.get('enums', []):
+                if 'enum' not in self.type_info_index:
+                    self.type_info_index['enum'] = []
+                if doc_id not in self.type_info_index['enum']:
+                    self.type_info_index['enum'].append(doc_id)
+    
     def _tokenize(self, text: str) -> List[str]:
         """分词"""
         # 简单分词: 转小写,按非字母数字字符分割
         import re
         tokens = re.findall(r'\w+', text.lower())
         return tokens
+    
+    def _is_typescript_query(self, query_tokens: List[str]) -> bool:
+        """判断查询是否是 TypeScript/API 相关查询"""
+        query_lower = ' '.join(query_tokens).lower()
+        # 检查是否包含 TS 相关关键词
+        for pattern_group in self.TS_QUERY_PATTERNS.values():
+            for pattern in pattern_group:
+                if pattern in query_lower:
+                    return True
+        return False
     
     def search(
         self,
@@ -180,6 +251,10 @@ class SearchEngine:
         summary = doc.get('summary', '').lower()
         keywords = [k.lower() for k in doc.get('keywords', [])]
         url = doc.get('url', '').lower()
+        category = doc.get('category', '')
+        
+        # 检查是否是 TypeScript 查询
+        is_ts_query = self._is_typescript_query(query_tokens)
         
         # 遍历每个查询关键词
         for token in query_tokens:
@@ -206,8 +281,29 @@ class SearchEngine:
             if token in summary:
                 score += 0.5
         
+        # TypeScript 查询加权
+        if is_ts_query:
+            # 如果是 TS 查询，且文档是 .d.ts 文件，增加权重
+            if category == 'typescript-definitions':
+                score += 2.0
+            
+            # 检查是否在 type_info 中有匹配
+            type_info = doc.get('type_info', {})
+            for token in query_tokens:
+                # 在接口中查找
+                if token in [i.lower() for i in type_info.get('interfaces', [])]:
+                    score += 1.5
+                # 在函数中查找
+                elif token in [f.lower() for f in type_info.get('functions', [])]:
+                    score += 1.5
+                # 在类中查找
+                elif token in [c.lower() for c in type_info.get('classes', [])]:
+                    score += 1.0
+                # 在类型中查找
+                elif token in [t.lower() for t in type_info.get('types', [])]:
+                    score += 1.0
+        
         # 分类加权
-        category = doc.get('category', '')
         if any(token in category for token in query_tokens):
             score += 0.3
         
